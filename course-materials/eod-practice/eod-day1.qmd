@@ -1,102 +1,88 @@
 ---
-title: "Day 1: Tasks & Activities"
-subtitle: "Project organization, data import, file paths"
+title: "Day 1: End-of-day practice"
+subtitle: "Create a repo for your coral reef simulator"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(tidyverse)
-library(here)
-```
+Over the course of the first week of EDS 221, you're going to implement the coral reef simulator board game in R. This project provides an opportunity to integrate foundational programming concepts: data structures, control structures, and functions. All of your work on this project will live in a single repository.
 
-## 1. Setup
+Today's end-of-day practice lays the groundwork for the rest of the work you'll do this week. By the end of this activity, you will have:
 
-### Get the data and create a version-controlled R Project
+* Local and remote repositories to track your progress
+* A README describing your project
+* A script that rolls two dice
 
-- Fork, add your name to end of the repo name, and clone [this repo](https://github.com/eds-221-programming-essentials/eds-221-day1-activity)
-- Before you move on, read more about the data [here](https://github.com/slu-soc1120/STL_HEALTH_Lead)
-- Add two subfolders to your R project: `docs` and `figs`
-- Create and save a new Quarto document as `stl_lead_inequity.qmd` in the `docs` folder
+The following sections describe your goals and how to validate them. The instructions are deliberately left vague - use your notes and the activities from earlier today (e.g., live coding scripts) to guide you!
 
-## 2. Data import and exploration
+## Version control tasks
 
-### Read in & explore the data
+1. Initialize a local git repository for your project in your eds221/ folder. 
+2. In your repository, create README.md. Add 2-3 sentences describing the coral reef simulator at a high level. This should be a summary, not step-by-step instructions.
+3. Commit your changes.
+4. Create a remote repository on GitHub. 
+5. Push your local repo to the remote.
 
-In your .qmd: 
+### Validation checks
 
-- Attach the `tidyverse` and `janitor` packages in a new code chunk
-- Read in the `stl_blood_lead.csv` data as `stl_lead` and use `janitor::clean_names` to convert all variable names to lower snake case
+Check that...
 
-```{r, include = FALSE}
-stl_lead <- read_csv(here::here("course-materials","eod-practice", "data","stl_blood_lead.csv")) |> # Note that their path will be here::here("data", "stl_blood_lead.csv) instead
-  janitor::clean_names()
-```
-
-- Do some basic exploration of the dataset (e.g. using summary, data visualizations and summary statistics). 
-
-```{r, include = FALSE}
-# Many options here...as long as they're doing some exploration
-summary(stl_lead)
-
-ggplot(data = stl_lead, aes(x = pct_elevated)) +
-  geom_histogram()
-
-# As long as they do one or two visualizations and use summarize that's fine.
-```
-
-
-- In a new code chunk, from `stl_blood_lead` create a new data frame called `stl_lead_prop` that has one additional column called `prop_white` that returns the percent of each census tract identifying as white (variable `white` in the dataset divided by variable `totalPop`, times 100). You may need to do some Googling. Hint: `dplyr::mutate(new_col = col_a / col_b)` will create a new column `new_col` that contains the value of `col_a / col_b`
-
-```{r, include = FALSE}
-
-stl_lead_prop = stl_lead |> 
-  mutate(prop_white = white / total_pop)
+- [ ] Your repo is inside eds221/, and not inside another repo you made earlier today. You don't want nested repos!
+- [ ] Your README is visible on GitHub.
+- [ ] Your local and remote repositories are synced. `git status` should say:
 
 ```
+On branch main
+Your branch is up to date with 'origin/main'.
 
-## 3. Visualize data
-
-### Create a scatterplot
-
-- In a new code chunk, create a scatterplot graph of the percentage of children in each census tract with elevated blood lead levels (`pctElevated`) versus the percent of each census tract identifying as white. 
-- Customize by updating several aesthetics (e.g. size, opacity (see `alpha = `), color, etc.)
-- Store the scatterplot as `stl_lead_plot`
-- Have the scatterplot returned in the rendered html - customize the size that it appears when knitted
-- Also save a .png of the scatterplot to `figs`, with dimensions of (6" x 5") (width x height)
-- In text above or below the scatterplot, write 1 - 2 sentences describing the overall trend that you observe from your graph
-
-```{r, include = FALSE}
-ggplot(data = stl_lead_prop, aes(x = prop_white, y = pct_elevated)) +
-  geom_point() # Then they can do a bit of customization here
+nothing to commit, working tree clean
 ```
 
-### Create a histogram
+## Code execution tasks
 
-- Create a histogram of only the `pctElevated` column in the data frame (remember, this will only take one variable - the frequency is calculated for you by `geom_histogram`)
-- Customize the fill, color, and size aesthetics - test some stuff! Feel free to make it awful. 
-- Once you've played around with customization, export the histogram as a .jpg to the `figs` folder
-- Make sure the histogram also shows up in your rendered html 
+1. Create a script called roll_dice.R.
+2. Paste the following code in roll_dice.R.
 
-```{r, include = FALSE}
-# Example code for saving ggplot:
-# ggsave(myPlot, here::here("figs", "myPlot.csv"))
+```r
+set.seed(123)
+die <- 1:6
+rolls <- sample(die, size = 2, replace = TRUE)
+roll_total <- sum(rolls)
 ```
 
-## 4. Collaborate!
+3. Run the code in roll_dice.R at the console.
+4. Save your script, then commit and push your changes.
 
-### Render & push
+### Validation checks
 
-- Render your .qmd
-- Stage, commit, pull then push changes using the command line
+Check that...
 
-### Share & test
+- [ ] The value of `roll_total` is 9.
+- [ ] Your script is visible on GitHub.
+- [ ] Your local and remote repositories are synced.
 
-- Share the link to your public GitHub repo with a neighbor
-- **Fork** the repo your neighbor shared, then clone to get set up locally in RStudio
-- Navigate to their .qmd
-- Render - does everything work? Cool, your neighbor made a reproducible project with file paths you can use too! 
+## Wrap up
 
-::: {.center-text .body-text-xl .teal-text}
-End Activity Session (Day 1)
-:::
+Congrats - you've completed your tasks for day 1! 
 
+Today you learned:
+
+**How code executes**
+
+* Code is made up of expressions, where operators and functions act on variables and values to make things happen.
+* Code has a _flow_ from scripts to the console to the environent.
+* Expressions build on each other to perform complex tasks using simpler parts.
+
+**How to track changes**
+
+* git records the history of your coding projects in repositories.
+* git commands "move" files between the working directory, staging area, local repository, and remote repository.
+* GitHub hosts your remote repositories, so you can share code and collaborate!
+
+## More information
+
+### What's a .md file?
+
+You may have noticed your README file ends in .md. That means it's a _Markdown_ file. Markdown is a lightweight language for formatting text. All the formatting is included directly in the text (as opposed to a Word document, for example), so it's much more compatible with version control. You'll learn more about Markdown next week. In the meantime, if you'd like to learn more, check out [Markdown Tutorial](https://markdowntutorial.com) and [GitHub for Beginners: Getting started with Markdown](https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/).
+
+### Why is the value of `roll_total` 9?
+
+Rolling dice is random, so how come everyone's supposed to get the same value? What a great question! For now, I'm going to leave this to you to ponder. Have another look at the code I gave you and, if you're so inclined, come up with a hypothesis for why every student should get the same random numbers. We'll discuss this on Day 4.

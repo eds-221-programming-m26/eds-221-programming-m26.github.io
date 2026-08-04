@@ -20,17 +20,26 @@ knitr::include_graphics("images/horst-welcome.png")
 
 <!-- No pre-class prep before our first day of class! -->
 
-## Class materials
+## Morning session: Code execution
 
-| {{< fa calendar-day title="A calendary with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  |  {{< fa laptop-code title="A laptop with on-screen code" >}} Interactive session |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| day 1 / morning   | [Course introduction, programming in EDS, meet our tools](https://docs.google.com/presentation/d/1rQhErlT1nBF1xs9bzPWRMzGBeSTnNuSDV5vW7eYEswo/present?usp=sharing){target="_blank"} | [Don't fear the Terminal - continuing with some commands, navigation, and more git](interactive-sessions/interactive-session-1a.qmd){target="_blank"} |
-| day 1 / afternoon | [Project oriented workflows, file paths, naming things;](https://docs.google.com/presentation/d/10AOZ2Qkl011zhhICHGLG5nR6pfumvAC8Ce-_dg-DXfs/present?usp=sharing){target="_blank"} good habits from the [tidyverse style guide](https://style.tidyverse.org/){target="_blank"} | [Meet `here`, project organization, adding data import to our workflow](interactive-sessions/interactive-session-1b.qmd){target="_blank"} |
-: {.hover .bordered tbl-colwidths="[20,40,40]"} 
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Course introduction](FIXME){target="_blank"}
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Hands-on coral reef simulation](FIXME){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: console, script, environemnt](FIXME){target="_blank"}
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: operators and functions](FIXME){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: code execution](FIXME){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/rMmqvrVNCVScavCU6){target="_blank"}
+
+## Afternoon session: Version control
+
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Tracking changes](FIXME){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: git and GitHub](FIXME){target="_blank"}
+* {{< fa laptop title="A laptop" >}} [Trace git commands](FIXME){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: version control](FIXME){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/vE1sEsh8b8cpRUkQ7){target="_blank"}
 
 ## End-of-day practice
 
 Complete the following tasks / activities before heading home for the day!
 
-- [{{< fa pencil title="A pencil" >}} **Day 1 Practice:** Project organization, data import, file paths](eod-practice/eod-day1.qmd){target="_blank"}
+- {{< fa laptop title="A laptop" >}} [**Day 1 Practice:** Create a repo for your coral reef simulator](eod-practice/eod-day1.qmd){target="_blank"}
 
