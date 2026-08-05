@@ -1,204 +1,133 @@
 ---
-title: "Day 2: Tasks & Activities"
-subtitle: "Data types, indexing data, import & plot data"
+title: "Day 2: End-of-day practice"
+subtitle: "Initialize your reef"
 ---
 
+Yesterday you laid the groundwork for your coral reef simulator by creating the repository. Today, you'll write code to perform the reef initialization step.
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(tidyverse)
-library(here)
-library(janitor)
-```
+In the game, you initialized the reef by randomly picking 8 grid cells and placing live coral tokens on them. Here, you'll write a script to do something similar.
 
-## 1. Checking data types
-### Setup
+## Pseudocode for reef initialization
 
-- Create a new repo on GitHub for today's activities
-- Clone to create a version controlled R Project 
-- Create subfolders called `docs`, `data`, and `figs`
-- Create a Quarto Document, save in the `docs` subfolder as `r_data_types.qmd` 
+It's not exactly code, but it's not quite plain language either - let's get to know _pseudocode_.
 
-### Checking data types
-
-#### Vectors, lists & data frames
-
-In your Quarto document: 
-
-1. Create a vector called `vec_1`containing the following: 
-
-```{r}
-#| eval: false
-2, 5, 9, 10, 8, 12, 1, 0
-```
-
-```{r, include = FALSE}
-vec_1 <- c(2, 5, 9, 10, 8, 12, 1, 0)
-
-vec_1_e5_up <- vec_1[5:7]
-
-vec_1_char <- as.character(vec_1)
-vec_1_char
-
-vec_1_logical <- as.logical(vec_1)
-vec_1_logical
-```
-
-Check the following for that vector: 
-
-- What is the class of the vector? `class()`
-- What type of variable does it store? `typeof()`
-- Access the 3rd element and store as `vec_1_e3`
-- Access the 1st element and store as `vec_1_e1`
-- Access the 5th through 7th elements and store as `vec_1_e5to7`
-- Reassign `vec_1` as a character using `as.character`, stored as `vec_1_char`. What does the output look like? 
-
-2. Create a vector called `vec_2`
-
-`vec_2` should contained *named* elements, where `town = "Santa Barbara`, `location = "Rincon"`, `swell = "south"`
-
-```{r, include = FALSE}
-vec_2 <- c(town = "Santa Barbara", location = "Rincon", swell = "south")
-
-class(vec_2)
-typeof(vec_2)
-
-vec_2[2]
-
-vec_2["location"]
+Here's pseudocode describing how to initialize the reef:
 
 ```
-
-- Take a look at what you've made
-- What is the class of vector elements? `class()`
-- What is the length of vec_2?
-- Access the 2nd element by name and store as `vec_2_e2`
-
-3. Create a data frame in R
-
-Write code to create a data frame called `df_1` that looks like this: 
-```{r, echo = FALSE}
-df_1 <- data.frame(region = c("A", "B", "A", "D"),
-                   species = c("otter", "great white", "sea lion", "gray whale"),
-                   count = c(12, 2, 36, 6))
-
-df_1
-
-max_count <- max(df_1$count)
+Create a 5x5 matrix of 0s representing the coral reef
+Label the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc
+Randomly sample 8 cell labels (without replacement)
+For each sample cell label:
+    Convert the cell label to a row index
+    Convert the cell label to a column index
+    Use the row and column indices to set the value of the matrix cell to 1
+Print the matrix
 ```
 
-- Return the class of the entire data frame
-- Return the class of the species column
-- Find the maximum value of the `count()` column, store as `max_count`
+A few things you should notice. 
 
+1. Pseudocode has the feel of code, but the details are a little hand-wavy.
+2. Some lines represent a single code expression (e.g., the first line creates a variable with a call to `matrix()`), while others may require more than a single expression to implement.
+3. It's a higher-level description of the procedure than code itself, although more detailed than simply plain language.
 
-## 2. Wild data
+Because of these properties, pseudocode is a valuable tool in several stages of the coding process. It's quicker to write and faster to digest than real code, so it's useful for planning _and_ for explaining. But it also has just enough detail that it requires you to think carefully about how your code is going to work. You'll be writing pseudocode yourself later this week.
 
-#### Set-up
+Now it's your turn to translate the pseudocode into real code.
 
-- Visit the EDI site to learn about Mack Creek salamander & cutthroat trout data you'll be using here: [data package](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-and.4027.14)
+## Implement the pseudocode
 
-- Download the *first CSV* listed (`AS00601.csv`), and take a look at it (outside of R is fine as a first step, e.g. you can open the CSV in Excel)
+### 0. Get ready
 
-- Explore the metadata (see View Full Metadata in the [Resources section](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-and.4027.14) of the data website)
+Open your coral reef simulator folder in Positron and make a new script called initalize_reef.R. Put this expression on the first line:
 
-- What does each column contain? What are the units of each? What is the study overall about? 
-
-- Create a new Quarto Document and save it in your `docs` folder. Attach the `tidyverse`, `here` and `janitor` packages in the setup chunk (you choose the file name)
-
-- Set global options in the YAML so that messages and warnings do NOT show up in the rendered document
-
-- Save the `AS00601.csv` in your `data` folder of your project
-
-#### Read in the data
-
-- Read in the data using `read_csv()` with `here()`, store as `mack_verts`
-```{r, include = FALSE}
-mack_verts <- read_csv(here("course-materials","eod-practice","data","AS00601.csv"))
+```r
+set.seed(32)
 ```
 
-- Look at what you've read in (e.g. with view())
+### 1. Create the matrix
 
-#### A bit of wrangling & exploring
-
-- Update the variable names in `mack_verts` to lower snake case
-
-```{r, include = FALSE}
-mack_verts <- clean_names(mack_verts)
+```
+Create a 5x5 matrix of 0s representing the coral reef
 ```
 
-- In a new code chunk, practice accessing individual pieces of the data frame (there is no real functionality to this right now, but just to reinforce stuff we learned in our interactive session): 
+Write an expression to implement this step in the procedure. You should be able to do it in one line.
 
-  - Store the 5th value in column "WEIGHT" as `mc_wt_5`. Check by looking at your data frame to confirm.
-  - Store the 8th - 20th value in the "LENGTH1" column as `mc_length_8_20`. Check by looking at your data frame to confirm. 
-  - Store everything in column SAMPLEDATE as a vector called `mc_dates`
-    
-```{r, include = FALSE}
-mc_wt_5 <- mack_verts$weight[5]
+### 2. Randomly sample coral starting locations
 
-mc_length_8_20 <- mack_verts$length1[8:20]
-
-mc_dates <- mack_verts$sampledate
+```
+Label the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc
+Randomly sample 8 cell labels (without replacement)
 ```
 
-#### Make a salamander subset
+The first line of pseudocode here is a cue for the reader. It would help to draw it on a sheet of paper for you to visualize it (drawing while you code is always a good idea!), but no code is needed here.
 
-- Create a subset that only contains observations for Pacific Giant Salamanders (species *Dicamptodon tenebrosus*, stored in `species` as `DITE`). Store the subset as `mc_salamanders`. *Hint:* see `dplyr::filter()`!
+The second line requires another expression. Again, you should be able to do this in one line of code.
 
-```{r, include = FALSE}
-mc_salamanders <- mack_verts %>% 
-  filter(species == "DITE")
+### 3. Place your coral tokens
+
+```
+For each sample cell label:
+    Convert the cell label to a row index
+    Convert the cell label to a column index
+    Use the row and column indices to set the value of the matrix cell to 1
 ```
 
-#### Make a scatterplot of salamander length x weight
+This part of the pseudocode requires you to repeat the same step multiple times - a _loop_. We'll cover loops on Day 3, so for today your task is to initialize just one cell. Use the first value from your random sample of coral starting locations.
 
-- Create a scatterplot of length1 (snout-vent length in millimeters) versus weight (grams) for all salamanders in the subset you created above, `mc_salamanders`. Update axis labels, title, subtitle, and add a caption with the data source. Customize point color and size, possibly opacity, and theme. 
+Converting the cell label to row and column indices requires some problem solving! Make sure you can do the conversion on paper before writing the code.
 
-```{r, include = FALSE}
-salamander_plot <- ggplot(data = mc_salamanders, aes(x = length1, y = weight)) + 
-  geom_point(alpha = 0.5, color = "purple") +
-  theme_minimal()
+::: {.callout-tip}
+## Tip
 
-salamander_plot
-```
+Here's how I suggest solving it on paper - but you're encouraged to do whatever helps you visualize and reason about the problem! Draw a 5x5 grid on a piece of paper. Label the rows and columns with their indices, and put the numbers 1 to 25 in the cells. From there, try to figure out how to convert the labels to indices.
 
-- Export your scatterplot as `salamander_size.png` to your figs folder.
-
-```{r, include = FALSE}
-ggsave(here::here("course-materials","eod-practice", "output", "salamander_size.png"), plot = salamander_plot)
-```
-
-#### Make a cutthroat plot
-
-- Similar to above, make a subset called `mc_trout` that only contains observations for cutthroat trout (species "ONCL")
-- Create a scatterplot of length1 by weight for all trout in the dataset
-- Customize so that the point color depends on *reach* 
-- Customize your color scheme (e.g. `scale_color_manual()`)
-- Facet your plot by creek reach (hint: `facet_wrap(~...)`)
-- Update graph axis labels and title
-- Export your graph as `cutthroat_size.png` to the `figs` folder
-
-```{r, include = FALSE}
-mc_trout <- mack_verts %>% filter(species == "ONCL")
-
-ggplot(data = mc_trout, aes(x = length1, y = weight)) +
-  geom_point(aes(color = reach)) +
-  scale_color_manual(values = c("red", "orange", "purple")) +
-  facet_wrap(~reach) +
-  theme_minimal()
-
-ggsave(here("course-materials","eod-practice", "output","cutthroat_size.png"))
-```
-
-### Stage, commit, pull, push
-
-- Make sure your changes are safely stored by pushing to GitHub
-- Close your project locally
-- Reopen your project locally
-- Reopen your .qmd files for the activities you did today.
-- Render. Does it work? Done. 
-
-::: {.center-text .body-text-xl .teal-text}
-End Activity Session (Day 2)
+Hint: the `%%` and `%/%` operators will come in useful here!
 :::
 
+### 4. Print the matrix
+
+At the console. 
+
+### Validation checks
+
+Check that...
+
+- [ ] Your first sampled label is 6
+- [ ] The leftmost cell of the second row of your matrix is 1
+- [ ] The other 24 cells in your matrix are 0
+
+## Track your progress
+
+Save the files in your working directory, then stage, commit, and push your changes.
+
+### Validation checks
+
+Check that...
+
+- [ ] Your script is visible on GitHub
+- [ ] Your local and remote repositories are synced. `git status` should say:
+
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+## Wrap up
+
+That's it for day 2!
+
+Today you learned about:
+
+**Data types and 1d structures**
+
+* Real world data is represented with four computational types: character, double, integer, and logical.
+* Vectors are constrained to one type, so combining vectors of different types induces _coercion_.
+* There are lots of different ways to create vectors, such as `logical()`, `:`, and `c()`.
+
+**Indexing and 2d data**
+
+* Reading and writing from data structures happens through _indexing_.
+* Indexing into 1d data structures can be done with positive integers (selection by position), negative integers (exclusion by position), names, and logic. In addition, you can index 2d data with blanks to access along an entire dimension.
+* Data frames are a particularly important 2d data structure and the workhorse of data science. We'll work extensively with data frames starting next week after you build your computational thinking foundation.

@@ -1,7 +1,7 @@
 ---
 title: "Data representations"
 subtitle: "Day 2"
-description: "Tuesday August 12^th^, 2025"
+description: "Tuesday August 11^th^, 2026"
 ---
 
 ```{r}
@@ -20,21 +20,25 @@ knitr::include_graphics("images/horst-data-types.jpeg")
 
 <!-- No pre-class prep before our first day of class! -->
 
-## Class materials
+## Morning session: Data types and 1d structures
 
-| {{< fa calendar-day title="A calendary with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  |  {{< fa laptop-code title="A laptop with on-screen code" >}} Interactive session |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| day 2 / morning   | [Data representations and types](https://docs.google.com/presentation/d/1P8-NoqJz0dvKRBhSEiI73XHMzQy2vvlpj9P9a9c1Dtc/present?usp=sharing){target="_blank"} | [Creating and indexing with different data types in R and Python](interactive-sessions/interactive-session-2a.qmd){target="_blank"} |
-| day 2 / afternoon | [Common data types and structures in EDS](https://docs.google.com/presentation/d/14h2Re_ceXFlRzSWlToOE3GnJiOJUuPK_YgJ_xggY7MI/present?usp=sharing){target="_blank"} | [Data in R: accessing / updating elements & casting continued](interactive-sessions/interactive-session-2b.qmd){target="_blank"} |
-: {.hover .bordered tbl-colwidths="[20,40,40]"} 
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Create a data sheet](FIXME){target="_blank"}
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: type coercion](FIXME){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: creating vectors](FIXME){target="_blank"}
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Types and vectors mini-lecture](FIXME){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: data types and 1d structures](FIXME){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/eox8Ynzj7AC4Ccu88){target="_blank"}
+
+## Afternoon session: Indexing and 2d data
+
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: indexing](FIXME){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: indexing and 2d data](FIXME){target="_blank"}
+* {{< fa laptop title="A laptop" >}} [Debugger: indexing errors](FIXME){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: Indexing and 2d data](FIXME){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/CCsDQJrHqv4hDBi99){target="_blank"}
 
 ## End-of-day practice
 
 Complete the following tasks / activities before heading home for the day!
 
-- [{{< fa pencil title="A pencil" >}} **Day 2 Practice:** Exploring data types, indexing, importing, and plotting](eod-practice/eod-day2.qmd){target="_blank"}
-
-## Additional Resources
-
-TBD
-
+- {{< fa laptop title="A laptop" >}} [**Day 2 Practice:** Initialize the reef](eod-practice/eod-day2.qmd){target="_blank"}
