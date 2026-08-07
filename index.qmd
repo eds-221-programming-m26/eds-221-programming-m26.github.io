@@ -1,7 +1,7 @@
 ---
 title: "Scientific Programming Essentials"
 subtitle: "Master of Environmental Data Science (MEDS)"
-description: "Summer 2025"
+description: "Summer 2026"
 title-block-banner: false
 toc: false
 ---
@@ -21,21 +21,18 @@ knitr::include_graphics("images/horst-language-critters.png")
 
 ## Course Description
 
-This course teaches key scientific programming skills and demonstrates the application of these techniques to environmental data analysis and problem solving. Topics include structured programming and algorithm development, flow control, simple and advanced data input-output and representation, functions and objects, documentation, testing and debugging. The course will be taught using a combination of the R and Python programming languages.
+This course teaches scientific programming skills and demonstrates the application of these techniques to environmental data analysis and problem solving. Topics include fundamental programming concepts, transforming and visualizing data, and exposure to modern data science tools. The course will be taught in R.
 
-By the end of EDS 221, students should be able to:
+By the end of this course, students will be able to: 
 
-- **Understand, create, and work with different data structures** (e.g. vectors, data frames, lists) **and types** (e.g. numeric, character, factor, logical, date-times)
-
-- **Design, implement, test, and document functions**, including functions with iteration, conditionals, messages, and warnings in R
-
-- **Use basic** (non-collaborative) **project-oriented workflos with reproducible code** (R scripts, Quarto documents, Jupyter notebooks) **and version control** (git/GitHub basics)
-
-- **Perform basic data wrangling and visualization** with real world environmental data and tidyverse packages (in R)
-
-- **Employ troubleshooting and debugging strategies** including tools, mindsets, strategies, and resources
-
-
+- 🧠 **Think** like a computer scientist
+  - 🌎 Represent real world data using computational data structures
+  - 🤖 Interpret and design algorithms to solve problems
+  - 🍄 Decompose complex problems into modular components
+- 🎨 **Create** like a computer scientist
+  - 🔠 Read and write code using proper syntax
+  - 🛠 Implement algorithms with control structures and functions
+  - 👷 Manage coding projects using version control
 
 ## Teaching Team
 
@@ -53,13 +50,12 @@ By the end of EDS 221, students should be able to:
 #| echo: false
 #| fig-align: "center"
 #| out-width: "45%" 
-knitr::include_graphics("images/ruth.png")
+knitr::include_graphics("images/max.png")
 ```
 
 ::: {.center-text}
-[**Ruth Oliver**]{.teal-text}  
-**Email:** [rutholiver@ucsb.edu](mailto::rutholiver@ucsb.edu)  
-**Learn more:** [oliverlab.org](https://oliverlab.org/){target="_blank"}  
+[**Max Czapanskiy (they/them)**]{.teal-text}  
+**Email:** [maxczap@ucsb.edu](mailto::maxczap@ucsb.edu)   
 :::
 
 :::
@@ -79,9 +75,8 @@ knitr::include_graphics("images/alessandra.png")
 ```
 
 ::: {.center-text}
-[**Alessandra Vidal Meza**]{.teal-text}  
-**Email:** [avidalmeza@bren.ucsb.edu](mailto::avidalmeza@bren.ucsb.edu)   
-**Learn more:** [avidalmeza.github.io](https://avidalmeza.github.io/){target="_blank"}
+[**Alessandra Vidal Meza (she/her/ella)**]{.teal-text}  
+**Email:** [avidalmeza@bren.ucsb.edu](mailto::avidalmeza@bren.ucsb.edu)
 :::
 
 :::
@@ -89,4 +84,4 @@ knitr::include_graphics("images/alessandra.png")
 
 ## Acknowledgements
 
-EDS 221 was originally developed and taught by [Allison Horst](https://allisonhorst.github.io/). This new website houses materials which are *heavily* reused, adapted from, and inspired by Allison's original work.
+EDS 221 was originally developed and taught by [Allison Horst](https://allisonhorst.github.io/). This course website contains material reused from, adapted from, and inspired by Allison's original work.

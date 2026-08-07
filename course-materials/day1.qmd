@@ -22,24 +22,24 @@ knitr::include_graphics("images/horst-welcome.png")
 
 ## Morning session: Code execution
 
-* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Course introduction](FIXME){target="_blank"}
-* {{< fa pen-to-square title="A pencil writing on paper" >}} [Hands-on coral reef simulation](FIXME){target="_blank"}
-* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: console, script, environemnt](FIXME){target="_blank"}
-* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: operators and functions](FIXME){target="_blank"}
-* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: code execution](FIXME){target="_blank"}
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Course introduction](https://docs.google.com/presentation/d/1vTuBI5KRnC_q1SLoFIQNz3Qmla9FFmWebzJ5b5fNl_g/edit?usp=sharing){target="_blank"}
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Hands-on coral reef model](activities/day1/day1am-coral-reef-model.qmd)
+* {{< fa users-line title="Multiple people working together" >}} Live coding demo: console, script, environment^[The script from the live coding demo will be linked from here after the session ends.]
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: operators and functions](activities/day1/day1am-code-sleuth.pdf){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: code execution](activities/day1/day1am-concept-mapping.pdf){target="_blank"}
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/rMmqvrVNCVScavCU6){target="_blank"}
 
 ## Afternoon session: Version control
 
-* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Tracking changes](FIXME){target="_blank"}
-* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: git and GitHub](FIXME){target="_blank"}
-* {{< fa laptop title="A laptop" >}} [Trace git commands](FIXME){target="_blank"}
-* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: version control](FIXME){target="_blank"}
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Tracking changes](https://docs.google.com/presentation/d/1monH7YHyB1c6jcglZlUvK-m-2w-Z0j-z-4cEoa7qxdo){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} Live coding demo: git and GitHub
+* {{< fa laptop title="A laptop" >}} [Trace git commands](activities/day1/day1pm-git-challenge.qmd)
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: version control](activities/day1/day1pm-concept-mapping.pdf){target="_blank"}
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/vE1sEsh8b8cpRUkQ7){target="_blank"}
 
 ## End-of-day practice
 
 Complete the following tasks / activities before heading home for the day!
 
-- {{< fa laptop title="A laptop" >}} [**Day 1 Practice:** Create a repo for your coral reef simulator](eod-practice/eod-day1.qmd){target="_blank"}
+- {{< fa laptop title="A laptop" >}} [**Day 1 Practice:** Create a repo for your coral reef model](eod/eod-day1.qmd){target="_blank"}
 

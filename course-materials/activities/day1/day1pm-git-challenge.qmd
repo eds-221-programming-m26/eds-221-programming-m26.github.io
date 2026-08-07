@@ -1,0 +1,114 @@
+---
+title: "git challenge"
+---
+
+## Instructions
+
+This exercise will take you through a standard git workflow on your computer and on a whiteboard.
+
+Begin by drawing four boxes on your whiteboard. Label them **working directory**, **staging area**, **local repo** and **remote repo**.
+
+### 1. Clone the repo
+
+This exercise begins with a repo on GitHub. Visit [https://github.com/eds-221-programming-m26/eds221-git-challenge](https://github.com/eds-221-programming-m26/eds221-git-challenge){target="_blank"} in your browser to see what the repo looks like. You should see a README file containing the same instructions as the page on the course website.
+
+Cloning copies a **remote repository** on GitHub to a **local repository** on your computer.
+
+#### At your computer
+
+1. Switch to the Terminal in Positron (_not_ the R console). 
+2. `cd` to your eds221/ directory (_not_ your eds221-day1pm/ directory; one level up from there).
+3. Clone the remote repo with this command:
+    
+    `git clone https://github.com/eds-221-programming-m26/eds221-git-challenge`
+
+You should now see the directory eds221/eds221-git-challenge/.
+
+#### At your whiteboard
+
+1. Draw a line from your **remote repo** box to your **working directory** box. 
+2. Label the line **git clone**.
+
+### 2. Make changes in your working directory
+
+The working directory is the directory on your computer that git recognizes as a repository. git will track your changes as you edit, create, and delete files in this directory.
+
+#### At your computer
+
+1. Open the eds221/eds221-git-challenge/ folder in Positron.
+2. Edit the README. Add a sentence stating your name and the name of your favorite video game from childhood. If you didn't play video games, pick another kind of game (board, card, sport, etc).
+3. Save the README.
+4. Create directory called R/. 
+5. Create a script in R/ called fave-game.R. Add these expressions to your script, replacing the text as appropriate.
+
+```r
+my_fave_game <- "your favorite childhood game here"
+paste("my favorite childhood game was", my_fave_game)
+```
+
+6. At the terminal, run `git status`. You should see that README.md and R/ have been modified. If they haven't, make sure you saved your changes.
+
+Note: only R/, rather than R/fave-game.R, shows up now because the directory is new. After you stage individual files, you'll see the full paths show up.
+
+#### At your whiteboard
+
+1. Write **README.md** and **R/fave-game.R** on sticky notes.
+2. Place the sticky notes in the **working directory** box.
+
+### 3. Stage your changes
+
+If using git is like working in a kitchen, then the staging area is the countertop. It's where you put your ingredients (file changes in the working directory; the previous step) before you cook with them (committing changes; the next step).
+
+#### At your computer
+
+1. At the terminal, run `git add README.md`.
+2. Run `git status` again. Verify that README.md is under "Changes to be committed", but R/ is still in "Untracked files".
+
+#### At your whiteboard
+
+1. Move the **README.md** sticky note to the **staging area** box.
+
+#### At your computer
+
+1. At the terminal, run `git add R/fave-game.R`.
+2. Run `git status` again. Verify that both README.md _and_ R/fave-game.R are under "Changes to be committed".
+
+#### At your whiteboard
+
+1. Move the **R/fave-game.R** sticky note to the **staging area** box.
+
+### 4. Commit your changes
+
+You've pulled out your ingredients, now it's time to cook. Committing your changes creates a new checkpoint in your local repository. It's the equivalent of an entry in a Wikipedia page revision history.
+
+#### At your computer
+
+1. At the terminal, run `git commit -m "Add favorite game"`.
+
+The `-m "Add favorite game"` part defines your commit message. It's a brief summary of the changes included in the commit.
+
+2. Run `git status` again. Verify that you see "Your branch is ahead of 'origin/main' by 1 commit", which means your local repository has a commit that isn't on the remote repository yet. Also verify that you see "nothing to commit, working tree clean", which means that your working directory and local repository are synced up.
+
+#### At your whiteboard
+
+1. Move the **README.md** and **R/fave-game.R** sticky notes to the **local repository** box _together_. This represents all the staged changes getting packaged up in a single commit.
+
+### 5. Push your changes
+
+You've cooked the meal, but no one can eat because you haven't served it yet. Pushing your commit will send your local changes to the remote repository on GitHub. At that point, collaborators and clients will be able to see your work.
+
+#### At your computer
+
+1. At the terminal, run `git push`. You should see messages about enumerating, counting, compressing, and writing objects. These all mean the commit is making its way from your computer up to the remote repository.
+2. Run `git status`. You should see a local repository looking very content and pleased with itself. That looks like this:
+
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+#### At your whiteboard
+
+1. Move the **README.md** and **R/fave-game.R** sticky notes to the **remote repository** box.

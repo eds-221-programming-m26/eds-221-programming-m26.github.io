@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Friday August 21st, 2025">
 
-<title>Review</title>
+<title>git challenge</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,28 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">EDS 221</span>
     </a>
   </div>
@@ -92,11 +125,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../eds221-syllabus-m26.pdf" target="_blank"> 
+    <a class="nav-link" href="../../../eds221-syllabus-m26.pdf" target="_blank"> 
 <span class="menu-text">syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -105,43 +138,43 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
         <li>
-    <a class="dropdown-item" href="../course-materials/day1.html">
+    <a class="dropdown-item" href="../../../course-materials/day1.html">
  <span class="dropdown-text">day 1 (8/10)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day2.html">
+    <a class="dropdown-item" href="../../../course-materials/day2.html">
  <span class="dropdown-text">day 2 (8/11)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day3.html">
+    <a class="dropdown-item" href="../../../course-materials/day3.html">
  <span class="dropdown-text">day 3 (8/12)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day4.html">
+    <a class="dropdown-item" href="../../../course-materials/day4.html">
  <span class="dropdown-text">day 4 (8/13)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day5.html">
+    <a class="dropdown-item" href="../../../course-materials/day5.html">
  <span class="dropdown-text">day 5 (8/14)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day6.html">
+    <a class="dropdown-item" href="../../../course-materials/day6.html">
  <span class="dropdown-text">day 6 (8/17)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day7.html">
+    <a class="dropdown-item" href="../../../course-materials/day7.html">
  <span class="dropdown-text">day 7 (8/18)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day8.html">
+    <a class="dropdown-item" href="../../../course-materials/day8.html">
  <span class="dropdown-text">day 8 (8/29)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day9.html">
+    <a class="dropdown-item" href="../../../course-materials/day9.html">
  <span class="dropdown-text">day 9 (8/20)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day10.html">
+    <a class="dropdown-item" href="../../../course-materials/day10.html">
  <span class="dropdown-text">day 10 (8/21)</span></a>
   </li>  
     </ul>
@@ -161,19 +194,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Review</h1>
-            <p class="subtitle lead">Day 10</p>
-                  <div>
-        <div class="description">
-          Friday August 21<sup>st</sup>, 2025
-        </div>
-      </div>
-                </div>
+    <div class="quarto-title column-page-left">
+      <h1 class="title">git challenge</h1>
+                      </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -184,24 +211,156 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a>
+  <ul class="collapse">
+  <li><a href="#clone-the-repo" id="toc-clone-the-repo" class="nav-link" data-scroll-target="#clone-the-repo">1. Clone the repo</a></li>
+  <li><a href="#make-changes-in-your-working-directory" id="toc-make-changes-in-your-working-directory" class="nav-link" data-scroll-target="#make-changes-in-your-working-directory">2. Make changes in your working directory</a></li>
+  <li><a href="#stage-your-changes" id="toc-stage-your-changes" class="nav-link" data-scroll-target="#stage-your-changes">3. Stage your changes</a></li>
+  <li><a href="#commit-your-changes" id="toc-commit-your-changes" class="nav-link" data-scroll-target="#commit-your-changes">4. Commit your changes</a></li>
+  <li><a href="#push-your-changes" id="toc-push-your-changes" class="nav-link" data-scroll-target="#push-your-changes">5. Push your changes</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/under-construction.png" class="img-fluid figure-img"></p>
-<figcaption>Website under construction sign</figcaption>
-</figure>
-</div>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>This exercise will take you through a standard git workflow on your computer and on a whiteboard.</p>
+<p>Begin by drawing four boxes on your whiteboard. Label them <strong>working directory</strong>, <strong>staging area</strong>, <strong>local repo</strong> and <strong>remote repo</strong>.</p>
+<section id="clone-the-repo" class="level3">
+<h3 class="anchored" data-anchor-id="clone-the-repo">1. Clone the repo</h3>
+<p>This exercise begins with a repo on GitHub. Visit <a href="https://github.com/eds-221-programming-m26/eds221-git-challenge" target="_blank">https://github.com/eds-221-programming-m26/eds221-git-challenge</a> in your browser to see what the repo looks like. You should see a README file containing the same instructions as the page on the course website.</p>
+<p>Cloning copies a <strong>remote repository</strong> on GitHub to a <strong>local repository</strong> on your computer.</p>
+<section id="at-your-computer" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-computer">At your computer</h4>
+<ol type="1">
+<li><p>Switch to the Terminal in Positron (<em>not</em> the R console).</p></li>
+<li><p><code>cd</code> to your eds221/ directory (<em>not</em> your eds221-day1pm/ directory; one level up from there).</p></li>
+<li><p>Clone the remote repo with this command:</p>
+<p><code>git clone https://github.com/eds-221-programming-m26/eds221-git-challenge</code></p></li>
+</ol>
+<p>You should now see the directory eds221/eds221-git-challenge/.</p>
+</section>
+<section id="at-your-whiteboard" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-whiteboard">At your whiteboard</h4>
+<ol type="1">
+<li>Draw a line from your <strong>remote repo</strong> box to your <strong>working directory</strong> box.</li>
+<li>Label the line <strong>git clone</strong>.</li>
+</ol>
+</section>
+</section>
+<section id="make-changes-in-your-working-directory" class="level3">
+<h3 class="anchored" data-anchor-id="make-changes-in-your-working-directory">2. Make changes in your working directory</h3>
+<p>The working directory is the directory on your computer that git recognizes as a repository. git will track your changes as you edit, create, and delete files in this directory.</p>
+<section id="at-your-computer-1" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-computer-1">At your computer</h4>
+<ol type="1">
+<li>Open the eds221/eds221-git-challenge/ folder in Positron.</li>
+<li>Edit the README. Add a sentence stating your name and the name of your favorite video game from childhood. If you didn’t play video games, pick another kind of game (board, card, sport, etc).</li>
+<li>Save the README.</li>
+<li>Create directory called R/.</li>
+<li>Create a script in R/ called fave-game.R. Add these expressions to your script, replacing the text as appropriate.</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_fave_game <span class="ot">&lt;-</span> <span class="st">"your favorite childhood game here"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"my favorite childhood game was"</span>, my_fave_game)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="6" type="1">
+<li>At the terminal, run <code>git status</code>. You should see that README.md and R/ have been modified. If they haven’t, make sure you saved your changes.</li>
+</ol>
+<p>Note: only R/, rather than R/fave-game.R, shows up now because the directory is new. After you stage individual files, you’ll see the full paths show up.</p>
+</section>
+<section id="at-your-whiteboard-1" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-whiteboard-1">At your whiteboard</h4>
+<ol type="1">
+<li>Write <strong>README.md</strong> and <strong>R/fave-game.R</strong> on sticky notes.</li>
+<li>Place the sticky notes in the <strong>working directory</strong> box.</li>
+</ol>
+</section>
+</section>
+<section id="stage-your-changes" class="level3">
+<h3 class="anchored" data-anchor-id="stage-your-changes">3. Stage your changes</h3>
+<p>If using git is like working in a kitchen, then the staging area is the countertop. It’s where you put your ingredients (file changes in the working directory; the previous step) before you cook with them (committing changes; the next step).</p>
+<section id="at-your-computer-2" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-computer-2">At your computer</h4>
+<ol type="1">
+<li>At the terminal, run <code>git add README.md</code>.</li>
+<li>Run <code>git status</code> again. Verify that README.md is under “Changes to be committed”, but R/ is still in “Untracked files”.</li>
+</ol>
+</section>
+<section id="at-your-whiteboard-2" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-whiteboard-2">At your whiteboard</h4>
+<ol type="1">
+<li>Move the <strong>README.md</strong> sticky note to the <strong>staging area</strong> box.</li>
+</ol>
+</section>
+<section id="at-your-computer-3" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-computer-3">At your computer</h4>
+<ol type="1">
+<li>At the terminal, run <code>git add R/fave-game.R</code>.</li>
+<li>Run <code>git status</code> again. Verify that both README.md <em>and</em> R/fave-game.R are under “Changes to be committed”.</li>
+</ol>
+</section>
+<section id="at-your-whiteboard-3" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-whiteboard-3">At your whiteboard</h4>
+<ol type="1">
+<li>Move the <strong>R/fave-game.R</strong> sticky note to the <strong>staging area</strong> box.</li>
+</ol>
+</section>
+</section>
+<section id="commit-your-changes" class="level3">
+<h3 class="anchored" data-anchor-id="commit-your-changes">4. Commit your changes</h3>
+<p>You’ve pulled out your ingredients, now it’s time to cook. Committing your changes creates a new checkpoint in your local repository. It’s the equivalent of an entry in a Wikipedia page revision history.</p>
+<section id="at-your-computer-4" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-computer-4">At your computer</h4>
+<ol type="1">
+<li>At the terminal, run <code>git commit -m "Add favorite game"</code>.</li>
+</ol>
+<p>The <code>-m "Add favorite game"</code> part defines your commit message. It’s a brief summary of the changes included in the commit.</p>
+<ol start="2" type="1">
+<li>Run <code>git status</code> again. Verify that you see “Your branch is ahead of ‘origin/main’ by 1 commit”, which means your local repository has a commit that isn’t on the remote repository yet. Also verify that you see “nothing to commit, working tree clean”, which means that your working directory and local repository are synced up.</li>
+</ol>
+</section>
+<section id="at-your-whiteboard-4" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-whiteboard-4">At your whiteboard</h4>
+<ol type="1">
+<li>Move the <strong>README.md</strong> and <strong>R/fave-game.R</strong> sticky notes to the <strong>local repository</strong> box <em>together</em>. This represents all the staged changes getting packaged up in a single commit.</li>
+</ol>
+</section>
+</section>
+<section id="push-your-changes" class="level3">
+<h3 class="anchored" data-anchor-id="push-your-changes">5. Push your changes</h3>
+<p>You’ve cooked the meal, but no one can eat because you haven’t served it yet. Pushing your commit will send your local changes to the remote repository on GitHub. At that point, collaborators and clients will be able to see your work.</p>
+<section id="at-your-computer-5" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-computer-5">At your computer</h4>
+<ol type="1">
+<li>At the terminal, run <code>git push</code>. You should see messages about enumerating, counting, compressing, and writing objects. These all mean the commit is making its way from your computer up to the remote repository.</li>
+<li>Run <code>git status</code>. You should see a local repository looking very content and pleased with itself. That looks like this:</li>
+</ol>
+<pre><code>On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean</code></pre>
+</section>
+<section id="at-your-whiteboard-5" class="level4">
+<h4 class="anchored" data-anchor-id="at-your-whiteboard-5">At your whiteboard</h4>
+<ol type="1">
+<li>Move the <strong>README.md</strong> and <strong>R/fave-game.R</strong> sticky notes to the <strong>remote repository</strong> box.</li>
+</ol>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

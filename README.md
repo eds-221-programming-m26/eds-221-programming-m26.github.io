@@ -6,26 +6,24 @@
 
 ## Course Description
 
-This course teaches key scientific programming skills and demonstrates the application of these techniques to environmental data analysis and problem solving. Topics include structured programming and algorithm development, flow control, simple and advanced data input-output and representation, functions and objects, documentation, testing and debugging. The course will be taught using a combination of the R and Python programming languages.
+This course teaches scientific programming skills and demonstrates the application of these techniques to environmental data analysis and problem solving. Topics include fundamental programming concepts, transforming and visualizing data, and exposure to modern data science tools. The course will be taught in R.
 
-By the end of EDS 221, students should be able to:
+By the end of this course, students will be able to: 
 
-- Understand, create, and work with different data structures (e.g. vectors, data frames, lists) and types (e.g. numeric, character, factor, logical, date-times)
-
-- Design, implement, test, and document functions, including functions with iteration, conditionals, messages, and warnings in R
-
-- Use basic** (non-collaborative) project-oriented workflos with reproducible code (R scripts, Quarto documents, Jupyter notebooks) and version control (git/GitHub basics)
-
-- Perform basic data wrangling and visualization with real world environmental data and tidyverse packages (in R)
-
-- Employ troubleshooting and debugging strategies including tools, mindsets, strategies, and resources
-
-  Visit the [course page](https://bren.ucsb.edu/courses/eds-221) on the Bren Website.
+- 🧠 **Think** like a computer scientist
+  - 🌎 Represent real world data using computational data structures
+  - 🤖 Interpret and design algorithms to solve problems
+  - 🍄 Decompose complex problems into modular components
+- 🎨 **Create** like a computer scientist
+  - 🔠 Read and write code using proper syntax
+  - 🛠 Implement algorithms with control structures and functions
+  - 👷 Manage coding projects using version control
 
 ## Report a bug / issue
 
-Found something that doesn't look quite right? Feel free to file an [issue](https://github.com/eds-221-programming-essentials/EDS-221-programming-essentials.github.io) and include a concise, clear description, along with a link to the location on the website. Screenshots are always appreciated as well!
+Found something that doesn't look quite right? Feel free to file an [issue](https://github.com/eds-221-programming-m26/eds-221-programming-m26.github.io/) and include a concise, clear description, along with a link to the location on the website. Screenshots are always appreciated as well!
 
 ## Acknowledgements
 
-EDS 221 (along with all [materials](https://allisonhorst.github.io/EDS_221_programming-essentials/)) was originally developed and taught by [Allison Horst](https://github.com/allisonhorst). This new website houses materials which are heavily reused, adapted from, and inspired by Allison’s original work.
+EDS 221 was originally developed and taught by [Allison Horst](https://allisonhorst.github.io/). This course website contains material reused from, adapted from, and inspired by Allison's original work.
+
