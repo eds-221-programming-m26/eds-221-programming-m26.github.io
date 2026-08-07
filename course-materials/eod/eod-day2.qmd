@@ -1,0 +1,133 @@
+---
+title: "Day 2: End-of-day practice"
+subtitle: "Initialize your reef"
+---
+
+Yesterday you laid the groundwork for your coral reef simulator by creating the repository. Today, you'll write code to perform the reef initialization step.
+
+In the game, you initialized the reef by randomly picking 8 grid cells and placing live coral tokens on them. Here, you'll write a script to do something similar.
+
+## Pseudocode for reef initialization
+
+It's not exactly code, but it's not quite plain language either - let's get to know _pseudocode_.
+
+Here's pseudocode describing how to initialize the reef:
+
+```
+Create a 5x5 matrix of 0s representing the coral reef
+Label the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc
+Randomly sample 8 cell labels (without replacement)
+For each sample cell label:
+    Convert the cell label to a row index
+    Convert the cell label to a column index
+    Use the row and column indices to set the value of the matrix cell to 1
+Print the matrix
+```
+
+A few things you should notice. 
+
+1. Pseudocode has the feel of code, but the details are a little hand-wavy.
+2. Some lines represent a single code expression (e.g., the first line creates a variable with a call to `matrix()`), while others may require more than a single expression to implement.
+3. It's a higher-level description of the procedure than code itself, although more detailed than simply plain language.
+
+Because of these properties, pseudocode is a valuable tool in several stages of the coding process. It's quicker to write and faster to digest than real code, so it's useful for planning _and_ for explaining. But it also has just enough detail that it requires you to think carefully about how your code is going to work. You'll be writing pseudocode yourself later this week.
+
+Now it's your turn to translate the pseudocode into real code.
+
+## Implement the pseudocode
+
+### 0. Get ready
+
+Open your coral reef simulator folder in Positron and make a new script called initalize_reef.R. Put this expression on the first line:
+
+```r
+set.seed(32)
+```
+
+### 1. Create the matrix
+
+```
+Create a 5x5 matrix of 0s representing the coral reef
+```
+
+Write an expression to implement this step in the procedure. You should be able to do it in one line.
+
+### 2. Randomly sample coral starting locations
+
+```
+Label the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc
+Randomly sample 8 cell labels (without replacement)
+```
+
+The first line of pseudocode here is a cue for the reader. It would help to draw it on a sheet of paper for you to visualize it (drawing while you code is always a good idea!), but no code is needed here.
+
+The second line requires another expression. Again, you should be able to do this in one line of code.
+
+### 3. Place your coral tokens
+
+```
+For each sample cell label:
+    Convert the cell label to a row index
+    Convert the cell label to a column index
+    Use the row and column indices to set the value of the matrix cell to 1
+```
+
+This part of the pseudocode requires you to repeat the same step multiple times - a _loop_. We'll cover loops on Day 3, so for today your task is to initialize just one cell. Use the first value from your random sample of coral starting locations.
+
+Converting the cell label to row and column indices requires some problem solving! Make sure you can do the conversion on paper before writing the code.
+
+::: {.callout-tip}
+## Tip
+
+Here's how I suggest solving it on paper - but you're encouraged to do whatever helps you visualize and reason about the problem! Draw a 5x5 grid on a piece of paper. Label the rows and columns with their indices, and put the numbers 1 to 25 in the cells. From there, try to figure out how to convert the labels to indices.
+
+Hint: the `%%` and `%/%` operators will come in useful here!
+:::
+
+### 4. Print the matrix
+
+At the console. 
+
+### Validation checks
+
+Check that...
+
+- [ ] Your first sampled label is 6
+- [ ] The leftmost cell of the second row of your matrix is 1
+- [ ] The other 24 cells in your matrix are 0
+
+## Track your progress
+
+Save the files in your working directory, then stage, commit, and push your changes.
+
+### Validation checks
+
+Check that...
+
+- [ ] Your script is visible on GitHub
+- [ ] Your local and remote repositories are synced. `git status` should say:
+
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+## Wrap up
+
+That's it for day 2!
+
+Today you learned about:
+
+**Data types and 1d structures**
+
+* Real world data is represented with four computational types: character, double, integer, and logical.
+* Vectors are constrained to one type, so combining vectors of different types induces _coercion_.
+* There are lots of different ways to create vectors, such as `logical()`, `:`, and `c()`.
+
+**Indexing and 2d data**
+
+* Reading and writing from data structures happens through _indexing_.
+* Indexing into 1d data structures can be done with positive integers (selection by position), negative integers (exclusion by position), names, and logic. In addition, you can index 2d data with blanks to access along an entire dimension.
+* Data frames are a particularly important 2d data structure and the workhorse of data science. We'll work extensively with data frames starting next week after you build your computational thinking foundation.

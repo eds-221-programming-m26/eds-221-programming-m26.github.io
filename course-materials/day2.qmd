@@ -1,7 +1,44 @@
 ---
-title: "Data structures"
+title: "Data representations"
 subtitle: "Day 2"
 description: "Tuesday August 11^th^, 2026"
 ---
 
-![Website under construction sign](images/under-construction.png)
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "80%"
+#| fig-align: "center"
+knitr::include_graphics("images/horst-data-types.jpeg")
+```
+
+:::{.gray-text .center-text}
+*Artwork by [Allison Horst](https://allisonhorst.com/)*
+:::
+
+<!-- ## Pre-class prep -->
+
+<!-- No pre-class prep before our first day of class! -->
+
+## Morning session: Data types and 1d structures
+
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Create a data sheet](FIXME){target="_blank"}
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: type coercion](FIXME){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: creating vectors](FIXME){target="_blank"}
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Types and vectors mini-lecture](FIXME){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: data types and 1d structures](FIXME){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/eox8Ynzj7AC4Ccu88){target="_blank"}
+
+## Afternoon session: Indexing and 2d data
+
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: indexing](FIXME){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: indexing and 2d data](FIXME){target="_blank"}
+* {{< fa laptop title="A laptop" >}} [Debugger: indexing errors](FIXME){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: Indexing and 2d data](FIXME){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/CCsDQJrHqv4hDBi99){target="_blank"}
+
+## End-of-day practice
+
+Complete the following tasks / activities before heading home for the day!
+
+- {{< fa laptop title="A laptop" >}} [**Day 2 Practice:** Initialize the reef](eod-practice/eod-day2.qmd){target="_blank"}
