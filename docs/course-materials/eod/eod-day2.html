@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Monday August 17th, 2025">
 
-<title>Data frames</title>
+<title>Day 2: End-of-day practice</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,28 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EDS 221</span>
     </a>
   </div>
@@ -92,11 +125,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../eds221-syllabus-m26.pdf" target="_blank"> 
+    <a class="nav-link" href="../../eds221-syllabus-m26.pdf" target="_blank"> 
 <span class="menu-text">syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -105,43 +138,43 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
         <li>
-    <a class="dropdown-item" href="../course-materials/day1.html">
+    <a class="dropdown-item" href="../../course-materials/day1.html">
  <span class="dropdown-text">day 1 (8/10)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day2.html">
+    <a class="dropdown-item" href="../../course-materials/day2.html">
  <span class="dropdown-text">day 2 (8/11)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day3.html">
+    <a class="dropdown-item" href="../../course-materials/day3.html">
  <span class="dropdown-text">day 3 (8/12)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day4.html">
+    <a class="dropdown-item" href="../../course-materials/day4.html">
  <span class="dropdown-text">day 4 (8/13)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day5.html">
+    <a class="dropdown-item" href="../../course-materials/day5.html">
  <span class="dropdown-text">day 5 (8/14)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day6.html">
+    <a class="dropdown-item" href="../../course-materials/day6.html">
  <span class="dropdown-text">day 6 (8/17)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day7.html">
+    <a class="dropdown-item" href="../../course-materials/day7.html">
  <span class="dropdown-text">day 7 (8/18)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day8.html">
+    <a class="dropdown-item" href="../../course-materials/day8.html">
  <span class="dropdown-text">day 8 (8/29)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day9.html">
+    <a class="dropdown-item" href="../../course-materials/day9.html">
  <span class="dropdown-text">day 9 (8/20)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day10.html">
+    <a class="dropdown-item" href="../../course-materials/day10.html">
  <span class="dropdown-text">day 10 (8/21)</span></a>
   </li>  
     </ul>
@@ -161,19 +194,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Data frames</h1>
-            <p class="subtitle lead">Day 6</p>
-                  <div>
-        <div class="description">
-          Monday August 17<sup>th</sup>, 2025
-        </div>
-      </div>
-                </div>
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Day 2: End-of-day practice</h1>
+            <p class="subtitle lead">Initialize your reef</p>
+                      </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -184,24 +212,150 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pseudocode-for-reef-initialization" id="toc-pseudocode-for-reef-initialization" class="nav-link active" data-scroll-target="#pseudocode-for-reef-initialization">Pseudocode for reef initialization</a></li>
+  <li><a href="#implement-the-pseudocode" id="toc-implement-the-pseudocode" class="nav-link" data-scroll-target="#implement-the-pseudocode">Implement the pseudocode</a>
+  <ul class="collapse">
+  <li><a href="#get-ready" id="toc-get-ready" class="nav-link" data-scroll-target="#get-ready">0. Get ready</a></li>
+  <li><a href="#create-the-matrix" id="toc-create-the-matrix" class="nav-link" data-scroll-target="#create-the-matrix">1. Create the matrix</a></li>
+  <li><a href="#randomly-sample-coral-starting-locations" id="toc-randomly-sample-coral-starting-locations" class="nav-link" data-scroll-target="#randomly-sample-coral-starting-locations">2. Randomly sample coral starting locations</a></li>
+  <li><a href="#place-your-coral-tokens" id="toc-place-your-coral-tokens" class="nav-link" data-scroll-target="#place-your-coral-tokens">3. Place your coral tokens</a></li>
+  <li><a href="#print-the-matrix" id="toc-print-the-matrix" class="nav-link" data-scroll-target="#print-the-matrix">4. Print the matrix</a></li>
+  <li><a href="#validation-checks" id="toc-validation-checks" class="nav-link" data-scroll-target="#validation-checks">Validation checks</a></li>
+  </ul></li>
+  <li><a href="#track-your-progress" id="toc-track-your-progress" class="nav-link" data-scroll-target="#track-your-progress">Track your progress</a>
+  <ul class="collapse">
+  <li><a href="#validation-checks-1" id="toc-validation-checks-1" class="nav-link" data-scroll-target="#validation-checks-1">Validation checks</a></li>
+  </ul></li>
+  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap up</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/under-construction.png" class="img-fluid figure-img"></p>
-<figcaption>Website under construction sign</figcaption>
-</figure>
+<p>Yesterday you laid the groundwork for your coral reef simulator by creating the repository. Today, you’ll write code to perform the reef initialization step.</p>
+<p>In the game, you initialized the reef by randomly picking 8 grid cells and placing live coral tokens on them. Here, you’ll write a script to do something similar.</p>
+<section id="pseudocode-for-reef-initialization" class="level2">
+<h2 class="anchored" data-anchor-id="pseudocode-for-reef-initialization">Pseudocode for reef initialization</h2>
+<p>It’s not exactly code, but it’s not quite plain language either - let’s get to know <em>pseudocode</em>.</p>
+<p>Here’s pseudocode describing how to initialize the reef:</p>
+<pre><code>Create a 5x5 matrix of 0s representing the coral reef
+Label the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc
+Randomly sample 8 cell labels (without replacement)
+For each sample cell label:
+    Convert the cell label to a row index
+    Convert the cell label to a column index
+    Use the row and column indices to set the value of the matrix cell to 1
+Print the matrix</code></pre>
+<p>A few things you should notice.</p>
+<ol type="1">
+<li>Pseudocode has the feel of code, but the details are a little hand-wavy.</li>
+<li>Some lines represent a single code expression (e.g., the first line creates a variable with a call to <code>matrix()</code>), while others may require more than a single expression to implement.</li>
+<li>It’s a higher-level description of the procedure than code itself, although more detailed than simply plain language.</li>
+</ol>
+<p>Because of these properties, pseudocode is a valuable tool in several stages of the coding process. It’s quicker to write and faster to digest than real code, so it’s useful for planning <em>and</em> for explaining. But it also has just enough detail that it requires you to think carefully about how your code is going to work. You’ll be writing pseudocode yourself later this week.</p>
+<p>Now it’s your turn to translate the pseudocode into real code.</p>
+</section>
+<section id="implement-the-pseudocode" class="level2">
+<h2 class="anchored" data-anchor-id="implement-the-pseudocode">Implement the pseudocode</h2>
+<section id="get-ready" class="level3">
+<h3 class="anchored" data-anchor-id="get-ready">0. Get ready</h3>
+<p>Open your coral reef simulator folder in Positron and make a new script called initalize_reef.R. Put this expression on the first line:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">32</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="create-the-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="create-the-matrix">1. Create the matrix</h3>
+<pre><code>Create a 5x5 matrix of 0s representing the coral reef</code></pre>
+<p>Write an expression to implement this step in the procedure. You should be able to do it in one line.</p>
+</section>
+<section id="randomly-sample-coral-starting-locations" class="level3">
+<h3 class="anchored" data-anchor-id="randomly-sample-coral-starting-locations">2. Randomly sample coral starting locations</h3>
+<pre><code>Label the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc
+Randomly sample 8 cell labels (without replacement)</code></pre>
+<p>The first line of pseudocode here is a cue for the reader. It would help to draw it on a sheet of paper for you to visualize it (drawing while you code is always a good idea!), but no code is needed here.</p>
+<p>The second line requires another expression. Again, you should be able to do this in one line of code.</p>
+</section>
+<section id="place-your-coral-tokens" class="level3">
+<h3 class="anchored" data-anchor-id="place-your-coral-tokens">3. Place your coral tokens</h3>
+<pre><code>For each sample cell label:
+    Convert the cell label to a row index
+    Convert the cell label to a column index
+    Use the row and column indices to set the value of the matrix cell to 1</code></pre>
+<p>This part of the pseudocode requires you to repeat the same step multiple times - a <em>loop</em>. We’ll cover loops on Day 3, so for today your task is to initialize just one cell. Use the first value from your random sample of coral starting locations.</p>
+<p>Converting the cell label to row and column indices requires some problem solving! Make sure you can do the conversion on paper before writing the code.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here’s how I suggest solving it on paper - but you’re encouraged to do whatever helps you visualize and reason about the problem! Draw a 5x5 grid on a piece of paper. Label the rows and columns with their indices, and put the numbers 1 to 25 in the cells. From there, try to figure out how to convert the labels to indices.</p>
+<p>Hint: the <code>%%</code> and <code>%/%</code> operators will come in useful here!</p>
+</div>
+</div>
+</section>
+<section id="print-the-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="print-the-matrix">4. Print the matrix</h3>
+<p>At the console.</p>
+</section>
+<section id="validation-checks" class="level3">
+<h3 class="anchored" data-anchor-id="validation-checks">Validation checks</h3>
+<p>Check that…</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Your first sampled label is 6</label></li>
+<li><label><input type="checkbox">The leftmost cell of the second row of your matrix is 1</label></li>
+<li><label><input type="checkbox">The other 24 cells in your matrix are 0</label></li>
+</ul>
+</section>
+</section>
+<section id="track-your-progress" class="level2">
+<h2 class="anchored" data-anchor-id="track-your-progress">Track your progress</h2>
+<p>Save the files in your working directory, then stage, commit, and push your changes.</p>
+<section id="validation-checks-1" class="level3">
+<h3 class="anchored" data-anchor-id="validation-checks-1">Validation checks</h3>
+<p>Check that…</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Your script is visible on GitHub</label></li>
+<li><label><input type="checkbox">Your local and remote repositories are synced. <code>git status</code> should say:</label></li>
+</ul>
+<pre><code>On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean</code></pre>
+</section>
+</section>
+<section id="wrap-up" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up">Wrap up</h2>
+<p>That’s it for day 2!</p>
+<p>Today you learned about:</p>
+<p><strong>Data types and 1d structures</strong></p>
+<ul>
+<li>Real world data is represented with four computational types: character, double, integer, and logical.</li>
+<li>Vectors are constrained to one type, so combining vectors of different types induces <em>coercion</em>.</li>
+<li>There are lots of different ways to create vectors, such as <code>logical()</code>, <code>:</code>, and <code>c()</code>.</li>
+</ul>
+<p><strong>Indexing and 2d data</strong></p>
+<ul>
+<li>Reading and writing from data structures happens through <em>indexing</em>.</li>
+<li>Indexing into 1d data structures can be done with positive integers (selection by position), negative integers (exclusion by position), names, and logic. In addition, you can index 2d data with blanks to access along an entire dimension.</li>
+<li>Data frames are a particularly important 2d data structure and the workhorse of data science. We’ll work extensively with data frames starting next week after you build your computational thinking foundation.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -628,7 +782,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><img src="../images/bren-logo.png" alt="The Bren School of Environmental Science &amp; Management logo" width="250"></p>
+<p><img src="../../images/bren-logo.png" alt="The Bren School of Environmental Science &amp; Management logo" width="250"></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

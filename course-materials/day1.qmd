@@ -41,5 +41,5 @@ knitr::include_graphics("images/horst-welcome.png")
 
 Complete the following tasks / activities before heading home for the day!
 
-- {{< fa laptop title="A laptop" >}} [**Day 1 Practice:** Create a repo for your coral reef model](eod/eod-day1.qmd){target="_blank"}
+- {{< fa laptop title="A laptop" >}} [**Day 1 Practice:** Create a repo for your coral reef model](eod/eod-day1.qmd)
 

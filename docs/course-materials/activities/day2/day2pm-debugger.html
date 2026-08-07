@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Monday August 17th, 2025">
 
-<title>Data frames</title>
+<title>Debugger: indexing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,28 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">EDS 221</span>
     </a>
   </div>
@@ -92,11 +125,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../eds221-syllabus-m26.pdf" target="_blank"> 
+    <a class="nav-link" href="../../../eds221-syllabus-m26.pdf" target="_blank"> 
 <span class="menu-text">syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -105,43 +138,43 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
         <li>
-    <a class="dropdown-item" href="../course-materials/day1.html">
+    <a class="dropdown-item" href="../../../course-materials/day1.html">
  <span class="dropdown-text">day 1 (8/10)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day2.html">
+    <a class="dropdown-item" href="../../../course-materials/day2.html">
  <span class="dropdown-text">day 2 (8/11)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day3.html">
+    <a class="dropdown-item" href="../../../course-materials/day3.html">
  <span class="dropdown-text">day 3 (8/12)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day4.html">
+    <a class="dropdown-item" href="../../../course-materials/day4.html">
  <span class="dropdown-text">day 4 (8/13)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day5.html">
+    <a class="dropdown-item" href="../../../course-materials/day5.html">
  <span class="dropdown-text">day 5 (8/14)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day6.html">
+    <a class="dropdown-item" href="../../../course-materials/day6.html">
  <span class="dropdown-text">day 6 (8/17)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day7.html">
+    <a class="dropdown-item" href="../../../course-materials/day7.html">
  <span class="dropdown-text">day 7 (8/18)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day8.html">
+    <a class="dropdown-item" href="../../../course-materials/day8.html">
  <span class="dropdown-text">day 8 (8/29)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day9.html">
+    <a class="dropdown-item" href="../../../course-materials/day9.html">
  <span class="dropdown-text">day 9 (8/20)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day10.html">
+    <a class="dropdown-item" href="../../../course-materials/day10.html">
  <span class="dropdown-text">day 10 (8/21)</span></a>
   </li>  
     </ul>
@@ -161,19 +194,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Data frames</h1>
-            <p class="subtitle lead">Day 6</p>
-                  <div>
-        <div class="description">
-          Monday August 17<sup>th</sup>, 2025
-        </div>
-      </div>
-                </div>
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Debugger: indexing</h1>
+                      </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -184,24 +211,88 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#bugs" id="toc-bugs" class="nav-link" data-scroll-target="#bugs">Bugs</a>
+  <ul class="collapse">
+  <li><a href="#bug-1" id="toc-bug-1" class="nav-link" data-scroll-target="#bug-1">Bug 1</a></li>
+  <li><a href="#bug-2" id="toc-bug-2" class="nav-link" data-scroll-target="#bug-2">Bug 2</a></li>
+  <li><a href="#bug-3" id="toc-bug-3" class="nav-link" data-scroll-target="#bug-3">Bug 3</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/under-construction.png" class="img-fluid figure-img"></p>
-<figcaption>Website under construction sign</figcaption>
-</figure>
-</div>
+<section id="instructions" class="level1">
+<h1>Instructions</h1>
+<p>Bugs are an ever-present challenge in programming. With their red text and baffling messages, errors are among the most intimidating parts of learning to code. Perhaps even more frustrating are silent bugs - the code runs but the results just aren’t right.</p>
+<p>Debugger exercises will present you with buggy code - either an error or incorrect result. Your task will be to describe the intent of the code, diagnose the error, and use your problem solving skills to find a solution. With practice, these exercises will demystify errors and you’ll gain confidence in your coding abilities.</p>
+<p>Begin by creating a new script in your eds221/day2 folder called day2pm-debugger.R.</p>
+<p><strong>For each of the following code chunks</strong></p>
+<ol type="1">
+<li>Explain in plain language what the code chunk is supposed to do.</li>
+<li>Copy-paste the chunk into your script and run it to see the bug.</li>
+<li>Describe the bug. Is it an error? An incorrect value? What did you expect, versus what did you find?</li>
+<li>Fix the bug. Verify the code runs as expected.</li>
+</ol>
+</section>
+<section id="bugs" class="level1">
+<h1>Bugs</h1>
+<section id="bug-1" class="level2">
+<h2 class="anchored" data-anchor-id="bug-1">Bug 1</h2>
+<blockquote class="blockquote">
+<p>“Brianna said the coral cover pre-2020 never dropped below 10% - can you double check that?”</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>survey_years <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">2008</span>, <span class="dv">2024</span>, <span class="at">by =</span> <span class="dv">2</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>coral_cover_pct <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">34.53</span>, <span class="fl">22.26</span>, <span class="fl">11.66</span>, <span class="fl">9.25</span>, <span class="fl">14.05</span>, <span class="fl">22.30</span>, <span class="fl">30.35</span>, <span class="fl">16.35</span>, <span class="fl">5.74</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>pre_2020_coral <span class="ot">&lt;-</span> survey_years[coral_cover_pct <span class="sc">&lt;</span> <span class="dv">2020</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(pre_2020_coral)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="bug-2" class="level2">
+<h2 class="anchored" data-anchor-id="bug-2">Bug 2</h2>
+<blockquote class="blockquote">
+<p>“Did you get the sea level model predictions for the Coastal Commission meeting?”</p>
+</blockquote>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sea_level_2100_ft <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.7</span>, <span class="fl">2.0</span>, <span class="fl">2.6</span>, <span class="dv">10</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(sea_level_2100_ft) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"RCP 2.6"</span>, <span class="st">"RCP 4.5"</span>, <span class="st">"RCP 8.5"</span>, <span class="st">"H++"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>worst_case_rcp <span class="ot">&lt;-</span> <span class="st">"RCP 8.5"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>sea_level_2100_ft[<span class="st">"worst_case_rcp"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="bug-3" class="level2">
+<h2 class="anchored" data-anchor-id="bug-3">Bug 3</h2>
+<blockquote class="blockquote">
+<p>“Hey Randall, it looks like you recorded a finch as a towhee. Can you fix that?”</p>
+</blockquote>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>songbird_survey <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">species =</span> <span class="fu">c</span>(<span class="st">"California Towhee"</span>, <span class="st">"House Finch"</span>, <span class="st">"House Sparrow"</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">count =</span> <span class="fu">c</span>(<span class="dv">9</span>L, <span class="dv">6</span>L, <span class="dv">8</span>L),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">song_freq_khz =</span> <span class="fu">c</span>(<span class="fl">4.99</span>, <span class="fl">2.66</span>, <span class="fl">4.08</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">is_native =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>wrong_count_towhee <span class="ot">&lt;-</span> songbird_survey<span class="sc">$</span>count[species <span class="sc">==</span> <span class="st">"California Towhee"</span>]</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>wrong_count_finch <span class="ot">&lt;-</span> songbird_survey<span class="sc">$</span>count[species <span class="sc">==</span> <span class="st">"House Finch"</span>]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>right_count_towhee <span class="ot">&lt;-</span> wrong_count_towhee <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>right_count_finch <span class="ot">&lt;-</span> wrong_count_finch <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>songbird_survey<span class="sc">$</span>count[species <span class="sc">==</span> <span class="st">"California Towhee"</span>] <span class="ot">&lt;-</span> right_count_towhee</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>songbird_survey<span class="sc">$</span>count[species <span class="sc">==</span> <span class="st">"House Finch"</span>] <span class="ot">&lt;-</span> right_count_finch</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>songbird_survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -628,7 +719,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><img src="../images/bren-logo.png" alt="The Bren School of Environmental Science &amp; Management logo" width="250"></p>
+<p><img src="../../../images/bren-logo.png" alt="The Bren School of Environmental Science &amp; Management logo" width="250"></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

@@ -1,0 +1,65 @@
+---
+title: "Debugger: indexing"
+---
+
+# Instructions
+
+Bugs are an ever-present challenge in programming. With their red text and baffling messages, errors are among the most intimidating parts of learning to code. Perhaps even more frustrating are silent bugs - the code runs but the results just aren't right.
+
+Debugger exercises will present you with buggy code - either an error or incorrect result. Your task will be to describe the intent of the code, diagnose the error, and use your problem solving skills to find a solution. With practice, these exercises will demystify errors and you'll gain confidence in your coding abilities.
+
+Begin by creating a new script in your eds221/day2 folder called day2pm-debugger.R.
+
+**For each of the following code chunks**
+
+1. Explain in plain language what the code chunk is supposed to do.
+2. Copy-paste the chunk into your script and run it to see the bug.
+3. Describe the bug. Is it an error? An incorrect value? What did you expect, versus what did you find?
+3. Fix the bug. Verify the code runs as expected.
+
+# Bugs
+
+## Bug 1
+
+> "Brianna said the coral cover pre-2020 never dropped below 10% - can you double check that?"
+
+```r
+survey_years <- seq(2008, 2024, by = 2)
+coral_cover_pct <- c(34.53, 22.26, 11.66, 9.25, 14.05, 22.30, 30.35, 16.35, 5.74)
+
+pre_2020_coral <- survey_years[coral_cover_pct < 2020]
+min(pre_2020_coral)
+```
+
+## Bug 2
+
+> "Did you get the sea level model predictions for the Coastal Commission meeting?"
+
+```r
+sea_level_2100_ft <- c(1.7, 2.0, 2.6, 10)
+names(sea_level_2100_ft) <- c("RCP 2.6", "RCP 4.5", "RCP 8.5", "H++")
+worst_case_rcp <- "RCP 8.5"
+sea_level_2100_ft["worst_case_rcp"]
+```
+
+## Bug 3
+
+> "Hey Randall, it looks like you recorded a finch as a towhee. Can you fix that?"
+
+```r
+songbird_survey <- data.frame(
+  species = c("California Towhee", "House Finch", "House Sparrow"),
+  count = c(9L, 6L, 8L),
+  song_freq_khz = c(4.99, 2.66, 4.08),
+  is_native = c(TRUE, TRUE, FALSE)
+)
+
+wrong_count_towhee <- songbird_survey$count[species == "California Towhee"]
+wrong_count_finch <- songbird_survey$count[species == "House Finch"]
+right_count_towhee <- wrong_count_towhee - 1
+right_count_finch <- wrong_count_finch + 1
+
+songbird_survey$count[species == "California Towhee"] <- right_count_towhee
+songbird_survey$count[species == "House Finch"] <- right_count_finch
+songbird_survey
+```

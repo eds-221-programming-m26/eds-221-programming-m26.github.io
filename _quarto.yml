@@ -41,7 +41,7 @@ website:
     background: dark
     right: This website is built with [{{< fa brands github title="the github octocat logo" >}}](https://github.com/eds-221-programming-m26/eds-221-programming-m26.github.io), [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html) and [Quarto](https://quarto.org/)
     left: |
-      <img src="images/bren-logo.png" alt="The Bren School of Environmental Science & Management logo" width="250"/>
+      <img src="/images/bren-logo.png" alt="The Bren School of Environmental Science & Management logo" width="250"/>
 
 
 format:
@@ -52,3 +52,6 @@ format:
     page-layout: full
 
 editor: source
+
+execute:
+  freeze: true

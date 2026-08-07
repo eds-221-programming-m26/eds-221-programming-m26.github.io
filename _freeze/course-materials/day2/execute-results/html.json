@@ -1,0 +1,15 @@
+{
+  "hash": "124dbc8f6d8cf755f43394014b43e1f3",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Data structures\"\nsubtitle: \"Day 2\"\ndescription: \"Tuesday August 11^th^, 2026\"\n---\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](images/horst-data-types.jpeg){fig-align='center' width=80%}\n:::\n:::\n\n\n\n\n:::{.gray-text .center-text}\n*Artwork by [Allison Horst](https://allisonhorst.com/)*\n:::\n\n<!-- ## Pre-class prep -->\n\n<!-- No pre-class prep before our first day of class! -->\n\n## Morning session: Data types and 1d structures\n\n* {{< fa pen-to-square title=\"A pencil writing on paper\" >}} [Create a data sheet](activities/day2/day2am-create-data-sheet.pdf){target=\"_blank\"}\n* {{< fa pen-to-square title=\"A pencil writing on paper\" >}} [Code sleuth: type coercion](activities/day2/day2am-code-sleuth.pdf){target=\"_blank\"}\n* {{< fa users-line title=\"Multiple people working together\" >}} Live coding demo: creating vectors\n* {{< fa person-chalkboard title=\"A person motioning at a chalkboard\" >}} [Types and vectors mini-lecture](FIXME){target=\"_blank\"}\n* {{< fa diagram-project title=\"Nodes connected by edges\" >}} [Concept mapping: data types and 1d structures](activities/day2/day2am-concept-mapping.pdf){target=\"_blank\"}\n* {{< fa square-check title=\"A checked checkbox\" >}} [Exit ticket](https://forms.gle/eox8Ynzj7AC4Ccu88){target=\"_blank\"}\n\n## Afternoon session: Indexing and 2d data\n\n* {{< fa pen-to-square title=\"A pencil writing on paper\" >}} [Code sleuth: indexing](activities/day2/day2pm-code-sleuth.pdf){target=\"_blank\"}\n* {{< fa users-line title=\"Multiple people working together\" >}} Live coding demo: indexing and 2d data\n* {{< fa pen-to-square title=\"A pencil writing on paper\" >}} [SLWE: indexing](activities/day2/day2pm-slwe.pdf){target=\"_blank\"}\n* {{< fa laptop title=\"A laptop\" >}} [Debugger: indexing errors](activities/day2/day2pm-debugger.qmd)\n* {{< fa diagram-project title=\"Nodes connected by edges\" >}} [Concept mapping: Indexing and 2d data](activities/day2/day2pm-concept-mapping.pdf){target=\"_blank\"}\n* {{< fa square-check title=\"A checked checkbox\" >}} [Exit ticket](https://forms.gle/CCsDQJrHqv4hDBi99){target=\"_blank\"}\n\n## End-of-day practice\n\nComplete the following tasks / activities before heading home for the day!\n\n- {{< fa laptop title=\"A laptop\" >}} [**Day 2 Practice:** Initialize the reef](eod/eod-day2.qmd){target=\"_blank\"}\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
