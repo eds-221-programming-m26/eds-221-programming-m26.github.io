@@ -13,7 +13,7 @@ format:
 
 [EDS 221 Day 1 AM]{.custom-title}
 
-[*Course intro, code execution*]{.custom-subtitle}
+[*Course intro*]{.custom-subtitle}
 
 <hr class="hr-teal">
 

@@ -11,7 +11,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.43">
 
-  <title>eds-212-template-copy</title>
+  <title>day1pm-slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -330,674 +330,74 @@
 
 <section id="title-slide" class="slide level2 center" data-menu-title="Title Slide" data-background="#053660">
 <h2></h2>
-<p><span class="custom-title">EDS 212: Day 1, Lecture 1</span></p>
-<p><span class="custom-subtitle"><em>Course intro, algebra refresher</em></span></p>
+<p><span class="custom-title">EDS 221 Day 1 PM</span></p>
+<p><span class="custom-subtitle"><em>Version control</em></span></p>
 <hr class="hr-teal">
-<p><span class="custom-subtitle3">August 4<sup>th</sup>, 2025</span></p>
+<p><span class="custom-subtitle3">August 10<sup>th</sup>, 2025</span></p>
 </section>
-<section id="welcome" class="slide level2" data-menu-title="Welcome to EDS 212!">
+<section id="corals" class="slide level2" data-menu-title="Corals">
 <h2></h2>
-<p><span class="slide-title">Welcome to EDS 212 - Essential Math in Environmental Data Science</span></p>
-<hr>
-<p><br></p>
-<ul>
-<li><strong>Instructor:</strong> Ruth Oliver (rutholiver@ucsb.edu)</li>
-<li><strong>Teaching assistant:</strong> Alessandra Vidal Meza</li>
-<li><strong>Course hours:</strong> 10am - 4:30pm PST</li>
-<li><strong>Location:</strong> NCEAS 1st Floor Classroom</li>
-</ul>
-<p><br></p>
-<div class="center-text body-text-l">
-<p>Let’s take a look at the <a href="https://docs.google.com/document/d/1L3nnsIcDQy_PKegzaaZxzUE7BTKLzO6wx1uRoF22BM4/edit">course syllabus</a> together.</p>
+<div class="center-text body-text-m">
+<p><img data-src="images/wikipedia-coral-reef.png"></p>
+<p>Anyone can edit Wikipedia - how do you keep all those changes organized?</p>
 </div>
 </section>
-<section id="course-description" class="slide level2" data-menu-title="Course description">
+<section id="version-history" class="slide level2" data-menu-title="Version history tracks changes over time">
 <h2></h2>
-<p><span class="slide-title">Course description</span></p>
-<hr>
-<ul>
-<li><strong>Units:</strong> 2</li>
-<li><strong>Grading:</strong> Satisfactory/Unsatisfactory</li>
-<li><strong>Description:</strong> Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations.</li>
-</ul>
-</section>
-<section id="topics" class="slide level2" data-menu-title="Topics">
-<h2></h2>
-<p><span class="slide-title">Topics overview</span></p>
-<hr>
-<div class="body-text-m">
-<ul>
-<li><strong>Day 1:</strong> Course introduction &amp; math basics refresher</li>
-<li><strong>Day 2:</strong> Derivatives</li>
-<li><strong>Day 3:</strong> Differential equations, intro to linear algebra</li>
-<li><strong>Day 4:</strong> Linear algebra, summary statistics</li>
-<li><strong>Day 5:</strong> Basic probability theory, Boolean algebra</li>
-</ul>
+<p><span class="slide-title">Version history tracks changes over time</span></p>
+<div class="center-text body-text-m">
+<p>Each contribution is individually recorded.</p>
 </div>
+<img data-src="images/coral-reef-revisions.png" class="r-stretch">
 </section>
-<section id="math-evolution" class="slide level2" data-menu-title="Math evolution">
+<section id="version-history2" class="slide level2" data-menu-title="Version history tracks changes over time">
 <h2></h2>
-<p><span class="slide-title">Maybe you’re thinking…</span></p>
-<hr>
+<p><span class="slide-title">Version history tracks changes over time</span></p>
+<div class="center-text body-text-m">
+<p>Details about <em>when</em>, <em>who</em>, and <em>what</em> are linked to a set of <strong>changes</strong>.</p>
+</div>
+<img data-src="images/coral-reef-revisions2.png" class="r-stretch">
+</section>
+<section id="diffs" class="slide level2" data-menu-title="Differences">
+<h2></h2>
+<p><span class="slide-title"><em>Differences</em> highlight exact changes</span></p>
+<div class="center-text body-text-m">
+<p>With version history, changes can be tracked to individual lines.</p>
+</div>
+<img data-src="images/coral-diff.png" class="r-stretch">
+</section>
+<section id="no-version-control" class="slide level2" data-menu-title="Let's avoid this">
+<h2></h2>
+<p><span class="slide-title">Version control lets us avoid <em>this</em></span></p>
 
-<img data-src="images/math-evolution.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p>Source: <a href="https://datavizblog.com/2019/07/05/dataviz-humor-math-skills-vs-stage-of-life/">Michael Sandberg’s Data Visualization Blog</a></p>
+<img data-src="images/excel_messy_saves.png" class="r-stretch quarto-figure-center"><p class="caption">From “R for Excel Users” by Julie Lowndes &amp; Allison Horst</p></section>
+<section id="code-version-control" class="slide level2" data-menu-title="Code version control">
+<h2></h2>
+<p><span class="slide-title">Pardon me, I want to write code, not encyclopedias</span></p>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/git-history.png"></p>
+<figcaption>Bryan (2018) <em>The American Statistician</em></figcaption>
+</figure>
+</div>
+<p><strong>git</strong> is the most widespread tool for version control of code.</p>
+<p>Like Wikipedia’s revision history, it tracks <em>when</em>, <em>who</em>, and <em>what</em>, with line-by-line differences.</p>
+</div><div class="column">
+<p><img data-src="images/github-logo.png"></p>
+<p><strong>GitHub</strong> is the most widespread platform for hosting git repositories</p>
+<p>It helps you collaborate, simplifying access and project management</p>
+</div>
 </div>
 </section>
-<section id="why-math" class="slide level2" data-menu-title="Why math?">
+<section id="live-coding" class="slide level2" data-menu-title="Live coding demo">
 <h2></h2>
-<p><span class="slide-title">Why am I taking a math class?</span></p>
+<p><span class="slide-title">Live coding demo</span></p>
 <hr>
-<p><br> <br> <br></p>
-<div class="center-text body-text-xl">
-<p>or,</p>
-<p><br></p>
-<p><em>Why do I have to know math when a computer will do it for me?</em></p>
-</div>
 </section>
-<section id="warm-up" class="slide level2" data-menu-title="Brain warm-up">
-<h2></h2>
-<p><span class="slide-title">A quantitative brain warm-up</span></p>
-<hr>
-<p><br></p>
-<div class="center-text body-text-l teal-text">
-<p>MEDS students have diverse work &amp; academic histories</p>
-</div>
-<p><strong>This course (re)introduces math concepts and tools that:</strong></p>
-<ul>
-<li>Focus on applications to environmental data science</li>
-<li>Are specifically relevant for MEDS projects, coursework</li>
-<li>Provide an entryway into building computational skills</li>
-<li>Refresh quantitative thinking skills generally</li>
-<li>Refresh essentials like units, conversions, notation, language</li>
-</ul>
-</section>
-<section id="warm-up-overview" class="slide level2" data-menu-title="Warm-up overview">
-<h2></h2>
-<p><span class="slide-title">Math brain warm up</span></p>
-<hr>
-<div class="body-text-m">
-<ul>
-<li>Algebra blitz</li>
-<li>Exponentials and logarithms</li>
-<li>Common units and unit conversions</li>
-<li>Functions</li>
-<li>Understanding graphs</li>
-<li>Interpreting equations</li>
-</ul>
-</div>
-</section>
-<section id="first-algebra" class="slide level2" data-menu-title="First, algebra">
-<h2></h2>
-<p><span class="slide-title">Math brain warm up</span></p>
-<hr>
-<div class="body-text-m">
-<ul>
-<li><span class="teal-text"><strong>Algebra blitz</strong></span></li>
-<li>Exponentials and logarithms</li>
-<li>Common units and unit conversions</li>
-<li>Functions</li>
-<li>Understanding graphs</li>
-<li>Interpreting equations</li>
-</ul>
-</div>
-</section>
-<section id="algebra-blitz" class="slide level2" data-menu-title="Algebra blitz">
-<h2></h2>
-<p><span class="slide-title">Algebra blitz</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l"><strong>You can get far with a few rules:</strong></span></p>
-<div class="body-text-m">
-<ol type="1">
-<li>Order of operations</li>
-<li>Equations are already solved (but sometimes we need them in a different format)</li>
-<li>Do whatever you want but do the same thing to both sides</li>
-</ol>
-</div>
-</section>
-<section id="PEMDAS" class="slide level2" data-menu-title="PEMDAS">
-<h2></h2>
-<p><span class="slide-title">1. Order of operations (P-E-MD-AS)</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l"><strong>P</strong> - Parentheses</span></p>
-<p><br></p>
-<p><span class="body-text-l"><strong>E</strong> - Exponents</span></p>
-<p><br></p>
-<p><span class="body-text-l"><strong>M/D</strong> - Multipication / division</span></p>
-<p><br></p>
-<p><span class="body-text-l"><strong>A/S</strong> - Addition / subtraction</span></p>
-</section>
-<section id="PEMDAS-practice" class="slide level2" data-menu-title="PEMDAS practice">
-<h2></h2>
-<p><span class="slide-title">1. Order of operations practice problems</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">Simplify the following: <span class="math inline">\((12 - 2)/5 + 5(3+2)/6\)</span></span></p>
-<p><br></p>
-<p><span class="body-text-m">Simplify the following: <span class="math inline">\(\frac{4-6}{2}(3+1)-\frac{1+2*4}{3}\)</span></span></p>
-<p><br></p>
-<p><span class="body-text-m">Simplify the following: <span class="math inline">\(3x+4(8x-6x) -(2y-5)+\frac{2x(1-3)}{2}\)</span></span></p>
-<aside class="notes">
-<ol type="1">
-<li><span class="math inline">\((12 - 2)/5 + 5(3+2)/6\)</span></li>
-</ol>
-<ul>
-<li><span class="math inline">\((10/5) + 5 \times 5 / 6\)</span></li>
-<li><strong>ANSWER: <span class="math inline">\(2 + 25/6\)</span></strong></li>
-</ul>
-<ol start="2" type="1">
-<li><span class="math inline">\(\frac{(4-6)}{(2)}(3+1)-\frac{(1+2*4)}{(3)}\)</span></li>
-</ol>
-<ul>
-<li><span class="math inline">\(\frac{(-2)}{(2)}(4)-\frac{(9)}{(3)}\)</span></li>
-<li><span class="math inline">\(-1 \times 4 - 3\)</span></li>
-<li><span class="math inline">\(-4-3\)</span></li>
-<li><strong>ANSWER: <span class="math inline">\(-7\)</span></strong></li>
-</ul>
-<ol start="3" type="1">
-<li><span class="math inline">\(3x+4(8x-6x) -(2y-5)+\frac{2x(1-3)}{2}\)</span></li>
-</ol>
-<ul>
-<li><span class="math inline">\(3x+4 \times 2x - 2y + 5 + \frac{2x-6x}{2}\)</span></li>
-<li><span class="math inline">\(3x+4 \times 2x - 2y + 5 + \frac{2x}{2}-\frac{6x}{2}\)</span></li>
-<li><span class="math inline">\(3x+4 \times 2x - 2y + 5 + x - 3x\)</span></li>
-<li><span class="math inline">\(11x - 2y + 5 - 2x\)</span></li>
-<li><strong>ANSWER: <span class="math inline">\(9x - 2y + 5\)</span></strong></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="notation-matters" class="slide level2" data-menu-title="Notation matters">
-<h2></h2>
-<p><span class="slide-title">1. Notation matters</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-m">
-<p>Simplify the following: <span class="math inline">\(6 \div 3(4+2)\)</span></p>
-<p>What would be a harder-to-misinterpret way to write this?</p>
-</div>
-<p><br></p>
+<section class="slide level2">
 
-<img data-src="images/pemdas-clarity.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><aside class="notes">
-<p>ANSWER: 12</p>
-<p>A harder to misinterpret way to write this: <span class="math inline">\((6 \div 3) \times (4+2)\)</span></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<p>–</p>
-</section>
-<section id="takeaway" class="slide level2" data-menu-title="Takeaway">
-<h2></h2>
-<p><span class="slide-title">1. An important takeaway:</span></p>
-<hr>
-<p><br></p>
-<div class="center-text body-text-l">
-<p>Being readable &amp; hard to incorrectly interpret is often as important as being technically “correct”</p>
-</div>
-<p><br> <br></p>
-<p><span class="body-text-m">When designing things, it’s important to <strong>consider the different ways that users might misuse or misunderstand it</strong> - then <strong>build in safeguards</strong> to help them use it correctly. <strong>Clear communication</strong> and <strong>user-centered design</strong> is critical in environmental data science.</span></p>
-</section>
-<section id="equations-solved" class="slide level2" data-menu-title="Equations solved">
-<h2></h2>
-<p><span class="slide-title">2. Equations are solved</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l"><span class="math display">\[2x-5y+3.9=8x^2-100.7x\]</span></span></p>
-<p><br></p>
-<p><span class="body-text-m">Provides solutions for the questions:</span></p>
-<p><br></p>
-<div class="body-text-m">
-<ol type="1">
-<li>“What is the value of <span class="math inline">\(2x-5y+3.9\)</span>?” and</li>
-<li>“What is the value of <span class="math inline">\(8x^2-100.7x\)</span>?”</li>
-</ol>
-</div>
-</section>
-<section id="reorganize" class="slide level2" data-menu-title="Reorganize">
-<h2></h2>
-<p><span class="slide-title">2./3. It is often helpful to reorganize things</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-l">
-<p>In the equation on the previous slide (shown below), we might want to solve for <em>y</em>:</p>
-<p><span class="math display">\[2x-5y+3.9=8x^2-100.7x\]</span></p>
-<p><br></p>
-<p>The one rule to rule them all:</p>
-</div>
-<p><span class="teal-text body-text-m">You can do whatever you want to an equation, as long as you do <strong>the exact same thing to both sides.</strong> That includes ensuring that you are applying something entirely to each side.</span></p>
-</section>
-<section id="same-both-sides1" class="slide level2" data-menu-title="Same thing, both sides 1">
-<h2></h2>
-<p><span class="slide-title2">3. We’re really just doing the same thing to both sides until we’re happy with the format</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l"><strong>Example:</strong></span></p>
-<p><br></p>
-<p><span class="body-text-m">Apply the same operation to each side of the following equation step-by-step to isolate <span class="math inline">\(x\)</span> on one side. <strong>Write out all steps.</strong></span></p>
-<p><br></p>
-<p><span class="body-text-l"><span class="math display">\[4x+8=5-2x\]</span></span></p>
-<aside class="notes">
-<ul>
-<li>Start with: <span class="math display">\[4x+8=5-2x\]</span></li>
-<li>Add <span class="math inline">\(2x\)</span> to each side: <span class="math inline">\(6x + 8 = 5\)</span></li>
-<li>Subtract <span class="math inline">\(8\)</span> from both sides: <span class="math inline">\(6x = -3\)</span></li>
-<li><strong>ANSWER: <span class="math inline">\(x = -\frac{1}{2}\)</span></strong></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="same-both-sides2" class="slide level2" data-menu-title="Same thing, both sides 2">
-<h2></h2>
-<p><span class="slide-title2">3. We’re really just doing the same thing to both sides until we’re happy with the format</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l"><strong>Example:</strong></span></p>
-<p><br></p>
-<p><span class="body-text-m">Apply the same operation to each side of the following equation step-by-step to isolate <span class="math inline">\(a\)</span> on one side. <strong>Write out all steps.</strong></span></p>
-<p><br></p>
-<p><span class="body-text-l"><span class="math display">\[\frac{2(a+1)}{3a}+4=6\]</span></span></p>
-<aside class="notes">
-<p>ENDING NOTE: We might encounter complex expressions for how values are related to each other. While the equation is already solved, it can be helpful to use some basic algebra to rearrange things to make our equations easier to understand.</p>
-<ul>
-<li>Start with: <span class="math display">\[\frac{2(a+1)}{3a}+4=6\]</span></li>
-<li>Subtract 4 from both sides: <span class="math display">\[\frac{2a+2}{3a}=2\]</span></li>
-<li>Multiply both sides by <span class="math inline">\(3a\)</span>: <span class="math display">\[2a+2=6a\]</span></li>
-<li>Subtract <span class="math inline">\(2a\)</span> from both sides: <span class="math display">\[2=4a\]</span></li>
-<li>Divide each side by 4; <strong>ANSWER: <span class="math inline">\(a = \frac{1}{2}\)</span></strong></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="next-exp" class="slide level2" data-menu-title="Next, exponentials">
-<h2></h2>
-<p><span class="slide-title">Math brain warm up</span></p>
-<hr>
-<div class="body-text-m">
-<ul>
-<li>Algebra blitz</li>
-<li><span class="teal-text"><strong>Exponentials</strong></span> and logarithms (this afternoon)</li>
-<li>Common units and unit conversions</li>
-<li>Functions</li>
-<li>Understanding graphs</li>
-<li>Interpreting equations</li>
-</ul>
-</div>
-</section>
-<section id="exponents" class="slide level2" data-menu-title="Exponents">
-<h2></h2>
-<p><span class="slide-title">Exponents &amp; how to do math with them</span></p>
-<hr>
-<div class="body-text-l">
-<p><span class="math display">\[x^n=x\times x\times\ x \times x...(n\space times)\]</span></p>
-<p><br></p>
-<!-- [Exponent warm-ups]{.body-text-m} -->
-<p>Evaluate the following to find a value for <span class="math inline">\(y\)</span>:</p>
-<p><br></p>
-<ol type="1">
-<li><p><span class="math inline">\(y = 12-2^4\)</span></p></li>
-<li><p><span class="math inline">\(2y + 30=y+3^3\)</span></p></li>
-</ol>
-</div>
-<aside class="notes">
-<p>Sometimes things are related to each other in an exponential way, so we’re going to remind ourselves how they work using numbers.</p>
-<ol type="1">
-<li><span class="math inline">\(y = 12-2^4\)</span></li>
-</ol>
-<ul>
-<li><span class="math inline">\(y = 12 - (2 \times 2 \times 2 \times 2)\)</span></li>
-<li><span class="math inline">\(y = 12 - 26\)</span></li>
-<li><strong>ANSWER: <span class="math inline">\(y = -4\)</span></strong></li>
-</ul>
-<ol start="2" type="1">
-<li><span class="math inline">\(2y + 30=y+3^3\)</span></li>
-</ol>
-<ul>
-<li><span class="math inline">\(2y + 30 = y + (3 \times 3 \times 3)\)</span></li>
-<li><span class="math inline">\(2y + 30 = y + 27\)</span></li>
-<li><span class="math inline">\(y + 30 = 27\)</span></li>
-<li><strong>ANSWER: <span class="math inline">\(y = -3\)</span></strong></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="exponents-rules" class="slide level2" data-menu-title="Exponent rules">
-<h2></h2>
-<p><span class="slide-title">Exponent rules</span></p>
-<hr>
-<ul>
-<li><span class="math inline">\(x^ax^b=x^{a+b}\)</span> ; <strong>Example:</strong> <span class="math inline">\(x^5x^3=x^{5+3}=x^8\)</span> ; <strong>Example:</strong> <span class="math inline">\(2^2 \times 2^2\)</span> = <span class="math inline">\((2 \times 2) \times (2 \times 2)\)</span> = <span class="math inline">\(2^4\)</span></li>
-</ul>
-<div class="fragment">
-<ul>
-<li><span class="math inline">\(\frac{x^a}{x^b}=x^{a-b}\)</span> ; <strong>Example:</strong> <span class="math inline">\(\frac{z^5}{z^3}=z^{5-3}=z^2\)</span> ; <strong>Example:</strong> <span class="math inline">\(\frac{2^3}{2^2}\)</span> = <span class="math inline">\(\frac{2 \times 2 \times 2}{2 \times 2}\)</span> = <span class="math inline">\(2^1\)</span></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><span class="math inline">\(\frac{1}{x^a}=x^{-a}\)</span> ; <strong>Example:</strong> <span class="math inline">\(b^{-4x}=\frac{1}{b^{4x}}\)</span></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><span class="math inline">\((x^a)^b=x^{ab}\)</span> ; <strong>Example:</strong> <span class="math inline">\((2^3)^2=2^{3*2}=2^6=64\)</span></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><span class="math inline">\((\frac{x}{y})^a=\frac{x^a}{y^a}\)</span> ; <strong>Example:</strong> <span class="math inline">\((\frac{y}{2^2})^2=\frac{y^2}{(2^2)^2}=\frac{y^2}{2^4}=\frac{y^2}{16}\)</span></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><span class="math inline">\((xy)^a=x^ay^a\)</span> ; <strong>Example:</strong> <span class="math inline">\((3x)^2=3^2x^2\)</span></li>
-</ul>
-</div>
-</section>
-<section id="exponents-practice" class="slide level2" data-menu-title="Exponent practice">
-<h2></h2>
-<p><span class="slide-title">Exponent practice</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l">Simplify the following expressions using the rules of exponents:</span></p>
-<p><br></p>
-<p><span class="body-text-l">1. <span class="math inline">\(3x^5x^8x^{-11}\)</span></span></p>
-<p><br></p>
-<p><span class="body-text-l">2. <span class="math inline">\(\frac{-8x^6}{2x^4}+7x^2\)</span></span></p>
-<p><br></p>
-<p><span class="body-text-l">3. <span class="math inline">\(\frac{3x}{x^5}-3.8x^4\frac{x^3}{x^6}+8.1x-11.2\)</span></span></p>
-<aside class="notes">
-<ol type="1">
-<li><span class="math inline">\(3x^5x^8x^{-11}\)</span></li>
-</ol>
-<ul>
-<li><strong>ANSWER: <span class="math inline">\(3x^2\)</span></strong></li>
-</ul>
-<ol start="2" type="1">
-<li><span class="math inline">\(\frac{-8x^6}{2x^4}+7x^2\)</span></li>
-</ol>
-<ul>
-<li><span class="math inline">\(-4x^2 + 7x^2\)</span></li>
-<li><strong>ANSWER: <span class="math inline">\(3x^2\)</span></strong></li>
-</ul>
-<ol start="3" type="1">
-<li><span class="math inline">\(\frac{3x}{x^5}-3.8x^4\frac{x^3}{x^6}+8.1x-11.2\)</span></li>
-</ol>
-<ul>
-<li><span class="math inline">\(3x^{-4}-3.8x^4 \times x^{-3} + 8.1x - 11.2\)</span></li>
-<li><span class="math inline">\(3x^{-4}-3.8x^1 + 8.1x - 11.2\)</span></li>
-<li><strong>ANSWER: <span class="math inline">\(3x^{-4}+4.3x - 11.2\)</span></strong></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="FOIL" class="slide level2" data-menu-title="FOIL">
-<h2></h2>
-<p><span class="slide-title">Multiplying expressions (FOIL)</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l"><strong>F</strong>irst, <strong>O</strong>utside, <strong>I</strong>nside, <strong>L</strong>ast</span></p>
-<p><br></p>
-<p><span class="body-text-l"><strong>Example:</strong></span></p>
-<p><span class="body-text-l"><span class="math display">\[(2x+5)(x-3)\]</span></span></p>
-<div class="fragment">
-<!-- [$$=2x^2-3*2x+5*x-5*3$$]{.body-text-l} -->
-<p><span class="body-text-l"><span class="math display">\[= (2x \times x) (2x \times -3) (5 \times x) (5 \times -3)\]</span></span></p>
-<p><span class="body-text-l"><span class="math display">\[= 2x^2 - 6x + 5x - 15\]</span></span></p>
-<p><span class="body-text-l"><span class="math display">\[=2x^2-x-15\]</span></span></p>
-</div>
-</section>
-<section id="next-units" class="slide level2" data-menu-title="Next, units">
-<h2></h2>
-<p><span class="slide-title">Math brain warm up</span></p>
-<hr>
-<div class="body-text-m">
-<ul>
-<li>Algebra blitz</li>
-<li>Exponentials and logarithms</li>
-<li><span class="teal-text"><strong>Common units and unit conversions</strong></span></li>
-<li>Functions</li>
-<li>Understanding graphs</li>
-<li>Interpreting equations</li>
-</ul>
-</div>
-</section>
-<section id="units" class="slide level2" data-menu-title="Units">
-<h2></h2>
-<p><span class="slide-title">UNITS. UNITS. UNITS.</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-m">
-<p>Think about these statements, which all contain the same <em>value</em> of 4:</p>
-<p><br></p>
-<ul>
-<li><p>There are four in the refrigerator.</p></li>
-<li><p>There are four <strong>burritos</strong> in the refrigerator.</p></li>
-<li><p>There are four <strong>roaches</strong> in the refrigerator.</p></li>
-<li><p>There are four <strong>million dollars</strong> in the refrigerator.</p></li>
-</ul>
-</div>
-</section>
-<section id="units-critical" class="slide level2" data-menu-title="Units are critical">
-<h2></h2>
-<p><span class="slide-title2">Units are critical in environmental data science</span></p>
-<hr>
-<p><br> <br></p>
-<div class="center-text body-text-l">
-<p>We cannot responsibly work with data without knowing the units of <strong>each variable we’re working with</strong>.</p>
-<p><br></p>
-<p>That means we need to always <strong>familiarize ourselves with metadata</strong>, carefully <strong>check units and any unit conversions</strong>, and understand <strong>how units combine into the units of a dependent variable</strong>.</p>
-</div>
-</section>
-<section id="unit-conv" class="slide level2" data-menu-title="Unit conversions">
-<h2></h2>
-<p><span class="slide-title">Dimensional analysis for unit conversions</span></p>
-<hr>
-<div class="body-text-m">
-<p>In dimensional analysis, we multiply initial units by a sequence of conversion factors to arrive at the final desired units.</p>
-<p><br></p>
-<p>For example, to convert <span class="math inline">\(100 \frac{g}{cm^3}\)</span> into units of <span class="math inline">\(\frac{kg}{in^3}\)</span>, given that 1 cm<sup>3</sup> = 0.061 in<sup>3</sup>.</p>
-<p><br></p>
-<p><span class="math display">\[100\frac{g}{cm^3}*\frac{1kg}{1000g}*\frac{1cm^3}{0.061in^3}=1.639\frac{kg}{in^3}\]</span></p>
-</div>
-</section>
-<section id="unit-conv-practice" class="slide level2" data-menu-title="Unit conversions practice">
-<h2></h2>
-<p><span class="slide-title">Unit conversion practice</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-m">
-<p>Practice dimensional analysis to perform the following conversions:</p>
-<p><br></p>
-<ol type="1">
-<li>Convert <span class="math inline">\(8.1\frac{km}{s}\)</span> to miles per hour, given that 1 km = 0.621 miles.</li>
-</ol>
-<p><br></p>
-<ol start="2" type="1">
-<li>Convert a mass flux of <span class="math inline">\(3.2\frac{g}{min\cdot m^2}\)</span> to <span class="math inline">\(\frac{mg}{s\cdot cm^2}\)</span>.</li>
-</ol>
-</div>
-<aside class="notes">
-<ol type="1">
-<li><p><span class="math inline">\(8.1\frac{km}{s} \times \frac{60s}{min} \times \frac{60min}{hr} \times \frac{0.621 miles}{1km} = 18,108.36 \frac{miles}{hr}\)</span></p></li>
-<li><p><span class="math inline">\(3.2\frac{g}{min\cdot m^2} \times \frac{1min}{60s} \times \frac{1000 mg}{g} \times \frac{m}{100cm} \times \frac{m}{100cm}\)</span></p></li>
-</ol>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="next-fxns" class="slide level2" data-menu-title="Next, functions">
-<h2></h2>
-<p><span class="slide-title">Math brain warm up</span></p>
-<hr>
-<div class="body-text-m">
-<ul>
-<li>Algebra blitz</li>
-<li>Exponentials and logarithms</li>
-<li>Common units and unit conversions</li>
-<li><span class="teal-text"><strong>Functions</strong></span></li>
-<li>Understanding graphs</li>
-<li>Interpreting equations</li>
-</ul>
-</div>
-</section>
-<section id="functions" class="slide level2" data-menu-title="Functions">
-<h2></h2>
-<p><span class="slide-title">Functions</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">Functions are mathematical expressions that tell us how input values are related to output values.</span></p>
-<p><br></p>
-<p>For example, <span class="math inline">\(y = 3x-5\)</span> is a function that tells us the <strong>value of y</strong> at <strong>any value of x</strong>. In this scenario, we would probably say <strong>y is a function of x</strong>.</p>
-<p><br></p>
-<p>Could you also rewrite it and say <strong>x is a function of y</strong>? Here, with no knowledge of what’s an input and what’s an output, sure - but usually in environmental data science we specify the input variable(s), and the output variable(s) carefully. What follows is the expression in the format of: “<strong>[output variable(s)] is/are a function of [input variable(s)]</strong>”.</p>
-</section>
-<section id="inputs-outputs" class="slide level2" data-menu-title="Inputs &amp; outputs">
-<h2></h2>
-<p><span class="slide-title">Thinking about inputs and outputs</span></p>
-<hr>
-<p><br></p>
-<p>For the following combinations of related variables, which do you expect would be the <strong>input</strong> and the <strong>output</strong> in a function describing how they are related? Say your answer in a sentence, e.g.&nbsp;“Evapotranspiration is a function of air temperature.”</p>
-<p><br></p>
-<div class="body-text-m">
-<ol type="1">
-<li><p>fuel (biomass) / slope / wildfire severity / windspeed / air temperature</p></li>
-<li><p>wind speed / power generated by wind turbine</p></li>
-<li><p>soil C:N ratio / bacterial biomass / soil water content / leaf litter decomposition rate</p></li>
-</ol>
-</div>
-<aside class="notes">
-<ol type="1">
-<li>wildfire severity is a function of fuel and slope and windspeed and air temperature</li>
-<li>power generated by wind turbine is a function of wind speed</li>
-<li>leaf litter decomposition rate is a function of soil C:N ratio and bacterial biomass and soil water content</li>
-</ol>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<!-- --- -->
-<!-- ```{r} -->
-<!-- #| eval: true -->
-<!-- #| echo: false -->
-<!-- #| out-width: "100%" -->
-<!-- #| fig-align: "center" -->
-<!-- knitr::include_graphics("images/betz_limit.png") -->
-<!-- ``` -->
-<!-- ::: {.center-text .body-text-s .gray-text} -->
-<!-- Schaffarczyk A.P. (2020) Types of Wind Turbines. In: Introduction to Wind Turbine Aerodynamics. Green Energy & Technology. Springer, Cham. https://doi-org.proxy.library.ucsb.edu:9443/10.1007/978-3-030-41028-5_2 -->
-<!-- ::: -->
-</section>
-<section id="fxn-notation" class="slide level2" data-menu-title="Function notation">
-<h2></h2>
-<p><span class="slide-title">Function notation</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l">Single variable (univariate) function:</span></p>
-<p><span class="math inline">\(f(x) = [expression\space containing \space x]\)</span></p>
-<p><br></p>
-<p><span class="body-text-l">Multivariate function:</span></p>
-<p><span class="math inline">\(g(a,T,z)=[expression\space containing \space a, T, \space and \space z]\)</span></p>
-</section>
-<section id="eval-fxns" class="slide level2" data-menu-title="Evalutating functions">
-<h2></h2>
-<p><span class="slide-title">Evaluating functions</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-m">
-<p>For continuous functions, we evaluate them by plugging in variable values.</p>
-<p><br></p>
-<p><strong>Example:</strong></p>
-<p><br></p>
-<p>Evaluate <span class="math inline">\(g(x,t)=2.4x+0.5t^2\)</span> at <span class="math inline">\(x = 3\)</span> and <span class="math inline">\(t = 10\)</span></p>
-<p><br></p>
-<p><span class="math inline">\(g(3, 10) = 2.4(3) + 0.5(10^2)= 57.2\)</span></p>
-</div>
-<aside class="notes">
-<ul>
-<li><span class="math inline">\(g(3,10) = 2.4 \times 3 + 0.5 \times 10^2\)</span></li>
-<li><strong><span class="math inline">\(g(3,10) = 7.2 + 50 = 57.2\)</span></strong></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -1217,44 +617,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

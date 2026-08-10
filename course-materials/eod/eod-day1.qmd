@@ -1,9 +1,9 @@
 ---
 title: "Day 1: End-of-day practice"
-subtitle: "Create a repo for your coral reef simulator"
+subtitle: "Create a repo for your coral reef model"
 ---
 
-Over the course of the first week of EDS 221, you're going to implement the coral reef simulator board game in R. This project provides an opportunity to integrate foundational programming concepts: data structures, control structures, and functions. All of your work on this project will live in a single repository.
+Over the course of the first week of EDS 221, you're going to implement the coral reef model in R. This project provides an opportunity to integrate foundational programming concepts: data structures, control structures, and functions. All of your work on this project will live in a single repository.
 
 Today's end-of-day practice lays the groundwork for the rest of the work you'll do this week. By the end of this activity, you will have:
 
@@ -16,7 +16,7 @@ The following sections describe your goals and how to validate them. The instruc
 ## Version control tasks
 
 1. Initialize a local git repository for your project in your eds221/ folder. 
-2. In your repository, create README.md. Add 2-3 sentences describing the coral reef simulator at a high level. This should be a summary, not step-by-step instructions.
+2. In your repository, create README.md. Add 2-3 sentences describing the coral reef model at a high level. This should be a summary, not step-by-step instructions.
 3. Commit your changes.
 4. Create a remote repository on GitHub. 
 5. Push your local repo to the remote.

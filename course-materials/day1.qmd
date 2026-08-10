@@ -31,7 +31,7 @@ knitr::include_graphics("images/horst-welcome.png")
 
 ## Afternoon session: Version control
 
-* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Tracking changes](day1pm-slides.qmd){target="_blank"}
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Tracking changes](slides/day1pm-slides.qmd){target="_blank"}
 * {{< fa users-line title="Multiple people working together" >}} Live coding demo: git and GitHub
 * {{< fa laptop title="A laptop" >}} [Trace git commands](activities/day1/day1pm-git-challenge.qmd)
 * {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: version control](activities/day1/day1pm-concept-mapping.pdf){target="_blank"}

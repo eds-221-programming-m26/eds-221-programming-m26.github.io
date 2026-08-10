@@ -28,25 +28,11 @@
     "text": "Footnotes\n\n\nThe script from the live coding demo will be linked from here after the session ends.↩︎"
   },
   {
-    "objectID": "course-materials/day2.html#morning-session-data-types-and-1d-structures",
-    "href": "course-materials/day2.html#morning-session-data-types-and-1d-structures",
+    "objectID": "course-materials/day2.html",
+    "href": "course-materials/day2.html",
     "title": "Data structures",
-    "section": "Morning session: Data types and 1d structures",
-    "text": "Morning session: Data types and 1d structures\n\n Create a data sheet\n Code sleuth: type coercion\n Live coding demo: creating vectors\n Types and vectors mini-lecture\n Concept mapping: data types and 1d structures\n Exit ticket"
-  },
-  {
-    "objectID": "course-materials/day2.html#afternoon-session-indexing-and-2d-data",
-    "href": "course-materials/day2.html#afternoon-session-indexing-and-2d-data",
-    "title": "Data structures",
-    "section": "Afternoon session: Indexing and 2d data",
-    "text": "Afternoon session: Indexing and 2d data\n\n Code sleuth: indexing\n Live coding demo: indexing and 2d data\n SLWE: indexing\n Debugger: indexing errors\n Concept mapping: Indexing and 2d data\n Exit ticket"
-  },
-  {
-    "objectID": "course-materials/day2.html#end-of-day-practice",
-    "href": "course-materials/day2.html#end-of-day-practice",
-    "title": "Data structures",
-    "section": "End-of-day practice",
-    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 2 Practice: Initialize the reef"
+    "section": "",
+    "text": "Website under construction sign"
   },
   {
     "objectID": "course-materials/day7.html",
@@ -105,249 +91,74 @@
     "text": "Chunk 1\nOn a sheet of paper\n\nIdentify the object being indexed (vector, list, matrix, etc)\nIdentify the index (inside [ ] or following $)\nDetermine the type of the index (positive integers, negative integers, conditions, names, blanks) and evaluate it\nApply the index to the object and determine the result"
   },
   {
-    "objectID": "course-materials/slides/eds-212-template copy.html#title-slide",
-    "href": "course-materials/slides/eds-212-template copy.html#title-slide",
+    "objectID": "course-materials/slides/day1pm-slides.html#title-slide",
+    "href": "course-materials/slides/day1pm-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 212: Day 1, Lecture 1\nCourse intro, algebra refresher\n\nAugust 4th, 2025"
+    "text": "EDS 221 Day 1 PM\nVersion control\n\nAugust 10th, 2025"
   },
   {
-    "objectID": "course-materials/slides/eds-212-template copy.html#welcome",
-    "href": "course-materials/slides/eds-212-template copy.html#welcome",
+    "objectID": "course-materials/slides/day1pm-slides.html#corals",
+    "href": "course-materials/slides/day1pm-slides.html#corals",
     "title": "",
     "section": "",
-    "text": "Welcome to EDS 212 - Essential Math in Environmental Data Science\n\n\n\nInstructor: Ruth Oliver (rutholiver@ucsb.edu)\nTeaching assistant: Alessandra Vidal Meza\nCourse hours: 10am - 4:30pm PST\nLocation: NCEAS 1st Floor Classroom\n\n\n\nLet’s take a look at the course syllabus together."
+    "text": "Anyone can edit Wikipedia - how do you keep all those changes organized?"
   },
   {
-    "objectID": "course-materials/slides/eds-212-template copy.html#course-description",
-    "href": "course-materials/slides/eds-212-template copy.html#course-description",
+    "objectID": "course-materials/slides/day1pm-slides.html#version-history",
+    "href": "course-materials/slides/day1pm-slides.html#version-history",
     "title": "",
     "section": "",
-    "text": "Course description\n\n\nUnits: 2\nGrading: Satisfactory/Unsatisfactory\nDescription: Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations."
+    "text": "Version history tracks changes over time\n\nEach contribution is individually recorded."
   },
   {
-    "objectID": "course-materials/slides/eds-212-template copy.html#topics",
-    "href": "course-materials/slides/eds-212-template copy.html#topics",
+    "objectID": "course-materials/slides/day1pm-slides.html#version-history2",
+    "href": "course-materials/slides/day1pm-slides.html#version-history2",
     "title": "",
     "section": "",
-    "text": "Topics overview\n\n\n\nDay 1: Course introduction & math basics refresher\nDay 2: Derivatives\nDay 3: Differential equations, intro to linear algebra\nDay 4: Linear algebra, summary statistics\nDay 5: Basic probability theory, Boolean algebra"
+    "text": "Version history tracks changes over time\n\nDetails about when, who, and what are linked to a set of changes."
   },
   {
-    "objectID": "course-materials/slides/eds-212-template copy.html#math-evolution",
-    "href": "course-materials/slides/eds-212-template copy.html#math-evolution",
+    "objectID": "course-materials/slides/day1pm-slides.html#diffs",
+    "href": "course-materials/slides/day1pm-slides.html#diffs",
     "title": "",
     "section": "",
-    "text": "Maybe you’re thinking…\n\n\n\nSource: Michael Sandberg’s Data Visualization Blog"
+    "text": "Differences highlight exact changes\n\nWith version history, changes can be tracked to individual lines."
   },
   {
-    "objectID": "course-materials/slides/eds-212-template copy.html#why-math",
-    "href": "course-materials/slides/eds-212-template copy.html#why-math",
+    "objectID": "course-materials/slides/day1pm-slides.html#no-version-control",
+    "href": "course-materials/slides/day1pm-slides.html#no-version-control",
     "title": "",
     "section": "",
-    "text": "Why am I taking a math class?\n\n  \n\nor,\n\nWhy do I have to know math when a computer will do it for me?"
+    "text": "Version control lets us avoid this\n\nFrom “R for Excel Users” by Julie Lowndes & Allison Horst"
   },
   {
-    "objectID": "course-materials/slides/eds-212-template copy.html#warm-up",
-    "href": "course-materials/slides/eds-212-template copy.html#warm-up",
+    "objectID": "course-materials/slides/day1pm-slides.html#code-version-control",
+    "href": "course-materials/slides/day1pm-slides.html#code-version-control",
     "title": "",
     "section": "",
-    "text": "A quantitative brain warm-up\n\n\n\nMEDS students have diverse work & academic histories\n\nThis course (re)introduces math concepts and tools that:\n\nFocus on applications to environmental data science\nAre specifically relevant for MEDS projects, coursework\nProvide an entryway into building computational skills\nRefresh quantitative thinking skills generally\nRefresh essentials like units, conversions, notation, language"
+    "text": "Pardon me, I want to write code, not encyclopedias\n\n\n\n\n\nBryan (2018) The American Statistician\n\n\ngit is the most widespread tool for version control of code.\nLike Wikipedia’s revision history, it tracks when, who, and what, with line-by-line differences.\n\n\nGitHub is the most widespread platform for hosting git repositories\nIt helps you collaborate, simplifying access and project management"
   },
   {
-    "objectID": "course-materials/slides/eds-212-template copy.html#warm-up-overview",
-    "href": "course-materials/slides/eds-212-template copy.html#warm-up-overview",
+    "objectID": "course-materials/slides/day1pm-slides.html#live-coding",
+    "href": "course-materials/slides/day1pm-slides.html#live-coding",
     "title": "",
     "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#first-algebra",
-    "href": "course-materials/slides/eds-212-template copy.html#first-algebra",
-    "title": "",
-    "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#algebra-blitz",
-    "href": "course-materials/slides/eds-212-template copy.html#algebra-blitz",
-    "title": "",
-    "section": "",
-    "text": "Algebra blitz\n\n\nYou can get far with a few rules:\n\n\nOrder of operations\nEquations are already solved (but sometimes we need them in a different format)\nDo whatever you want but do the same thing to both sides"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#PEMDAS",
-    "href": "course-materials/slides/eds-212-template copy.html#PEMDAS",
-    "title": "",
-    "section": "",
-    "text": "1. Order of operations (P-E-MD-AS)\n\n\nP - Parentheses\n\nE - Exponents\n\nM/D - Multipication / division\n\nA/S - Addition / subtraction"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#PEMDAS-practice",
-    "href": "course-materials/slides/eds-212-template copy.html#PEMDAS-practice",
-    "title": "",
-    "section": "",
-    "text": "1. Order of operations practice problems\n\n\nSimplify the following: \\((12 - 2)/5 + 5(3+2)/6\\)\n\nSimplify the following: \\(\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3}\\)\n\nSimplify the following: \\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)\n\n\n\\((12 - 2)/5 + 5(3+2)/6\\)\n\n\n\\((10/5) + 5 \\times 5 / 6\\)\nANSWER: \\(2 + 25/6\\)\n\n\n\\(\\frac{(4-6)}{(2)}(3+1)-\\frac{(1+2*4)}{(3)}\\)\n\n\n\\(\\frac{(-2)}{(2)}(4)-\\frac{(9)}{(3)}\\)\n\\(-1 \\times 4 - 3\\)\n\\(-4-3\\)\nANSWER: \\(-7\\)\n\n\n\\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)\n\n\n\\(3x+4 \\times 2x - 2y + 5 + \\frac{2x-6x}{2}\\)\n\\(3x+4 \\times 2x - 2y + 5 + \\frac{2x}{2}-\\frac{6x}{2}\\)\n\\(3x+4 \\times 2x - 2y + 5 + x - 3x\\)\n\\(11x - 2y + 5 - 2x\\)\nANSWER: \\(9x - 2y + 5\\)"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#notation-matters",
-    "href": "course-materials/slides/eds-212-template copy.html#notation-matters",
-    "title": "",
-    "section": "",
-    "text": "1. Notation matters\n\n\n\nSimplify the following: \\(6 \\div 3(4+2)\\)\nWhat would be a harder-to-misinterpret way to write this?\n\n\n\n\nANSWER: 12\nA harder to misinterpret way to write this: \\((6 \\div 3) \\times (4+2)\\)\n\n–"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#takeaway",
-    "href": "course-materials/slides/eds-212-template copy.html#takeaway",
-    "title": "",
-    "section": "",
-    "text": "1. An important takeaway:\n\n\n\nBeing readable & hard to incorrectly interpret is often as important as being technically “correct”\n\n \nWhen designing things, it’s important to consider the different ways that users might misuse or misunderstand it - then build in safeguards to help them use it correctly. Clear communication and user-centered design is critical in environmental data science."
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#equations-solved",
-    "href": "course-materials/slides/eds-212-template copy.html#equations-solved",
-    "title": "",
-    "section": "",
-    "text": "2. Equations are solved\n\n\n\\[2x-5y+3.9=8x^2-100.7x\\]\n\nProvides solutions for the questions:\n\n\n\n“What is the value of \\(2x-5y+3.9\\)?” and\n“What is the value of \\(8x^2-100.7x\\)?”"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#reorganize",
-    "href": "course-materials/slides/eds-212-template copy.html#reorganize",
-    "title": "",
-    "section": "",
-    "text": "2./3. It is often helpful to reorganize things\n\n\n\nIn the equation on the previous slide (shown below), we might want to solve for y:\n\\[2x-5y+3.9=8x^2-100.7x\\]\n\nThe one rule to rule them all:\n\nYou can do whatever you want to an equation, as long as you do the exact same thing to both sides. That includes ensuring that you are applying something entirely to each side."
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#same-both-sides1",
-    "href": "course-materials/slides/eds-212-template copy.html#same-both-sides1",
-    "title": "",
-    "section": "",
-    "text": "3. We’re really just doing the same thing to both sides until we’re happy with the format\n\n\nExample:\n\nApply the same operation to each side of the following equation step-by-step to isolate \\(x\\) on one side. Write out all steps.\n\n\\[4x+8=5-2x\\]\n\n\nStart with: \\[4x+8=5-2x\\]\nAdd \\(2x\\) to each side: \\(6x + 8 = 5\\)\nSubtract \\(8\\) from both sides: \\(6x = -3\\)\nANSWER: \\(x = -\\frac{1}{2}\\)"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#same-both-sides2",
-    "href": "course-materials/slides/eds-212-template copy.html#same-both-sides2",
-    "title": "",
-    "section": "",
-    "text": "3. We’re really just doing the same thing to both sides until we’re happy with the format\n\n\nExample:\n\nApply the same operation to each side of the following equation step-by-step to isolate \\(a\\) on one side. Write out all steps.\n\n\\[\\frac{2(a+1)}{3a}+4=6\\]\n\nENDING NOTE: We might encounter complex expressions for how values are related to each other. While the equation is already solved, it can be helpful to use some basic algebra to rearrange things to make our equations easier to understand.\n\nStart with: \\[\\frac{2(a+1)}{3a}+4=6\\]\nSubtract 4 from both sides: \\[\\frac{2a+2}{3a}=2\\]\nMultiply both sides by \\(3a\\): \\[2a+2=6a\\]\nSubtract \\(2a\\) from both sides: \\[2=4a\\]\nDivide each side by 4; ANSWER: \\(a = \\frac{1}{2}\\)"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#next-exp",
-    "href": "course-materials/slides/eds-212-template copy.html#next-exp",
-    "title": "",
-    "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms (this afternoon)\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#exponents",
-    "href": "course-materials/slides/eds-212-template copy.html#exponents",
-    "title": "",
-    "section": "",
-    "text": "Exponents & how to do math with them\n\n\n\\[x^n=x\\times x\\times\\ x \\times x...(n\\space times)\\]\n\n\nEvaluate the following to find a value for \\(y\\):\n\n\n\\(y = 12-2^4\\)\n\\(2y + 30=y+3^3\\)\n\n\n\nSometimes things are related to each other in an exponential way, so we’re going to remind ourselves how they work using numbers.\n\n\\(y = 12-2^4\\)\n\n\n\\(y = 12 - (2 \\times 2 \\times 2 \\times 2)\\)\n\\(y = 12 - 26\\)\nANSWER: \\(y = -4\\)\n\n\n\\(2y + 30=y+3^3\\)\n\n\n\\(2y + 30 = y + (3 \\times 3 \\times 3)\\)\n\\(2y + 30 = y + 27\\)\n\\(y + 30 = 27\\)\nANSWER: \\(y = -3\\)"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#exponents-rules",
-    "href": "course-materials/slides/eds-212-template copy.html#exponents-rules",
-    "title": "",
-    "section": "",
-    "text": "Exponent rules\n\n\n\\(x^ax^b=x^{a+b}\\) ; Example: \\(x^5x^3=x^{5+3}=x^8\\) ; Example: \\(2^2 \\times 2^2\\) = \\((2 \\times 2) \\times (2 \\times 2)\\) = \\(2^4\\)\n\n\n\n\\(\\frac{x^a}{x^b}=x^{a-b}\\) ; Example: \\(\\frac{z^5}{z^3}=z^{5-3}=z^2\\) ; Example: \\(\\frac{2^3}{2^2}\\) = \\(\\frac{2 \\times 2 \\times 2}{2 \\times 2}\\) = \\(2^1\\)\n\n\n\n\n\\(\\frac{1}{x^a}=x^{-a}\\) ; Example: \\(b^{-4x}=\\frac{1}{b^{4x}}\\)\n\n\n\n\n\\((x^a)^b=x^{ab}\\) ; Example: \\((2^3)^2=2^{3*2}=2^6=64\\)\n\n\n\n\n\\((\\frac{x}{y})^a=\\frac{x^a}{y^a}\\) ; Example: \\((\\frac{y}{2^2})^2=\\frac{y^2}{(2^2)^2}=\\frac{y^2}{2^4}=\\frac{y^2}{16}\\)\n\n\n\n\n\\((xy)^a=x^ay^a\\) ; Example: \\((3x)^2=3^2x^2\\)"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#exponents-practice",
-    "href": "course-materials/slides/eds-212-template copy.html#exponents-practice",
-    "title": "",
-    "section": "",
-    "text": "Exponent practice\n\n\nSimplify the following expressions using the rules of exponents:\n\n1. \\(3x^5x^8x^{-11}\\)\n\n2. \\(\\frac{-8x^6}{2x^4}+7x^2\\)\n\n3. \\(\\frac{3x}{x^5}-3.8x^4\\frac{x^3}{x^6}+8.1x-11.2\\)\n\n\n\\(3x^5x^8x^{-11}\\)\n\n\nANSWER: \\(3x^2\\)\n\n\n\\(\\frac{-8x^6}{2x^4}+7x^2\\)\n\n\n\\(-4x^2 + 7x^2\\)\nANSWER: \\(3x^2\\)\n\n\n\\(\\frac{3x}{x^5}-3.8x^4\\frac{x^3}{x^6}+8.1x-11.2\\)\n\n\n\\(3x^{-4}-3.8x^4 \\times x^{-3} + 8.1x - 11.2\\)\n\\(3x^{-4}-3.8x^1 + 8.1x - 11.2\\)\nANSWER: \\(3x^{-4}+4.3x - 11.2\\)"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#FOIL",
-    "href": "course-materials/slides/eds-212-template copy.html#FOIL",
-    "title": "",
-    "section": "",
-    "text": "Multiplying expressions (FOIL)\n\n\nFirst, Outside, Inside, Last\n\nExample:\n\\[(2x+5)(x-3)\\]\n\n\n\\[= (2x \\times x) (2x \\times -3) (5 \\times x) (5 \\times -3)\\]\n\\[= 2x^2 - 6x + 5x - 15\\]\n\\[=2x^2-x-15\\]"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#next-units",
-    "href": "course-materials/slides/eds-212-template copy.html#next-units",
-    "title": "",
-    "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#units",
-    "href": "course-materials/slides/eds-212-template copy.html#units",
-    "title": "",
-    "section": "",
-    "text": "UNITS. UNITS. UNITS.\n\n\n\nThink about these statements, which all contain the same value of 4:\n\n\nThere are four in the refrigerator.\nThere are four burritos in the refrigerator.\nThere are four roaches in the refrigerator.\nThere are four million dollars in the refrigerator."
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#units-critical",
-    "href": "course-materials/slides/eds-212-template copy.html#units-critical",
-    "title": "",
-    "section": "",
-    "text": "Units are critical in environmental data science\n\n \n\nWe cannot responsibly work with data without knowing the units of each variable we’re working with.\n\nThat means we need to always familiarize ourselves with metadata, carefully check units and any unit conversions, and understand how units combine into the units of a dependent variable."
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#unit-conv",
-    "href": "course-materials/slides/eds-212-template copy.html#unit-conv",
-    "title": "",
-    "section": "",
-    "text": "Dimensional analysis for unit conversions\n\n\nIn dimensional analysis, we multiply initial units by a sequence of conversion factors to arrive at the final desired units.\n\nFor example, to convert \\(100 \\frac{g}{cm^3}\\) into units of \\(\\frac{kg}{in^3}\\), given that 1 cm3 = 0.061 in3.\n\n\\[100\\frac{g}{cm^3}*\\frac{1kg}{1000g}*\\frac{1cm^3}{0.061in^3}=1.639\\frac{kg}{in^3}\\]"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#unit-conv-practice",
-    "href": "course-materials/slides/eds-212-template copy.html#unit-conv-practice",
-    "title": "",
-    "section": "",
-    "text": "Unit conversion practice\n\n\n\nPractice dimensional analysis to perform the following conversions:\n\n\nConvert \\(8.1\\frac{km}{s}\\) to miles per hour, given that 1 km = 0.621 miles.\n\n\n\nConvert a mass flux of \\(3.2\\frac{g}{min\\cdot m^2}\\) to \\(\\frac{mg}{s\\cdot cm^2}\\).\n\n\n\n\n\\(8.1\\frac{km}{s} \\times \\frac{60s}{min} \\times \\frac{60min}{hr} \\times \\frac{0.621 miles}{1km} = 18,108.36 \\frac{miles}{hr}\\)\n\\(3.2\\frac{g}{min\\cdot m^2} \\times \\frac{1min}{60s} \\times \\frac{1000 mg}{g} \\times \\frac{m}{100cm} \\times \\frac{m}{100cm}\\)"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#next-fxns",
-    "href": "course-materials/slides/eds-212-template copy.html#next-fxns",
-    "title": "",
-    "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#functions",
-    "href": "course-materials/slides/eds-212-template copy.html#functions",
-    "title": "",
-    "section": "",
-    "text": "Functions\n\n\nFunctions are mathematical expressions that tell us how input values are related to output values.\n\nFor example, \\(y = 3x-5\\) is a function that tells us the value of y at any value of x. In this scenario, we would probably say y is a function of x.\n\nCould you also rewrite it and say x is a function of y? Here, with no knowledge of what’s an input and what’s an output, sure - but usually in environmental data science we specify the input variable(s), and the output variable(s) carefully. What follows is the expression in the format of: “[output variable(s)] is/are a function of [input variable(s)]”."
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#inputs-outputs",
-    "href": "course-materials/slides/eds-212-template copy.html#inputs-outputs",
-    "title": "",
-    "section": "",
-    "text": "Thinking about inputs and outputs\n\n\nFor the following combinations of related variables, which do you expect would be the input and the output in a function describing how they are related? Say your answer in a sentence, e.g. “Evapotranspiration is a function of air temperature.”\n\n\n\nfuel (biomass) / slope / wildfire severity / windspeed / air temperature\nwind speed / power generated by wind turbine\nsoil C:N ratio / bacterial biomass / soil water content / leaf litter decomposition rate\n\n\n\n\nwildfire severity is a function of fuel and slope and windspeed and air temperature\npower generated by wind turbine is a function of wind speed\nleaf litter decomposition rate is a function of soil C:N ratio and bacterial biomass and soil water content"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#fxn-notation",
-    "href": "course-materials/slides/eds-212-template copy.html#fxn-notation",
-    "title": "",
-    "section": "",
-    "text": "Function notation\n\n\nSingle variable (univariate) function:\n\\(f(x) = [expression\\space containing \\space x]\\)\n\nMultivariate function:\n\\(g(a,T,z)=[expression\\space containing \\space a, T, \\space and \\space z]\\)"
-  },
-  {
-    "objectID": "course-materials/slides/eds-212-template copy.html#eval-fxns",
-    "href": "course-materials/slides/eds-212-template copy.html#eval-fxns",
-    "title": "",
-    "section": "",
-    "text": "Evaluating functions\n\n\n\nFor continuous functions, we evaluate them by plugging in variable values.\n\nExample:\n\nEvaluate \\(g(x,t)=2.4x+0.5t^2\\) at \\(x = 3\\) and \\(t = 10\\)\n\n\\(g(3, 10) = 2.4(3) + 0.5(10^2)= 57.2\\)\n\n\n\n\\(g(3,10) = 2.4 \\times 3 + 0.5 \\times 10^2\\)\n\\(g(3,10) = 7.2 + 50 = 57.2\\)"
+    "text": "Live coding demo"
   },
   {
     "objectID": "course-materials/eod/eod-day1.html",
     "href": "course-materials/eod/eod-day1.html",
     "title": "Day 1: End-of-day practice",
     "section": "",
-    "text": "Over the course of the first week of EDS 221, you’re going to implement the coral reef simulator board game in R. This project provides an opportunity to integrate foundational programming concepts: data structures, control structures, and functions. All of your work on this project will live in a single repository.\nToday’s end-of-day practice lays the groundwork for the rest of the work you’ll do this week. By the end of this activity, you will have:\nThe following sections describe your goals and how to validate them. The instructions are deliberately left vague - use your notes and the activities from earlier today (e.g., live coding scripts) to guide you!"
+    "text": "Over the course of the first week of EDS 221, you’re going to implement the coral reef model in R. This project provides an opportunity to integrate foundational programming concepts: data structures, control structures, and functions. All of your work on this project will live in a single repository.\nToday’s end-of-day practice lays the groundwork for the rest of the work you’ll do this week. By the end of this activity, you will have:\nThe following sections describe your goals and how to validate them. The instructions are deliberately left vague - use your notes and the activities from earlier today (e.g., live coding scripts) to guide you!"
   },
   {
     "objectID": "course-materials/eod/eod-day1.html#version-control-tasks",
     "href": "course-materials/eod/eod-day1.html#version-control-tasks",
     "title": "Day 1: End-of-day practice",
     "section": "Version control tasks",
-    "text": "Version control tasks\n\nInitialize a local git repository for your project in your eds221/ folder.\nIn your repository, create README.md. Add 2-3 sentences describing the coral reef simulator at a high level. This should be a summary, not step-by-step instructions.\nCommit your changes.\nCreate a remote repository on GitHub.\nPush your local repo to the remote.\n\n\nValidation checks\nCheck that…\n\nYour repo is inside eds221/, and not inside another repo you made earlier today. You don’t want nested repos!\nYour README is visible on GitHub.\nYour local and remote repositories are synced. git status should say:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean"
+    "text": "Version control tasks\n\nInitialize a local git repository for your project in your eds221/ folder.\nIn your repository, create README.md. Add 2-3 sentences describing the coral reef model at a high level. This should be a summary, not step-by-step instructions.\nCommit your changes.\nCreate a remote repository on GitHub.\nPush your local repo to the remote.\n\n\nValidation checks\nCheck that…\n\nYour repo is inside eds221/, and not inside another repo you made earlier today. You don’t want nested repos!\nYour README is visible on GitHub.\nYour local and remote repositories are synced. git status should say:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean"
   },
   {
     "objectID": "course-materials/eod/eod-day1.html#code-execution-tasks",
@@ -452,7 +263,7 @@
     "href": "course-materials/slides/day1am-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 221 Day 1 AM\nCourse intro, code execution\n\nAugust 10th, 2025"
+    "text": "EDS 221 Day 1 AM\nCourse intro\n\nAugust 10th, 2025"
   },
   {
     "objectID": "course-materials/slides/day1am-slides.html#corals",
