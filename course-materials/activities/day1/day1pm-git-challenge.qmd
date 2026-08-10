@@ -18,13 +18,21 @@ Cloning copies a **remote repository** on GitHub to a **local repository** on yo
 
 #### At your computer
 
+First, make your own copy of this remote repo.
+
+1. On the repo page, click the green **"Use this template"** button → **"Create a new repository."**. 
+2. Keep the owner your own GitHub account and use the same repo name **eds221-git-challenge**.
+3. Click "Create repository.
+
+Then, clone your copy of the remote repo to your computer.
+
 1. Switch to the Terminal in Positron (_not_ the R console). 
 2. `cd` to your eds221/ directory (_not_ your eds221-day1pm/ directory; one level up from there).
 3. Clone the remote repo with this command:
     
-    `git clone https://github.com/eds-221-programming-m26/eds221-git-challenge`
+    `git clone https://github.com/<your GitHub username>/eds221-git-challenge`
 
-You should now see the directory eds221/eds221-git-challenge/.
+Make sure to replace `<your GitHub username>`. You should now see the directory eds221/eds221-git-challenge/.
 
 #### At your whiteboard
 
