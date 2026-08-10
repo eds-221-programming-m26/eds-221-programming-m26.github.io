@@ -4,4 +4,33 @@ subtitle: "Day 3"
 description: "Wednesday August 12^th^, 2025"
 ---
 
-![Website under construction sign](images/under-construction.png)
+
+
+<!-- ## Pre-class prep -->
+
+<!-- No pre-class prep before our first day of class! -->
+
+## Morning session: Conditions and logic
+
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Create a data sheet](activities/day2/day2am-create-data-sheet.pdf){target="_blank"}
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: type coercion](activities/day2/day2am-code-sleuth.pdf){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} Live coding demo: creating vectors
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Types and vectors mini-lecture](FIXME){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: data types and 1d structures](activities/day2/day2am-concept-mapping.pdf){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/eox8Ynzj7AC4Ccu88){target="_blank"}
+
+## Afternoon session: Loops
+
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: indexing](activities/day2/day2pm-code-sleuth.pdf){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} Live coding demo: indexing and 2d data
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [SLWE: indexing](activities/day2/day2pm-slwe.pdf){target="_blank"}
+* {{< fa laptop title="A laptop" >}} [Debugger: indexing errors](activities/day2/day2pm-debugger.qmd)
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: Indexing and 2d data](activities/day2/day2pm-concept-mapping.pdf){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/CCsDQJrHqv4hDBi99){target="_blank"}
+
+## End-of-day practice
+
+Complete the following tasks / activities before heading home for the day!
+
+- {{< fa laptop title="A laptop" >}} [**Day 2 Practice:** Initialize the reef](eod/eod-day2.qmd)
+

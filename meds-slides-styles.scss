@@ -51,6 +51,13 @@ td {
   font-size: 20px;
 }
 
+// scoped override for tables that should match .body-text-m sizing
+.table-text-m {
+  th, td {
+    font-size: 1.15em;
+  }
+}
+
 // horizontal line (default dark blue)
 hr {
   border: 4px solid $dark-blue;
@@ -176,6 +183,14 @@ hr {
 	line-height: 1.8em;
 }
 
+// slightly tighter line spacing for dense lists
+.tight-list {
+  li {
+    line-height: 1.1em;
+    margin-bottom: 0.2em;
+  }
+}
+
 // sanchez font family
 .sanchez-font {
   font-family: $font-family-serif;
@@ -220,6 +235,15 @@ hr {
   border-radius: 25px;
 }
 
+.yellow-highlight {
+  background-color: rgba(255, 221, 51, 0.5);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 8px;
+  border-radius: 25px;
+}
+
 .blue-underline {
   text-decoration: underline $dark-blue;
   text-underline-offset: 10px; // https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset
@@ -246,6 +270,8 @@ hr {
   margin: auto;
   position: absolute;
   top: 50%;
+  left: 0;
+  right: 0;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }

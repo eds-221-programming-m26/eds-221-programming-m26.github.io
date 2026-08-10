@@ -1,5 +1,8 @@
 ---
 title: "Hands-on coral reef model"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Motivation
@@ -12,8 +15,8 @@ Before you begin modeling the reef, make sure you have all the materials.
 
 * Reef grid (2 laminated sheets)
 * Coral tokens (50 in a plastic bag)
-* Dice (6d6, 1d8)
-* Role instructions (5)
+* Dice (6d6, 2d8)
+* Model instructions
 * Paper and pencil
 
 Each "turn" represents two years on the reef. You will simulate growth and mortality of corals by rolling dice and placing tokens. When the model completes the simulation, you will have a time series of coral percent cover from 2004 to 2024.

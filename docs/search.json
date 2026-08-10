@@ -81,7 +81,7 @@
     "href": "course-materials/activities/day1/day1am-coral-reef-model.html#model-rules",
     "title": "Hands-on coral reef model",
     "section": "Model rules",
-    "text": "Model rules\nBefore you begin modeling the reef, make sure you have all the materials.\n\nReef grid (2 laminated sheets)\nCoral tokens (50 in a plastic bag)\nDice (6d6, 1d8)\nRole instructions (5)\nPaper and pencil\n\nEach “turn” represents two years on the reef. You will simulate growth and mortality of corals by rolling dice and placing tokens. When the model completes the simulation, you will have a time series of coral percent cover from 2004 to 2024.\n\nSetup\nOn one grid, randomly place 8 coral tokens live-side up. This represent the coral cover on the reef in 2004.\nOn the sheet of paper, make two columns: year and pct_coral_cover. In the first row, record 2004 for the year and 32 for the percent coral cover.\nPro-tip: the reef grid has 25 cells, so the percent cover is the number of live corals tokens times four.\n\n\nTake a turn\nTwo years have passed since the last set of observations. Let’s simulate what happened on the reef. Keep the grid you updated in the previous turn (or during setup) the same and wipe the tokens from the other grid. The other grid is now the reef in the current turn.\n\nFOR each cell with a live coral token on the previous turn’s grid.\n\nRoll 2d6 and add them up. Call this total outcome.\nIF outcome is less than or equal to 3:\n\nThe coral dies.\nPlace a dead coral token on this turn’s grid in the same location.\n\nELSE IF outcome is greater than or equal to 6:\n\nThe coral grows.\nPlace a live coral token on this turn’s grid in the same location.\nThe coral now expands into a neighboring cell. Choose which of the 8 neighboring cells to grow into by rolling your d8. Place a live coral token on the neighboring cell in this turn’s grid corresponding to the relative location shown here:\n\n\n\n\nA 3x3 grid numbered 1 through 8, starting at the top left and progressing clockwise. The center cell is blank.\n\n\nELSE:\n\nThe coral neither grows nor dies.\nPlace a live coral token on this turn’s grid in the same location.\n\n\nCalculate the percent coral cover\nAdd a row to the paper with the year and percent coral cover\n\n\n\nKeep going\nRepeat taking turns until your time series runs through 2024.\n\n\nCRISES!\nThree crises struck Mo’orea’s coral reefs during this time period. Crises activate in specific years and change the model rules.\n\nCrown of Thorns Crisis\nIn 2008 and 2010, a plague of Crown of Thorns seastars wrecks devastation on the corals. Change the following rules:\n\nThe threshold for coral death increases from 3 to 4\nNo growth occurs\n\n\n\nCyclone Crisis\nIn 2012, a cyclone strikes Mo’orea. Change the following rules:\n\nNo mortality or growth occurs\nRoll a d6 to determine the direction of the cyclone’s approach. As the reef is scoured by the storm, remove all tokens from the three columns/rows facing its approach.\n\nOn a 1-2, the cyclone approaches from the west. Remove tokens from the three left columns.\nOn a 3-4, the cyclone approaches from the north. Remove tokens from the three top rows.\nOn a 5-6, the cyclone approaches from the east. Remove tokens from the three right columns.\n\n\n\n\nMarine Heatwave Crisis\nIn 2022, a marine heatwave caused an intense bleaching event on the reef. Change the following rules:\n\nThe threshold for coral death increases from 3 to 7\nThe growth threshold increases from 7 to 10\n\n\n\n\nSubmit your time series\nAfter resolving the model, submit your time series in the spreadsheet here."
+    "text": "Model rules\nBefore you begin modeling the reef, make sure you have all the materials.\n\nReef grid (2 laminated sheets)\nCoral tokens (50 in a plastic bag)\nDice (6d6, 2d8)\nModel instructions\nPaper and pencil\n\nEach “turn” represents two years on the reef. You will simulate growth and mortality of corals by rolling dice and placing tokens. When the model completes the simulation, you will have a time series of coral percent cover from 2004 to 2024.\n\nSetup\nOn one grid, randomly place 8 coral tokens live-side up. This represent the coral cover on the reef in 2004.\nOn the sheet of paper, make two columns: year and pct_coral_cover. In the first row, record 2004 for the year and 32 for the percent coral cover.\nPro-tip: the reef grid has 25 cells, so the percent cover is the number of live corals tokens times four.\n\n\nTake a turn\nTwo years have passed since the last set of observations. Let’s simulate what happened on the reef. Keep the grid you updated in the previous turn (or during setup) the same and wipe the tokens from the other grid. The other grid is now the reef in the current turn.\n\nFOR each cell with a live coral token on the previous turn’s grid.\n\nRoll 2d6 and add them up. Call this total outcome.\nIF outcome is less than or equal to 3:\n\nThe coral dies.\nPlace a dead coral token on this turn’s grid in the same location.\n\nELSE IF outcome is greater than or equal to 6:\n\nThe coral grows.\nPlace a live coral token on this turn’s grid in the same location.\nThe coral now expands into a neighboring cell. Choose which of the 8 neighboring cells to grow into by rolling your d8. Place a live coral token on the neighboring cell in this turn’s grid corresponding to the relative location shown here:\n\n\n\n\nA 3x3 grid numbered 1 through 8, starting at the top left and progressing clockwise. The center cell is blank.\n\n\nELSE:\n\nThe coral neither grows nor dies.\nPlace a live coral token on this turn’s grid in the same location.\n\n\nCalculate the percent coral cover\nAdd a row to the paper with the year and percent coral cover\n\n\n\nKeep going\nRepeat taking turns until your time series runs through 2024.\n\n\nCRISES!\nThree crises struck Mo’orea’s coral reefs during this time period. Crises activate in specific years and change the model rules.\n\nCrown of Thorns Crisis\nIn 2008 and 2010, a plague of Crown of Thorns seastars wrecks devastation on the corals. Change the following rules:\n\nThe threshold for coral death increases from 3 to 4\nNo growth occurs\n\n\n\nCyclone Crisis\nIn 2012, a cyclone strikes Mo’orea. Change the following rules:\n\nNo mortality or growth occurs\nRoll a d6 to determine the direction of the cyclone’s approach. As the reef is scoured by the storm, remove all tokens from the three columns/rows facing its approach.\n\nOn a 1-2, the cyclone approaches from the west. Remove tokens from the three left columns.\nOn a 3-4, the cyclone approaches from the north. Remove tokens from the three top rows.\nOn a 5-6, the cyclone approaches from the east. Remove tokens from the three right columns.\n\n\n\n\nMarine Heatwave Crisis\nIn 2022, a marine heatwave caused an intense bleaching event on the reef. Change the following rules:\n\nThe threshold for coral death increases from 3 to 7\nThe growth threshold increases from 7 to 10\n\n\n\n\nSubmit your time series\nAfter resolving the model, submit your time series in the spreadsheet here."
   },
   {
     "objectID": "course-materials/activities/day1/day1am-coral-reef-model.html#student-roles",
@@ -91,81 +91,249 @@
     "text": "Student roles\nChoose students in your group to perform each of the following roles.\n🎂 Demography tracker Keeps track of which coral to resolve growth/mortality for next, and which have already resolved.\n🪙 Token manager Places, flips, and removes tokens from the grid.\n🎲 Dice roller Rolls the dice and reports the totals.\n📝 Data recorder Updates the table as new time series data emerges.\n⏳ Time keeper Tracks the time and make sures the group is on track to finish. Also writes down any rule ambiguities (and the group decision) encountered.\nWhen the group encounters an ambiguity in the rules, you must reach consensus as a group to decide how to proceed.\n🙅 No laptops while the model is running 🙅"
   },
   {
-    "objectID": "course-materials/eod/eod-day2.html",
-    "href": "course-materials/eod/eod-day2.html",
-    "title": "Day 2: End-of-day practice",
+    "objectID": "course-materials/activities/day3/day3am-review-indexing.html",
+    "href": "course-materials/activities/day3/day3am-review-indexing.html",
+    "title": "Review indexing",
     "section": "",
-    "text": "Yesterday you laid the groundwork for your coral reef simulator by creating the repository. Today, you’ll write code to perform the reef initialization step.\nIn the game, you initialized the reef by randomly picking 8 grid cells and placing live coral tokens on them. Here, you’ll write a script to do something similar."
+    "text": "Yesterday we covered 1d and 2d data structures, including indexing. Recall the subgoals for evaluating indexing expressions.\nWe’ll review yesterday’s content by using these subgoals to understand the following code.\nset.seed(1)\n\n# Chunk 1\ncoral_row &lt;- 3\ncoral_col &lt;- 3\nreef &lt;- matrix(0, nrow = 5, ncol = 5)\nreef[coral_row, coral_col] &lt;- 1\nprint(\"Initial reef\")\n\n[1] \"Initial reef\"\n\nreef\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    0    0    0    0    0\n[2,]    0    0    0    0    0\n[3,]    0    0    1    0    0\n[4,]    0    0    0    0    0\n[5,]    0    0    0    0    0\n\n# Chunk 2\ngrowth_row_lookup &lt;- c(-1, -1, -1, 0, 1, 1, 1, 0)\ngrowth_col_lookup &lt;- c(-1, 0, 1, 1, 1, 0, -1, -1)\n\n# Chunk 3\ngrowth_roll &lt;- sample(1:8, size = 1)\nprint(\"Growth direction roll\")\n\n[1] \"Growth direction roll\"\n\ngrowth_roll\n\n[1] 1\n\ngrowth_row &lt;- coral_row + growth_row_lookup[growth_roll]\ngrowth_col &lt;- coral_col + growth_col_lookup[growth_roll]\nreef[growth_row, growth_col] &lt;- 1\nprint(\"Updated reef\")\n\n[1] \"Updated reef\"\n\nreef\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    0    0    0    0    0\n[2,]    0    1    0    0    0\n[3,]    0    0    1    0    0\n[4,]    0    0    0    0    0\n[5,]    0    0    0    0    0"
   },
   {
-    "objectID": "course-materials/eod/eod-day2.html#pseudocode-for-reef-initialization",
-    "href": "course-materials/eod/eod-day2.html#pseudocode-for-reef-initialization",
-    "title": "Day 2: End-of-day practice",
-    "section": "Pseudocode for reef initialization",
-    "text": "Pseudocode for reef initialization\nIt’s not exactly code, but it’s not quite plain language either - let’s get to know pseudocode.\nHere’s pseudocode describing how to initialize the reef:\nCreate a 5x5 matrix of 0s representing the coral reef\nLabel the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc\nRandomly sample 8 cell labels (without replacement)\nFor each sample cell label:\n    Convert the cell label to a row index\n    Convert the cell label to a column index\n    Use the row and column indices to set the value of the matrix cell to 1\nPrint the matrix\nA few things you should notice.\n\nPseudocode has the feel of code, but the details are a little hand-wavy.\nSome lines represent a single code expression (e.g., the first line creates a variable with a call to matrix()), while others may require more than a single expression to implement.\nIt’s a higher-level description of the procedure than code itself, although more detailed than simply plain language.\n\nBecause of these properties, pseudocode is a valuable tool in several stages of the coding process. It’s quicker to write and faster to digest than real code, so it’s useful for planning and for explaining. But it also has just enough detail that it requires you to think carefully about how your code is going to work. You’ll be writing pseudocode yourself later this week.\nNow it’s your turn to translate the pseudocode into real code."
+    "objectID": "course-materials/activities/day3/day3am-review-indexing.html#chunk-1",
+    "href": "course-materials/activities/day3/day3am-review-indexing.html#chunk-1",
+    "title": "Review indexing",
+    "section": "Chunk 1",
+    "text": "Chunk 1\nOn a sheet of paper\n\nIdentify the object being indexed (vector, list, matrix, etc)\nIdentify the index (inside [ ] or following $)\nDetermine the type of the index (positive integers, negative integers, conditions, names, blanks) and evaluate it\nApply the index to the object and determine the result"
   },
   {
-    "objectID": "course-materials/eod/eod-day2.html#implement-the-pseudocode",
-    "href": "course-materials/eod/eod-day2.html#implement-the-pseudocode",
-    "title": "Day 2: End-of-day practice",
-    "section": "Implement the pseudocode",
-    "text": "Implement the pseudocode\n\n0. Get ready\nOpen your coral reef simulator folder in Positron and make a new script called initalize_reef.R. Put this expression on the first line:\nset.seed(32)\n\n\n1. Create the matrix\nCreate a 5x5 matrix of 0s representing the coral reef\nWrite an expression to implement this step in the procedure. You should be able to do it in one line.\n\n\n2. Randomly sample coral starting locations\nLabel the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc\nRandomly sample 8 cell labels (without replacement)\nThe first line of pseudocode here is a cue for the reader. It would help to draw it on a sheet of paper for you to visualize it (drawing while you code is always a good idea!), but no code is needed here.\nThe second line requires another expression. Again, you should be able to do this in one line of code.\n\n\n3. Place your coral tokens\nFor each sample cell label:\n    Convert the cell label to a row index\n    Convert the cell label to a column index\n    Use the row and column indices to set the value of the matrix cell to 1\nThis part of the pseudocode requires you to repeat the same step multiple times - a loop. We’ll cover loops on Day 3, so for today your task is to initialize just one cell. Use the first value from your random sample of coral starting locations.\nConverting the cell label to row and column indices requires some problem solving! Make sure you can do the conversion on paper before writing the code.\n\n\n\n\n\n\nTip\n\n\n\nHere’s how I suggest solving it on paper - but you’re encouraged to do whatever helps you visualize and reason about the problem! Draw a 5x5 grid on a piece of paper. Label the rows and columns with their indices, and put the numbers 1 to 25 in the cells. From there, try to figure out how to convert the labels to indices.\nHint: the %% and %/% operators will come in useful here!\n\n\n\n\n4. Print the matrix\nAt the console.\n\n\nValidation checks\nCheck that…\n\nYour first sampled label is 6\nThe leftmost cell of the second row of your matrix is 1\nThe other 24 cells in your matrix are 0"
-  },
-  {
-    "objectID": "course-materials/eod/eod-day2.html#track-your-progress",
-    "href": "course-materials/eod/eod-day2.html#track-your-progress",
-    "title": "Day 2: End-of-day practice",
-    "section": "Track your progress",
-    "text": "Track your progress\nSave the files in your working directory, then stage, commit, and push your changes.\n\nValidation checks\nCheck that…\n\nYour script is visible on GitHub\nYour local and remote repositories are synced. git status should say:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean"
-  },
-  {
-    "objectID": "course-materials/eod/eod-day2.html#wrap-up",
-    "href": "course-materials/eod/eod-day2.html#wrap-up",
-    "title": "Day 2: End-of-day practice",
-    "section": "Wrap up",
-    "text": "Wrap up\nThat’s it for day 2!\nToday you learned about:\nData types and 1d structures\n\nReal world data is represented with four computational types: character, double, integer, and logical.\nVectors are constrained to one type, so combining vectors of different types induces coercion.\nThere are lots of different ways to create vectors, such as logical(), :, and c().\n\nIndexing and 2d data\n\nReading and writing from data structures happens through indexing.\nIndexing into 1d data structures can be done with positive integers (selection by position), negative integers (exclusion by position), names, and logic. In addition, you can index 2d data with blanks to access along an entire dimension.\nData frames are a particularly important 2d data structure and the workhorse of data science. We’ll work extensively with data frames starting next week after you build your computational thinking foundation."
-  },
-  {
-    "objectID": "course-materials/day9.html",
-    "href": "course-materials/day9.html",
-    "title": "Problem solving",
+    "objectID": "course-materials/slides/eds-212-template copy.html#title-slide",
+    "href": "course-materials/slides/eds-212-template copy.html#title-slide",
+    "title": "",
     "section": "",
-    "text": "Website under construction sign"
+    "text": "EDS 212: Day 1, Lecture 1\nCourse intro, algebra refresher\n\nAugust 4th, 2025"
   },
   {
-    "objectID": "course-materials/day10.html",
-    "href": "course-materials/day10.html",
-    "title": "Review",
+    "objectID": "course-materials/slides/eds-212-template copy.html#welcome",
+    "href": "course-materials/slides/eds-212-template copy.html#welcome",
+    "title": "",
     "section": "",
-    "text": "Website under construction sign"
+    "text": "Welcome to EDS 212 - Essential Math in Environmental Data Science\n\n\n\nInstructor: Ruth Oliver (rutholiver@ucsb.edu)\nTeaching assistant: Alessandra Vidal Meza\nCourse hours: 10am - 4:30pm PST\nLocation: NCEAS 1st Floor Classroom\n\n\n\nLet’s take a look at the course syllabus together."
   },
   {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
-    "title": "Scientific Programming Essentials",
-    "section": "Course Description",
-    "text": "Course Description\nThis course teaches scientific programming skills and demonstrates the application of these techniques to environmental data analysis and problem solving. Topics include fundamental programming concepts, transforming and visualizing data, and exposure to modern data science tools. The course will be taught in R.\nBy the end of this course, students will be able to:\n\n🧠 Think like a computer scientist\n\n🌎 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
-  },
-  {
-    "objectID": "index.html#teaching-team",
-    "href": "index.html#teaching-team",
-    "title": "Scientific Programming Essentials",
-    "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nMax Czapanskiy (they/them)\nEmail: maxczap@ucsb.edu\n\n\n\n\nTA\n\n\n\n\n\n\n\n\n\n\n\nAlessandra Vidal Meza (she/her/ella)\nEmail: avidalmeza@bren.ucsb.edu"
-  },
-  {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
-    "title": "Scientific Programming Essentials",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nEDS 221 was originally developed and taught by Allison Horst. This course website contains material reused from, adapted from, and inspired by Allison’s original work."
-  },
-  {
-    "objectID": "course-materials/day8.html",
-    "href": "course-materials/day8.html",
-    "title": "Advanced data types",
+    "objectID": "course-materials/slides/eds-212-template copy.html#course-description",
+    "href": "course-materials/slides/eds-212-template copy.html#course-description",
+    "title": "",
     "section": "",
-    "text": "Website under construction sign"
+    "text": "Course description\n\n\nUnits: 2\nGrading: Satisfactory/Unsatisfactory\nDescription: Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations."
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#topics",
+    "href": "course-materials/slides/eds-212-template copy.html#topics",
+    "title": "",
+    "section": "",
+    "text": "Topics overview\n\n\n\nDay 1: Course introduction & math basics refresher\nDay 2: Derivatives\nDay 3: Differential equations, intro to linear algebra\nDay 4: Linear algebra, summary statistics\nDay 5: Basic probability theory, Boolean algebra"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#math-evolution",
+    "href": "course-materials/slides/eds-212-template copy.html#math-evolution",
+    "title": "",
+    "section": "",
+    "text": "Maybe you’re thinking…\n\n\n\nSource: Michael Sandberg’s Data Visualization Blog"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#why-math",
+    "href": "course-materials/slides/eds-212-template copy.html#why-math",
+    "title": "",
+    "section": "",
+    "text": "Why am I taking a math class?\n\n  \n\nor,\n\nWhy do I have to know math when a computer will do it for me?"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#warm-up",
+    "href": "course-materials/slides/eds-212-template copy.html#warm-up",
+    "title": "",
+    "section": "",
+    "text": "A quantitative brain warm-up\n\n\n\nMEDS students have diverse work & academic histories\n\nThis course (re)introduces math concepts and tools that:\n\nFocus on applications to environmental data science\nAre specifically relevant for MEDS projects, coursework\nProvide an entryway into building computational skills\nRefresh quantitative thinking skills generally\nRefresh essentials like units, conversions, notation, language"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#warm-up-overview",
+    "href": "course-materials/slides/eds-212-template copy.html#warm-up-overview",
+    "title": "",
+    "section": "",
+    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#first-algebra",
+    "href": "course-materials/slides/eds-212-template copy.html#first-algebra",
+    "title": "",
+    "section": "",
+    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#algebra-blitz",
+    "href": "course-materials/slides/eds-212-template copy.html#algebra-blitz",
+    "title": "",
+    "section": "",
+    "text": "Algebra blitz\n\n\nYou can get far with a few rules:\n\n\nOrder of operations\nEquations are already solved (but sometimes we need them in a different format)\nDo whatever you want but do the same thing to both sides"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#PEMDAS",
+    "href": "course-materials/slides/eds-212-template copy.html#PEMDAS",
+    "title": "",
+    "section": "",
+    "text": "1. Order of operations (P-E-MD-AS)\n\n\nP - Parentheses\n\nE - Exponents\n\nM/D - Multipication / division\n\nA/S - Addition / subtraction"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#PEMDAS-practice",
+    "href": "course-materials/slides/eds-212-template copy.html#PEMDAS-practice",
+    "title": "",
+    "section": "",
+    "text": "1. Order of operations practice problems\n\n\nSimplify the following: \\((12 - 2)/5 + 5(3+2)/6\\)\n\nSimplify the following: \\(\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3}\\)\n\nSimplify the following: \\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)\n\n\n\\((12 - 2)/5 + 5(3+2)/6\\)\n\n\n\\((10/5) + 5 \\times 5 / 6\\)\nANSWER: \\(2 + 25/6\\)\n\n\n\\(\\frac{(4-6)}{(2)}(3+1)-\\frac{(1+2*4)}{(3)}\\)\n\n\n\\(\\frac{(-2)}{(2)}(4)-\\frac{(9)}{(3)}\\)\n\\(-1 \\times 4 - 3\\)\n\\(-4-3\\)\nANSWER: \\(-7\\)\n\n\n\\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)\n\n\n\\(3x+4 \\times 2x - 2y + 5 + \\frac{2x-6x}{2}\\)\n\\(3x+4 \\times 2x - 2y + 5 + \\frac{2x}{2}-\\frac{6x}{2}\\)\n\\(3x+4 \\times 2x - 2y + 5 + x - 3x\\)\n\\(11x - 2y + 5 - 2x\\)\nANSWER: \\(9x - 2y + 5\\)"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#notation-matters",
+    "href": "course-materials/slides/eds-212-template copy.html#notation-matters",
+    "title": "",
+    "section": "",
+    "text": "1. Notation matters\n\n\n\nSimplify the following: \\(6 \\div 3(4+2)\\)\nWhat would be a harder-to-misinterpret way to write this?\n\n\n\n\nANSWER: 12\nA harder to misinterpret way to write this: \\((6 \\div 3) \\times (4+2)\\)\n\n–"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#takeaway",
+    "href": "course-materials/slides/eds-212-template copy.html#takeaway",
+    "title": "",
+    "section": "",
+    "text": "1. An important takeaway:\n\n\n\nBeing readable & hard to incorrectly interpret is often as important as being technically “correct”\n\n \nWhen designing things, it’s important to consider the different ways that users might misuse or misunderstand it - then build in safeguards to help them use it correctly. Clear communication and user-centered design is critical in environmental data science."
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#equations-solved",
+    "href": "course-materials/slides/eds-212-template copy.html#equations-solved",
+    "title": "",
+    "section": "",
+    "text": "2. Equations are solved\n\n\n\\[2x-5y+3.9=8x^2-100.7x\\]\n\nProvides solutions for the questions:\n\n\n\n“What is the value of \\(2x-5y+3.9\\)?” and\n“What is the value of \\(8x^2-100.7x\\)?”"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#reorganize",
+    "href": "course-materials/slides/eds-212-template copy.html#reorganize",
+    "title": "",
+    "section": "",
+    "text": "2./3. It is often helpful to reorganize things\n\n\n\nIn the equation on the previous slide (shown below), we might want to solve for y:\n\\[2x-5y+3.9=8x^2-100.7x\\]\n\nThe one rule to rule them all:\n\nYou can do whatever you want to an equation, as long as you do the exact same thing to both sides. That includes ensuring that you are applying something entirely to each side."
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#same-both-sides1",
+    "href": "course-materials/slides/eds-212-template copy.html#same-both-sides1",
+    "title": "",
+    "section": "",
+    "text": "3. We’re really just doing the same thing to both sides until we’re happy with the format\n\n\nExample:\n\nApply the same operation to each side of the following equation step-by-step to isolate \\(x\\) on one side. Write out all steps.\n\n\\[4x+8=5-2x\\]\n\n\nStart with: \\[4x+8=5-2x\\]\nAdd \\(2x\\) to each side: \\(6x + 8 = 5\\)\nSubtract \\(8\\) from both sides: \\(6x = -3\\)\nANSWER: \\(x = -\\frac{1}{2}\\)"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#same-both-sides2",
+    "href": "course-materials/slides/eds-212-template copy.html#same-both-sides2",
+    "title": "",
+    "section": "",
+    "text": "3. We’re really just doing the same thing to both sides until we’re happy with the format\n\n\nExample:\n\nApply the same operation to each side of the following equation step-by-step to isolate \\(a\\) on one side. Write out all steps.\n\n\\[\\frac{2(a+1)}{3a}+4=6\\]\n\nENDING NOTE: We might encounter complex expressions for how values are related to each other. While the equation is already solved, it can be helpful to use some basic algebra to rearrange things to make our equations easier to understand.\n\nStart with: \\[\\frac{2(a+1)}{3a}+4=6\\]\nSubtract 4 from both sides: \\[\\frac{2a+2}{3a}=2\\]\nMultiply both sides by \\(3a\\): \\[2a+2=6a\\]\nSubtract \\(2a\\) from both sides: \\[2=4a\\]\nDivide each side by 4; ANSWER: \\(a = \\frac{1}{2}\\)"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#next-exp",
+    "href": "course-materials/slides/eds-212-template copy.html#next-exp",
+    "title": "",
+    "section": "",
+    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms (this afternoon)\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#exponents",
+    "href": "course-materials/slides/eds-212-template copy.html#exponents",
+    "title": "",
+    "section": "",
+    "text": "Exponents & how to do math with them\n\n\n\\[x^n=x\\times x\\times\\ x \\times x...(n\\space times)\\]\n\n\nEvaluate the following to find a value for \\(y\\):\n\n\n\\(y = 12-2^4\\)\n\\(2y + 30=y+3^3\\)\n\n\n\nSometimes things are related to each other in an exponential way, so we’re going to remind ourselves how they work using numbers.\n\n\\(y = 12-2^4\\)\n\n\n\\(y = 12 - (2 \\times 2 \\times 2 \\times 2)\\)\n\\(y = 12 - 26\\)\nANSWER: \\(y = -4\\)\n\n\n\\(2y + 30=y+3^3\\)\n\n\n\\(2y + 30 = y + (3 \\times 3 \\times 3)\\)\n\\(2y + 30 = y + 27\\)\n\\(y + 30 = 27\\)\nANSWER: \\(y = -3\\)"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#exponents-rules",
+    "href": "course-materials/slides/eds-212-template copy.html#exponents-rules",
+    "title": "",
+    "section": "",
+    "text": "Exponent rules\n\n\n\\(x^ax^b=x^{a+b}\\) ; Example: \\(x^5x^3=x^{5+3}=x^8\\) ; Example: \\(2^2 \\times 2^2\\) = \\((2 \\times 2) \\times (2 \\times 2)\\) = \\(2^4\\)\n\n\n\n\\(\\frac{x^a}{x^b}=x^{a-b}\\) ; Example: \\(\\frac{z^5}{z^3}=z^{5-3}=z^2\\) ; Example: \\(\\frac{2^3}{2^2}\\) = \\(\\frac{2 \\times 2 \\times 2}{2 \\times 2}\\) = \\(2^1\\)\n\n\n\n\n\\(\\frac{1}{x^a}=x^{-a}\\) ; Example: \\(b^{-4x}=\\frac{1}{b^{4x}}\\)\n\n\n\n\n\\((x^a)^b=x^{ab}\\) ; Example: \\((2^3)^2=2^{3*2}=2^6=64\\)\n\n\n\n\n\\((\\frac{x}{y})^a=\\frac{x^a}{y^a}\\) ; Example: \\((\\frac{y}{2^2})^2=\\frac{y^2}{(2^2)^2}=\\frac{y^2}{2^4}=\\frac{y^2}{16}\\)\n\n\n\n\n\\((xy)^a=x^ay^a\\) ; Example: \\((3x)^2=3^2x^2\\)"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#exponents-practice",
+    "href": "course-materials/slides/eds-212-template copy.html#exponents-practice",
+    "title": "",
+    "section": "",
+    "text": "Exponent practice\n\n\nSimplify the following expressions using the rules of exponents:\n\n1. \\(3x^5x^8x^{-11}\\)\n\n2. \\(\\frac{-8x^6}{2x^4}+7x^2\\)\n\n3. \\(\\frac{3x}{x^5}-3.8x^4\\frac{x^3}{x^6}+8.1x-11.2\\)\n\n\n\\(3x^5x^8x^{-11}\\)\n\n\nANSWER: \\(3x^2\\)\n\n\n\\(\\frac{-8x^6}{2x^4}+7x^2\\)\n\n\n\\(-4x^2 + 7x^2\\)\nANSWER: \\(3x^2\\)\n\n\n\\(\\frac{3x}{x^5}-3.8x^4\\frac{x^3}{x^6}+8.1x-11.2\\)\n\n\n\\(3x^{-4}-3.8x^4 \\times x^{-3} + 8.1x - 11.2\\)\n\\(3x^{-4}-3.8x^1 + 8.1x - 11.2\\)\nANSWER: \\(3x^{-4}+4.3x - 11.2\\)"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#FOIL",
+    "href": "course-materials/slides/eds-212-template copy.html#FOIL",
+    "title": "",
+    "section": "",
+    "text": "Multiplying expressions (FOIL)\n\n\nFirst, Outside, Inside, Last\n\nExample:\n\\[(2x+5)(x-3)\\]\n\n\n\\[= (2x \\times x) (2x \\times -3) (5 \\times x) (5 \\times -3)\\]\n\\[= 2x^2 - 6x + 5x - 15\\]\n\\[=2x^2-x-15\\]"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#next-units",
+    "href": "course-materials/slides/eds-212-template copy.html#next-units",
+    "title": "",
+    "section": "",
+    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#units",
+    "href": "course-materials/slides/eds-212-template copy.html#units",
+    "title": "",
+    "section": "",
+    "text": "UNITS. UNITS. UNITS.\n\n\n\nThink about these statements, which all contain the same value of 4:\n\n\nThere are four in the refrigerator.\nThere are four burritos in the refrigerator.\nThere are four roaches in the refrigerator.\nThere are four million dollars in the refrigerator."
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#units-critical",
+    "href": "course-materials/slides/eds-212-template copy.html#units-critical",
+    "title": "",
+    "section": "",
+    "text": "Units are critical in environmental data science\n\n \n\nWe cannot responsibly work with data without knowing the units of each variable we’re working with.\n\nThat means we need to always familiarize ourselves with metadata, carefully check units and any unit conversions, and understand how units combine into the units of a dependent variable."
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#unit-conv",
+    "href": "course-materials/slides/eds-212-template copy.html#unit-conv",
+    "title": "",
+    "section": "",
+    "text": "Dimensional analysis for unit conversions\n\n\nIn dimensional analysis, we multiply initial units by a sequence of conversion factors to arrive at the final desired units.\n\nFor example, to convert \\(100 \\frac{g}{cm^3}\\) into units of \\(\\frac{kg}{in^3}\\), given that 1 cm3 = 0.061 in3.\n\n\\[100\\frac{g}{cm^3}*\\frac{1kg}{1000g}*\\frac{1cm^3}{0.061in^3}=1.639\\frac{kg}{in^3}\\]"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#unit-conv-practice",
+    "href": "course-materials/slides/eds-212-template copy.html#unit-conv-practice",
+    "title": "",
+    "section": "",
+    "text": "Unit conversion practice\n\n\n\nPractice dimensional analysis to perform the following conversions:\n\n\nConvert \\(8.1\\frac{km}{s}\\) to miles per hour, given that 1 km = 0.621 miles.\n\n\n\nConvert a mass flux of \\(3.2\\frac{g}{min\\cdot m^2}\\) to \\(\\frac{mg}{s\\cdot cm^2}\\).\n\n\n\n\n\\(8.1\\frac{km}{s} \\times \\frac{60s}{min} \\times \\frac{60min}{hr} \\times \\frac{0.621 miles}{1km} = 18,108.36 \\frac{miles}{hr}\\)\n\\(3.2\\frac{g}{min\\cdot m^2} \\times \\frac{1min}{60s} \\times \\frac{1000 mg}{g} \\times \\frac{m}{100cm} \\times \\frac{m}{100cm}\\)"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#next-fxns",
+    "href": "course-materials/slides/eds-212-template copy.html#next-fxns",
+    "title": "",
+    "section": "",
+    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#functions",
+    "href": "course-materials/slides/eds-212-template copy.html#functions",
+    "title": "",
+    "section": "",
+    "text": "Functions\n\n\nFunctions are mathematical expressions that tell us how input values are related to output values.\n\nFor example, \\(y = 3x-5\\) is a function that tells us the value of y at any value of x. In this scenario, we would probably say y is a function of x.\n\nCould you also rewrite it and say x is a function of y? Here, with no knowledge of what’s an input and what’s an output, sure - but usually in environmental data science we specify the input variable(s), and the output variable(s) carefully. What follows is the expression in the format of: “[output variable(s)] is/are a function of [input variable(s)]”."
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#inputs-outputs",
+    "href": "course-materials/slides/eds-212-template copy.html#inputs-outputs",
+    "title": "",
+    "section": "",
+    "text": "Thinking about inputs and outputs\n\n\nFor the following combinations of related variables, which do you expect would be the input and the output in a function describing how they are related? Say your answer in a sentence, e.g. “Evapotranspiration is a function of air temperature.”\n\n\n\nfuel (biomass) / slope / wildfire severity / windspeed / air temperature\nwind speed / power generated by wind turbine\nsoil C:N ratio / bacterial biomass / soil water content / leaf litter decomposition rate\n\n\n\n\nwildfire severity is a function of fuel and slope and windspeed and air temperature\npower generated by wind turbine is a function of wind speed\nleaf litter decomposition rate is a function of soil C:N ratio and bacterial biomass and soil water content"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#fxn-notation",
+    "href": "course-materials/slides/eds-212-template copy.html#fxn-notation",
+    "title": "",
+    "section": "",
+    "text": "Function notation\n\n\nSingle variable (univariate) function:\n\\(f(x) = [expression\\space containing \\space x]\\)\n\nMultivariate function:\n\\(g(a,T,z)=[expression\\space containing \\space a, T, \\space and \\space z]\\)"
+  },
+  {
+    "objectID": "course-materials/slides/eds-212-template copy.html#eval-fxns",
+    "href": "course-materials/slides/eds-212-template copy.html#eval-fxns",
+    "title": "",
+    "section": "",
+    "text": "Evaluating functions\n\n\n\nFor continuous functions, we evaluate them by plugging in variable values.\n\nExample:\n\nEvaluate \\(g(x,t)=2.4x+0.5t^2\\) at \\(x = 3\\) and \\(t = 10\\)\n\n\\(g(3, 10) = 2.4(3) + 0.5(10^2)= 57.2\\)\n\n\n\n\\(g(3,10) = 2.4 \\times 3 + 0.5 \\times 10^2\\)\n\\(g(3,10) = 7.2 + 50 = 57.2\\)"
   },
   {
     "objectID": "course-materials/eod/eod-day1.html",
@@ -203,6 +371,160 @@
     "text": "More information\n\nWhat’s a .md file?\nYou may have noticed your README file ends in .md. That means it’s a Markdown file. Markdown is a lightweight language for formatting text. All the formatting is included directly in the text (as opposed to a Word document, for example), so it’s much more compatible with version control. You’ll learn more about Markdown next week. In the meantime, if you’d like to learn more, check out Markdown Tutorial and GitHub for Beginners: Getting started with Markdown.\n\n\nWhy is the value of roll_total 9?\nRolling dice is random, so how come everyone’s supposed to get the same value? What a great question! For now, I’m going to leave this to you to ponder. Have another look at the code I gave you and, if you’re so inclined, come up with a hypothesis for why every student should get the same random numbers. We’ll discuss this on Day 4."
   },
   {
+    "objectID": "course-materials/day8.html",
+    "href": "course-materials/day8.html",
+    "title": "Advanced data types",
+    "section": "",
+    "text": "Website under construction sign"
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Scientific Programming Essentials",
+    "section": "Course Description",
+    "text": "Course Description\nThis course teaches scientific programming skills and demonstrates the application of these techniques to environmental data analysis and problem solving. Topics include fundamental programming concepts, transforming and visualizing data, and exposure to modern data science tools. The course will be taught in R.\nBy the end of this course, students will be able to:\n\n🧠 Think like a computer scientist\n\n🌎 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
+  },
+  {
+    "objectID": "index.html#teaching-team",
+    "href": "index.html#teaching-team",
+    "title": "Scientific Programming Essentials",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nMax Czapanskiy (they/them)\nEmail: maxczap@ucsb.edu\n\n\n\n\nTA\n\n\n\n\n\n\n\n\n\n\n\nAlessandra Vidal Meza (she/her/ella)\nEmail: avidalmeza@bren.ucsb.edu"
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Scientific Programming Essentials",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nEDS 221 was originally developed and taught by Allison Horst. This course website contains material reused from, adapted from, and inspired by Allison’s original work."
+  },
+  {
+    "objectID": "course-materials/day10.html",
+    "href": "course-materials/day10.html",
+    "title": "Review",
+    "section": "",
+    "text": "Website under construction sign"
+  },
+  {
+    "objectID": "course-materials/day9.html",
+    "href": "course-materials/day9.html",
+    "title": "Problem solving",
+    "section": "",
+    "text": "Website under construction sign"
+  },
+  {
+    "objectID": "course-materials/eod/eod-day2.html",
+    "href": "course-materials/eod/eod-day2.html",
+    "title": "Day 2: End-of-day practice",
+    "section": "",
+    "text": "Yesterday you laid the groundwork for your coral reef simulator by creating the repository. Today, you’ll write code to perform the reef initialization step.\nIn the game, you initialized the reef by randomly picking 8 grid cells and placing live coral tokens on them. Here, you’ll write a script to do something similar."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day2.html#pseudocode-for-reef-initialization",
+    "href": "course-materials/eod/eod-day2.html#pseudocode-for-reef-initialization",
+    "title": "Day 2: End-of-day practice",
+    "section": "Pseudocode for reef initialization",
+    "text": "Pseudocode for reef initialization\nIt’s not exactly code, but it’s not quite plain language either - let’s get to know pseudocode.\nHere’s pseudocode describing how to initialize the reef:\nCreate a 5x5 matrix of 0s representing the coral reef\nLabel the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc\nRandomly sample 8 cell labels (without replacement)\nFor each sample cell label:\n    Convert the cell label to a row index\n    Convert the cell label to a column index\n    Use the row and column indices to set the value of the matrix cell to 1\nPrint the matrix\nA few things you should notice.\n\nPseudocode has the feel of code, but the details are a little hand-wavy.\nSome lines represent a single code expression (e.g., the first line creates a variable with a call to matrix()), while others may require more than a single expression to implement.\nIt’s a higher-level description of the procedure than code itself, although more detailed than simply plain language.\n\nBecause of these properties, pseudocode is a valuable tool in several stages of the coding process. It’s quicker to write and faster to digest than real code, so it’s useful for planning and for explaining. But it also has just enough detail that it requires you to think carefully about how your code is going to work. You’ll be writing pseudocode yourself later this week.\nNow it’s your turn to translate the pseudocode into real code."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day2.html#implement-the-pseudocode",
+    "href": "course-materials/eod/eod-day2.html#implement-the-pseudocode",
+    "title": "Day 2: End-of-day practice",
+    "section": "Implement the pseudocode",
+    "text": "Implement the pseudocode\n\n0. Get ready\nOpen your coral reef simulator folder in Positron and make a new script called initalize_reef.R. Put this expression on the first line:\nset.seed(32)\n\n\n1. Create the matrix\nCreate a 5x5 matrix of 0s representing the coral reef\nWrite an expression to implement this step in the procedure. You should be able to do it in one line.\n\n\n2. Randomly sample coral starting locations\nLabel the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc\nRandomly sample 8 cell labels (without replacement)\nThe first line of pseudocode here is a cue for the reader. It would help to draw it on a sheet of paper for you to visualize it (drawing while you code is always a good idea!), but no code is needed here.\nThe second line requires another expression. Again, you should be able to do this in one line of code.\n\n\n3. Place your coral tokens\nFor each sample cell label:\n    Convert the cell label to a row index\n    Convert the cell label to a column index\n    Use the row and column indices to set the value of the matrix cell to 1\nThis part of the pseudocode requires you to repeat the same step multiple times - a loop. We’ll cover loops on Day 3, so for today your task is to initialize just one cell. Use the first value from your random sample of coral starting locations.\nConverting the cell label to row and column indices requires some problem solving! Make sure you can do the conversion on paper before writing the code.\n\n\n\n\n\n\nTip\n\n\n\nHere’s how I suggest solving it on paper - but you’re encouraged to do whatever helps you visualize and reason about the problem! Draw a 5x5 grid on a piece of paper. Label the rows and columns with their indices, and put the numbers 1 to 25 in the cells. From there, try to figure out how to convert the labels to indices.\nHint: the %% and %/% operators will come in useful here!\n\n\n\n\n4. Print the matrix\nAt the console.\n\n\nValidation checks\nCheck that…\n\nYour first sampled label is 6\nThe leftmost cell of the second row of your matrix is 1\nThe other 24 cells in your matrix are 0"
+  },
+  {
+    "objectID": "course-materials/eod/eod-day2.html#track-your-progress",
+    "href": "course-materials/eod/eod-day2.html#track-your-progress",
+    "title": "Day 2: End-of-day practice",
+    "section": "Track your progress",
+    "text": "Track your progress\nSave the files in your working directory, then stage, commit, and push your changes.\n\nValidation checks\nCheck that…\n\nYour script is visible on GitHub\nYour local and remote repositories are synced. git status should say:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean"
+  },
+  {
+    "objectID": "course-materials/eod/eod-day2.html#wrap-up",
+    "href": "course-materials/eod/eod-day2.html#wrap-up",
+    "title": "Day 2: End-of-day practice",
+    "section": "Wrap up",
+    "text": "Wrap up\nThat’s it for day 2!\nToday you learned about:\nData types and 1d structures\n\nReal world data is represented with four computational types: character, double, integer, and logical.\nVectors are constrained to one type, so combining vectors of different types induces coercion.\nThere are lots of different ways to create vectors, such as logical(), :, and c().\n\nIndexing and 2d data\n\nReading and writing from data structures happens through indexing.\nIndexing into 1d data structures can be done with positive integers (selection by position), negative integers (exclusion by position), names, and logic. In addition, you can index 2d data with blanks to access along an entire dimension.\nData frames are a particularly important 2d data structure and the workhorse of data science. We’ll work extensively with data frames starting next week after you build your computational thinking foundation."
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#title-slide",
+    "href": "course-materials/slides/day1am-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 1 AM\nCourse intro, code execution\n\nAugust 10th, 2025"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#corals",
+    "href": "course-materials/slides/day1am-slides.html#corals",
+    "title": "",
+    "section": "",
+    "text": "What happened to this system?\nWhat are the consequences for people and the environment?\nWhy are we talking about this in a programming class?"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-1",
+    "href": "course-materials/slides/day1am-slides.html#data-understanding-1",
+    "title": "",
+    "section": "",
+    "text": "From data to understanding\n\nWith code, we go from this…"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-2",
+    "href": "course-materials/slides/day1am-slides.html#data-understanding-2",
+    "title": "",
+    "section": "",
+    "text": "From data to understanding\n\n…to this."
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#learning-objectives",
+    "href": "course-materials/slides/day1am-slides.html#learning-objectives",
+    "title": "",
+    "section": "",
+    "text": "Learning objectives\n\n\n🧠 Think like a computer scientist\n\n🌍 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#grading",
+    "href": "course-materials/slides/day1am-slides.html#grading",
+    "title": "",
+    "section": "",
+    "text": "Grading\n\n\n\n👍 Satisfactory / Unsatisfactory\n\nNo letter grades\n\n✅ Attendance\n\nExpected every day.\nBut life happens! Let your instructors know about absences in advance when possible.\n\n✋ Participation\n\nActive participation in all exercises expected."
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#daily-schedule",
+    "href": "course-materials/slides/day1am-slides.html#daily-schedule",
+    "title": "",
+    "section": "",
+    "text": "Daily schedule\n\n\n\n\n\nMorning session\n\nReview previous day\nNew material\nSession review\n\nAfternoon session\n\nNew material\nSession review\n\nEnd-of-day session\n\nPractice day’s material\n\n\n\n\nSession activities\n\nPencil-and-paper exercises\nLive-coding demos\nConcept mapping\n\nExpect a lot of:\n\nWorking in groups\nProblem solving\nThink first, draw second, type last"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#typing-club",
+    "href": "course-materials/slides/day1am-slides.html#typing-club",
+    "title": "",
+    "section": "",
+    "text": "Have your coffee with typing club!\n\n\n💻 💻 💻 Touch typing is a valuable skill for keeping up in class, and one you can develop.\nBut why practice alone?\n☕ ☕ ☕ Join typing club 9:15-9:45, here in the NCEAS classroom. I’ll make the coffee (there will be tea, too), we’ll practice typing together.\n\n\nDistribution of typing speeds"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#course-schedule",
+    "href": "course-materials/slides/day1am-slides.html#course-schedule",
+    "title": "",
+    "section": "",
+    "text": "Course schedule\n\n\n\n\n\nWeek 1\nWeek 2\n\n\n\n\nDay 1 - Code execution\nDay 6 - Data frames\n\n\nDay 2 - Data structures\nDay 7 - Manipulating data\n\n\nDay 3 - Control structures\nDay 8 - Advanced data types\n\n\nDay 4 - Functions\nDay 9 - Troubleshooting\n\n\nDay 5 - Creating programs\nDay 10 - Review"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#degree-schedule",
+    "href": "course-materials/slides/day1am-slides.html#degree-schedule",
+    "title": "",
+    "section": "",
+    "text": "Degree schedule\n\n\n\n\n\nFall\n\nStatistics\nEnvironmental data\nGeospatial analysis\nEthics and bias\n\nWinter\n\nMore statistics\nData visualization\nEnvironmental systems\nCapstone I\n\nSpring\n\nMachine learning\nDatabases\nCapstone II\n\n\n\n\n\nAll these classes use programming!\nBut since you haven’t taken them yet, in the meantime we’ll use programming to build…"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#coral-reef-model",
+    "href": "course-materials/slides/day1am-slides.html#coral-reef-model",
+    "title": "",
+    "section": "",
+    "text": "Coral reef model"
+  },
+  {
     "objectID": "course-materials/activities/day2/day2pm-debugger.html",
     "href": "course-materials/activities/day2/day2pm-debugger.html",
     "title": "Debugger: indexing",
@@ -235,14 +557,14 @@
     "href": "course-materials/activities/day1/day1pm-git-challenge.html",
     "title": "git challenge",
     "section": "",
-    "text": "This exercise will take you through a standard git workflow on your computer and on a whiteboard.\nBegin by drawing four boxes on your whiteboard. Label them working directory, staging area, local repo and remote repo.\n\n\nThis exercise begins with a repo on GitHub. Visit https://github.com/eds-221-programming-m26/eds221-git-challenge in your browser to see what the repo looks like. You should see a README file containing the same instructions as the page on the course website.\nCloning copies a remote repository on GitHub to a local repository on your computer.\n\n\n\nSwitch to the Terminal in Positron (not the R console).\ncd to your eds221/ directory (not your eds221-day1pm/ directory; one level up from there).\nClone the remote repo with this command:\ngit clone https://github.com/eds-221-programming-m26/eds221-git-challenge\n\nYou should now see the directory eds221/eds221-git-challenge/.\n\n\n\n\nDraw a line from your remote repo box to your working directory box.\nLabel the line git clone.\n\n\n\n\n\nThe working directory is the directory on your computer that git recognizes as a repository. git will track your changes as you edit, create, and delete files in this directory.\n\n\n\nOpen the eds221/eds221-git-challenge/ folder in Positron.\nEdit the README. Add a sentence stating your name and the name of your favorite video game from childhood. If you didn’t play video games, pick another kind of game (board, card, sport, etc).\nSave the README.\nCreate directory called R/.\nCreate a script in R/ called fave-game.R. Add these expressions to your script, replacing the text as appropriate.\n\nmy_fave_game &lt;- \"your favorite childhood game here\"\npaste(\"my favorite childhood game was\", my_fave_game)\n\nAt the terminal, run git status. You should see that README.md and R/ have been modified. If they haven’t, make sure you saved your changes.\n\nNote: only R/, rather than R/fave-game.R, shows up now because the directory is new. After you stage individual files, you’ll see the full paths show up.\n\n\n\n\nWrite README.md and R/fave-game.R on sticky notes.\nPlace the sticky notes in the working directory box.\n\n\n\n\n\nIf using git is like working in a kitchen, then the staging area is the countertop. It’s where you put your ingredients (file changes in the working directory; the previous step) before you cook with them (committing changes; the next step).\n\n\n\nAt the terminal, run git add README.md.\nRun git status again. Verify that README.md is under “Changes to be committed”, but R/ is still in “Untracked files”.\n\n\n\n\n\nMove the README.md sticky note to the staging area box.\n\n\n\n\n\nAt the terminal, run git add R/fave-game.R.\nRun git status again. Verify that both README.md and R/fave-game.R are under “Changes to be committed”.\n\n\n\n\n\nMove the R/fave-game.R sticky note to the staging area box.\n\n\n\n\n\nYou’ve pulled out your ingredients, now it’s time to cook. Committing your changes creates a new checkpoint in your local repository. It’s the equivalent of an entry in a Wikipedia page revision history.\n\n\n\nAt the terminal, run git commit -m \"Add favorite game\".\n\nThe -m \"Add favorite game\" part defines your commit message. It’s a brief summary of the changes included in the commit.\n\nRun git status again. Verify that you see “Your branch is ahead of ‘origin/main’ by 1 commit”, which means your local repository has a commit that isn’t on the remote repository yet. Also verify that you see “nothing to commit, working tree clean”, which means that your working directory and local repository are synced up.\n\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the local repository box together. This represents all the staged changes getting packaged up in a single commit.\n\n\n\n\n\nYou’ve cooked the meal, but no one can eat because you haven’t served it yet. Pushing your commit will send your local changes to the remote repository on GitHub. At that point, collaborators and clients will be able to see your work.\n\n\n\nAt the terminal, run git push. You should see messages about enumerating, counting, compressing, and writing objects. These all mean the commit is making its way from your computer up to the remote repository.\nRun git status. You should see a local repository looking very content and pleased with itself. That looks like this:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the remote repository box."
+    "text": "This exercise will take you through a standard git workflow on your computer and on a whiteboard.\nDo this exercise in pairs. Choose one student to work at their computer while the other student manages their whiteboard. When you’ve completed the exercise once through, swap roles and start over.\nBegin by drawing four boxes on your whiteboard. Label them working directory, staging area, local repo and remote repo.\n\n\nThis exercise begins with a repo on GitHub. Visit https://github.com/eds-221-programming-m26/eds221-git-challenge in your browser to see what the repo looks like. You should see a README file containing the same instructions as the page on the course website.\nCloning copies a remote repository on GitHub to a local repository on your computer.\n\n\n\nSwitch to the Terminal in Positron (not the R console).\ncd to your eds221/ directory (not your eds221-day1pm/ directory; one level up from there).\nClone the remote repo with this command:\ngit clone https://github.com/eds-221-programming-m26/eds221-git-challenge\n\nYou should now see the directory eds221/eds221-git-challenge/.\n\n\n\n\nDraw a line from your remote repo box to your working directory box.\nLabel the line git clone.\n\n\n\n\n\nThe working directory is the directory on your computer that git recognizes as a repository. git will track your changes as you edit, create, and delete files in this directory.\n\n\n\nOpen the eds221/eds221-git-challenge/ folder in Positron.\nEdit the README. Add a sentence stating your name and the name of your favorite video game from childhood. If you didn’t play video games, pick another kind of game (board, card, sport, etc).\nSave the README.\nCreate directory called R/.\nCreate a script in R/ called fave-game.R. Add these expressions to your script, replacing the text as appropriate.\n\nmy_fave_game &lt;- \"your favorite childhood game here\"\npaste(\"my favorite childhood game was\", my_fave_game)\n\nAt the terminal, run git status. You should see that README.md and R/ have been modified. If they haven’t, make sure you saved your changes.\n\nNote: only R/, rather than R/fave-game.R, shows up now because the directory is new. After you stage individual files, you’ll see the full paths show up.\n\n\n\n\nWrite README.md and R/fave-game.R on sticky notes.\nPlace the sticky notes in the working directory box.\n\n\n\n\n\nIf using git is like working in a kitchen, then the staging area is the countertop. It’s where you put your ingredients (file changes in the working directory; the previous step) before you cook with them (committing changes; the next step).\n\n\n\nAt the terminal, run git add README.md.\nRun git status again. Verify that README.md is under “Changes to be committed”, but R/ is still in “Untracked files”.\n\n\n\n\n\nMove the README.md sticky note to the staging area box.\n\n\n\n\n\nAt the terminal, run git add R/fave-game.R.\nRun git status again. Verify that both README.md and R/fave-game.R are under “Changes to be committed”.\n\n\n\n\n\nMove the R/fave-game.R sticky note to the staging area box.\n\n\n\n\n\nYou’ve pulled out your ingredients, now it’s time to cook. Committing your changes creates a new checkpoint in your local repository. It’s the equivalent of an entry in a Wikipedia page revision history.\n\n\n\nAt the terminal, run git commit -m \"Add favorite game\".\n\nThe -m \"Add favorite game\" part defines your commit message. It’s a brief summary of the changes included in the commit.\n\nRun git status again. Verify that you see “Your branch is ahead of ‘origin/main’ by 1 commit”, which means your local repository has a commit that isn’t on the remote repository yet. Also verify that you see “nothing to commit, working tree clean”, which means that your working directory and local repository are synced up.\n\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the local repository box together. This represents all the staged changes getting packaged up in a single commit.\n\n\n\n\n\nYou’ve cooked the meal, but no one can eat because you haven’t served it yet. Pushing your commit will send your local changes to the remote repository on GitHub. At that point, collaborators and clients will be able to see your work.\n\n\n\nAt the terminal, run git push. You should see messages about enumerating, counting, compressing, and writing objects. These all mean the commit is making its way from your computer up to the remote repository.\nRun git status. You should see a local repository looking very content and pleased with itself. That looks like this:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the remote repository box."
   },
   {
     "objectID": "course-materials/activities/day1/day1pm-git-challenge.html#instructions",
     "href": "course-materials/activities/day1/day1pm-git-challenge.html#instructions",
     "title": "git challenge",
     "section": "",
-    "text": "This exercise will take you through a standard git workflow on your computer and on a whiteboard.\nBegin by drawing four boxes on your whiteboard. Label them working directory, staging area, local repo and remote repo.\n\n\nThis exercise begins with a repo on GitHub. Visit https://github.com/eds-221-programming-m26/eds221-git-challenge in your browser to see what the repo looks like. You should see a README file containing the same instructions as the page on the course website.\nCloning copies a remote repository on GitHub to a local repository on your computer.\n\n\n\nSwitch to the Terminal in Positron (not the R console).\ncd to your eds221/ directory (not your eds221-day1pm/ directory; one level up from there).\nClone the remote repo with this command:\ngit clone https://github.com/eds-221-programming-m26/eds221-git-challenge\n\nYou should now see the directory eds221/eds221-git-challenge/.\n\n\n\n\nDraw a line from your remote repo box to your working directory box.\nLabel the line git clone.\n\n\n\n\n\nThe working directory is the directory on your computer that git recognizes as a repository. git will track your changes as you edit, create, and delete files in this directory.\n\n\n\nOpen the eds221/eds221-git-challenge/ folder in Positron.\nEdit the README. Add a sentence stating your name and the name of your favorite video game from childhood. If you didn’t play video games, pick another kind of game (board, card, sport, etc).\nSave the README.\nCreate directory called R/.\nCreate a script in R/ called fave-game.R. Add these expressions to your script, replacing the text as appropriate.\n\nmy_fave_game &lt;- \"your favorite childhood game here\"\npaste(\"my favorite childhood game was\", my_fave_game)\n\nAt the terminal, run git status. You should see that README.md and R/ have been modified. If they haven’t, make sure you saved your changes.\n\nNote: only R/, rather than R/fave-game.R, shows up now because the directory is new. After you stage individual files, you’ll see the full paths show up.\n\n\n\n\nWrite README.md and R/fave-game.R on sticky notes.\nPlace the sticky notes in the working directory box.\n\n\n\n\n\nIf using git is like working in a kitchen, then the staging area is the countertop. It’s where you put your ingredients (file changes in the working directory; the previous step) before you cook with them (committing changes; the next step).\n\n\n\nAt the terminal, run git add README.md.\nRun git status again. Verify that README.md is under “Changes to be committed”, but R/ is still in “Untracked files”.\n\n\n\n\n\nMove the README.md sticky note to the staging area box.\n\n\n\n\n\nAt the terminal, run git add R/fave-game.R.\nRun git status again. Verify that both README.md and R/fave-game.R are under “Changes to be committed”.\n\n\n\n\n\nMove the R/fave-game.R sticky note to the staging area box.\n\n\n\n\n\nYou’ve pulled out your ingredients, now it’s time to cook. Committing your changes creates a new checkpoint in your local repository. It’s the equivalent of an entry in a Wikipedia page revision history.\n\n\n\nAt the terminal, run git commit -m \"Add favorite game\".\n\nThe -m \"Add favorite game\" part defines your commit message. It’s a brief summary of the changes included in the commit.\n\nRun git status again. Verify that you see “Your branch is ahead of ‘origin/main’ by 1 commit”, which means your local repository has a commit that isn’t on the remote repository yet. Also verify that you see “nothing to commit, working tree clean”, which means that your working directory and local repository are synced up.\n\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the local repository box together. This represents all the staged changes getting packaged up in a single commit.\n\n\n\n\n\nYou’ve cooked the meal, but no one can eat because you haven’t served it yet. Pushing your commit will send your local changes to the remote repository on GitHub. At that point, collaborators and clients will be able to see your work.\n\n\n\nAt the terminal, run git push. You should see messages about enumerating, counting, compressing, and writing objects. These all mean the commit is making its way from your computer up to the remote repository.\nRun git status. You should see a local repository looking very content and pleased with itself. That looks like this:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the remote repository box."
+    "text": "This exercise will take you through a standard git workflow on your computer and on a whiteboard.\nDo this exercise in pairs. Choose one student to work at their computer while the other student manages their whiteboard. When you’ve completed the exercise once through, swap roles and start over.\nBegin by drawing four boxes on your whiteboard. Label them working directory, staging area, local repo and remote repo.\n\n\nThis exercise begins with a repo on GitHub. Visit https://github.com/eds-221-programming-m26/eds221-git-challenge in your browser to see what the repo looks like. You should see a README file containing the same instructions as the page on the course website.\nCloning copies a remote repository on GitHub to a local repository on your computer.\n\n\n\nSwitch to the Terminal in Positron (not the R console).\ncd to your eds221/ directory (not your eds221-day1pm/ directory; one level up from there).\nClone the remote repo with this command:\ngit clone https://github.com/eds-221-programming-m26/eds221-git-challenge\n\nYou should now see the directory eds221/eds221-git-challenge/.\n\n\n\n\nDraw a line from your remote repo box to your working directory box.\nLabel the line git clone.\n\n\n\n\n\nThe working directory is the directory on your computer that git recognizes as a repository. git will track your changes as you edit, create, and delete files in this directory.\n\n\n\nOpen the eds221/eds221-git-challenge/ folder in Positron.\nEdit the README. Add a sentence stating your name and the name of your favorite video game from childhood. If you didn’t play video games, pick another kind of game (board, card, sport, etc).\nSave the README.\nCreate directory called R/.\nCreate a script in R/ called fave-game.R. Add these expressions to your script, replacing the text as appropriate.\n\nmy_fave_game &lt;- \"your favorite childhood game here\"\npaste(\"my favorite childhood game was\", my_fave_game)\n\nAt the terminal, run git status. You should see that README.md and R/ have been modified. If they haven’t, make sure you saved your changes.\n\nNote: only R/, rather than R/fave-game.R, shows up now because the directory is new. After you stage individual files, you’ll see the full paths show up.\n\n\n\n\nWrite README.md and R/fave-game.R on sticky notes.\nPlace the sticky notes in the working directory box.\n\n\n\n\n\nIf using git is like working in a kitchen, then the staging area is the countertop. It’s where you put your ingredients (file changes in the working directory; the previous step) before you cook with them (committing changes; the next step).\n\n\n\nAt the terminal, run git add README.md.\nRun git status again. Verify that README.md is under “Changes to be committed”, but R/ is still in “Untracked files”.\n\n\n\n\n\nMove the README.md sticky note to the staging area box.\n\n\n\n\n\nAt the terminal, run git add R/fave-game.R.\nRun git status again. Verify that both README.md and R/fave-game.R are under “Changes to be committed”.\n\n\n\n\n\nMove the R/fave-game.R sticky note to the staging area box.\n\n\n\n\n\nYou’ve pulled out your ingredients, now it’s time to cook. Committing your changes creates a new checkpoint in your local repository. It’s the equivalent of an entry in a Wikipedia page revision history.\n\n\n\nAt the terminal, run git commit -m \"Add favorite game\".\n\nThe -m \"Add favorite game\" part defines your commit message. It’s a brief summary of the changes included in the commit.\n\nRun git status again. Verify that you see “Your branch is ahead of ‘origin/main’ by 1 commit”, which means your local repository has a commit that isn’t on the remote repository yet. Also verify that you see “nothing to commit, working tree clean”, which means that your working directory and local repository are synced up.\n\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the local repository box together. This represents all the staged changes getting packaged up in a single commit.\n\n\n\n\n\nYou’ve cooked the meal, but no one can eat because you haven’t served it yet. Pushing your commit will send your local changes to the remote repository on GitHub. At that point, collaborators and clients will be able to see your work.\n\n\n\nAt the terminal, run git push. You should see messages about enumerating, counting, compressing, and writing objects. These all mean the commit is making its way from your computer up to the remote repository.\nRun git status. You should see a local repository looking very content and pleased with itself. That looks like this:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the remote repository box."
   },
   {
     "objectID": "course-materials/day5.html",
@@ -263,6 +585,27 @@
     "href": "course-materials/day3.html",
     "title": "Control structures",
     "section": "",
-    "text": "Website under construction sign"
+    "text": "Create a data sheet\n Code sleuth: type coercion\n Live coding demo: creating vectors\n Types and vectors mini-lecture\n Concept mapping: data types and 1d structures\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day3.html#morning-session-conditions-and-logic",
+    "href": "course-materials/day3.html#morning-session-conditions-and-logic",
+    "title": "Control structures",
+    "section": "",
+    "text": "Create a data sheet\n Code sleuth: type coercion\n Live coding demo: creating vectors\n Types and vectors mini-lecture\n Concept mapping: data types and 1d structures\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day3.html#afternoon-session-loops",
+    "href": "course-materials/day3.html#afternoon-session-loops",
+    "title": "Control structures",
+    "section": "Afternoon session: Loops",
+    "text": "Afternoon session: Loops\n\n Code sleuth: indexing\n Live coding demo: indexing and 2d data\n SLWE: indexing\n Debugger: indexing errors\n Concept mapping: Indexing and 2d data\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day3.html#end-of-day-practice",
+    "href": "course-materials/day3.html#end-of-day-practice",
+    "title": "Control structures",
+    "section": "End-of-day practice",
+    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 2 Practice: Initialize the reef"
   }
 ]

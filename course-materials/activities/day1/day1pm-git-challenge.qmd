@@ -6,6 +6,8 @@ title: "git challenge"
 
 This exercise will take you through a standard git workflow on your computer and on a whiteboard.
 
+Do this exercise in pairs. Choose one student to work at their computer while the other student manages their whiteboard. When you've completed the exercise once through, swap roles and start over.
+
 Begin by drawing four boxes on your whiteboard. Label them **working directory**, **staging area**, **local repo** and **remote repo**.
 
 ### 1. Clone the repo
