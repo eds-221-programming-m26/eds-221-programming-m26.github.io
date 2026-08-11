@@ -3,7 +3,7 @@ title: "Day 2: End-of-day practice"
 subtitle: "Initialize your reef"
 ---
 
-Yesterday you laid the groundwork for your coral reef simulator by creating the repository. Today, you'll write code to perform the reef initialization step.
+Yesterday you laid the groundwork for your coral reef model by creating the repository. Today, you'll write code to perform the reef initialization step.
 
 In the game, you initialized the reef by randomly picking 8 grid cells and placing live coral tokens on them. Here, you'll write a script to do something similar.
 
@@ -38,7 +38,7 @@ Now it's your turn to translate the pseudocode into real code.
 
 ### 0. Get ready
 
-Open your coral reef simulator folder in Positron and make a new script called initalize_reef.R. Put this expression on the first line:
+Open your coral reef model folder in Positron and make a new script called initalize_reef.R. Put this expression on the first line:
 
 ```r
 set.seed(32)

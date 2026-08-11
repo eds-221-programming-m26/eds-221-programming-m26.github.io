@@ -1,0 +1,152 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    # code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme: 
+      - ../../meds-slides-styles.scss
+---
+
+## {#title-slide data-menu-title="Title Slide" background="#053660"} 
+
+[EDS 221 Day 2 PM]{.custom-title}
+
+[*Indexing and 2d data*]{.custom-subtitle}
+
+<hr class="hr-teal">
+
+[August 11^th^, 2025]{.custom-subtitle3}
+
+---
+
+## {#review-day1-code-execution data-menu-title="Review day 1: Code execution"} 
+
+[Review day 1: Code execution]{.slide-title}
+
+<hr>
+
+What’s the value of x after you execute these commands? 
+
+What output would you see at the console?
+
+```r
+x <- 10
+x + 1
+y <- x
+y <- y * 2
+x
+y
+```
+
+---
+
+## {#review-day1-version-control data-menu-title="Review day 1: Version control"} 
+
+[Review day 1: Version control]{.slide-title}
+
+<hr>
+
+Label the arrows in the following diagram with the corresponding git command.
+
+![](images/review-version-control.png)
+
+---
+
+## {#create-datasheet data-menu-title="Create a datasheet"} 
+
+[Create a datasheet]{.slide-title}
+
+<hr>
+
+![Photo by Annabelle Lang/LSU College of Agriculture](https://www.lsuagcenter.com/~/media/system/8/0/4/2/8042b11b0ad981fd318ac6c2642be37c/watching-marsh-birdsjpg.jpg?h=4147&la=en&w=6220)
+
+---
+
+## {#types data-menu-title="Atomic types"} 
+
+[Atomic types]{.slide-title}
+
+<hr>
+
+::: {.columns}
+
+::: {.column}
+
+There are four **atomic types** in R.
+
+- Character (text)
+- Double (decimal numbers)
+- Integer (round numbers)
+- Logical (true and false)
+
+:::
+
+::: {.column}
+
+Atomic types are the basic building blocks of data structures in R.
+
+Like the name implies, everything else is made out of them.
+
+:::
+
+:::
+
+---
+
+## {#coercion data-menu-title="Coercion"} 
+
+[Coercion]{.slide-title}
+
+<hr>
+
+Atomic vectors have to be _one type_. When you combine vectors of different types, one gets coerced into the other's type.
+
+![From _Hands on Programming with R_](https://rstudio-education.github.io/hopr/images/hopr_0301.png)
+
+---
+
+## {#making-vectors data-menu-title="Making vectors"} 
+
+[Making vectors]{.slide-title}
+
+<hr>
+
+There are many ways to make vectors. Some of the most common are:
+
+::: {.columns}
+
+::: {.column}
+
+```{r}
+#| echo: true
+
+# Sequence operator
+2:4
+
+# c() function
+c("Violet", "Cyan")
+```
+
+:::
+
+::: {.column}
+
+```{r}
+#| echo: true
+
+# Vector constructors
+character(5)
+double(5)
+
+# Random number generators
+rnorm(3, mean = 0, sd = 1)
+rpois(4, lambda = 10)
+```
+
+:::
+
+:::
+
+---

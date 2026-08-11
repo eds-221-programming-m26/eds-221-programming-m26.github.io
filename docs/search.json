@@ -4,14 +4,14 @@
     "href": "course-materials/day1.html#morning-session-code-execution",
     "title": "Intro to programming",
     "section": "Morning session: Code execution",
-    "text": "Morning session: Code execution\n\n Course introduction\n Hands-on coral reef model\n Live coding demo: console, script, environment1\n Code sleuth: operators and functions\n Concept mapping: code execution\n Exit ticket"
+    "text": "Morning session: Code execution\n\n Course introduction\n Hands-on coral reef model\n Live coding demo: console, script, environment\n Code sleuth: operators and functions Solutions\n Concept mapping: code execution Solutions\n Exit ticket"
   },
   {
     "objectID": "course-materials/day1.html#afternoon-session-version-control",
     "href": "course-materials/day1.html#afternoon-session-version-control",
     "title": "Intro to programming",
     "section": "Afternoon session: Version control",
-    "text": "Afternoon session: Version control\n\n Tracking changes\n Live coding demo: git and GitHub\n Trace git commands\n Concept mapping: version control\n Exit ticket"
+    "text": "Afternoon session: Version control\n\n Tracking changes\n Live coding demo: git and GitHub\n Trace git commands\n Concept mapping: version control Solutions\n Exit ticket"
   },
   {
     "objectID": "course-materials/day1.html#end-of-day-practice",
@@ -21,18 +21,32 @@
     "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 1 Practice: Create a repo for your coral reef model"
   },
   {
-    "objectID": "course-materials/day1.html#footnotes",
-    "href": "course-materials/day1.html#footnotes",
-    "title": "Intro to programming",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThe script from the live coding demo will be linked from here after the session ends.↩︎"
+    "objectID": "course-materials/day2.html#morning-session-data-types-and-1d-structures",
+    "href": "course-materials/day2.html#morning-session-data-types-and-1d-structures",
+    "title": "Data structures",
+    "section": "Morning session: Data types and 1d structures",
+    "text": "Morning session: Data types and 1d structures\n\n Review day 1\n Create a data sheet\n Code sleuth: type coercion\n Live coding demo: creating vectors\n Types and vectors mini-lecture\n Concept mapping: data types and 1d structures\n Exit ticket"
   },
   {
-    "objectID": "course-materials/day2.html",
-    "href": "course-materials/day2.html",
+    "objectID": "course-materials/day2.html#afternoon-session-indexing-and-2d-data",
+    "href": "course-materials/day2.html#afternoon-session-indexing-and-2d-data",
     "title": "Data structures",
-    "section": "",
-    "text": "Website under construction sign"
+    "section": "Afternoon session: Indexing and 2d data",
+    "text": "Afternoon session: Indexing and 2d data\n\n Code sleuth: indexing\n Live coding demo: indexing and 2d data\n SLWE: indexing\n Concept mapping: Indexing and 2d data\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day2.html#end-of-day-practice",
+    "href": "course-materials/day2.html#end-of-day-practice",
+    "title": "Data structures",
+    "section": "End-of-day practice",
+    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 2 Practice: Initialize the reef"
+  },
+  {
+    "objectID": "course-materials/day2.html#additional-materials",
+    "href": "course-materials/day2.html#additional-materials",
+    "title": "Data structures",
+    "section": "Additional materials",
+    "text": "Additional materials\n\nWant some extra practice? Try these debugger problems.\nSee Hands on Programming with R for more information about data structures and indexing.\nFor a truly in-depth exploration, read Vectors and Subsetting in Advanced R by Hadley Wickham."
   },
   {
     "objectID": "course-materials/day7.html",
@@ -89,6 +103,55 @@
     "title": "Review indexing",
     "section": "Chunk 1",
     "text": "Chunk 1\nOn a sheet of paper\n\nIdentify the object being indexed (vector, list, matrix, etc)\nIdentify the index (inside [ ] or following $)\nDetermine the type of the index (positive integers, negative integers, conditions, names, blanks) and evaluate it\nApply the index to the object and determine the result"
+  },
+  {
+    "objectID": "course-materials/slides/day2pm-slides.html#title-slide",
+    "href": "course-materials/slides/day2pm-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 2 PM\nIndexing and 2d data\n\nAugust 11th, 2025"
+  },
+  {
+    "objectID": "course-materials/slides/day2pm-slides.html#review-day1-code-execution",
+    "href": "course-materials/slides/day2pm-slides.html#review-day1-code-execution",
+    "title": "",
+    "section": "",
+    "text": "Review day 1: Code execution\n\nWhat’s the value of x after you execute these commands?\nWhat output would you see at the console?\nx &lt;- 10\nx + 1\ny &lt;- x\ny &lt;- y * 2\nx\ny"
+  },
+  {
+    "objectID": "course-materials/slides/day2pm-slides.html#review-day1-version-control",
+    "href": "course-materials/slides/day2pm-slides.html#review-day1-version-control",
+    "title": "",
+    "section": "",
+    "text": "Review day 1: Version control\n\nLabel the arrows in the following diagram with the corresponding git command."
+  },
+  {
+    "objectID": "course-materials/slides/day2pm-slides.html#create-datasheet",
+    "href": "course-materials/slides/day2pm-slides.html#create-datasheet",
+    "title": "",
+    "section": "",
+    "text": "Create a datasheet\n\n\nPhoto by Annabelle Lang/LSU College of Agriculture"
+  },
+  {
+    "objectID": "course-materials/slides/day2pm-slides.html#types",
+    "href": "course-materials/slides/day2pm-slides.html#types",
+    "title": "",
+    "section": "",
+    "text": "Atomic types\n\n\n\nThere are four atomic types in R.\n\nCharacter (text)\nDouble (decimal numbers)\nInteger (round numbers)\nLogical (true and false)\n\n\nAtomic types are the basic building blocks of data structures in R.\nLike the name implies, everything else is made out of them."
+  },
+  {
+    "objectID": "course-materials/slides/day2pm-slides.html#coercion",
+    "href": "course-materials/slides/day2pm-slides.html#coercion",
+    "title": "",
+    "section": "",
+    "text": "Coercion\n\nAtomic vectors have to be one type. When you combine vectors of different types, one gets coerced into the other’s type.\n\nFrom Hands on Programming with R"
+  },
+  {
+    "objectID": "course-materials/slides/day2pm-slides.html#making-vectors",
+    "href": "course-materials/slides/day2pm-slides.html#making-vectors",
+    "title": "",
+    "section": "",
+    "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1]  1.354899  1.454561 -1.436012\n\nrpois(4, lambda = 10)\n\n[1] 11 14  5  8"
   },
   {
     "objectID": "course-materials/slides/day1pm-slides.html#title-slide",
@@ -228,7 +291,7 @@
     "href": "course-materials/eod/eod-day2.html",
     "title": "Day 2: End-of-day practice",
     "section": "",
-    "text": "Yesterday you laid the groundwork for your coral reef simulator by creating the repository. Today, you’ll write code to perform the reef initialization step.\nIn the game, you initialized the reef by randomly picking 8 grid cells and placing live coral tokens on them. Here, you’ll write a script to do something similar."
+    "text": "Yesterday you laid the groundwork for your coral reef model by creating the repository. Today, you’ll write code to perform the reef initialization step.\nIn the game, you initialized the reef by randomly picking 8 grid cells and placing live coral tokens on them. Here, you’ll write a script to do something similar."
   },
   {
     "objectID": "course-materials/eod/eod-day2.html#pseudocode-for-reef-initialization",
@@ -242,7 +305,7 @@
     "href": "course-materials/eod/eod-day2.html#implement-the-pseudocode",
     "title": "Day 2: End-of-day practice",
     "section": "Implement the pseudocode",
-    "text": "Implement the pseudocode\n\n0. Get ready\nOpen your coral reef simulator folder in Positron and make a new script called initalize_reef.R. Put this expression on the first line:\nset.seed(32)\n\n\n1. Create the matrix\nCreate a 5x5 matrix of 0s representing the coral reef\nWrite an expression to implement this step in the procedure. You should be able to do it in one line.\n\n\n2. Randomly sample coral starting locations\nLabel the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc\nRandomly sample 8 cell labels (without replacement)\nThe first line of pseudocode here is a cue for the reader. It would help to draw it on a sheet of paper for you to visualize it (drawing while you code is always a good idea!), but no code is needed here.\nThe second line requires another expression. Again, you should be able to do this in one line of code.\n\n\n3. Place your coral tokens\nFor each sample cell label:\n    Convert the cell label to a row index\n    Convert the cell label to a column index\n    Use the row and column indices to set the value of the matrix cell to 1\nThis part of the pseudocode requires you to repeat the same step multiple times - a loop. We’ll cover loops on Day 3, so for today your task is to initialize just one cell. Use the first value from your random sample of coral starting locations.\nConverting the cell label to row and column indices requires some problem solving! Make sure you can do the conversion on paper before writing the code.\n\n\n\n\n\n\nTip\n\n\n\nHere’s how I suggest solving it on paper - but you’re encouraged to do whatever helps you visualize and reason about the problem! Draw a 5x5 grid on a piece of paper. Label the rows and columns with their indices, and put the numbers 1 to 25 in the cells. From there, try to figure out how to convert the labels to indices.\nHint: the %% and %/% operators will come in useful here!\n\n\n\n\n4. Print the matrix\nAt the console.\n\n\nValidation checks\nCheck that…\n\nYour first sampled label is 6\nThe leftmost cell of the second row of your matrix is 1\nThe other 24 cells in your matrix are 0"
+    "text": "Implement the pseudocode\n\n0. Get ready\nOpen your coral reef model folder in Positron and make a new script called initalize_reef.R. Put this expression on the first line:\nset.seed(32)\n\n\n1. Create the matrix\nCreate a 5x5 matrix of 0s representing the coral reef\nWrite an expression to implement this step in the procedure. You should be able to do it in one line.\n\n\n2. Randomly sample coral starting locations\nLabel the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc\nRandomly sample 8 cell labels (without replacement)\nThe first line of pseudocode here is a cue for the reader. It would help to draw it on a sheet of paper for you to visualize it (drawing while you code is always a good idea!), but no code is needed here.\nThe second line requires another expression. Again, you should be able to do this in one line of code.\n\n\n3. Place your coral tokens\nFor each sample cell label:\n    Convert the cell label to a row index\n    Convert the cell label to a column index\n    Use the row and column indices to set the value of the matrix cell to 1\nThis part of the pseudocode requires you to repeat the same step multiple times - a loop. We’ll cover loops on Day 3, so for today your task is to initialize just one cell. Use the first value from your random sample of coral starting locations.\nConverting the cell label to row and column indices requires some problem solving! Make sure you can do the conversion on paper before writing the code.\n\n\n\n\n\n\nTip\n\n\n\nHere’s how I suggest solving it on paper - but you’re encouraged to do whatever helps you visualize and reason about the problem! Draw a 5x5 grid on a piece of paper. Label the rows and columns with their indices, and put the numbers 1 to 25 in the cells. From there, try to figure out how to convert the labels to indices.\nHint: the %% and %/% operators will come in useful here!\n\n\n\n\n4. Print the matrix\nAt the console.\n\n\nValidation checks\nCheck that…\n\nYour first sampled label is 6\nThe leftmost cell of the second row of your matrix is 1\nThe other 24 cells in your matrix are 0"
   },
   {
     "objectID": "course-materials/eod/eod-day2.html#track-your-progress",
@@ -257,6 +320,55 @@
     "title": "Day 2: End-of-day practice",
     "section": "Wrap up",
     "text": "Wrap up\nThat’s it for day 2!\nToday you learned about:\nData types and 1d structures\n\nReal world data is represented with four computational types: character, double, integer, and logical.\nVectors are constrained to one type, so combining vectors of different types induces coercion.\nThere are lots of different ways to create vectors, such as logical(), :, and c().\n\nIndexing and 2d data\n\nReading and writing from data structures happens through indexing.\nIndexing into 1d data structures can be done with positive integers (selection by position), negative integers (exclusion by position), names, and logic. In addition, you can index 2d data with blanks to access along an entire dimension.\nData frames are a particularly important 2d data structure and the workhorse of data science. We’ll work extensively with data frames starting next week after you build your computational thinking foundation."
+  },
+  {
+    "objectID": "course-materials/slides/day2am-slides.html#title-slide",
+    "href": "course-materials/slides/day2am-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 2 AM\nData types and 1d structures\n\nAugust 11th, 2025"
+  },
+  {
+    "objectID": "course-materials/slides/day2am-slides.html#review-day1-code-execution",
+    "href": "course-materials/slides/day2am-slides.html#review-day1-code-execution",
+    "title": "",
+    "section": "",
+    "text": "Review day 1: Code execution\n\nWhat’s the value of x after you execute these commands?\nWhat output would you see at the console?\nx &lt;- 10\nx + 1\ny &lt;- x\ny &lt;- y * 2\nx\ny"
+  },
+  {
+    "objectID": "course-materials/slides/day2am-slides.html#review-day1-version-control",
+    "href": "course-materials/slides/day2am-slides.html#review-day1-version-control",
+    "title": "",
+    "section": "",
+    "text": "Review day 1: Version control\n\nLabel the arrows in the following diagram with the corresponding git command."
+  },
+  {
+    "objectID": "course-materials/slides/day2am-slides.html#create-datasheet",
+    "href": "course-materials/slides/day2am-slides.html#create-datasheet",
+    "title": "",
+    "section": "",
+    "text": "Create a datasheet\n\n\nPhoto by Annabelle Lang/LSU College of Agriculture"
+  },
+  {
+    "objectID": "course-materials/slides/day2am-slides.html#types",
+    "href": "course-materials/slides/day2am-slides.html#types",
+    "title": "",
+    "section": "",
+    "text": "Atomic types\n\n\n\nThere are four atomic types in R.\n\nCharacter (text)\nDouble (decimal numbers)\nInteger (round numbers)\nLogical (true and false)\n\n\nAtomic types are the basic building blocks of data structures in R.\nLike the name implies, everything else is made out of them."
+  },
+  {
+    "objectID": "course-materials/slides/day2am-slides.html#coercion",
+    "href": "course-materials/slides/day2am-slides.html#coercion",
+    "title": "",
+    "section": "",
+    "text": "Coercion\n\nAtomic vectors have to be one type. When you combine vectors of different types, one gets coerced into the other’s type.\n\nFrom Hands on Programming with R"
+  },
+  {
+    "objectID": "course-materials/slides/day2am-slides.html#making-vectors",
+    "href": "course-materials/slides/day2am-slides.html#making-vectors",
+    "title": "",
+    "section": "",
+    "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1] -1.1841031 -0.3077750 -0.3283373\n\nrpois(4, lambda = 10)\n\n[1]  5 11  6  8"
   },
   {
     "objectID": "course-materials/slides/day1am-slides.html#title-slide",

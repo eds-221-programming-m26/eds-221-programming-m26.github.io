@@ -22,10 +22,11 @@ knitr::include_graphics("images/horst-data-types.jpeg")
 
 ## Morning session: Data types and 1d structures
 
+* {{< fa ghost title="A ghost" >}} [Review day 1](slides/day2am-slides.qmd){target="_blank"}
 * {{< fa pen-to-square title="A pencil writing on paper" >}} [Create a data sheet](activities/day2/day2am-create-data-sheet.pdf){target="_blank"}
 * {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: type coercion](activities/day2/day2am-code-sleuth.pdf){target="_blank"}
 * {{< fa users-line title="Multiple people working together" >}} Live coding demo: creating vectors
-* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Types and vectors mini-lecture](FIXME){target="_blank"}
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Types and vectors mini-lecture](slides/day2am-slides.qmd){target="_blank"}
 * {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: data types and 1d structures](activities/day2/day2am-concept-mapping.pdf){target="_blank"}
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/eox8Ynzj7AC4Ccu88){target="_blank"}
 
@@ -34,7 +35,6 @@ knitr::include_graphics("images/horst-data-types.jpeg")
 * {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: indexing](activities/day2/day2pm-code-sleuth.pdf){target="_blank"}
 * {{< fa users-line title="Multiple people working together" >}} Live coding demo: indexing and 2d data
 * {{< fa pen-to-square title="A pencil writing on paper" >}} [SLWE: indexing](activities/day2/day2pm-slwe.pdf){target="_blank"}
-* {{< fa laptop title="A laptop" >}} [Debugger: indexing errors](activities/day2/day2pm-debugger.qmd)
 * {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: Indexing and 2d data](activities/day2/day2pm-concept-mapping.pdf){target="_blank"}
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/CCsDQJrHqv4hDBi99){target="_blank"}
 
@@ -43,3 +43,9 @@ knitr::include_graphics("images/horst-data-types.jpeg")
 Complete the following tasks / activities before heading home for the day!
 
 - {{< fa laptop title="A laptop" >}} [**Day 2 Practice:** Initialize the reef](eod/eod-day2.qmd)
+
+## Additional materials
+
+- Want some extra practice? Try these [debugger problems](activities/day2/day2pm-debugger.qmd).
+- See _Hands on Programming with R_ for more information about [data structures](https://rstudio-education.github.io/hopr/r-objects.html) and [indexing](https://rstudio-education.github.io/hopr/r-notation.html).
+- For a truly in-depth exploration, read [Vectors](https://adv-r.hadley.nz/vectors-chap.html) and [Subsetting](https://adv-r.hadley.nz/subsetting.html) in _Advanced R_ by [Hadley Wickham](https://hadley.nz/).
