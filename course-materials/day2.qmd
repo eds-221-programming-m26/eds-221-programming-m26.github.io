@@ -24,18 +24,18 @@ knitr::include_graphics("images/horst-data-types.jpeg")
 
 * {{< fa ghost title="A ghost" >}} [Review day 1](slides/day2am-slides.qmd){target="_blank"}
 * {{< fa pen-to-square title="A pencil writing on paper" >}} [Create a data sheet](activities/day2/day2am-create-data-sheet.pdf){target="_blank"}
-* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: type coercion](activities/day2/day2am-code-sleuth.pdf){target="_blank"}
-* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: creating vectors](solutions/day2-am-live-coding.R)
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: type coercion](activities/day2/day2am-code-sleuth.pdf){target="_blank"} [**Solutions**](solutions/day2/day2am-code-sleuth.pdf){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: creating vectors](solutions/day2/day2-am-live-coding.R)
 * {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Types and vectors mini-lecture](slides/day2am-slides.qmd){target="_blank"}
-* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: data types and 1d structures](activities/day2/day2am-concept-mapping.pdf){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: data types and 1d structures](activities/day2/day2am-concept-mapping.pdf){target="_blank"} [**Solutions**](solutions/day2/day2am-concept-mapping.pdf){target="_blank"}
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/eox8Ynzj7AC4Ccu88){target="_blank"}
 
 ## Afternoon session: Indexing and 2d data
 
-* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: indexing](activities/day2/day2pm-code-sleuth.pdf){target="_blank"}
-* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: indexing and 2d data](solutions/day2-pm-live-coding.R)
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: indexing](activities/day2/day2pm-code-sleuth.pdf){target="_blank"} [**Solutions**](solutions/day2/day2pm-code-sleuth.pdf){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: indexing and 2d data](solutions/day2/day2-pm-live-coding.R)
 * {{< fa pen-to-square title="A pencil writing on paper" >}} [SLWE: indexing](activities/day2/day2pm-slwe.pdf){target="_blank"}
-* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: Indexing and 2d data](activities/day2/day2pm-concept-mapping.pdf){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: Indexing and 2d data](activities/day2/day2pm-concept-mapping.pdf){target="_blank"}  [**Solutions**](solutions/day2/day2pm-concept-mapping.pdf){target="_blank"}
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/CCsDQJrHqv4hDBi99){target="_blank"}
 
 ## End-of-day practice

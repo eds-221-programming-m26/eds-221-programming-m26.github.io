@@ -24,9 +24,9 @@ knitr::include_graphics("images/horst-welcome.png")
 
 * {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Course introduction](slides/day1am-slides.qmd){target="_blank"}
 * {{< fa pen-to-square title="A pencil writing on paper" >}} [Hands-on coral reef model](activities/day1/day1am-coral-reef-model.qmd)
-* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: console, script, environment](solutions/day1am.R)
-* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: operators and functions](activities/day1/day1am-code-sleuth.pdf){target="_blank"} [**Solutions**](solutions/day1am-code-sleuth.pdf)
-* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: code execution](activities/day1/day1am-concept-mapping.pdf){target="_blank"} [**Solutions**](solutions/day1am-concept-mapping.pdf)
+* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: console, script, environment](solutions/day1/day1am.R)
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: operators and functions](activities/day1/day1am-code-sleuth.pdf){target="_blank"} [**Solutions**](solutions/day1/day1am-code-sleuth.pdf)
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: code execution](activities/day1/day1am-concept-mapping.pdf){target="_blank"} [**Solutions**](solutions/day1/day1am-concept-mapping.pdf)
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/rMmqvrVNCVScavCU6){target="_blank"}
 
 ## Afternoon session: Version control
@@ -34,7 +34,7 @@ knitr::include_graphics("images/horst-welcome.png")
 * {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Tracking changes](slides/day1pm-slides.qmd){target="_blank"}
 * {{< fa users-line title="Multiple people working together" >}} Live coding demo: git and GitHub
 * {{< fa laptop title="A laptop" >}} [Trace git commands](activities/day1/day1pm-git-challenge.qmd)
-* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: version control](activities/day1/day1pm-concept-mapping.pdf){target="_blank"} [**Solutions**](solutions/day1pm-concept-mapping.pdf)
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: version control](activities/day1/day1pm-concept-mapping.pdf){target="_blank"} [**Solutions**](solutions/day1/day1pm-concept-mapping.pdf)
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/vE1sEsh8b8cpRUkQ7){target="_blank"}
 
 ## End-of-day practice
