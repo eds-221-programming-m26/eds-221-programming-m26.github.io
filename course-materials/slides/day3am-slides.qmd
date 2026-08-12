@@ -1,0 +1,87 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    # code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme: 
+      - ../../meds-slides-styles.scss
+---
+
+## {#title-slide data-menu-title="Title Slide" background="#053660"} 
+
+[EDS 221 Day 3 AM]{.custom-title}
+
+[*Conditions and logic*]{.custom-subtitle}
+
+<hr class="hr-teal">
+
+[August 12^th^, 2025]{.custom-subtitle3}
+
+---
+
+## {#review-day2-indexing data-menu-title="Review day 2: Indexing"} 
+
+[Review day 2: Indexing]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+
+On a sheet of paper, draw the reef matrix after this code runs:
+
+:::
+
+```r
+reef <- matrix(0, nrow = 5, ncol = 5)
+coral_row <- 3
+coral_col <- 4
+reef[coral_row, coral_col] <- 1
+```
+
+---
+
+## {#review-day2-indexing2 data-menu-title="Review day 2: Indexing"} 
+
+[Review day 2: Indexing]{.slide-title}
+
+<hr>
+
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+Recall the subgoals for evaluating indexing expressions
+
+1. Identify the object being indexed (vector, data frame, matrix, etc)
+2. Identify the index (inside [ ] or following $)
+3. Determine the type of the index (positive integers, negative integers, conditions, names, blanks) and evaluate it
+4. Apply the index to the object and determine the result
+
+:::
+
+::: {.column width="70%"}
+
+On a sheet of paper, apply these subgoals to evaluate the following code.
+
+```r
+growth_row_offset <- c(-1, -1, -1, 0, 1, 1, 1, 0)
+growth_col_offset <- c(-1, 0, 1, 1, 1, 0, -1, -1)
+
+growth_roll <- 4
+
+growth_row <- coral_row + 
+  growth_row_offset[growth_roll]
+growth_col <- coral_col + 
+  growth_col_offset[growth_roll]
+reef[growth_row, growth_col] <- 1
+```
+
+:::
+
+:::
+
+---
+

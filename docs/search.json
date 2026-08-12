@@ -91,67 +91,130 @@
     "text": "Student roles\nChoose students in your group to perform each of the following roles.\n🎂 Demography tracker Keeps track of which coral to resolve growth/mortality for next, and which have already resolved.\n🪙 Token manager Places, flips, and removes tokens from the grid.\n🎲 Dice roller Rolls the dice and reports the totals.\n📝 Data recorder Updates the table as new time series data emerges.\n⏳ Time keeper Tracks the time and make sures the group is on track to finish. Also writes down any rule ambiguities (and the group decision) encountered.\nWhen the group encounters an ambiguity in the rules, you must reach consensus as a group to decide how to proceed.\n🙅 No laptops while the model is running 🙅"
   },
   {
-    "objectID": "course-materials/activities/day3/day3am-review-indexing.html",
-    "href": "course-materials/activities/day3/day3am-review-indexing.html",
-    "title": "Review indexing",
-    "section": "",
-    "text": "Yesterday we covered 1d and 2d data structures, including indexing. Recall the subgoals for evaluating indexing expressions.\nWe’ll review yesterday’s content by using these subgoals to understand the following code.\nset.seed(1)\n\n# Chunk 1\ncoral_row &lt;- 3\ncoral_col &lt;- 3\nreef &lt;- matrix(0, nrow = 5, ncol = 5)\nreef[coral_row, coral_col] &lt;- 1\nprint(\"Initial reef\")\n\n[1] \"Initial reef\"\n\nreef\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    0    0    0    0    0\n[2,]    0    0    0    0    0\n[3,]    0    0    1    0    0\n[4,]    0    0    0    0    0\n[5,]    0    0    0    0    0\n\n# Chunk 2\ngrowth_row_lookup &lt;- c(-1, -1, -1, 0, 1, 1, 1, 0)\ngrowth_col_lookup &lt;- c(-1, 0, 1, 1, 1, 0, -1, -1)\n\n# Chunk 3\ngrowth_roll &lt;- sample(1:8, size = 1)\nprint(\"Growth direction roll\")\n\n[1] \"Growth direction roll\"\n\ngrowth_roll\n\n[1] 1\n\ngrowth_row &lt;- coral_row + growth_row_lookup[growth_roll]\ngrowth_col &lt;- coral_col + growth_col_lookup[growth_roll]\nreef[growth_row, growth_col] &lt;- 1\nprint(\"Updated reef\")\n\n[1] \"Updated reef\"\n\nreef\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    0    0    0    0    0\n[2,]    0    1    0    0    0\n[3,]    0    0    1    0    0\n[4,]    0    0    0    0    0\n[5,]    0    0    0    0    0"
-  },
-  {
-    "objectID": "course-materials/activities/day3/day3am-review-indexing.html#chunk-1",
-    "href": "course-materials/activities/day3/day3am-review-indexing.html#chunk-1",
-    "title": "Review indexing",
-    "section": "Chunk 1",
-    "text": "Chunk 1\nOn a sheet of paper\n\nIdentify the object being indexed (vector, list, matrix, etc)\nIdentify the index (inside [ ] or following $)\nDetermine the type of the index (positive integers, negative integers, conditions, names, blanks) and evaluate it\nApply the index to the object and determine the result"
-  },
-  {
-    "objectID": "course-materials/slides/day2pm-slides.html#title-slide",
-    "href": "course-materials/slides/day2pm-slides.html#title-slide",
+    "objectID": "course-materials/slides/day1am-slides.html#title-slide",
+    "href": "course-materials/slides/day1am-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 221 Day 2 PM\nIndexing and 2d data\n\nAugust 11th, 2025"
+    "text": "EDS 221 Day 1 AM\nCourse intro\n\nAugust 10th, 2025"
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#review-day1-code-execution",
-    "href": "course-materials/slides/day2pm-slides.html#review-day1-code-execution",
+    "objectID": "course-materials/slides/day1am-slides.html#corals",
+    "href": "course-materials/slides/day1am-slides.html#corals",
+    "title": "",
+    "section": "",
+    "text": "What happened to this system?\nWhat are the consequences for people and the environment?\nWhy are we talking about this in a programming class?"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-1",
+    "href": "course-materials/slides/day1am-slides.html#data-understanding-1",
+    "title": "",
+    "section": "",
+    "text": "From data to understanding\n\nWith code, we go from this…"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-2",
+    "href": "course-materials/slides/day1am-slides.html#data-understanding-2",
+    "title": "",
+    "section": "",
+    "text": "From data to understanding\n\n…to this."
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#learning-objectives",
+    "href": "course-materials/slides/day1am-slides.html#learning-objectives",
+    "title": "",
+    "section": "",
+    "text": "Learning objectives\n\n\n🧠 Think like a computer scientist\n\n🌍 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#grading",
+    "href": "course-materials/slides/day1am-slides.html#grading",
+    "title": "",
+    "section": "",
+    "text": "Grading\n\n\n\n👍 Satisfactory / Unsatisfactory\n\nNo letter grades\n\n✅ Attendance\n\nExpected every day.\nBut life happens! Let your instructors know about absences in advance when possible.\n\n✋ Participation\n\nActive participation in all exercises expected."
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#daily-schedule",
+    "href": "course-materials/slides/day1am-slides.html#daily-schedule",
+    "title": "",
+    "section": "",
+    "text": "Daily schedule\n\n\n\n\n\nMorning session\n\nReview previous day\nNew material\nSession review\n\nAfternoon session\n\nNew material\nSession review\n\nEnd-of-day session\n\nPractice day’s material\n\n\n\n\nSession activities\n\nPencil-and-paper exercises\nLive-coding demos\nConcept mapping\n\nExpect a lot of:\n\nWorking in groups\nProblem solving\nThink first, draw second, type last"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#typing-club",
+    "href": "course-materials/slides/day1am-slides.html#typing-club",
+    "title": "",
+    "section": "",
+    "text": "Have your coffee with typing club!\n\n\n💻 💻 💻 Touch typing is a valuable skill for keeping up in class, and one you can develop.\nBut why practice alone?\n☕ ☕ ☕ Join typing club 9:15-9:45, here in the NCEAS classroom. I’ll make the coffee (there will be tea, too), we’ll practice typing together.\n\n\nDistribution of typing speeds"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#course-schedule",
+    "href": "course-materials/slides/day1am-slides.html#course-schedule",
+    "title": "",
+    "section": "",
+    "text": "Course schedule\n\n\n\n\n\nWeek 1\nWeek 2\n\n\n\n\nDay 1 - Code execution\nDay 6 - Data frames\n\n\nDay 2 - Data structures\nDay 7 - Manipulating data\n\n\nDay 3 - Control structures\nDay 8 - Advanced data types\n\n\nDay 4 - Functions\nDay 9 - Troubleshooting\n\n\nDay 5 - Creating programs\nDay 10 - Review"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#degree-schedule",
+    "href": "course-materials/slides/day1am-slides.html#degree-schedule",
+    "title": "",
+    "section": "",
+    "text": "Degree schedule\n\n\n\n\n\nFall\n\nStatistics\nEnvironmental data\nGeospatial analysis\nEthics and bias\n\nWinter\n\nMore statistics\nData visualization\nEnvironmental systems\nCapstone I\n\nSpring\n\nMachine learning\nDatabases\nCapstone II\n\n\n\n\n\nAll these classes use programming!\nBut since you haven’t taken them yet, in the meantime we’ll use programming to build…"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#coral-reef-model",
+    "href": "course-materials/slides/day1am-slides.html#coral-reef-model",
+    "title": "",
+    "section": "",
+    "text": "Coral reef model"
+  },
+  {
+    "objectID": "course-materials/slides/day2am-slides.html#title-slide",
+    "href": "course-materials/slides/day2am-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 2 AM\nData types and 1d structures\n\nAugust 11th, 2025"
+  },
+  {
+    "objectID": "course-materials/slides/day2am-slides.html#review-day1-code-execution",
+    "href": "course-materials/slides/day2am-slides.html#review-day1-code-execution",
     "title": "",
     "section": "",
     "text": "Review day 1: Code execution\n\nWhat’s the value of x after you execute these commands?\nWhat output would you see at the console?\nx &lt;- 10\nx + 1\ny &lt;- x\ny &lt;- y * 2\nx\ny"
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#review-day1-version-control",
-    "href": "course-materials/slides/day2pm-slides.html#review-day1-version-control",
+    "objectID": "course-materials/slides/day2am-slides.html#review-day1-version-control",
+    "href": "course-materials/slides/day2am-slides.html#review-day1-version-control",
     "title": "",
     "section": "",
     "text": "Review day 1: Version control\n\nLabel the arrows in the following diagram with the corresponding git command."
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#create-datasheet",
-    "href": "course-materials/slides/day2pm-slides.html#create-datasheet",
+    "objectID": "course-materials/slides/day2am-slides.html#create-datasheet",
+    "href": "course-materials/slides/day2am-slides.html#create-datasheet",
     "title": "",
     "section": "",
     "text": "Create a datasheet\n\n\nPhoto by Annabelle Lang/LSU College of Agriculture"
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#types",
-    "href": "course-materials/slides/day2pm-slides.html#types",
+    "objectID": "course-materials/slides/day2am-slides.html#types",
+    "href": "course-materials/slides/day2am-slides.html#types",
     "title": "",
     "section": "",
     "text": "Atomic types\n\n\n\nThere are four atomic types in R.\n\nCharacter (text)\nDouble (decimal numbers)\nInteger (round numbers)\nLogical (true and false)\n\n\nAtomic types are the basic building blocks of data structures in R.\nLike the name implies, everything else is made out of them."
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#coercion",
-    "href": "course-materials/slides/day2pm-slides.html#coercion",
+    "objectID": "course-materials/slides/day2am-slides.html#coercion",
+    "href": "course-materials/slides/day2am-slides.html#coercion",
     "title": "",
     "section": "",
     "text": "Coercion\n\nAtomic vectors have to be one type. When you combine vectors of different types, one gets coerced into the other’s type.\n\nFrom Hands on Programming with R"
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#making-vectors",
-    "href": "course-materials/slides/day2pm-slides.html#making-vectors",
+    "objectID": "course-materials/slides/day2am-slides.html#making-vectors",
+    "href": "course-materials/slides/day2am-slides.html#making-vectors",
     "title": "",
     "section": "",
-    "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1]  1.354899  1.454561 -1.436012\n\nrpois(4, lambda = 10)\n\n[1] 11 14  5  8"
+    "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1] -1.1841031 -0.3077750 -0.3283373\n\nrpois(4, lambda = 10)\n\n[1]  5 11  6  8"
   },
   {
     "objectID": "course-materials/slides/day1pm-slides.html#title-slide",
@@ -322,130 +385,74 @@
     "text": "Wrap up\nThat’s it for day 2!\nToday you learned about:\nData types and 1d structures\n\nReal world data is represented with four computational types: character, double, integer, and logical.\nVectors are constrained to one type, so combining vectors of different types induces coercion.\nThere are lots of different ways to create vectors, such as logical(), :, and c().\n\nIndexing and 2d data\n\nReading and writing from data structures happens through indexing.\nIndexing into 1d data structures can be done with positive integers (selection by position), negative integers (exclusion by position), names, and logic. In addition, you can index 2d data with blanks to access along an entire dimension.\nData frames are a particularly important 2d data structure and the workhorse of data science. We’ll work extensively with data frames starting next week after you build your computational thinking foundation."
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#title-slide",
-    "href": "course-materials/slides/day2am-slides.html#title-slide",
+    "objectID": "course-materials/slides/day3am-slides.html#title-slide",
+    "href": "course-materials/slides/day3am-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 221 Day 2 AM\nData types and 1d structures\n\nAugust 11th, 2025"
+    "text": "EDS 221 Day 3 AM\nConditions and logic\n\nAugust 12th, 2025"
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#review-day1-code-execution",
-    "href": "course-materials/slides/day2am-slides.html#review-day1-code-execution",
+    "objectID": "course-materials/slides/day3am-slides.html#review-day2-indexing",
+    "href": "course-materials/slides/day3am-slides.html#review-day2-indexing",
+    "title": "",
+    "section": "",
+    "text": "Review day 2: Indexing\n\n\nOn a sheet of paper, draw the reef matrix after this code runs:\n\nreef &lt;- matrix(0, nrow = 5, ncol = 5)\ncoral_row &lt;- 3\ncoral_col &lt;- 4\nreef[coral_row, coral_col] &lt;- 1"
+  },
+  {
+    "objectID": "course-materials/slides/day3am-slides.html#review-day2-indexing2",
+    "href": "course-materials/slides/day3am-slides.html#review-day2-indexing2",
+    "title": "",
+    "section": "",
+    "text": "Review day 2: Indexing\n\n\n\nRecall the subgoals for evaluating indexing expressions\n\nIdentify the object being indexed (vector, data frame, matrix, etc)\nIdentify the index (inside [ ] or following $)\nDetermine the type of the index (positive integers, negative integers, conditions, names, blanks) and evaluate it\nApply the index to the object and determine the result\n\n\nOn a sheet of paper, apply these subgoals to evaluate the following code.\ngrowth_row_offset &lt;- c(-1, -1, -1, 0, 1, 1, 1, 0)\ngrowth_col_offset &lt;- c(-1, 0, 1, 1, 1, 0, -1, -1)\n\ngrowth_roll &lt;- 4\n\ngrowth_row &lt;- coral_row + \n  growth_row_offset[growth_roll]\ngrowth_col &lt;- coral_col + \n  growth_col_offset[growth_roll]\nreef[growth_row, growth_col] &lt;- 1"
+  },
+  {
+    "objectID": "course-materials/slides/day2pm-slides.html#title-slide",
+    "href": "course-materials/slides/day2pm-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 2 PM\nIndexing and 2d data\n\nAugust 11th, 2025"
+  },
+  {
+    "objectID": "course-materials/slides/day2pm-slides.html#review-day1-code-execution",
+    "href": "course-materials/slides/day2pm-slides.html#review-day1-code-execution",
     "title": "",
     "section": "",
     "text": "Review day 1: Code execution\n\nWhat’s the value of x after you execute these commands?\nWhat output would you see at the console?\nx &lt;- 10\nx + 1\ny &lt;- x\ny &lt;- y * 2\nx\ny"
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#review-day1-version-control",
-    "href": "course-materials/slides/day2am-slides.html#review-day1-version-control",
+    "objectID": "course-materials/slides/day2pm-slides.html#review-day1-version-control",
+    "href": "course-materials/slides/day2pm-slides.html#review-day1-version-control",
     "title": "",
     "section": "",
     "text": "Review day 1: Version control\n\nLabel the arrows in the following diagram with the corresponding git command."
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#create-datasheet",
-    "href": "course-materials/slides/day2am-slides.html#create-datasheet",
+    "objectID": "course-materials/slides/day2pm-slides.html#create-datasheet",
+    "href": "course-materials/slides/day2pm-slides.html#create-datasheet",
     "title": "",
     "section": "",
     "text": "Create a datasheet\n\n\nPhoto by Annabelle Lang/LSU College of Agriculture"
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#types",
-    "href": "course-materials/slides/day2am-slides.html#types",
+    "objectID": "course-materials/slides/day2pm-slides.html#types",
+    "href": "course-materials/slides/day2pm-slides.html#types",
     "title": "",
     "section": "",
     "text": "Atomic types\n\n\n\nThere are four atomic types in R.\n\nCharacter (text)\nDouble (decimal numbers)\nInteger (round numbers)\nLogical (true and false)\n\n\nAtomic types are the basic building blocks of data structures in R.\nLike the name implies, everything else is made out of them."
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#coercion",
-    "href": "course-materials/slides/day2am-slides.html#coercion",
+    "objectID": "course-materials/slides/day2pm-slides.html#coercion",
+    "href": "course-materials/slides/day2pm-slides.html#coercion",
     "title": "",
     "section": "",
     "text": "Coercion\n\nAtomic vectors have to be one type. When you combine vectors of different types, one gets coerced into the other’s type.\n\nFrom Hands on Programming with R"
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#making-vectors",
-    "href": "course-materials/slides/day2am-slides.html#making-vectors",
+    "objectID": "course-materials/slides/day2pm-slides.html#making-vectors",
+    "href": "course-materials/slides/day2pm-slides.html#making-vectors",
     "title": "",
     "section": "",
-    "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1] -1.1841031 -0.3077750 -0.3283373\n\nrpois(4, lambda = 10)\n\n[1]  5 11  6  8"
-  },
-  {
-    "objectID": "course-materials/slides/day1am-slides.html#title-slide",
-    "href": "course-materials/slides/day1am-slides.html#title-slide",
-    "title": "",
-    "section": "",
-    "text": "EDS 221 Day 1 AM\nCourse intro\n\nAugust 10th, 2025"
-  },
-  {
-    "objectID": "course-materials/slides/day1am-slides.html#corals",
-    "href": "course-materials/slides/day1am-slides.html#corals",
-    "title": "",
-    "section": "",
-    "text": "What happened to this system?\nWhat are the consequences for people and the environment?\nWhy are we talking about this in a programming class?"
-  },
-  {
-    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-1",
-    "href": "course-materials/slides/day1am-slides.html#data-understanding-1",
-    "title": "",
-    "section": "",
-    "text": "From data to understanding\n\nWith code, we go from this…"
-  },
-  {
-    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-2",
-    "href": "course-materials/slides/day1am-slides.html#data-understanding-2",
-    "title": "",
-    "section": "",
-    "text": "From data to understanding\n\n…to this."
-  },
-  {
-    "objectID": "course-materials/slides/day1am-slides.html#learning-objectives",
-    "href": "course-materials/slides/day1am-slides.html#learning-objectives",
-    "title": "",
-    "section": "",
-    "text": "Learning objectives\n\n\n🧠 Think like a computer scientist\n\n🌍 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
-  },
-  {
-    "objectID": "course-materials/slides/day1am-slides.html#grading",
-    "href": "course-materials/slides/day1am-slides.html#grading",
-    "title": "",
-    "section": "",
-    "text": "Grading\n\n\n\n👍 Satisfactory / Unsatisfactory\n\nNo letter grades\n\n✅ Attendance\n\nExpected every day.\nBut life happens! Let your instructors know about absences in advance when possible.\n\n✋ Participation\n\nActive participation in all exercises expected."
-  },
-  {
-    "objectID": "course-materials/slides/day1am-slides.html#daily-schedule",
-    "href": "course-materials/slides/day1am-slides.html#daily-schedule",
-    "title": "",
-    "section": "",
-    "text": "Daily schedule\n\n\n\n\n\nMorning session\n\nReview previous day\nNew material\nSession review\n\nAfternoon session\n\nNew material\nSession review\n\nEnd-of-day session\n\nPractice day’s material\n\n\n\n\nSession activities\n\nPencil-and-paper exercises\nLive-coding demos\nConcept mapping\n\nExpect a lot of:\n\nWorking in groups\nProblem solving\nThink first, draw second, type last"
-  },
-  {
-    "objectID": "course-materials/slides/day1am-slides.html#typing-club",
-    "href": "course-materials/slides/day1am-slides.html#typing-club",
-    "title": "",
-    "section": "",
-    "text": "Have your coffee with typing club!\n\n\n💻 💻 💻 Touch typing is a valuable skill for keeping up in class, and one you can develop.\nBut why practice alone?\n☕ ☕ ☕ Join typing club 9:15-9:45, here in the NCEAS classroom. I’ll make the coffee (there will be tea, too), we’ll practice typing together.\n\n\nDistribution of typing speeds"
-  },
-  {
-    "objectID": "course-materials/slides/day1am-slides.html#course-schedule",
-    "href": "course-materials/slides/day1am-slides.html#course-schedule",
-    "title": "",
-    "section": "",
-    "text": "Course schedule\n\n\n\n\n\nWeek 1\nWeek 2\n\n\n\n\nDay 1 - Code execution\nDay 6 - Data frames\n\n\nDay 2 - Data structures\nDay 7 - Manipulating data\n\n\nDay 3 - Control structures\nDay 8 - Advanced data types\n\n\nDay 4 - Functions\nDay 9 - Troubleshooting\n\n\nDay 5 - Creating programs\nDay 10 - Review"
-  },
-  {
-    "objectID": "course-materials/slides/day1am-slides.html#degree-schedule",
-    "href": "course-materials/slides/day1am-slides.html#degree-schedule",
-    "title": "",
-    "section": "",
-    "text": "Degree schedule\n\n\n\n\n\nFall\n\nStatistics\nEnvironmental data\nGeospatial analysis\nEthics and bias\n\nWinter\n\nMore statistics\nData visualization\nEnvironmental systems\nCapstone I\n\nSpring\n\nMachine learning\nDatabases\nCapstone II\n\n\n\n\n\nAll these classes use programming!\nBut since you haven’t taken them yet, in the meantime we’ll use programming to build…"
-  },
-  {
-    "objectID": "course-materials/slides/day1am-slides.html#coral-reef-model",
-    "href": "course-materials/slides/day1am-slides.html#coral-reef-model",
-    "title": "",
-    "section": "",
-    "text": "Coral reef model"
+    "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1]  1.354899  1.454561 -1.436012\n\nrpois(4, lambda = 10)\n\n[1] 11 14  5  8"
   },
   {
     "objectID": "course-materials/activities/day2/day2pm-debugger.html",
@@ -508,14 +515,14 @@
     "href": "course-materials/day3.html",
     "title": "Control structures",
     "section": "",
-    "text": "Create a data sheet\n Code sleuth: type coercion\n Live coding demo: creating vectors\n Types and vectors mini-lecture\n Concept mapping: data types and 1d structures\n Exit ticket"
+    "text": "Review day 2\n Code sleuth: conditions and logic\n Live coding demo: if-else if-else\n Concept mapping: conditions and logic\n Exit ticket"
   },
   {
     "objectID": "course-materials/day3.html#morning-session-conditions-and-logic",
     "href": "course-materials/day3.html#morning-session-conditions-and-logic",
     "title": "Control structures",
     "section": "",
-    "text": "Create a data sheet\n Code sleuth: type coercion\n Live coding demo: creating vectors\n Types and vectors mini-lecture\n Concept mapping: data types and 1d structures\n Exit ticket"
+    "text": "Review day 2\n Code sleuth: conditions and logic\n Live coding demo: if-else if-else\n Concept mapping: conditions and logic\n Exit ticket"
   },
   {
     "objectID": "course-materials/day3.html#afternoon-session-loops",
