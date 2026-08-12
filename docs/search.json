@@ -109,7 +109,7 @@
     "href": "course-materials/activities/day3/day3pm-death-survival.html#verify",
     "title": "Death and survival on the reef",
     "section": "Verify",
-    "text": "Verify\nWhen done correctly, your code will produce this result for the coral cover percent:\n#  [1] 0.32 0.32 0.32 0.32 0.32 0.32 0.24 0.20 0.16 0.16 0.12\nNotice the percent cover never increases, it just slowly drops over time. That’s because we haven’t implemented any growth yet.\nWhen you’re done, call an instructor over to review your code and get feedback."
+    "text": "Verify\nWhen done correctly, your code will produce this result for the coral cover percent:\n [1] 0.32 0.24 0.24 0.24 0.24 0.20 0.20 0.20 0.16 0.08 0.08\nNotice the percent cover never increases, it just slowly drops over time. That’s because we haven’t implemented any growth yet.\nWhen you’re done, call an instructor over to review your code and get feedback."
   },
   {
     "objectID": "course-materials/slides/day3pm-slides.html#title-slide",

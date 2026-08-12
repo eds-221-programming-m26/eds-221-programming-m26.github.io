@@ -159,7 +159,7 @@ This step is similar to step 3. Make sure you choose the right index for `coral_
 When done correctly, your code will produce this result for the coral cover percent:
 
 ```r
-#  [1] 0.32 0.32 0.32 0.32 0.32 0.32 0.24 0.20 0.16 0.16 0.12
+ [1] 0.32 0.24 0.24 0.24 0.24 0.20 0.20 0.20 0.16 0.08 0.08
 ```
 
 Notice the percent cover never increases, it just slowly drops over time. That's because we haven't implemented any growth yet. 
