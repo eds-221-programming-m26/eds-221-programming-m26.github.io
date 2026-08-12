@@ -1,0 +1,167 @@
+---
+title: "Death and survival on the reef"
+---
+
+## Instructions
+
+In this exercise, you will apply what you've learned about conditional statements and loops to make a reef that can _survive_ and _die_, tracking coral cover over time. You will implement other features of the model, like growth and crises, later in the week.
+
+::: {.callout-important}
+
+This exercise synthesizes _a lot_ of new material from the first three days of class. It's a valuable opportunity to integrate everything you've learned so far, but it's also very challenging. You are encouraged to:
+
+- Make sketches to visualize your thinking
+- Work in groups
+- Ask your instructors for help!
+
+:::
+
+### 0. Get ready
+
+Open the folder with your coral reef project in Positron. 
+
+Download [death_survival.R](activities/day3/death_survival.R) and put it in your folder.
+
+This script contains template code. You'll fill it in with code you've written earlier in class, or by applying what you've learned about data structures and control structures. 
+
+### 1. Initialize the reef
+
+Your first step is to initialize your reef. Create the matrix and place 8 random corals in it.
+
+When done correctly, your `reef` will look like this:
+
+```r
+> reef
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    0    1    1    1    0
+[2,]    0    1    0    1    0
+[3,]    1    0    0    1    0
+[4,]    0    0    0    0    0
+[5,]    0    0    0    1    0
+```
+
+### 2. Track time and percent cover
+
+Create vectors `years` and `coral_cover_pct` to keep track of time and percent cover.
+
+When done correctly, your vectors will look like this:
+
+```r
+> years
+ [1] 2004 2006 2008 2010 2012 2014 2016 2018 2020 2022 2024
+> coral_cover_pct
+ [1] 0 0 0 0 0 0 0 0 0 0 0
+```
+
+### 3. Calculate coral cover
+
+Calculate coral cover in the first year.
+
+When done correctly, `coral_cover_pct` will look like this:
+
+```r
+> coral_cover_pct
+ [1] 0.32 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+```
+
+
+::: {.callout-tip}
+
+`reef` is all 1's and 0's, so the mean of the reef equals the percent cover.
+
+:::
+
+### 4. Loop over time 
+
+You've been given:
+
+```r
+for (_________) {
+```
+
+Fill in the blank with the iterator and sequence to loop over the indices waiting to be updated. You've already calculated  percent cover for the first year, so start your sequence at 2. Call your iterator `t`.
+
+### 5. Update previous and current reef
+
+While running the coral reef model manually, you alternated between two laminated grids. One represented the reef in the previous time step and you update the one in the current step. Now, you'll do that in code.
+
+You've been given:
+
+```r
+# Copy reef to a new variable, prev_reef
+prev_reef <- _________
+# Wipe the new reef clean
+reef <- _________
+```
+
+Fill in the blanks such that `prev_reef` becomes a copy of the reef, then `reef` starts over with all 0s.
+
+### 6. Loop over the rows and columns
+
+You've been given two more nested loops:
+
+```r
+for (_________) {
+  for (_________) {
+```
+
+Fill in the blanks to loop over the indices for the rows and columns of the reef. Call your iterators `r` and `c`.
+
+### 7. Check for coral
+
+Check if this cell had a coral in it in the previous reef.
+
+You've been given:
+
+```r
+if (_________) {
+```
+
+Fill in the blank with the condition checking if this cell (indicated by `r` and `c`) had a coral in it in the previous time step.
+
+
+### 8. Determine coral's fate
+
+For existing corals, roll 2d6 to determine the outcome.
+
+You've been given:
+
+```r
+# Roll 2d6 for this coral
+coral_outcome <- _________
+# Fill in the conditions below for mortality and survival
+# Update the reef accordingly
+if (_________) {
+  # Mortality
+  print("Coral died")
+  # Update the reef
+} else {
+  # Survival
+  print("Coral survived")
+  # Update the reef
+}
+```
+
+Fill in the blank to create `coral_outcome`. Then, use that variable to check if you should apply mortality or survival. Where the comment says `# Update the reef`, use `r` and `c` to set the reef's value at that location to the appropriate value (0 or 1).
+
+### 9. Update coral percent cover
+
+Notice where this code falls in the nested loops. It's inside the time loop, but after the row and column loops. At this point, you've completed updating the reef for a time step. Now it's time to calculate the coral percent cover and update your tracking variable, `coral_cover_pct`.
+
+::: {.callout-tip}
+
+This step is similar to step 3. Make sure you choose the right index for `coral_cover_pct`!
+
+:::
+
+## Verify
+
+When done correctly, your code will produce this result for the coral cover percent:
+
+```r
+#  [1] 0.32 0.32 0.32 0.32 0.32 0.32 0.24 0.20 0.16 0.16 0.12
+```
+
+Notice the percent cover never increases, it just slowly drops over time. That's because we haven't implemented any growth yet. 
+
+When you're done, call an instructor over to review your code and get feedback.

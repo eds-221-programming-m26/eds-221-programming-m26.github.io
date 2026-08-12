@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Wednesday August 12th, 2025">
 
-<title>Control structures</title>
+<title>Death and survival on the reef</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,28 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">EDS 221</span>
     </a>
   </div>
@@ -92,11 +125,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../eds221-syllabus-m26.pdf" target="_blank"> 
+    <a class="nav-link" href="../../../eds221-syllabus-m26.pdf" target="_blank"> 
 <span class="menu-text">syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -105,43 +138,43 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
         <li>
-    <a class="dropdown-item" href="../course-materials/day1.html">
+    <a class="dropdown-item" href="../../../course-materials/day1.html">
  <span class="dropdown-text">day 1 (8/10)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day2.html">
+    <a class="dropdown-item" href="../../../course-materials/day2.html">
  <span class="dropdown-text">day 2 (8/11)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day3.html">
+    <a class="dropdown-item" href="../../../course-materials/day3.html">
  <span class="dropdown-text">day 3 (8/12)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day4.html">
+    <a class="dropdown-item" href="../../../course-materials/day4.html">
  <span class="dropdown-text">day 4 (8/13)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day5.html">
+    <a class="dropdown-item" href="../../../course-materials/day5.html">
  <span class="dropdown-text">day 5 (8/14)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day6.html">
+    <a class="dropdown-item" href="../../../course-materials/day6.html">
  <span class="dropdown-text">day 6 (8/17)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day7.html">
+    <a class="dropdown-item" href="../../../course-materials/day7.html">
  <span class="dropdown-text">day 7 (8/18)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day8.html">
+    <a class="dropdown-item" href="../../../course-materials/day8.html">
  <span class="dropdown-text">day 8 (8/29)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day9.html">
+    <a class="dropdown-item" href="../../../course-materials/day9.html">
  <span class="dropdown-text">day 9 (8/20)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day10.html">
+    <a class="dropdown-item" href="../../../course-materials/day10.html">
  <span class="dropdown-text">day 10 (8/21)</span></a>
   </li>  
     </ul>
@@ -162,14 +195,8 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Control structures</h1>
-            <p class="subtitle lead">Day 3</p>
-                  <div>
-        <div class="description">
-          Wednesday August 12<sup>th</sup>, 2025
-        </div>
-      </div>
-                </div>
+      <h1 class="title">Death and survival on the reef</h1>
+                      </div>
   </div>
     
   
@@ -189,9 +216,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#morning-session-conditions-and-logic" id="toc-morning-session-conditions-and-logic" class="nav-link active" data-scroll-target="#morning-session-conditions-and-logic">Morning session: Conditions and logic</a></li>
-  <li><a href="#afternoon-session-loops" id="toc-afternoon-session-loops" class="nav-link" data-scroll-target="#afternoon-session-loops">Afternoon session: Loops</a></li>
-  <li><a href="#end-of-day-practice" id="toc-end-of-day-practice" class="nav-link" data-scroll-target="#end-of-day-practice">End-of-day practice</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a>
+  <ul class="collapse">
+  <li><a href="#get-ready" id="toc-get-ready" class="nav-link" data-scroll-target="#get-ready">0. Get ready</a></li>
+  <li><a href="#initialize-the-reef" id="toc-initialize-the-reef" class="nav-link" data-scroll-target="#initialize-the-reef">1. Initialize the reef</a></li>
+  <li><a href="#track-time-and-percent-cover" id="toc-track-time-and-percent-cover" class="nav-link" data-scroll-target="#track-time-and-percent-cover">2. Track time and percent cover</a></li>
+  <li><a href="#calculate-coral-cover" id="toc-calculate-coral-cover" class="nav-link" data-scroll-target="#calculate-coral-cover">3. Calculate coral cover</a></li>
+  <li><a href="#loop-over-time" id="toc-loop-over-time" class="nav-link" data-scroll-target="#loop-over-time">4. Loop over time</a></li>
+  <li><a href="#update-previous-and-current-reef" id="toc-update-previous-and-current-reef" class="nav-link" data-scroll-target="#update-previous-and-current-reef">5. Update previous and current reef</a></li>
+  <li><a href="#loop-over-the-rows-and-columns" id="toc-loop-over-the-rows-and-columns" class="nav-link" data-scroll-target="#loop-over-the-rows-and-columns">6. Loop over the rows and columns</a></li>
+  <li><a href="#check-for-coral" id="toc-check-for-coral" class="nav-link" data-scroll-target="#check-for-coral">7. Check for coral</a></li>
+  <li><a href="#determine-corals-fate" id="toc-determine-corals-fate" class="nav-link" data-scroll-target="#determine-corals-fate">8. Determine coral’s fate</a></li>
+  <li><a href="#update-coral-percent-cover" id="toc-update-coral-percent-cover" class="nav-link" data-scroll-target="#update-coral-percent-cover">9. Update coral percent cover</a></li>
+  </ul></li>
+  <li><a href="#verify" id="toc-verify" class="nav-link" data-scroll-target="#verify">Verify</a></li>
   </ul>
 </nav>
     </div>
@@ -202,34 +240,147 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<!-- ## Pre-class prep -->
-<!-- No pre-class prep before our first day of class! -->
-<section id="morning-session-conditions-and-logic" class="level2">
-<h2 class="anchored" data-anchor-id="morning-session-conditions-and-logic">Morning session: Conditions and logic</h2>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>In this exercise, you will apply what you’ve learned about conditional statements and loops to make a reef that can <em>survive</em> and <em>die</em>, tracking coral cover over time. You will implement other features of the model, like growth and crises, later in the week.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This exercise synthesizes <em>a lot</em> of new material from the first three days of class. It’s a valuable opportunity to integrate everything you’ve learned so far, but it’s also very challenging. You are encouraged to:</p>
 <ul>
-<li><i class="fa-solid fa-ghost" title="A ghost" aria-label="ghost"></i> <a href="../course-materials/slides/day3am-slides.html" target="_blank">Review day 2</a></li>
-<li><i class="fa-solid fa-pen-to-square" title="A pencil writing on paper" aria-label="pen-to-square"></i> <a href="activities/day3/day3am-code-sleuth.pdf" target="_blank">Code sleuth: conditions and logic</a></li>
-<li><i class="fa-solid fa-users-line" title="Multiple people working together" aria-label="users-line"></i> Live coding demo: if-else if-else</li>
-<li><i class="fa-solid fa-diagram-project" title="Nodes connected by edges" aria-label="diagram-project"></i> <a href="activities/day3/day3am-concept-mapping.pdf" target="_blank">Concept mapping: conditions and logic</a></li>
-<li><i class="fa-solid fa-square-check" title="A checked checkbox" aria-label="square-check"></i> <a href="https://forms.gle/BZuu5Ha6PiP38Uo6A" target="_blank">Exit ticket</a></li>
+<li>Make sketches to visualize your thinking</li>
+<li>Work in groups</li>
+<li>Ask your instructors for help!</li>
 </ul>
+</div>
+</div>
+<section id="get-ready" class="level3">
+<h3 class="anchored" data-anchor-id="get-ready">0. Get ready</h3>
+<p>Open the folder with your coral reef project in Positron.</p>
+<p>Download <a href="activities/day3/death_survival.R">death_survival.R</a> and put it in your folder.</p>
+<p>This script contains template code. You’ll fill it in with code you’ve written earlier in class, or by applying what you’ve learned about data structures and control structures.</p>
 </section>
-<section id="afternoon-session-loops" class="level2">
-<h2 class="anchored" data-anchor-id="afternoon-session-loops">Afternoon session: Loops</h2>
-<ul>
-<li><i class="fa-solid fa-person-chalkboard" title="A person motioning at a chalkboard" aria-label="person-chalkboard"></i> <a href="../course-materials/slides/day3pm-slides.html" target="_blank">Loops mini-lecture</a></li>
-<li><i class="fa-solid fa-users-line" title="Multiple people working together" aria-label="users-line"></i> Live coding demo: loops</li>
-<li><i class="fa-solid fa-laptop" title="A laptop" aria-label="laptop"></i> <a href="../course-materials/activities/day3/day3pm-death-survival.html">Death and survival on the reef</a></li>
-<li><i class="fa-solid fa-diagram-project" title="Nodes connected by edges" aria-label="diagram-project"></i> <a href="activities/day3/day3pm-concept-mapping.pdf" target="_blank">Concept mapping: loops</a></li>
-<li><i class="fa-solid fa-square-check" title="A checked checkbox" aria-label="square-check"></i> <a href="https://forms.gle/bjpWmE58VB5gnuMr5" target="_blank">Exit ticket</a></li>
-</ul>
+<section id="initialize-the-reef" class="level3">
+<h3 class="anchored" data-anchor-id="initialize-the-reef">1. Initialize the reef</h3>
+<p>Your first step is to initialize your reef. Create the matrix and place 8 random corals in it.</p>
+<p>When done correctly, your <code>reef</code> will look like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> reef</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>     [,<span class="dv">1</span>] [,<span class="dv">2</span>] [,<span class="dv">3</span>] [,<span class="dv">4</span>] [,<span class="dv">5</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>,]    <span class="dv">0</span>    <span class="dv">1</span>    <span class="dv">1</span>    <span class="dv">1</span>    <span class="dv">0</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>,]    <span class="dv">0</span>    <span class="dv">1</span>    <span class="dv">0</span>    <span class="dv">1</span>    <span class="dv">0</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">3</span>,]    <span class="dv">1</span>    <span class="dv">0</span>    <span class="dv">0</span>    <span class="dv">1</span>    <span class="dv">0</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">4</span>,]    <span class="dv">0</span>    <span class="dv">0</span>    <span class="dv">0</span>    <span class="dv">0</span>    <span class="dv">0</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">5</span>,]    <span class="dv">0</span>    <span class="dv">0</span>    <span class="dv">0</span>    <span class="dv">1</span>    <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="end-of-day-practice" class="level2">
-<h2 class="anchored" data-anchor-id="end-of-day-practice">End-of-day practice</h2>
-<p>Finish your day by completing the <em>Death and survival on the reef</em> activity.</p>
-<ul>
-<li><i class="fa-solid fa-laptop" title="A laptop" aria-label="laptop"></i> <a href="../course-materials/activities/day3/day3pm-death-survival.html">Death and survival on the reef</a></li>
-</ul>
+<section id="track-time-and-percent-cover" class="level3">
+<h3 class="anchored" data-anchor-id="track-time-and-percent-cover">2. Track time and percent cover</h3>
+<p>Create vectors <code>years</code> and <code>coral_cover_pct</code> to keep track of time and percent cover.</p>
+<p>When done correctly, your vectors will look like this:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> years</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> [<span class="dv">1</span>] <span class="dv">2004</span> <span class="dv">2006</span> <span class="dv">2008</span> <span class="dv">2010</span> <span class="dv">2012</span> <span class="dv">2014</span> <span class="dv">2016</span> <span class="dv">2018</span> <span class="dv">2020</span> <span class="dv">2022</span> <span class="dv">2024</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> coral_cover_pct</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">1</span>] <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="calculate-coral-cover" class="level3">
+<h3 class="anchored" data-anchor-id="calculate-coral-cover">3. Calculate coral cover</h3>
+<p>Calculate coral cover in the first year.</p>
+<p>When done correctly, <code>coral_cover_pct</code> will look like this:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> coral_cover_pct</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> [<span class="dv">1</span>] <span class="fl">0.32</span> <span class="fl">0.00</span> <span class="fl">0.00</span> <span class="fl">0.00</span> <span class="fl">0.00</span> <span class="fl">0.00</span> <span class="fl">0.00</span> <span class="fl">0.00</span> <span class="fl">0.00</span> <span class="fl">0.00</span> <span class="fl">0.00</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>reef</code> is all 1’s and 0’s, so the mean of the reef equals the percent cover.</p>
+</div>
+</div>
+</section>
+<section id="loop-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="loop-over-time">4. Loop over time</h3>
+<p>You’ve been given:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (_________) {</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Fill in the blank with the iterator and sequence to loop over the indices waiting to be updated. You’ve already calculated percent cover for the first year, so start your sequence at 2. Call your iterator <code>t</code>.</p>
+</section>
+<section id="update-previous-and-current-reef" class="level3">
+<h3 class="anchored" data-anchor-id="update-previous-and-current-reef">5. Update previous and current reef</h3>
+<p>While running the coral reef model manually, you alternated between two laminated grids. One represented the reef in the previous time step and you update the one in the current step. Now, you’ll do that in code.</p>
+<p>You’ve been given:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy reef to a new variable, prev_reef</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>prev_reef <span class="ot">&lt;-</span> _________</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Wipe the new reef clean</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>reef <span class="ot">&lt;-</span> _________</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Fill in the blanks such that <code>prev_reef</code> becomes a copy of the reef, then <code>reef</code> starts over with all 0s.</p>
+</section>
+<section id="loop-over-the-rows-and-columns" class="level3">
+<h3 class="anchored" data-anchor-id="loop-over-the-rows-and-columns">6. Loop over the rows and columns</h3>
+<p>You’ve been given two more nested loops:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (_________) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (_________) {</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Fill in the blanks to loop over the indices for the rows and columns of the reef. Call your iterators <code>r</code> and <code>c</code>.</p>
+</section>
+<section id="check-for-coral" class="level3">
+<h3 class="anchored" data-anchor-id="check-for-coral">7. Check for coral</h3>
+<p>Check if this cell had a coral in it in the previous reef.</p>
+<p>You’ve been given:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (_________) {</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Fill in the blank with the condition checking if this cell (indicated by <code>r</code> and <code>c</code>) had a coral in it in the previous time step.</p>
+</section>
+<section id="determine-corals-fate" class="level3">
+<h3 class="anchored" data-anchor-id="determine-corals-fate">8. Determine coral’s fate</h3>
+<p>For existing corals, roll 2d6 to determine the outcome.</p>
+<p>You’ve been given:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Roll 2d6 for this coral</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>coral_outcome <span class="ot">&lt;-</span> _________</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill in the conditions below for mortality and survival</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Update the reef accordingly</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (_________) {</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Mortality</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Coral died"</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Update the reef</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Survival</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Coral survived"</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Update the reef</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Fill in the blank to create <code>coral_outcome</code>. Then, use that variable to check if you should apply mortality or survival. Where the comment says <code># Update the reef</code>, use <code>r</code> and <code>c</code> to set the reef’s value at that location to the appropriate value (0 or 1).</p>
+</section>
+<section id="update-coral-percent-cover" class="level3">
+<h3 class="anchored" data-anchor-id="update-coral-percent-cover">9. Update coral percent cover</h3>
+<p>Notice where this code falls in the nested loops. It’s inside the time loop, but after the row and column loops. At this point, you’ve completed updating the reef for a time step. Now it’s time to calculate the coral percent cover and update your tracking variable, <code>coral_cover_pct</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This step is similar to step 3. Make sure you choose the right index for <code>coral_cover_pct</code>!</p>
+</div>
+</div>
+</section>
+</section>
+<section id="verify" class="level2">
+<h2 class="anchored" data-anchor-id="verify">Verify</h2>
+<p>When done correctly, your code will produce this result for the coral cover percent:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#  [1] 0.32 0.32 0.32 0.32 0.32 0.32 0.24 0.20 0.16 0.16 0.12</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Notice the percent cover never increases, it just slowly drops over time. That’s because we haven’t implemented any growth yet.</p>
+<p>When you’re done, call an instructor over to review your code and get feedback.</p>
 
 
 </section>
@@ -659,7 +810,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><img src="../images/bren-logo.png" alt="The Bren School of Environmental Science &amp; Management logo" width="250"></p>
+<p><img src="../../../images/bren-logo.png" alt="The Bren School of Environmental Science &amp; Management logo" width="250"></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

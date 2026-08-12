@@ -20,16 +20,15 @@ description: "Wednesday August 12^th^, 2025"
 
 ## Afternoon session: Loops
 
-* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: indexing](activities/day2/day2pm-code-sleuth.pdf){target="_blank"}
-* {{< fa users-line title="Multiple people working together" >}} Live coding demo: indexing and 2d data
-* {{< fa pen-to-square title="A pencil writing on paper" >}} [SLWE: indexing](activities/day2/day2pm-slwe.pdf){target="_blank"}
-* {{< fa laptop title="A laptop" >}} [Debugger: indexing errors](activities/day2/day2pm-debugger.qmd)
-* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: Indexing and 2d data](activities/day2/day2pm-concept-mapping.pdf){target="_blank"}
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Loops mini-lecture](slides/day3pm-slides.qmd){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} Live coding demo: loops
+* {{< fa laptop title="A laptop" >}} [Death and survival on the reef](activities/day3/day3pm-death-survival.qmd)
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: loops](activities/day3/day3pm-concept-mapping.pdf){target="_blank"}
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/bjpWmE58VB5gnuMr5){target="_blank"}
 
 ## End-of-day practice
 
-Complete the following tasks / activities before heading home for the day!
+Finish your day by completing the _Death and survival on the reef_ activity.
 
-- {{< fa laptop title="A laptop" >}} [**Day 2 Practice:** Initialize the reef](eod/eod-day2.qmd)
+* {{< fa laptop title="A laptop" >}} [Death and survival on the reef](activities/day3/day3pm-death-survival.qmd)
 

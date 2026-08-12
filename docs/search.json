@@ -91,81 +91,81 @@
     "text": "Student roles\nChoose students in your group to perform each of the following roles.\n🎂 Demography tracker Keeps track of which coral to resolve growth/mortality for next, and which have already resolved.\n🪙 Token manager Places, flips, and removes tokens from the grid.\n🎲 Dice roller Rolls the dice and reports the totals.\n📝 Data recorder Updates the table as new time series data emerges.\n⏳ Time keeper Tracks the time and make sures the group is on track to finish. Also writes down any rule ambiguities (and the group decision) encountered.\nWhen the group encounters an ambiguity in the rules, you must reach consensus as a group to decide how to proceed.\n🙅 No laptops while the model is running 🙅"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#title-slide",
-    "href": "course-materials/slides/day1am-slides.html#title-slide",
-    "title": "",
+    "objectID": "course-materials/activities/day3/day3pm-death-survival.html",
+    "href": "course-materials/activities/day3/day3pm-death-survival.html",
+    "title": "Death and survival on the reef",
     "section": "",
-    "text": "EDS 221 Day 1 AM\nCourse intro\n\nAugust 10th, 2025"
+    "text": "In this exercise, you will apply what you’ve learned about conditional statements and loops to make a reef that can survive and die, tracking coral cover over time. You will implement other features of the model, like growth and crises, later in the week.\n\n\n\n\n\n\nImportant\n\n\n\nThis exercise synthesizes a lot of new material from the first three days of class. It’s a valuable opportunity to integrate everything you’ve learned so far, but it’s also very challenging. You are encouraged to:\n\nMake sketches to visualize your thinking\nWork in groups\nAsk your instructors for help!\n\n\n\n\n\nOpen the folder with your coral reef project in Positron.\nDownload death_survival.R and put it in your folder.\nThis script contains template code. You’ll fill it in with code you’ve written earlier in class, or by applying what you’ve learned about data structures and control structures.\n\n\n\nYour first step is to initialize your reef. Create the matrix and place 8 random corals in it.\nWhen done correctly, your reef will look like this:\n&gt; reef\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    0    1    1    1    0\n[2,]    0    1    0    1    0\n[3,]    1    0    0    1    0\n[4,]    0    0    0    0    0\n[5,]    0    0    0    1    0\n\n\n\nCreate vectors years and coral_cover_pct to keep track of time and percent cover.\nWhen done correctly, your vectors will look like this:\n&gt; years\n [1] 2004 2006 2008 2010 2012 2014 2016 2018 2020 2022 2024\n&gt; coral_cover_pct\n [1] 0 0 0 0 0 0 0 0 0 0 0\n\n\n\nCalculate coral cover in the first year.\nWhen done correctly, coral_cover_pct will look like this:\n&gt; coral_cover_pct\n [1] 0.32 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00\n\n\n\n\n\n\nTip\n\n\n\nreef is all 1’s and 0’s, so the mean of the reef equals the percent cover.\n\n\n\n\n\nYou’ve been given:\nfor (_________) {\nFill in the blank with the iterator and sequence to loop over the indices waiting to be updated. You’ve already calculated percent cover for the first year, so start your sequence at 2. Call your iterator t.\n\n\n\nWhile running the coral reef model manually, you alternated between two laminated grids. One represented the reef in the previous time step and you update the one in the current step. Now, you’ll do that in code.\nYou’ve been given:\n# Copy reef to a new variable, prev_reef\nprev_reef &lt;- _________\n# Wipe the new reef clean\nreef &lt;- _________\nFill in the blanks such that prev_reef becomes a copy of the reef, then reef starts over with all 0s.\n\n\n\nYou’ve been given two more nested loops:\nfor (_________) {\n  for (_________) {\nFill in the blanks to loop over the indices for the rows and columns of the reef. Call your iterators r and c.\n\n\n\nCheck if this cell had a coral in it in the previous reef.\nYou’ve been given:\nif (_________) {\nFill in the blank with the condition checking if this cell (indicated by r and c) had a coral in it in the previous time step.\n\n\n\nFor existing corals, roll 2d6 to determine the outcome.\nYou’ve been given:\n# Roll 2d6 for this coral\ncoral_outcome &lt;- _________\n# Fill in the conditions below for mortality and survival\n# Update the reef accordingly\nif (_________) {\n  # Mortality\n  print(\"Coral died\")\n  # Update the reef\n} else {\n  # Survival\n  print(\"Coral survived\")\n  # Update the reef\n}\nFill in the blank to create coral_outcome. Then, use that variable to check if you should apply mortality or survival. Where the comment says # Update the reef, use r and c to set the reef’s value at that location to the appropriate value (0 or 1).\n\n\n\nNotice where this code falls in the nested loops. It’s inside the time loop, but after the row and column loops. At this point, you’ve completed updating the reef for a time step. Now it’s time to calculate the coral percent cover and update your tracking variable, coral_cover_pct.\n\n\n\n\n\n\nTip\n\n\n\nThis step is similar to step 3. Make sure you choose the right index for coral_cover_pct!"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#corals",
-    "href": "course-materials/slides/day1am-slides.html#corals",
-    "title": "",
+    "objectID": "course-materials/activities/day3/day3pm-death-survival.html#instructions",
+    "href": "course-materials/activities/day3/day3pm-death-survival.html#instructions",
+    "title": "Death and survival on the reef",
     "section": "",
-    "text": "What happened to this system?\nWhat are the consequences for people and the environment?\nWhy are we talking about this in a programming class?"
+    "text": "In this exercise, you will apply what you’ve learned about conditional statements and loops to make a reef that can survive and die, tracking coral cover over time. You will implement other features of the model, like growth and crises, later in the week.\n\n\n\n\n\n\nImportant\n\n\n\nThis exercise synthesizes a lot of new material from the first three days of class. It’s a valuable opportunity to integrate everything you’ve learned so far, but it’s also very challenging. You are encouraged to:\n\nMake sketches to visualize your thinking\nWork in groups\nAsk your instructors for help!\n\n\n\n\n\nOpen the folder with your coral reef project in Positron.\nDownload death_survival.R and put it in your folder.\nThis script contains template code. You’ll fill it in with code you’ve written earlier in class, or by applying what you’ve learned about data structures and control structures.\n\n\n\nYour first step is to initialize your reef. Create the matrix and place 8 random corals in it.\nWhen done correctly, your reef will look like this:\n&gt; reef\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    0    1    1    1    0\n[2,]    0    1    0    1    0\n[3,]    1    0    0    1    0\n[4,]    0    0    0    0    0\n[5,]    0    0    0    1    0\n\n\n\nCreate vectors years and coral_cover_pct to keep track of time and percent cover.\nWhen done correctly, your vectors will look like this:\n&gt; years\n [1] 2004 2006 2008 2010 2012 2014 2016 2018 2020 2022 2024\n&gt; coral_cover_pct\n [1] 0 0 0 0 0 0 0 0 0 0 0\n\n\n\nCalculate coral cover in the first year.\nWhen done correctly, coral_cover_pct will look like this:\n&gt; coral_cover_pct\n [1] 0.32 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00\n\n\n\n\n\n\nTip\n\n\n\nreef is all 1’s and 0’s, so the mean of the reef equals the percent cover.\n\n\n\n\n\nYou’ve been given:\nfor (_________) {\nFill in the blank with the iterator and sequence to loop over the indices waiting to be updated. You’ve already calculated percent cover for the first year, so start your sequence at 2. Call your iterator t.\n\n\n\nWhile running the coral reef model manually, you alternated between two laminated grids. One represented the reef in the previous time step and you update the one in the current step. Now, you’ll do that in code.\nYou’ve been given:\n# Copy reef to a new variable, prev_reef\nprev_reef &lt;- _________\n# Wipe the new reef clean\nreef &lt;- _________\nFill in the blanks such that prev_reef becomes a copy of the reef, then reef starts over with all 0s.\n\n\n\nYou’ve been given two more nested loops:\nfor (_________) {\n  for (_________) {\nFill in the blanks to loop over the indices for the rows and columns of the reef. Call your iterators r and c.\n\n\n\nCheck if this cell had a coral in it in the previous reef.\nYou’ve been given:\nif (_________) {\nFill in the blank with the condition checking if this cell (indicated by r and c) had a coral in it in the previous time step.\n\n\n\nFor existing corals, roll 2d6 to determine the outcome.\nYou’ve been given:\n# Roll 2d6 for this coral\ncoral_outcome &lt;- _________\n# Fill in the conditions below for mortality and survival\n# Update the reef accordingly\nif (_________) {\n  # Mortality\n  print(\"Coral died\")\n  # Update the reef\n} else {\n  # Survival\n  print(\"Coral survived\")\n  # Update the reef\n}\nFill in the blank to create coral_outcome. Then, use that variable to check if you should apply mortality or survival. Where the comment says # Update the reef, use r and c to set the reef’s value at that location to the appropriate value (0 or 1).\n\n\n\nNotice where this code falls in the nested loops. It’s inside the time loop, but after the row and column loops. At this point, you’ve completed updating the reef for a time step. Now it’s time to calculate the coral percent cover and update your tracking variable, coral_cover_pct.\n\n\n\n\n\n\nTip\n\n\n\nThis step is similar to step 3. Make sure you choose the right index for coral_cover_pct!"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-1",
-    "href": "course-materials/slides/day1am-slides.html#data-understanding-1",
-    "title": "",
-    "section": "",
-    "text": "From data to understanding\n\nWith code, we go from this…"
+    "objectID": "course-materials/activities/day3/day3pm-death-survival.html#verify",
+    "href": "course-materials/activities/day3/day3pm-death-survival.html#verify",
+    "title": "Death and survival on the reef",
+    "section": "Verify",
+    "text": "Verify\nWhen done correctly, your code will produce this result for the coral cover percent:\n#  [1] 0.32 0.32 0.32 0.32 0.32 0.32 0.24 0.20 0.16 0.16 0.12\nNotice the percent cover never increases, it just slowly drops over time. That’s because we haven’t implemented any growth yet.\nWhen you’re done, call an instructor over to review your code and get feedback."
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-2",
-    "href": "course-materials/slides/day1am-slides.html#data-understanding-2",
+    "objectID": "course-materials/slides/day3pm-slides.html#title-slide",
+    "href": "course-materials/slides/day3pm-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "From data to understanding\n\n…to this."
+    "text": "EDS 221 Day 3 PM\nLoops\n\nAugust 12th, 2025"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#learning-objectives",
-    "href": "course-materials/slides/day1am-slides.html#learning-objectives",
+    "objectID": "course-materials/slides/day3pm-slides.html#loops-repeat",
+    "href": "course-materials/slides/day3pm-slides.html#loops-repeat",
     "title": "",
     "section": "",
-    "text": "Learning objectives\n\n\n🧠 Think like a computer scientist\n\n🌍 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
+    "text": "Loops let you repeat yourself\n\nFor example, print each value in a vector\n\ncorals &lt;- c(\"Porites\", \"Pocillopora\", \"Acropora\")\nfor (c in corals) {\n  print(c)\n}\n\n[1] \"Porites\"\n[1] \"Pocillopora\"\n[1] \"Acropora\""
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#grading",
-    "href": "course-materials/slides/day1am-slides.html#grading",
+    "objectID": "course-materials/slides/day3pm-slides.html#loops-repeat2",
+    "href": "course-materials/slides/day3pm-slides.html#loops-repeat2",
     "title": "",
     "section": "",
-    "text": "Grading\n\n\n\n👍 Satisfactory / Unsatisfactory\n\nNo letter grades\n\n✅ Attendance\n\nExpected every day.\nBut life happens! Let your instructors know about absences in advance when possible.\n\n✋ Participation\n\nActive participation in all exercises expected."
+    "text": "Loops let you repeat yourself\n\nIt’s common to loop over the indices of a vector.\n\ncorals &lt;- c(\"Porites\", \"Pocillopora\", \"Acropora\")\nfor (i in 1:length(corals)) {\n  print(corals[i])\n}\n\n[1] \"Porites\"\n[1] \"Pocillopora\"\n[1] \"Acropora\""
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#daily-schedule",
-    "href": "course-materials/slides/day1am-slides.html#daily-schedule",
+    "objectID": "course-materials/slides/day3pm-slides.html#fibonacci",
+    "href": "course-materials/slides/day3pm-slides.html#fibonacci",
     "title": "",
     "section": "",
-    "text": "Daily schedule\n\n\n\n\n\nMorning session\n\nReview previous day\nNew material\nSession review\n\nAfternoon session\n\nNew material\nSession review\n\nEnd-of-day session\n\nPractice day’s material\n\n\n\n\nSession activities\n\nPencil-and-paper exercises\nLive-coding demos\nConcept mapping\n\nExpect a lot of:\n\nWorking in groups\nProblem solving\nThink first, draw second, type last"
+    "text": "What does this loop make?\n\nLet’s break down this loop.\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#typing-club",
-    "href": "course-materials/slides/day1am-slides.html#typing-club",
+    "objectID": "course-materials/slides/day3pm-slides.html#loop-parts",
+    "href": "course-materials/slides/day3pm-slides.html#loop-parts",
     "title": "",
     "section": "",
-    "text": "Have your coffee with typing club!\n\n\n💻 💻 💻 Touch typing is a valuable skill for keeping up in class, and one you can develop.\nBut why practice alone?\n☕ ☕ ☕ Join typing club 9:15-9:45, here in the NCEAS classroom. I’ll make the coffee (there will be tea, too), we’ll practice typing together.\n\n\nDistribution of typing speeds"
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\n\nIterator i\nSequence 3:length(fibonacci)\nBody { ... }\n\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#course-schedule",
-    "href": "course-materials/slides/day1am-slides.html#course-schedule",
+    "objectID": "course-materials/slides/day3pm-slides.html#iterator",
+    "href": "course-materials/slides/day3pm-slides.html#iterator",
     "title": "",
     "section": "",
-    "text": "Course schedule\n\n\n\n\n\nWeek 1\nWeek 2\n\n\n\n\nDay 1 - Code execution\nDay 6 - Data frames\n\n\nDay 2 - Data structures\nDay 7 - Manipulating data\n\n\nDay 3 - Control structures\nDay 8 - Advanced data types\n\n\nDay 4 - Functions\nDay 9 - Troubleshooting\n\n\nDay 5 - Creating programs\nDay 10 - Review"
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe iterator changes value each time through the loop.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#degree-schedule",
-    "href": "course-materials/slides/day1am-slides.html#degree-schedule",
+    "objectID": "course-materials/slides/day3pm-slides.html#sequence",
+    "href": "course-materials/slides/day3pm-slides.html#sequence",
     "title": "",
     "section": "",
-    "text": "Degree schedule\n\n\n\n\n\nFall\n\nStatistics\nEnvironmental data\nGeospatial analysis\nEthics and bias\n\nWinter\n\nMore statistics\nData visualization\nEnvironmental systems\nCapstone I\n\nSpring\n\nMachine learning\nDatabases\nCapstone II\n\n\n\n\n\nAll these classes use programming!\nBut since you haven’t taken them yet, in the meantime we’ll use programming to build…"
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe sequence is what the iterator takes on values from.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#coral-reef-model",
-    "href": "course-materials/slides/day1am-slides.html#coral-reef-model",
+    "objectID": "course-materials/slides/day3pm-slides.html#body",
+    "href": "course-materials/slides/day3pm-slides.html#body",
     "title": "",
     "section": "",
-    "text": "Coral reef model"
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe body is what the loop repeatedly does.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
   },
   {
     "objectID": "course-materials/slides/day2am-slides.html#title-slide",
@@ -455,6 +455,83 @@
     "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1]  1.354899  1.454561 -1.436012\n\nrpois(4, lambda = 10)\n\n[1] 11 14  5  8"
   },
   {
+    "objectID": "course-materials/slides/day1am-slides.html#title-slide",
+    "href": "course-materials/slides/day1am-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 1 AM\nCourse intro\n\nAugust 10th, 2025"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#corals",
+    "href": "course-materials/slides/day1am-slides.html#corals",
+    "title": "",
+    "section": "",
+    "text": "What happened to this system?\nWhat are the consequences for people and the environment?\nWhy are we talking about this in a programming class?"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-1",
+    "href": "course-materials/slides/day1am-slides.html#data-understanding-1",
+    "title": "",
+    "section": "",
+    "text": "From data to understanding\n\nWith code, we go from this…"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-2",
+    "href": "course-materials/slides/day1am-slides.html#data-understanding-2",
+    "title": "",
+    "section": "",
+    "text": "From data to understanding\n\n…to this."
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#learning-objectives",
+    "href": "course-materials/slides/day1am-slides.html#learning-objectives",
+    "title": "",
+    "section": "",
+    "text": "Learning objectives\n\n\n🧠 Think like a computer scientist\n\n🌍 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#grading",
+    "href": "course-materials/slides/day1am-slides.html#grading",
+    "title": "",
+    "section": "",
+    "text": "Grading\n\n\n\n👍 Satisfactory / Unsatisfactory\n\nNo letter grades\n\n✅ Attendance\n\nExpected every day.\nBut life happens! Let your instructors know about absences in advance when possible.\n\n✋ Participation\n\nActive participation in all exercises expected."
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#daily-schedule",
+    "href": "course-materials/slides/day1am-slides.html#daily-schedule",
+    "title": "",
+    "section": "",
+    "text": "Daily schedule\n\n\n\n\n\nMorning session\n\nReview previous day\nNew material\nSession review\n\nAfternoon session\n\nNew material\nSession review\n\nEnd-of-day session\n\nPractice day’s material\n\n\n\n\nSession activities\n\nPencil-and-paper exercises\nLive-coding demos\nConcept mapping\n\nExpect a lot of:\n\nWorking in groups\nProblem solving\nThink first, draw second, type last"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#typing-club",
+    "href": "course-materials/slides/day1am-slides.html#typing-club",
+    "title": "",
+    "section": "",
+    "text": "Have your coffee with typing club!\n\n\n💻 💻 💻 Touch typing is a valuable skill for keeping up in class, and one you can develop.\nBut why practice alone?\n☕ ☕ ☕ Join typing club 9:15-9:45, here in the NCEAS classroom. I’ll make the coffee (there will be tea, too), we’ll practice typing together.\n\n\nDistribution of typing speeds"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#course-schedule",
+    "href": "course-materials/slides/day1am-slides.html#course-schedule",
+    "title": "",
+    "section": "",
+    "text": "Course schedule\n\n\n\n\n\nWeek 1\nWeek 2\n\n\n\n\nDay 1 - Code execution\nDay 6 - Data frames\n\n\nDay 2 - Data structures\nDay 7 - Manipulating data\n\n\nDay 3 - Control structures\nDay 8 - Advanced data types\n\n\nDay 4 - Functions\nDay 9 - Troubleshooting\n\n\nDay 5 - Creating programs\nDay 10 - Review"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#degree-schedule",
+    "href": "course-materials/slides/day1am-slides.html#degree-schedule",
+    "title": "",
+    "section": "",
+    "text": "Degree schedule\n\n\n\n\n\nFall\n\nStatistics\nEnvironmental data\nGeospatial analysis\nEthics and bias\n\nWinter\n\nMore statistics\nData visualization\nEnvironmental systems\nCapstone I\n\nSpring\n\nMachine learning\nDatabases\nCapstone II\n\n\n\n\n\nAll these classes use programming!\nBut since you haven’t taken them yet, in the meantime we’ll use programming to build…"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#coral-reef-model",
+    "href": "course-materials/slides/day1am-slides.html#coral-reef-model",
+    "title": "",
+    "section": "",
+    "text": "Coral reef model"
+  },
+  {
     "objectID": "course-materials/activities/day2/day2pm-debugger.html",
     "href": "course-materials/activities/day2/day2pm-debugger.html",
     "title": "Debugger: indexing",
@@ -529,13 +606,13 @@
     "href": "course-materials/day3.html#afternoon-session-loops",
     "title": "Control structures",
     "section": "Afternoon session: Loops",
-    "text": "Afternoon session: Loops\n\n Code sleuth: indexing\n Live coding demo: indexing and 2d data\n SLWE: indexing\n Debugger: indexing errors\n Concept mapping: Indexing and 2d data\n Exit ticket"
+    "text": "Afternoon session: Loops\n\n Loops mini-lecture\n Live coding demo: loops\n Death and survival on the reef\n Concept mapping: loops\n Exit ticket"
   },
   {
     "objectID": "course-materials/day3.html#end-of-day-practice",
     "href": "course-materials/day3.html#end-of-day-practice",
     "title": "Control structures",
     "section": "End-of-day practice",
-    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 2 Practice: Initialize the reef"
+    "text": "End-of-day practice\nFinish your day by completing the Death and survival on the reef activity.\n\n Death and survival on the reef"
   }
 ]

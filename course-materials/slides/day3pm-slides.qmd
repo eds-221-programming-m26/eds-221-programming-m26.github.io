@@ -1,0 +1,217 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    # code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme: 
+      - ../../meds-slides-styles.scss
+execute: 
+  echo: true
+---
+
+## {#title-slide data-menu-title="Title Slide" background="#053660"} 
+
+[EDS 221 Day 3 PM]{.custom-title}
+
+[*Loops*]{.custom-subtitle}
+
+<hr class="hr-teal">
+
+[August 12^th^, 2025]{.custom-subtitle3}
+
+---
+
+## {#loops-repeat data-menu-title="Loops let you repeat yourself"} 
+
+[Loops let you repeat yourself]{.slide-title}
+
+<hr>
+
+[For example, print each value in a vector]{.body-text-m}
+
+```{r}
+corals <- c("Porites", "Pocillopora", "Acropora")
+for (c in corals) {
+  print(c)
+}
+```
+
+---
+
+## {#loops-repeat2 data-menu-title="Loops let you repeat yourself"} 
+
+[Loops let you repeat yourself]{.slide-title}
+
+<hr>
+
+[It's common to loop over the indices of a vector.]{.body-text-m}
+
+```{r}
+corals <- c("Porites", "Pocillopora", "Acropora")
+for (i in 1:length(corals)) {
+  print(corals[i])
+}
+```
+
+---
+
+## {#fibonacci data-menu-title="What does this loop make?"} 
+
+[What does this loop make?]{.slide-title}
+
+<hr>
+
+[Let's break down this loop.]{.body-text-m}
+
+```{r}
+fibonacci <- integer(6)
+fibonacci[1:2] <- 1
+for (i in 3:length(fibonacci)) {
+  fibonacci[i] <- fibonacci[i - 1] + fibonacci[i - 2]
+}
+fibonacci
+```
+
+---
+
+## {#loop-parts data-menu-title="Parts of a loop"} 
+
+[Parts of a loop]{.slide-title}
+
+<hr>
+
+[A loop has three main parts]{.body-text-m}
+
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+- **Iterator**
+  `i`
+- **Sequence**
+  `3:length(fibonacci)`
+- **Body**
+  `{ ... }`
+
+:::
+
+::: {.column width="70%"}
+
+```{r}
+fibonacci <- integer(6)
+fibonacci[1:2] <- 1
+for (i in 3:length(fibonacci)) {
+  fibonacci[i] <- fibonacci[i - 1] + fibonacci[i - 2]
+}
+fibonacci
+```
+
+:::
+
+:::
+
+---
+
+## {#iterator data-menu-title="Parts of a loop"} 
+
+[Parts of a loop]{.slide-title}
+
+<hr>
+
+[A loop has three main parts]{.body-text-m}
+
+
+::: {.columns}
+
+::: {.column width="30%" .body-text-m}
+
+The **iterator** changes value each time through the loop.
+
+:::
+
+::: {.column width="70%"}
+
+```{r}
+fibonacci <- integer(6)
+fibonacci[1:2] <- 1
+for (i in 3:length(fibonacci)) {
+  fibonacci[i] <- fibonacci[i - 1] + fibonacci[i - 2]
+}
+fibonacci
+```
+
+:::
+
+:::
+
+---
+
+## {#sequence data-menu-title="Parts of a loop"} 
+
+[Parts of a loop]{.slide-title}
+
+<hr>
+
+[A loop has three main parts]{.body-text-m}
+
+::: {.columns}
+
+::: {.column width="30%" .body-text-m}
+
+The **sequence** is what the iterator takes on values from.
+
+:::
+
+::: {.column width="70%"}
+
+```{r}
+fibonacci <- integer(6)
+fibonacci[1:2] <- 1
+for (i in 3:length(fibonacci)) {
+  fibonacci[i] <- fibonacci[i - 1] + fibonacci[i - 2]
+}
+fibonacci
+```
+
+:::
+
+:::
+
+---
+
+## {#body data-menu-title="Parts of a loop"} 
+
+[Parts of a loop]{.slide-title}
+
+<hr>
+
+[A loop has three main parts]{.body-text-m}
+
+
+::: {.columns}
+
+::: {.column width="30%" .body-text-m}
+
+The **body** is what the loop repeatedly does.
+
+:::
+
+::: {.column width="70%"}
+
+```{r}
+fibonacci <- integer(6)
+fibonacci[1:2] <- 1
+for (i in 3:length(fibonacci)) {
+  fibonacci[i] <- fibonacci[i - 1] + fibonacci[i - 2]
+}
+fibonacci
+```
+
+:::
+
+:::
+
+---
