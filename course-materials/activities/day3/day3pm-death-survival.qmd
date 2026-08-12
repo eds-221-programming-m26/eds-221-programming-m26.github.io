@@ -20,7 +20,7 @@ This exercise synthesizes _a lot_ of new material from the first three days of c
 
 Open the folder with your coral reef project in Positron. 
 
-Download [death_survival.R](activities/day3/death_survival.R) and put it in your folder.
+Download [death_survival.R](death_survival.R) and put it in your folder.
 
 This script contains template code. You'll fill it in with code you've written earlier in class, or by applying what you've learned about data structures and control structures. 
 
