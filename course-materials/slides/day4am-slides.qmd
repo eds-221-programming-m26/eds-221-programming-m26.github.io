@@ -75,6 +75,49 @@ The pace can be overwhelming, but you'll get what you need from this course when
 
 ---
 
+## {#day3-exit-tickets data-menu-title="Day 3 exit tickets"} 
+
+[Day 3 exit tickets]{.slide-title}
+
+<hr>
+
+[Muddiest points]{.body-text-l}
+
+> A lot of what we are doing with respect to the reef model has not been intuitive to me and I'd really like to develop that intuition. 
+
+> Not being handheld when it comes to writing code. Simply starting based on verbal instructions is very difficult for me. But we persevere. 
+
+> Coding it LOL... I understand it conceptually and on paper better.
+
+[How do we develop intuition?]{.body-text-l}
+
+---
+
+## {#day3-exit-tickets2 data-menu-title="Day 3 exit tickets"} 
+
+[Day 3 exit tickets]{.slide-title}
+
+<hr>
+
+[What I can do as your instructor]{.body-text-l}
+
+- More explanation during live coding
+- Go over worksheets together in class
+
+---
+
+## {#day3-exit-tickets3 data-menu-title="Day 3 exit tickets"} 
+
+[Day 3 exit tickets]{.slide-title}
+
+<hr>
+
+[What you can do as a student]{.body-text-l}
+
+[_What's worked for you?_]{.center-text}
+
+---
+
 ## {#review-day-3 data-menu-title="Review day 3"} 
 
 [Review day 3]{.slide-title}
