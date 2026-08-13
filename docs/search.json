@@ -1,171 +1,269 @@
 [
   {
-    "objectID": "course-materials/day1.html#morning-session-code-execution",
-    "href": "course-materials/day1.html#morning-session-code-execution",
-    "title": "Intro to programming",
-    "section": "Morning session: Code execution",
-    "text": "Morning session: Code execution\n\n Course introduction\n Hands-on coral reef model\n Live coding demo: console, script, environment\n Code sleuth: operators and functions Solutions\n Concept mapping: code execution Solutions\n Exit ticket"
+    "objectID": "proofread.html",
+    "href": "proofread.html",
+    "title": "Proofread notes — EDS 221 course website",
+    "section": "",
+    "text": "Generated 2026-08-13. Everything below needs a human look before the next render/publish.\n\n\n\nWrong year almost everywhere (“2025” instead of “2026”). day1.qmd and day2.qmd correctly say 2026, but every other date got left on last year:\n\ncourse-materials/day3.qmd:4, day4.qmd:4, day5.qmd:4, day6.qmd:4, day7.qmd:4, day8.qmd:4, day9.qmd:4, day10.qmd:4\nEvery slide deck’s subtitle date too: day1am-slides.qmd:20, day1pm-slides.qmd:20, day2am-slides.qmd:20, day2pm-slides.qmd:20, day3am-slides.qmd:20, day3pm-slides.qmd:22, day4am-slides.qmd:22, day4pm-slides.qmd:22\n\n_quarto.yml navbar has the wrong date for day 8. The “daily materials” dropdown reads day 8 (8/29) — should be 8/19 to stay consistent with the Mon–Fri sequence (day 6 = 8/17 … day 10 = 8/21). See _quarto.yml:32.\nBroken code sample in an end-of-day activity. eod-day4.qmd tells students to write source(R/util.R) — missing quotes around the path, which will throw an R error (object 'R' not found) if a student copies it literally. Should be source(\"R/util.R\"). See course-materials/eod/eod-day4.qmd:35.\n\n\n\n\nNone of these files exist in images/, but are referenced from qmd files: - images/horst-welcome.png — course-materials/day1.qmd:12 - images/horst-data-types.jpeg — course-materials/day2.qmd:12 - images/under-construction.png — used on every still-unbuilt day: day5.qmd:7, day6.qmd:7, day7.qmd:7, day8.qmd:7, day9.qmd:7, day10.qmd:7\n(images/tbd.png exists in the repo but doesn’t appear to be referenced anywhere — possibly meant to be the under-construction placeholder above, or otherwise unused and safe to remove.)\n\n\n\n\n“Thursay” → “Thursday” — course-materials/day4.qmd:4\n“environent” → “environment” — course-materials/eod/eod-day1.qmd:71\n“istructions” → “instructions” — course-materials/activities/day4/day4pm-getting-help.qmd:50\n“documenation” → “documentation” (4 occurrences) — day4pm-getting-help.qmd:56,66,75,85\n“This represent the coral cover” → “This represents” — day1am-coral-reef-model.qmd:26\n“make sures the group is on track” → “makes sure” — day1am-coral-reef-model.qmd:101\n“wrecks devastation on the corals” reads awkwardly — probably meant “wreaks devastation/havoc” — day1am-coral-reef-model.qmd:63\nStray/mismatched quote: Click \"Create repository. is missing its closing quotation mark before the period — day1pm-git-challenge.qmd:25\n\n\n\n\n\nhttps://forms.gle/rMmqvrVNCVScavCU6 (day 1 morning exit ticket) returned an HTTP 401 when checked automatically, while all seven other exit-ticket form links returned 200. Worth opening it yourself to confirm it’s still live/accepting responses — course-materials/day1.qmd:30.\nREADME’s “Report a bug/issue” link points at the bare repo (.../eds-221-programming-m26.github.io/) rather than the Issues page or a pre-filled new-issue link — consider pointing it at .../issues/new — README.md:24.\n\n\n\n\n\nDays 1–2 post Solutions links next to every code-sleuth and concept-mapping PDF; days 3–4 don’t (e.g. day3.qmd, day4.qmd), and there’s no solutions/day4/ folder at all. Intentional (answers given verbally in class) or just not uploaded yet?\nday3.qmd’s “Live coding demo: if-else if-else” and “loops” and day4’s “definitions and parameters” / “vectorization” live-coding demos have no linked script, unlike every other live-coding demo on days 1–2 which link an R file in solutions/. Worth adding once those exist, or intentional for these days.\nDays 5–10 are still “under construction” placeholders — worth double-checking none of them are supposed to be live already given today’s date (2026-08-13, day 4)."
   },
   {
-    "objectID": "course-materials/day1.html#afternoon-session-version-control",
-    "href": "course-materials/day1.html#afternoon-session-version-control",
-    "title": "Intro to programming",
-    "section": "Afternoon session: Version control",
-    "text": "Afternoon session: Version control\n\n Tracking changes\n Live coding demo: git and GitHub\n Trace git commands\n Concept mapping: version control Solutions\n Exit ticket"
+    "objectID": "proofread.html#high-priority-factual-errors",
+    "href": "proofread.html#high-priority-factual-errors",
+    "title": "Proofread notes — EDS 221 course website",
+    "section": "",
+    "text": "Wrong year almost everywhere (“2025” instead of “2026”). day1.qmd and day2.qmd correctly say 2026, but every other date got left on last year:\n\ncourse-materials/day3.qmd:4, day4.qmd:4, day5.qmd:4, day6.qmd:4, day7.qmd:4, day8.qmd:4, day9.qmd:4, day10.qmd:4\nEvery slide deck’s subtitle date too: day1am-slides.qmd:20, day1pm-slides.qmd:20, day2am-slides.qmd:20, day2pm-slides.qmd:20, day3am-slides.qmd:20, day3pm-slides.qmd:22, day4am-slides.qmd:22, day4pm-slides.qmd:22\n\n_quarto.yml navbar has the wrong date for day 8. The “daily materials” dropdown reads day 8 (8/29) — should be 8/19 to stay consistent with the Mon–Fri sequence (day 6 = 8/17 … day 10 = 8/21). See _quarto.yml:32.\nBroken code sample in an end-of-day activity. eod-day4.qmd tells students to write source(R/util.R) — missing quotes around the path, which will throw an R error (object 'R' not found) if a student copies it literally. Should be source(\"R/util.R\"). See course-materials/eod/eod-day4.qmd:35."
   },
   {
-    "objectID": "course-materials/day1.html#end-of-day-practice",
-    "href": "course-materials/day1.html#end-of-day-practice",
-    "title": "Intro to programming",
+    "objectID": "proofread.html#missing-images-will-render-as-broken-image-icons",
+    "href": "proofread.html#missing-images-will-render-as-broken-image-icons",
+    "title": "Proofread notes — EDS 221 course website",
+    "section": "",
+    "text": "None of these files exist in images/, but are referenced from qmd files: - images/horst-welcome.png — course-materials/day1.qmd:12 - images/horst-data-types.jpeg — course-materials/day2.qmd:12 - images/under-construction.png — used on every still-unbuilt day: day5.qmd:7, day6.qmd:7, day7.qmd:7, day8.qmd:7, day9.qmd:7, day10.qmd:7\n(images/tbd.png exists in the repo but doesn’t appear to be referenced anywhere — possibly meant to be the under-construction placeholder above, or otherwise unused and safe to remove.)"
+  },
+  {
+    "objectID": "proofread.html#typos-grammar",
+    "href": "proofread.html#typos-grammar",
+    "title": "Proofread notes — EDS 221 course website",
+    "section": "",
+    "text": "“Thursay” → “Thursday” — course-materials/day4.qmd:4\n“environent” → “environment” — course-materials/eod/eod-day1.qmd:71\n“istructions” → “instructions” — course-materials/activities/day4/day4pm-getting-help.qmd:50\n“documenation” → “documentation” (4 occurrences) — day4pm-getting-help.qmd:56,66,75,85\n“This represent the coral cover” → “This represents” — day1am-coral-reef-model.qmd:26\n“make sures the group is on track” → “makes sure” — day1am-coral-reef-model.qmd:101\n“wrecks devastation on the corals” reads awkwardly — probably meant “wreaks devastation/havoc” — day1am-coral-reef-model.qmd:63\nStray/mismatched quote: Click \"Create repository. is missing its closing quotation mark before the period — day1pm-git-challenge.qmd:25"
+  },
+  {
+    "objectID": "proofread.html#links-worth-a-manual-check",
+    "href": "proofread.html#links-worth-a-manual-check",
+    "title": "Proofread notes — EDS 221 course website",
+    "section": "",
+    "text": "https://forms.gle/rMmqvrVNCVScavCU6 (day 1 morning exit ticket) returned an HTTP 401 when checked automatically, while all seven other exit-ticket form links returned 200. Worth opening it yourself to confirm it’s still live/accepting responses — course-materials/day1.qmd:30.\nREADME’s “Report a bug/issue” link points at the bare repo (.../eds-221-programming-m26.github.io/) rather than the Issues page or a pre-filled new-issue link — consider pointing it at .../issues/new — README.md:24."
+  },
+  {
+    "objectID": "proofread.html#inconsistencies-worth-a-decision",
+    "href": "proofread.html#inconsistencies-worth-a-decision",
+    "title": "Proofread notes — EDS 221 course website",
+    "section": "",
+    "text": "Days 1–2 post Solutions links next to every code-sleuth and concept-mapping PDF; days 3–4 don’t (e.g. day3.qmd, day4.qmd), and there’s no solutions/day4/ folder at all. Intentional (answers given verbally in class) or just not uploaded yet?\nday3.qmd’s “Live coding demo: if-else if-else” and “loops” and day4’s “definitions and parameters” / “vectorization” live-coding demos have no linked script, unlike every other live-coding demo on days 1–2 which link an R file in solutions/. Worth adding once those exist, or intentional for these days.\nDays 5–10 are still “under construction” placeholders — worth double-checking none of them are supposed to be live already given today’s date (2026-08-13, day 4)."
+  },
+  {
+    "objectID": "course-materials/day3.html",
+    "href": "course-materials/day3.html",
+    "title": "Control structures",
+    "section": "",
+    "text": "Review day 2\n Code sleuth: conditions and logic Solutions\n Live coding demo: if-else if-else\n Concept mapping: conditions and logic Solutions\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day3.html#morning-session-conditions-and-logic",
+    "href": "course-materials/day3.html#morning-session-conditions-and-logic",
+    "title": "Control structures",
+    "section": "",
+    "text": "Review day 2\n Code sleuth: conditions and logic Solutions\n Live coding demo: if-else if-else\n Concept mapping: conditions and logic Solutions\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day3.html#afternoon-session-loops",
+    "href": "course-materials/day3.html#afternoon-session-loops",
+    "title": "Control structures",
+    "section": "Afternoon session: Loops",
+    "text": "Afternoon session: Loops\n\n Loops mini-lecture\n Live coding demo: loops\n Death and survival on the reef Solutions\n Concept mapping: loops Solutions\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day3.html#end-of-day-practice",
+    "href": "course-materials/day3.html#end-of-day-practice",
+    "title": "Control structures",
     "section": "End-of-day practice",
-    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 1 Practice: Create a repo for your coral reef model"
+    "text": "End-of-day practice\nFinish your day by completing the Death and survival on the reef activity.\n\n Death and survival on the reef"
   },
   {
-    "objectID": "course-materials/day2.html#morning-session-data-types-and-1d-structures",
-    "href": "course-materials/day2.html#morning-session-data-types-and-1d-structures",
-    "title": "Data structures",
-    "section": "Morning session: Data types and 1d structures",
-    "text": "Morning session: Data types and 1d structures\n\n Review day 1\n Create a data sheet\n Code sleuth: type coercion Solutions\n Live coding demo: creating vectors\n Types and vectors mini-lecture\n Concept mapping: data types and 1d structures Solutions\n Exit ticket"
-  },
-  {
-    "objectID": "course-materials/day2.html#afternoon-session-indexing-and-2d-data",
-    "href": "course-materials/day2.html#afternoon-session-indexing-and-2d-data",
-    "title": "Data structures",
-    "section": "Afternoon session: Indexing and 2d data",
-    "text": "Afternoon session: Indexing and 2d data\n\n Code sleuth: indexing Solutions\n Live coding demo: indexing and 2d data\n SLWE: indexing\n Concept mapping: Indexing and 2d data Solutions\n Exit ticket"
-  },
-  {
-    "objectID": "course-materials/day2.html#end-of-day-practice",
-    "href": "course-materials/day2.html#end-of-day-practice",
-    "title": "Data structures",
-    "section": "End-of-day practice",
-    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 2 Practice: Initialize the reef"
-  },
-  {
-    "objectID": "course-materials/day2.html#additional-materials",
-    "href": "course-materials/day2.html#additional-materials",
-    "title": "Data structures",
-    "section": "Additional materials",
-    "text": "Additional materials\n\nWant some extra practice? Try these debugger problems.\nSee Hands on Programming with R for more information about data structures and indexing.\nFor a truly in-depth exploration, read Vectors and Subsetting in Advanced R by Hadley Wickham."
-  },
-  {
-    "objectID": "course-materials/day7.html",
-    "href": "course-materials/day7.html",
-    "title": "Manipulating data",
+    "objectID": "course-materials/day6.html",
+    "href": "course-materials/day6.html",
+    "title": "Data frames",
     "section": "",
     "text": "Website under construction sign"
   },
   {
-    "objectID": "course-materials/day4.html",
-    "href": "course-materials/day4.html",
-    "title": "Functions",
+    "objectID": "course-materials/day5.html",
+    "href": "course-materials/day5.html",
+    "title": "Creating programs",
     "section": "",
     "text": "Website under construction sign"
   },
   {
-    "objectID": "course-materials/activities/day1/day1am-coral-reef-model.html",
-    "href": "course-materials/activities/day1/day1am-coral-reef-model.html",
-    "title": "Hands-on coral reef model",
+    "objectID": "course-materials/activities/day1/day1pm-git-challenge.html",
+    "href": "course-materials/activities/day1/day1pm-git-challenge.html",
+    "title": "git challenge",
     "section": "",
-    "text": "Models are used everywhere in data science. Data models, statistical models, machine learning models - even the latitude/longitude coordinates on your GPS come from a model. But models don’t have to be complex. An important aphorism about models states “all models are wrong, but some are useful.” In this course you will build a model of a coral reef inspired by the recent history of disturbance and recovery on the Mo’orea reefs. It’s not the most sophisticated model in the world, but as you’ll see it generates somewhat realistic patterns and it gives you a tangible (and tactile!) goal for your code."
+    "text": "This exercise will take you through a standard git workflow on your computer and on a whiteboard.\nDo this exercise in pairs. Choose one student to work at their computer while the other student manages their whiteboard. When you’ve completed the exercise once through, swap roles and start over.\nBegin by drawing four boxes on your whiteboard. Label them working directory, staging area, local repo and remote repo.\n\n\nThis exercise begins with a repo on GitHub. Visit https://github.com/eds-221-programming-m26/eds221-git-challenge in your browser to see what the repo looks like. You should see a README file containing the same instructions as the page on the course website.\nCloning copies a remote repository on GitHub to a local repository on your computer.\n\n\nFirst, make your own copy of this remote repo.\n\nOn the repo page, click the green “Use this template” button → “Create a new repository.”.\nKeep the owner your own GitHub account and use the same repo name eds221-git-challenge.\nClick “Create repository.\n\nThen, clone your copy of the remote repo to your computer.\n\nSwitch to the Terminal in Positron (not the R console).\ncd to your eds221/ directory (not your eds221-day1pm/ directory; one level up from there).\nClone the remote repo with this command:\ngit clone https://github.com/&lt;your GitHub username&gt;/eds221-git-challenge\n\nMake sure to replace &lt;your GitHub username&gt;. You should now see the directory eds221/eds221-git-challenge/.\n\n\n\n\nDraw a line from your remote repo box to your working directory box.\nLabel the line git clone.\n\n\n\n\n\nThe working directory is the directory on your computer that git recognizes as a repository. git will track your changes as you edit, create, and delete files in this directory.\n\n\n\nOpen the eds221/eds221-git-challenge/ folder in Positron.\nEdit the README. Add a sentence stating your name and the name of your favorite video game from childhood. If you didn’t play video games, pick another kind of game (board, card, sport, etc).\nSave the README.\nCreate directory called R/.\nCreate a script in R/ called fave-game.R. Add these expressions to your script, replacing the text as appropriate.\n\nmy_fave_game &lt;- \"your favorite childhood game here\"\npaste(\"my favorite childhood game was\", my_fave_game)\n\nAt the terminal, run git status. You should see that README.md and R/ have been modified. If they haven’t, make sure you saved your changes.\n\nNote: only R/, rather than R/fave-game.R, shows up now because the directory is new. After you stage individual files, you’ll see the full paths show up.\n\n\n\n\nWrite README.md and R/fave-game.R on sticky notes.\nPlace the sticky notes in the working directory box.\n\n\n\n\n\nIf using git is like working in a kitchen, then the staging area is the countertop. It’s where you put your ingredients (file changes in the working directory; the previous step) before you cook with them (committing changes; the next step).\n\n\n\nAt the terminal, run git add README.md.\nRun git status again. Verify that README.md is under “Changes to be committed”, but R/ is still in “Untracked files”.\n\n\n\n\n\nMove the README.md sticky note to the staging area box.\n\n\n\n\n\nAt the terminal, run git add R/fave-game.R.\nRun git status again. Verify that both README.md and R/fave-game.R are under “Changes to be committed”.\n\n\n\n\n\nMove the R/fave-game.R sticky note to the staging area box.\n\n\n\n\n\nYou’ve pulled out your ingredients, now it’s time to cook. Committing your changes creates a new checkpoint in your local repository. It’s the equivalent of an entry in a Wikipedia page revision history.\n\n\n\nAt the terminal, run git commit -m \"Add favorite game\".\n\nThe -m \"Add favorite game\" part defines your commit message. It’s a brief summary of the changes included in the commit.\n\nRun git status again. Verify that you see “Your branch is ahead of ‘origin/main’ by 1 commit”, which means your local repository has a commit that isn’t on the remote repository yet. Also verify that you see “nothing to commit, working tree clean”, which means that your working directory and local repository are synced up.\n\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the local repository box together. This represents all the staged changes getting packaged up in a single commit.\n\n\n\n\n\nYou’ve cooked the meal, but no one can eat because you haven’t served it yet. Pushing your commit will send your local changes to the remote repository on GitHub. At that point, collaborators and clients will be able to see your work.\n\n\n\nAt the terminal, run git push. You should see messages about enumerating, counting, compressing, and writing objects. These all mean the commit is making its way from your computer up to the remote repository.\nRun git status. You should see a local repository looking very content and pleased with itself. That looks like this:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the remote repository box."
   },
   {
-    "objectID": "course-materials/activities/day1/day1am-coral-reef-model.html#motivation",
-    "href": "course-materials/activities/day1/day1am-coral-reef-model.html#motivation",
-    "title": "Hands-on coral reef model",
+    "objectID": "course-materials/activities/day1/day1pm-git-challenge.html#instructions",
+    "href": "course-materials/activities/day1/day1pm-git-challenge.html#instructions",
+    "title": "git challenge",
     "section": "",
-    "text": "Models are used everywhere in data science. Data models, statistical models, machine learning models - even the latitude/longitude coordinates on your GPS come from a model. But models don’t have to be complex. An important aphorism about models states “all models are wrong, but some are useful.” In this course you will build a model of a coral reef inspired by the recent history of disturbance and recovery on the Mo’orea reefs. It’s not the most sophisticated model in the world, but as you’ll see it generates somewhat realistic patterns and it gives you a tangible (and tactile!) goal for your code."
+    "text": "This exercise will take you through a standard git workflow on your computer and on a whiteboard.\nDo this exercise in pairs. Choose one student to work at their computer while the other student manages their whiteboard. When you’ve completed the exercise once through, swap roles and start over.\nBegin by drawing four boxes on your whiteboard. Label them working directory, staging area, local repo and remote repo.\n\n\nThis exercise begins with a repo on GitHub. Visit https://github.com/eds-221-programming-m26/eds221-git-challenge in your browser to see what the repo looks like. You should see a README file containing the same instructions as the page on the course website.\nCloning copies a remote repository on GitHub to a local repository on your computer.\n\n\nFirst, make your own copy of this remote repo.\n\nOn the repo page, click the green “Use this template” button → “Create a new repository.”.\nKeep the owner your own GitHub account and use the same repo name eds221-git-challenge.\nClick “Create repository.\n\nThen, clone your copy of the remote repo to your computer.\n\nSwitch to the Terminal in Positron (not the R console).\ncd to your eds221/ directory (not your eds221-day1pm/ directory; one level up from there).\nClone the remote repo with this command:\ngit clone https://github.com/&lt;your GitHub username&gt;/eds221-git-challenge\n\nMake sure to replace &lt;your GitHub username&gt;. You should now see the directory eds221/eds221-git-challenge/.\n\n\n\n\nDraw a line from your remote repo box to your working directory box.\nLabel the line git clone.\n\n\n\n\n\nThe working directory is the directory on your computer that git recognizes as a repository. git will track your changes as you edit, create, and delete files in this directory.\n\n\n\nOpen the eds221/eds221-git-challenge/ folder in Positron.\nEdit the README. Add a sentence stating your name and the name of your favorite video game from childhood. If you didn’t play video games, pick another kind of game (board, card, sport, etc).\nSave the README.\nCreate directory called R/.\nCreate a script in R/ called fave-game.R. Add these expressions to your script, replacing the text as appropriate.\n\nmy_fave_game &lt;- \"your favorite childhood game here\"\npaste(\"my favorite childhood game was\", my_fave_game)\n\nAt the terminal, run git status. You should see that README.md and R/ have been modified. If they haven’t, make sure you saved your changes.\n\nNote: only R/, rather than R/fave-game.R, shows up now because the directory is new. After you stage individual files, you’ll see the full paths show up.\n\n\n\n\nWrite README.md and R/fave-game.R on sticky notes.\nPlace the sticky notes in the working directory box.\n\n\n\n\n\nIf using git is like working in a kitchen, then the staging area is the countertop. It’s where you put your ingredients (file changes in the working directory; the previous step) before you cook with them (committing changes; the next step).\n\n\n\nAt the terminal, run git add README.md.\nRun git status again. Verify that README.md is under “Changes to be committed”, but R/ is still in “Untracked files”.\n\n\n\n\n\nMove the README.md sticky note to the staging area box.\n\n\n\n\n\nAt the terminal, run git add R/fave-game.R.\nRun git status again. Verify that both README.md and R/fave-game.R are under “Changes to be committed”.\n\n\n\n\n\nMove the R/fave-game.R sticky note to the staging area box.\n\n\n\n\n\nYou’ve pulled out your ingredients, now it’s time to cook. Committing your changes creates a new checkpoint in your local repository. It’s the equivalent of an entry in a Wikipedia page revision history.\n\n\n\nAt the terminal, run git commit -m \"Add favorite game\".\n\nThe -m \"Add favorite game\" part defines your commit message. It’s a brief summary of the changes included in the commit.\n\nRun git status again. Verify that you see “Your branch is ahead of ‘origin/main’ by 1 commit”, which means your local repository has a commit that isn’t on the remote repository yet. Also verify that you see “nothing to commit, working tree clean”, which means that your working directory and local repository are synced up.\n\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the local repository box together. This represents all the staged changes getting packaged up in a single commit.\n\n\n\n\n\nYou’ve cooked the meal, but no one can eat because you haven’t served it yet. Pushing your commit will send your local changes to the remote repository on GitHub. At that point, collaborators and clients will be able to see your work.\n\n\n\nAt the terminal, run git push. You should see messages about enumerating, counting, compressing, and writing objects. These all mean the commit is making its way from your computer up to the remote repository.\nRun git status. You should see a local repository looking very content and pleased with itself. That looks like this:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the remote repository box."
   },
   {
-    "objectID": "course-materials/activities/day1/day1am-coral-reef-model.html#model-rules",
-    "href": "course-materials/activities/day1/day1am-coral-reef-model.html#model-rules",
-    "title": "Hands-on coral reef model",
-    "section": "Model rules",
-    "text": "Model rules\nBefore you begin modeling the reef, make sure you have all the materials.\n\nReef grid (2 laminated sheets)\nCoral tokens (50 in a plastic bag)\nDice (6d6, 2d8)\nModel instructions\nPaper and pencil\n\nEach “turn” represents two years on the reef. You will simulate growth and mortality of corals by rolling dice and placing tokens. When the model completes the simulation, you will have a time series of coral percent cover from 2004 to 2024.\n\nSetup\nOn one grid, randomly place 8 coral tokens live-side up. This represent the coral cover on the reef in 2004.\nOn the sheet of paper, make two columns: year and pct_coral_cover. In the first row, record 2004 for the year and 32 for the percent coral cover.\nPro-tip: the reef grid has 25 cells, so the percent cover is the number of live corals tokens times four.\n\n\nTake a turn\nTwo years have passed since the last set of observations. Let’s simulate what happened on the reef. Keep the grid you updated in the previous turn (or during setup) the same and wipe the tokens from the other grid. The other grid is now the reef in the current turn.\n\nFOR each cell with a live coral token on the previous turn’s grid.\n\nRoll 2d6 and add them up. Call this total outcome.\nIF outcome is less than or equal to 3:\n\nThe coral dies.\nPlace a dead coral token on this turn’s grid in the same location.\n\nELSE IF outcome is greater than or equal to 6:\n\nThe coral grows.\nPlace a live coral token on this turn’s grid in the same location.\nThe coral now expands into a neighboring cell. Choose which of the 8 neighboring cells to grow into by rolling your d8. Place a live coral token on the neighboring cell in this turn’s grid corresponding to the relative location shown here:\n\n\n\n\nA 3x3 grid numbered 1 through 8, starting at the top left and progressing clockwise. The center cell is blank.\n\n\nELSE:\n\nThe coral neither grows nor dies.\nPlace a live coral token on this turn’s grid in the same location.\n\n\nCalculate the percent coral cover\nAdd a row to the paper with the year and percent coral cover\n\n\n\nKeep going\nRepeat taking turns until your time series runs through 2024.\n\n\nCRISES!\nThree crises struck Mo’orea’s coral reefs during this time period. Crises activate in specific years and change the model rules.\n\nCrown of Thorns Crisis\nIn 2008 and 2010, a plague of Crown of Thorns seastars wrecks devastation on the corals. Change the following rules:\n\nThe threshold for coral death increases from 3 to 4\nNo growth occurs\n\n\n\nCyclone Crisis\nIn 2012, a cyclone strikes Mo’orea. Change the following rules:\n\nNo mortality or growth occurs\nRoll a d6 to determine the direction of the cyclone’s approach. As the reef is scoured by the storm, remove all tokens from the three columns/rows facing its approach.\n\nOn a 1-2, the cyclone approaches from the west. Remove tokens from the three left columns.\nOn a 3-4, the cyclone approaches from the north. Remove tokens from the three top rows.\nOn a 5-6, the cyclone approaches from the east. Remove tokens from the three right columns.\n\n\n\n\nMarine Heatwave Crisis\nIn 2022, a marine heatwave caused an intense bleaching event on the reef. Change the following rules:\n\nThe threshold for coral death increases from 3 to 7\nThe growth threshold increases from 7 to 10\n\n\n\n\nSubmit your time series\nAfter resolving the model, submit your time series in the spreadsheet here."
-  },
-  {
-    "objectID": "course-materials/activities/day1/day1am-coral-reef-model.html#student-roles",
-    "href": "course-materials/activities/day1/day1am-coral-reef-model.html#student-roles",
-    "title": "Hands-on coral reef model",
-    "section": "Student roles",
-    "text": "Student roles\nChoose students in your group to perform each of the following roles.\n🎂 Demography tracker Keeps track of which coral to resolve growth/mortality for next, and which have already resolved.\n🪙 Token manager Places, flips, and removes tokens from the grid.\n🎲 Dice roller Rolls the dice and reports the totals.\n📝 Data recorder Updates the table as new time series data emerges.\n⏳ Time keeper Tracks the time and make sures the group is on track to finish. Also writes down any rule ambiguities (and the group decision) encountered.\nWhen the group encounters an ambiguity in the rules, you must reach consensus as a group to decide how to proceed.\n🙅 No laptops while the model is running 🙅"
-  },
-  {
-    "objectID": "course-materials/activities/day3/day3pm-death-survival.html",
-    "href": "course-materials/activities/day3/day3pm-death-survival.html",
-    "title": "Death and survival on the reef",
+    "objectID": "course-materials/activities/day2/day2pm-debugger.html",
+    "href": "course-materials/activities/day2/day2pm-debugger.html",
+    "title": "Debugger: indexing",
     "section": "",
-    "text": "In this exercise, you will apply what you’ve learned about conditional statements and loops to make a reef that can survive and die, tracking coral cover over time. You will implement other features of the model, like growth and crises, later in the week.\n\n\n\n\n\n\nImportant\n\n\n\nThis exercise synthesizes a lot of new material from the first three days of class. It’s a valuable opportunity to integrate everything you’ve learned so far, but it’s also very challenging. You are encouraged to:\n\nMake sketches to visualize your thinking\nWork in groups\nAsk your instructors for help!\n\n\n\n\n\nOpen the folder with your coral reef project in Positron.\nDownload death_survival.R and put it in your folder.\nThis script contains template code. You’ll fill it in with code you’ve written earlier in class, or by applying what you’ve learned about data structures and control structures.\n\n\n\nYour first step is to initialize your reef. Create the matrix and place 8 random corals in it.\nWhen done correctly, your reef will look like this:\n&gt; reef\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    0    1    1    1    0\n[2,]    0    1    0    1    0\n[3,]    1    0    0    1    0\n[4,]    0    0    0    0    0\n[5,]    0    0    0    1    0\n\n\n\nCreate vectors years and coral_cover_pct to keep track of time and percent cover.\nWhen done correctly, your vectors will look like this:\n&gt; years\n [1] 2004 2006 2008 2010 2012 2014 2016 2018 2020 2022 2024\n&gt; coral_cover_pct\n [1] 0 0 0 0 0 0 0 0 0 0 0\n\n\n\nCalculate coral cover in the first year.\nWhen done correctly, coral_cover_pct will look like this:\n&gt; coral_cover_pct\n [1] 0.32 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00\n\n\n\n\n\n\nTip\n\n\n\nreef is all 1’s and 0’s, so the mean of the reef equals the percent cover.\n\n\n\n\n\nYou’ve been given:\nfor (_________) {\nFill in the blank with the iterator and sequence to loop over the indices waiting to be updated. You’ve already calculated percent cover for the first year, so start your sequence at 2. Call your iterator t.\n\n\n\nWhile running the coral reef model manually, you alternated between two laminated grids. One represented the reef in the previous time step and you update the one in the current step. Now, you’ll do that in code.\nYou’ve been given:\n# Copy reef to a new variable, prev_reef\nprev_reef &lt;- _________\n# Wipe the new reef clean\nreef &lt;- _________\nFill in the blanks such that prev_reef becomes a copy of the reef, then reef starts over with all 0s.\n\n\n\nYou’ve been given two more nested loops:\nfor (_________) {\n  for (_________) {\nFill in the blanks to loop over the indices for the rows and columns of the reef. Call your iterators r and c.\n\n\n\nCheck if this cell had a coral in it in the previous reef.\nYou’ve been given:\nif (_________) {\nFill in the blank with the condition checking if this cell (indicated by r and c) had a coral in it in the previous time step.\n\n\n\nFor existing corals, roll 2d6 to determine the outcome.\nYou’ve been given:\n# Roll 2d6 for this coral\ncoral_outcome &lt;- _________\n# Fill in the conditions below for mortality and survival\n# Update the reef accordingly\nif (_________) {\n  # Mortality\n  print(\"Coral died\")\n  # Update the reef\n} else {\n  # Survival\n  print(\"Coral survived\")\n  # Update the reef\n}\nFill in the blank to create coral_outcome. Then, use that variable to check if you should apply mortality or survival. Where the comment says # Update the reef, use r and c to set the reef’s value at that location to the appropriate value (0 or 1).\n\n\n\nNotice where this code falls in the nested loops. It’s inside the time loop, but after the row and column loops. At this point, you’ve completed updating the reef for a time step. Now it’s time to calculate the coral percent cover and update your tracking variable, coral_cover_pct.\n\n\n\n\n\n\nTip\n\n\n\nThis step is similar to step 3. Make sure you choose the right index for coral_cover_pct!"
+    "text": "Bugs are an ever-present challenge in programming. With their red text and baffling messages, errors are among the most intimidating parts of learning to code. Perhaps even more frustrating are silent bugs - the code runs but the results just aren’t right.\nDebugger exercises will present you with buggy code - either an error or incorrect result. Your task will be to describe the intent of the code, diagnose the error, and use your problem solving skills to find a solution. With practice, these exercises will demystify errors and you’ll gain confidence in your coding abilities.\nBegin by creating a new script in your eds221/day2 folder called day2pm-debugger.R.\nFor each of the following code chunks\n\nExplain in plain language what the code chunk is supposed to do.\nCopy-paste the chunk into your script and run it to see the bug.\nDescribe the bug. Is it an error? An incorrect value? What did you expect, versus what did you find?\nFix the bug. Verify the code runs as expected."
   },
   {
-    "objectID": "course-materials/activities/day3/day3pm-death-survival.html#instructions",
-    "href": "course-materials/activities/day3/day3pm-death-survival.html#instructions",
-    "title": "Death and survival on the reef",
+    "objectID": "course-materials/activities/day2/day2pm-debugger.html#bug-1",
+    "href": "course-materials/activities/day2/day2pm-debugger.html#bug-1",
+    "title": "Debugger: indexing",
+    "section": "Bug 1",
+    "text": "Bug 1\n\n“Brianna said the coral cover pre-2020 never dropped below 10% - can you double check that?”\n\nsurvey_years &lt;- seq(2008, 2024, by = 2)\ncoral_cover_pct &lt;- c(34.53, 22.26, 11.66, 9.25, 14.05, 22.30, 30.35, 16.35, 5.74)\n\npre_2020_coral &lt;- survey_years[coral_cover_pct &lt; 2020]\nmin(pre_2020_coral)"
+  },
+  {
+    "objectID": "course-materials/activities/day2/day2pm-debugger.html#bug-2",
+    "href": "course-materials/activities/day2/day2pm-debugger.html#bug-2",
+    "title": "Debugger: indexing",
+    "section": "Bug 2",
+    "text": "Bug 2\n\n“Did you get the sea level model predictions for the Coastal Commission meeting?”\n\nsea_level_2100_ft &lt;- c(1.7, 2.0, 2.6, 10)\nnames(sea_level_2100_ft) &lt;- c(\"RCP 2.6\", \"RCP 4.5\", \"RCP 8.5\", \"H++\")\nworst_case_rcp &lt;- \"RCP 8.5\"\nsea_level_2100_ft[\"worst_case_rcp\"]"
+  },
+  {
+    "objectID": "course-materials/activities/day2/day2pm-debugger.html#bug-3",
+    "href": "course-materials/activities/day2/day2pm-debugger.html#bug-3",
+    "title": "Debugger: indexing",
+    "section": "Bug 3",
+    "text": "Bug 3\n\n“Hey Randall, it looks like you recorded a finch as a towhee. Can you fix that?”\n\nsongbird_survey &lt;- data.frame(\n  species = c(\"California Towhee\", \"House Finch\", \"House Sparrow\"),\n  count = c(9L, 6L, 8L),\n  song_freq_khz = c(4.99, 2.66, 4.08),\n  is_native = c(TRUE, TRUE, FALSE)\n)\n\nwrong_count_towhee &lt;- songbird_survey$count[species == \"California Towhee\"]\nwrong_count_finch &lt;- songbird_survey$count[species == \"House Finch\"]\nright_count_towhee &lt;- wrong_count_towhee - 1\nright_count_finch &lt;- wrong_count_finch + 1\n\nsongbird_survey$count[species == \"California Towhee\"] &lt;- right_count_towhee\nsongbird_survey$count[species == \"House Finch\"] &lt;- right_count_finch\nsongbird_survey"
+  },
+  {
+    "objectID": "course-materials/activities/day4/day4pm-getting-help.html",
+    "href": "course-materials/activities/day4/day4pm-getting-help.html",
+    "title": "Getting help",
     "section": "",
-    "text": "In this exercise, you will apply what you’ve learned about conditional statements and loops to make a reef that can survive and die, tracking coral cover over time. You will implement other features of the model, like growth and crises, later in the week.\n\n\n\n\n\n\nImportant\n\n\n\nThis exercise synthesizes a lot of new material from the first three days of class. It’s a valuable opportunity to integrate everything you’ve learned so far, but it’s also very challenging. You are encouraged to:\n\nMake sketches to visualize your thinking\nWork in groups\nAsk your instructors for help!\n\n\n\n\n\nOpen the folder with your coral reef project in Positron.\nDownload death_survival.R and put it in your folder.\nThis script contains template code. You’ll fill it in with code you’ve written earlier in class, or by applying what you’ve learned about data structures and control structures.\n\n\n\nYour first step is to initialize your reef. Create the matrix and place 8 random corals in it.\nWhen done correctly, your reef will look like this:\n&gt; reef\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    0    1    1    1    0\n[2,]    0    1    0    1    0\n[3,]    1    0    0    1    0\n[4,]    0    0    0    0    0\n[5,]    0    0    0    1    0\n\n\n\nCreate vectors years and coral_cover_pct to keep track of time and percent cover.\nWhen done correctly, your vectors will look like this:\n&gt; years\n [1] 2004 2006 2008 2010 2012 2014 2016 2018 2020 2022 2024\n&gt; coral_cover_pct\n [1] 0 0 0 0 0 0 0 0 0 0 0\n\n\n\nCalculate coral cover in the first year.\nWhen done correctly, coral_cover_pct will look like this:\n&gt; coral_cover_pct\n [1] 0.32 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00\n\n\n\n\n\n\nTip\n\n\n\nreef is all 1’s and 0’s, so the mean of the reef equals the percent cover.\n\n\n\n\n\nYou’ve been given:\nfor (_________) {\nFill in the blank with the iterator and sequence to loop over the indices waiting to be updated. You’ve already calculated percent cover for the first year, so start your sequence at 2. Call your iterator t.\n\n\n\nWhile running the coral reef model manually, you alternated between two laminated grids. One represented the reef in the previous time step and you update the one in the current step. Now, you’ll do that in code.\nYou’ve been given:\n# Copy reef to a new variable, prev_reef\nprev_reef &lt;- _________\n# Wipe the new reef clean\nreef &lt;- _________\nFill in the blanks such that prev_reef becomes a copy of the reef, then reef starts over with all 0s.\n\n\n\nYou’ve been given two more nested loops:\nfor (_________) {\n  for (_________) {\nFill in the blanks to loop over the indices for the rows and columns of the reef. Call your iterators r and c.\n\n\n\nCheck if this cell had a coral in it in the previous reef.\nYou’ve been given:\nif (_________) {\nFill in the blank with the condition checking if this cell (indicated by r and c) had a coral in it in the previous time step.\n\n\n\nFor existing corals, roll 2d6 to determine the outcome.\nYou’ve been given:\n# Roll 2d6 for this coral\ncoral_outcome &lt;- _________\n# Fill in the conditions below for mortality and survival\n# Update the reef accordingly\nif (_________) {\n  # Mortality\n  print(\"Coral died\")\n  # Update the reef\n} else {\n  # Survival\n  print(\"Coral survived\")\n  # Update the reef\n}\nFill in the blank to create coral_outcome. Then, use that variable to check if you should apply mortality or survival. Where the comment says # Update the reef, use r and c to set the reef’s value at that location to the appropriate value (0 or 1).\n\n\n\nNotice where this code falls in the nested loops. It’s inside the time loop, but after the row and column loops. At this point, you’ve completed updating the reef for a time step. Now it’s time to calculate the coral percent cover and update your tracking variable, coral_cover_pct.\n\n\n\n\n\n\nTip\n\n\n\nThis step is similar to step 3. Make sure you choose the right index for coral_cover_pct!"
+    "text": "Each R function comes with its own documentation that explains what it does and how to use it. Documentation in R takes some getting used to, but once you learn the patterns it becomes a valuable resource to coders new and experienced. After you complete this exercise, you will know how to:"
   },
   {
-    "objectID": "course-materials/activities/day3/day3pm-death-survival.html#verify",
-    "href": "course-materials/activities/day3/day3pm-death-survival.html#verify",
-    "title": "Death and survival on the reef",
-    "section": "Verify",
-    "text": "Verify\nWhen done correctly, your code will produce this result for the coral cover percent:\n [1] 0.32 0.24 0.24 0.24 0.24 0.20 0.20 0.20 0.16 0.08 0.08\nNotice the percent cover never increases, it just slowly drops over time. That’s because we haven’t implemented any growth yet.\nWhen you’re done, call an instructor over to review your code and get feedback."
+    "objectID": "course-materials/activities/day4/day4pm-getting-help.html#where-to-find-help",
+    "href": "course-materials/activities/day4/day4pm-getting-help.html#where-to-find-help",
+    "title": "Getting help",
+    "section": "Where to find help",
+    "text": "Where to find help\nThere are two ways to find documentation: the help pane and the ? operator. Run this command at the console:\n?ifelse\nThis will bring up the documentation for the ifelse() function in the help pane. You can also use this pane directly."
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#title-slide",
-    "href": "course-materials/slides/day3pm-slides.html#title-slide",
+    "objectID": "course-materials/activities/day4/day4pm-getting-help.html#anatomy-of-documentation",
+    "href": "course-materials/activities/day4/day4pm-getting-help.html#anatomy-of-documentation",
+    "title": "Getting help",
+    "section": "Anatomy of documentation",
+    "text": "Anatomy of documentation\nDocumentation has many parts, but focus on these key ones:\n\nBig picture: Description comes first and provides a high-level description of the function.\nInput: Arguments lists the function’s parameters, telling you what inputs it expects to receive.\nOutput: Value describes what the function returns.\nIn practice: Examples shows how to use the function with sample code.\n\nExamples is particularly helpful. Seeing a function in action is often the best way to pick up how to use it. Think of them as code sleuth activities in the real world.\n\n\n\n\n\n\nRead the documentation for ifelse() to answer these questions.\n\nHow many parameters does the function take?\nDo any of the parameters have default values?"
+  },
+  {
+    "objectID": "course-materials/activities/day4/day4pm-getting-help.html#practice-reading-documentation",
+    "href": "course-materials/activities/day4/day4pm-getting-help.html#practice-reading-documentation",
+    "title": "Getting help",
+    "section": "Practice reading documentation",
+    "text": "Practice reading documentation\n\n\n\n\n\n\nThis exercise asks you to stand up, walk around, and talk to your peers.\n\n\n\nYou’ve been assigned to one of four groups based on your last name. Find one or two other students in the same group as you. As a team, follow the instructions below based on your group.\n\nLast name begins A-F\nRead the documentation for log().\nUse the documentation to answer the following questions:\n\nWhat’s the default base for the log() function?\nWhat’s the difference between log(), log2(), and log10()?\nHow would you use log() to do the same thing as log10()?\n\n\n\nLast name begins G-L\nRead the documentation for which.max().\nUse the documentation to answer the following questions:\n\nWhat’s the difference between which.max() and max()?\nYou’re given a vector of 100 2d6 dice rolls. How would you use which.max() to find the first roll that’s 10 or greater?\n\n\n\nLast name begins M-R\nRead the documentation for startsWith().\nUse the documentation to answer the following questions:\n\nWhat type of vectors does startsWith() expect as input?\nWhat type of vector does startsWith() return?\nHow would you use startsWith() to check if a bird name begins with “California”? Write a line of code to demonstrate its use.\n\n\n\nLast name begins S-Z\nRead the documentation for cumsum().\nUse the documentation to answer the following questions:\n\nWhat’s the difference between cumsum() and sum()?\nsum(1:5) returns one value. How many values are in the vector returned by cumsum(1:5)?"
+  },
+  {
+    "objectID": "course-materials/activities/day4/day4pm-getting-help.html#practice-reading-documentation-1",
+    "href": "course-materials/activities/day4/day4pm-getting-help.html#practice-reading-documentation-1",
+    "title": "Getting help",
+    "section": "Practice reading documentation",
+    "text": "Practice reading documentation\nStick with the student(s) you practiced reading documentation with. Find students from the other three groups. Trade off explaining your assigned functions."
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#title-slide",
+    "href": "course-materials/slides/day1am-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 221 Day 3 PM\nLoops\n\nAugust 12th, 2025"
+    "text": "EDS 221 Day 1 AM\nCourse intro\n\nAugust 10th, 2026"
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#loops-repeat",
-    "href": "course-materials/slides/day3pm-slides.html#loops-repeat",
+    "objectID": "course-materials/slides/day1am-slides.html#corals",
+    "href": "course-materials/slides/day1am-slides.html#corals",
     "title": "",
     "section": "",
-    "text": "Loops let you repeat yourself\n\nFor example, print each value in a vector\n\ncorals &lt;- c(\"Porites\", \"Pocillopora\", \"Acropora\")\nfor (c in corals) {\n  print(c)\n}\n\n[1] \"Porites\"\n[1] \"Pocillopora\"\n[1] \"Acropora\""
+    "text": "What happened to this system?\nWhat are the consequences for people and the environment?\nWhy are we talking about this in a programming class?"
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#loops-repeat2",
-    "href": "course-materials/slides/day3pm-slides.html#loops-repeat2",
+    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-1",
+    "href": "course-materials/slides/day1am-slides.html#data-understanding-1",
     "title": "",
     "section": "",
-    "text": "Loops let you repeat yourself\n\nIt’s common to loop over the indices of a vector.\n\ncorals &lt;- c(\"Porites\", \"Pocillopora\", \"Acropora\")\nfor (i in 1:length(corals)) {\n  print(corals[i])\n}\n\n[1] \"Porites\"\n[1] \"Pocillopora\"\n[1] \"Acropora\""
+    "text": "From data to understanding\n\nWith code, we go from this…"
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#fibonacci",
-    "href": "course-materials/slides/day3pm-slides.html#fibonacci",
+    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-2",
+    "href": "course-materials/slides/day1am-slides.html#data-understanding-2",
     "title": "",
     "section": "",
-    "text": "What does this loop make?\n\nLet’s break down this loop.\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+    "text": "From data to understanding\n\n…to this."
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#loop-parts",
-    "href": "course-materials/slides/day3pm-slides.html#loop-parts",
+    "objectID": "course-materials/slides/day1am-slides.html#learning-objectives",
+    "href": "course-materials/slides/day1am-slides.html#learning-objectives",
     "title": "",
     "section": "",
-    "text": "Parts of a loop\n\nA loop has three main parts\n\n\n\nIterator i\nSequence 3:length(fibonacci)\nBody { ... }\n\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+    "text": "Learning objectives\n\n\n🧠 Think like a computer scientist\n\n🌍 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#iterator",
-    "href": "course-materials/slides/day3pm-slides.html#iterator",
+    "objectID": "course-materials/slides/day1am-slides.html#grading",
+    "href": "course-materials/slides/day1am-slides.html#grading",
     "title": "",
     "section": "",
-    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe iterator changes value each time through the loop.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+    "text": "Grading\n\n\n\n👍 Satisfactory / Unsatisfactory\n\nNo letter grades\n\n✅ Attendance\n\nExpected every day.\nBut life happens! Let your instructors know about absences in advance when possible.\n\n✋ Participation\n\nActive participation in all exercises expected."
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#sequence",
-    "href": "course-materials/slides/day3pm-slides.html#sequence",
+    "objectID": "course-materials/slides/day1am-slides.html#daily-schedule",
+    "href": "course-materials/slides/day1am-slides.html#daily-schedule",
     "title": "",
     "section": "",
-    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe sequence is what the iterator takes on values from.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+    "text": "Daily schedule\n\n\n\n\n\nMorning session\n\nReview previous day\nNew material\nSession review\n\nAfternoon session\n\nNew material\nSession review\n\nEnd-of-day session\n\nPractice day’s material\n\n\n\n\nSession activities\n\nPencil-and-paper exercises\nLive-coding demos\nConcept mapping\n\nExpect a lot of:\n\nWorking in groups\nProblem solving\nThink first, draw second, type last"
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#body",
-    "href": "course-materials/slides/day3pm-slides.html#body",
+    "objectID": "course-materials/slides/day1am-slides.html#typing-club",
+    "href": "course-materials/slides/day1am-slides.html#typing-club",
     "title": "",
     "section": "",
-    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe body is what the loop repeatedly does.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+    "text": "Have your coffee with typing club!\n\n\n💻 💻 💻 Touch typing is a valuable skill for keeping up in class, and one you can develop.\nBut why practice alone?\n☕ ☕ ☕ Join typing club 9:15-9:45, here in the NCEAS classroom. I’ll make the coffee (there will be tea, too), we’ll practice typing together.\n\n\nDistribution of typing speeds"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#course-schedule",
+    "href": "course-materials/slides/day1am-slides.html#course-schedule",
+    "title": "",
+    "section": "",
+    "text": "Course schedule\n\n\n\n\n\nWeek 1\nWeek 2\n\n\n\n\nDay 1 - Code execution\nDay 6 - Data frames\n\n\nDay 2 - Data structures\nDay 7 - Manipulating data\n\n\nDay 3 - Control structures\nDay 8 - Advanced data types\n\n\nDay 4 - Functions\nDay 9 - Troubleshooting\n\n\nDay 5 - Creating programs\nDay 10 - Review"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#degree-schedule",
+    "href": "course-materials/slides/day1am-slides.html#degree-schedule",
+    "title": "",
+    "section": "",
+    "text": "Degree schedule\n\n\n\n\n\nFall\n\nStatistics\nEnvironmental data\nGeospatial analysis\nEthics and bias\n\nWinter\n\nMore statistics\nData visualization\nEnvironmental systems\nCapstone I\n\nSpring\n\nMachine learning\nDatabases\nCapstone II\n\n\n\n\n\nAll these classes use programming!\nBut since you haven’t taken them yet, in the meantime we’ll use programming to build…"
+  },
+  {
+    "objectID": "course-materials/slides/day1am-slides.html#coral-reef-model",
+    "href": "course-materials/slides/day1am-slides.html#coral-reef-model",
+    "title": "",
+    "section": "",
+    "text": "Coral reef model"
+  },
+  {
+    "objectID": "course-materials/slides/day4pm-slides.html#title-slide",
+    "href": "course-materials/slides/day4pm-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 4 PM\nVectorized functions\n\nAugust 13th, 2025"
+  },
+  {
+    "objectID": "course-materials/slides/day4pm-slides.html#vectorization",
+    "href": "course-materials/slides/day4pm-slides.html#vectorization",
+    "title": "",
+    "section": "",
+    "text": "Vectorization\n\nVectorized functions and operators work on entire vectors at once, rather than element by element.\nUsing vectorization often improves code performance and clarity.\nsquares &lt;- c(1, 4, 9, 16, 25)\n\n# Loop\nroots &lt;- double(length(squares))\nfor (i in 1:length(roots)) {\n  roots[i] &lt;- sqrt(roots)\n}\n\n# Vectorized\nroots &lt;- sqrt(squares)"
+  },
+  {
+    "objectID": "course-materials/slides/day4pm-slides.html#functions-operators",
+    "href": "course-materials/slides/day4pm-slides.html#functions-operators",
+    "title": "",
+    "section": "",
+    "text": "Functions and operators\n\nBoth functions and operators can be vectorized.\n\na &lt;- 1:4\nb &lt;- 4:1\n\na + b\n\n[1] 5 5 5 5\n\nas.character(a)\n\n[1] \"1\" \"2\" \"3\" \"4\""
+  },
+  {
+    "objectID": "course-materials/slides/day4pm-slides.html#review-",
+    "href": "course-materials/slides/day4pm-slides.html#review-",
+    "title": "",
+    "section": "",
+    "text": "Review\n\nThe round() function rounds numbers.\n\nround(pi, digits = 2)\n\n[1] 3.14\n\n\nConsider this expression:\nround(seq(0, 2, by = 1/2) * pi, digits = 2)\nUsing only pencil and paper, answer the following questions.\n\n\n\n\n\n\nTip\n\n\nSolve sub-expressions first to build up to the complete solution.\n\n\n\n\nWhat will the output be?\nWhich parameter is round() vectorized over?"
   },
   {
     "objectID": "course-materials/slides/day2am-slides.html#title-slide",
@@ -217,60 +315,53 @@
     "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1] -1.1841031 -0.3077750 -0.3283373\n\nrpois(4, lambda = 10)\n\n[1]  5 11  6  8"
   },
   {
-    "objectID": "course-materials/slides/day1pm-slides.html#title-slide",
-    "href": "course-materials/slides/day1pm-slides.html#title-slide",
+    "objectID": "course-materials/slides/day3am-slides.html#title-slide",
+    "href": "course-materials/slides/day3am-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 221 Day 1 PM\nVersion control\n\nAugust 10th, 2025"
+    "text": "EDS 221 Day 3 AM\nConditions and logic\n\nAugust 12th, 2026"
   },
   {
-    "objectID": "course-materials/slides/day1pm-slides.html#corals",
-    "href": "course-materials/slides/day1pm-slides.html#corals",
+    "objectID": "course-materials/slides/day3am-slides.html#review-day2-indexing",
+    "href": "course-materials/slides/day3am-slides.html#review-day2-indexing",
     "title": "",
     "section": "",
-    "text": "Anyone can edit Wikipedia - how do you keep all those changes organized?"
+    "text": "Review day 2: Indexing\n\n\nOn a sheet of paper, draw the reef matrix after this code runs:\n\nreef &lt;- matrix(0, nrow = 5, ncol = 5)\ncoral_row &lt;- 3\ncoral_col &lt;- 4\nreef[coral_row, coral_col] &lt;- 1"
   },
   {
-    "objectID": "course-materials/slides/day1pm-slides.html#version-history",
-    "href": "course-materials/slides/day1pm-slides.html#version-history",
+    "objectID": "course-materials/slides/day3am-slides.html#review-day2-indexing2",
+    "href": "course-materials/slides/day3am-slides.html#review-day2-indexing2",
     "title": "",
     "section": "",
-    "text": "Version history tracks changes over time\n\nEach contribution is individually recorded."
+    "text": "Review day 2: Indexing\n\n\n\nRecall the subgoals for evaluating indexing expressions\n\nIdentify the object being indexed (vector, data frame, matrix, etc)\nIdentify the index (inside [ ] or following $)\nDetermine the type of the index (positive integers, negative integers, conditions, names, blanks) and evaluate it\nApply the index to the object and determine the result\n\n\nOn a sheet of paper, apply these subgoals to evaluate the following code.\ngrowth_row_offset &lt;- c(-1, -1, -1, 0, 1, 1, 1, 0)\ngrowth_col_offset &lt;- c(-1, 0, 1, 1, 1, 0, -1, -1)\n\ngrowth_roll &lt;- 4\n\ngrowth_row &lt;- coral_row + \n  growth_row_offset[growth_roll]\ngrowth_col &lt;- coral_col + \n  growth_col_offset[growth_roll]\nreef[growth_row, growth_col] &lt;- 1"
   },
   {
-    "objectID": "course-materials/slides/day1pm-slides.html#version-history2",
-    "href": "course-materials/slides/day1pm-slides.html#version-history2",
-    "title": "",
+    "objectID": "course-materials/eod/eod-day4.html",
+    "href": "course-materials/eod/eod-day4.html",
+    "title": "Day 4: End-of-day practice",
     "section": "",
-    "text": "Version history tracks changes over time\n\nDetails about when, who, and what are linked to a set of changes."
+    "text": "Today you’re going to practice writing and using functions by continuing to encapsulate logic in your reef model. You’ll also learn a new GitHub feature: Issues."
   },
   {
-    "objectID": "course-materials/slides/day1pm-slides.html#diffs",
-    "href": "course-materials/slides/day1pm-slides.html#diffs",
-    "title": "",
-    "section": "",
-    "text": "Differences highlight exact changes\n\nWith version history, changes can be tracked to individual lines."
+    "objectID": "course-materials/eod/eod-day4.html#issues",
+    "href": "course-materials/eod/eod-day4.html#issues",
+    "title": "Day 4: End-of-day practice",
+    "section": "Issues",
+    "text": "Issues\n\n\n\n\n\n\nNote\n\n\n\nGitHub Issues are tools for tracking tasks, bugs, or questions related to a project. Like a shared to-do list or lab notebook for your code, each issue has a title, a description, and a conversation thread where you and your collaborators can discuss how to resolve it. Issues can be labeled, assigned to specific people, and closed once resolved, making them a simple way to organize and communicate about problems or planned improvements without cluttering the actual code.\n\n\n\nHow to make an Issue\n\nNavigate to your repository on GitHub.com and click the Issues tab.\nClick New issue, then add a descriptive title and a description of a task, bug, or question related to your reef model.\nClick Submit new issue to create it.\n\n\n\nMake two issues\n\nIntegrate initialization. The reef initialization step has been encapsulated in a function, but death_survival.R doesn’t have access to it yet. Create an Issue with the title “Integrate initialization”. The description should read “Source R/util.R at the top of death_survival.R and replace the existing reef initialization code with a call to the initialization function.”.\nEncapsulate growth. The coral growth code in death_survival.R still needs to be turned into a function. The Issue should describe adding a growth function to R/util.R and replacing the coral growth code in the script with a call to that function."
   },
   {
-    "objectID": "course-materials/slides/day1pm-slides.html#no-version-control",
-    "href": "course-materials/slides/day1pm-slides.html#no-version-control",
-    "title": "",
-    "section": "",
-    "text": "Version control lets us avoid this\n\nFrom “R for Excel Users” by Julie Lowndes & Allison Horst"
+    "objectID": "course-materials/eod/eod-day4.html#encapsulate-your-code",
+    "href": "course-materials/eod/eod-day4.html#encapsulate-your-code",
+    "title": "Day 4: End-of-day practice",
+    "section": "Encapsulate your code",
+    "text": "Encapsulate your code\n\nIntegrate initialization\nEarlier today, you encapsulated the reef initialization step in a function. But that function isn’t accessible to your reef model script yet - it’s in a separate file. Follow these steps to link the two together.\n\nAt the top of death_survival.R, add a line with the following code:\n\nsource(\"R/util.R\")\nThe source() function runs the script found at the path you give it. In this case, R/util.R is the path to a script defining your reef initialization function. So sourcing that script defines the function and gives you access to it.\n\nReplace the coral reef initialization code in your script with a call to your new function.\n\n\nLink your changes and the issue\nIncluding a closing keyword like fixes followed by an Issue number in a commit message will automatically close that Issue when the commit is pushed to GitHub.\n\nStage your changes to death_survival.R and util.R.\nCommit your changes with a message that includes fixes #1.\n\n\n\n\nEncapsulate growth\nThe activity this morning showed you how to encapsulate the code for coral growth into a function.\n\nAdd the growth function in util.R.\nReplace the coral growth code in your script with a call to your new function.\n\n\nLink your changes and the issue\n\nStage your changes to death_survival.R and util.R.\nCommit your changes with a message that includes fixes #2."
   },
   {
-    "objectID": "course-materials/slides/day1pm-slides.html#code-version-control",
-    "href": "course-materials/slides/day1pm-slides.html#code-version-control",
-    "title": "",
-    "section": "",
-    "text": "Pardon me, I want to write code, not encyclopedias\n\n\n\n\n\nBryan (2018) The American Statistician\n\n\ngit is the most widespread tool for version control of code.\nLike Wikipedia’s revision history, it tracks when, who, and what, with line-by-line differences.\n\n\nGitHub is the most widespread platform for hosting git repositories\nIt helps you collaborate, simplifying access and project management"
-  },
-  {
-    "objectID": "course-materials/slides/day1pm-slides.html#live-coding",
-    "href": "course-materials/slides/day1pm-slides.html#live-coding",
-    "title": "",
-    "section": "",
-    "text": "Live coding demo"
+    "objectID": "course-materials/eod/eod-day4.html#wrap-up",
+    "href": "course-materials/eod/eod-day4.html#wrap-up",
+    "title": "Day 4: End-of-day practice",
+    "section": "Wrap up",
+    "text": "Wrap up\nWhen you’re done, push your changes to GitHub. Then check your Issues on GitHub - you should see that they’re closed now and linked to the specific code changes.\n\n\n\n\n\n\nTip\n\n\n\nBy default, the Issues tab only shows open issues, so your closed issues will disappear from the list. To see them, click the Closed tab (next to Open) above the issue list."
   },
   {
     "objectID": "course-materials/eod/eod-day1.html",
@@ -298,7 +389,7 @@
     "href": "course-materials/eod/eod-day1.html#wrap-up",
     "title": "Day 1: End-of-day practice",
     "section": "Wrap up",
-    "text": "Wrap up\nCongrats - you’ve completed your tasks for day 1!\nToday you learned:\nHow code executes\n\nCode is made up of expressions, where operators and functions act on variables and values to make things happen.\nCode has a flow from scripts to the console to the environent.\nExpressions build on each other to perform complex tasks using simpler parts.\n\nHow to track changes\n\ngit records the history of your coding projects in repositories.\ngit commands “move” files between the working directory, staging area, local repository, and remote repository.\nGitHub hosts your remote repositories, so you can share code and collaborate!"
+    "text": "Wrap up\nCongrats - you’ve completed your tasks for day 1!\nToday you learned:\nHow code executes\n\nCode is made up of expressions, where operators and functions act on variables and values to make things happen.\nCode has a flow from scripts to the console to the environment.\nExpressions build on each other to perform complex tasks using simpler parts.\n\nHow to track changes\n\ngit records the history of your coding projects in repositories.\ngit commands “move” files between the working directory, staging area, local repository, and remote repository.\nGitHub hosts your remote repositories, so you can share code and collaborate!"
   },
   {
     "objectID": "course-materials/eod/eod-day1.html#more-information",
@@ -385,25 +476,116 @@
     "text": "Wrap up\nThat’s it for day 2!\nToday you learned about:\nData types and 1d structures\n\nReal world data is represented with four computational types: character, double, integer, and logical.\nVectors are constrained to one type, so combining vectors of different types induces coercion.\nThere are lots of different ways to create vectors, such as logical(), :, and c().\n\nIndexing and 2d data\n\nReading and writing from data structures happens through indexing.\nIndexing into 1d data structures can be done with positive integers (selection by position), negative integers (exclusion by position), names, and logic. In addition, you can index 2d data with blanks to access along an entire dimension.\nData frames are a particularly important 2d data structure and the workhorse of data science. We’ll work extensively with data frames starting next week after you build your computational thinking foundation."
   },
   {
-    "objectID": "course-materials/slides/day3am-slides.html#title-slide",
-    "href": "course-materials/slides/day3am-slides.html#title-slide",
+    "objectID": "course-materials/slides/day1pm-slides.html#title-slide",
+    "href": "course-materials/slides/day1pm-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 221 Day 3 AM\nConditions and logic\n\nAugust 12th, 2025"
+    "text": "EDS 221 Day 1 PM\nVersion control\n\nAugust 10th, 2026"
   },
   {
-    "objectID": "course-materials/slides/day3am-slides.html#review-day2-indexing",
-    "href": "course-materials/slides/day3am-slides.html#review-day2-indexing",
+    "objectID": "course-materials/slides/day1pm-slides.html#corals",
+    "href": "course-materials/slides/day1pm-slides.html#corals",
     "title": "",
     "section": "",
-    "text": "Review day 2: Indexing\n\n\nOn a sheet of paper, draw the reef matrix after this code runs:\n\nreef &lt;- matrix(0, nrow = 5, ncol = 5)\ncoral_row &lt;- 3\ncoral_col &lt;- 4\nreef[coral_row, coral_col] &lt;- 1"
+    "text": "Anyone can edit Wikipedia - how do you keep all those changes organized?"
   },
   {
-    "objectID": "course-materials/slides/day3am-slides.html#review-day2-indexing2",
-    "href": "course-materials/slides/day3am-slides.html#review-day2-indexing2",
+    "objectID": "course-materials/slides/day1pm-slides.html#version-history",
+    "href": "course-materials/slides/day1pm-slides.html#version-history",
     "title": "",
     "section": "",
-    "text": "Review day 2: Indexing\n\n\n\nRecall the subgoals for evaluating indexing expressions\n\nIdentify the object being indexed (vector, data frame, matrix, etc)\nIdentify the index (inside [ ] or following $)\nDetermine the type of the index (positive integers, negative integers, conditions, names, blanks) and evaluate it\nApply the index to the object and determine the result\n\n\nOn a sheet of paper, apply these subgoals to evaluate the following code.\ngrowth_row_offset &lt;- c(-1, -1, -1, 0, 1, 1, 1, 0)\ngrowth_col_offset &lt;- c(-1, 0, 1, 1, 1, 0, -1, -1)\n\ngrowth_roll &lt;- 4\n\ngrowth_row &lt;- coral_row + \n  growth_row_offset[growth_roll]\ngrowth_col &lt;- coral_col + \n  growth_col_offset[growth_roll]\nreef[growth_row, growth_col] &lt;- 1"
+    "text": "Version history tracks changes over time\n\nEach contribution is individually recorded."
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#version-history2",
+    "href": "course-materials/slides/day1pm-slides.html#version-history2",
+    "title": "",
+    "section": "",
+    "text": "Version history tracks changes over time\n\nDetails about when, who, and what are linked to a set of changes."
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#diffs",
+    "href": "course-materials/slides/day1pm-slides.html#diffs",
+    "title": "",
+    "section": "",
+    "text": "Differences highlight exact changes\n\nWith version history, changes can be tracked to individual lines."
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#no-version-control",
+    "href": "course-materials/slides/day1pm-slides.html#no-version-control",
+    "title": "",
+    "section": "",
+    "text": "Version control lets us avoid this\n\nFrom “R for Excel Users” by Julie Lowndes & Allison Horst"
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#code-version-control",
+    "href": "course-materials/slides/day1pm-slides.html#code-version-control",
+    "title": "",
+    "section": "",
+    "text": "Pardon me, I want to write code, not encyclopedias\n\n\n\n\n\nBryan (2018) The American Statistician\n\n\ngit is the most widespread tool for version control of code.\nLike Wikipedia’s revision history, it tracks when, who, and what, with line-by-line differences.\n\n\nGitHub is the most widespread platform for hosting git repositories\nIt helps you collaborate, simplifying access and project management"
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#live-coding",
+    "href": "course-materials/slides/day1pm-slides.html#live-coding",
+    "title": "",
+    "section": "",
+    "text": "Live coding demo"
+  },
+  {
+    "objectID": "course-materials/slides/day4am-slides.html#title-slide",
+    "href": "course-materials/slides/day4am-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 4 AM\nFunction basics\n\nAugust 13th, 2026"
+  },
+  {
+    "objectID": "course-materials/slides/day4am-slides.html#information-overload",
+    "href": "course-materials/slides/day4am-slides.html#information-overload",
+    "title": "",
+    "section": "",
+    "text": "Information overload?\n\nAfter three consecutive days of new content, it’s normal to feel overwhelmed."
+  },
+  {
+    "objectID": "course-materials/slides/day4am-slides.html#training-montage",
+    "href": "course-materials/slides/day4am-slides.html#training-montage",
+    "title": "",
+    "section": "",
+    "text": "Your hard work will pay off!\n\nThis is your training montage!"
+  },
+  {
+    "objectID": "course-materials/slides/day4am-slides.html#r-and-r",
+    "href": "course-materials/slides/day4am-slides.html#r-and-r",
+    "title": "",
+    "section": "",
+    "text": "Take care of yourself\n\nLearning needs down time. This weekend, take the time for rest and relaxation."
+  },
+  {
+    "objectID": "course-materials/slides/day4am-slides.html#successful-students",
+    "href": "course-materials/slides/day4am-slides.html#successful-students",
+    "title": "",
+    "section": "",
+    "text": "Successful students\n\nEveryone here has what it takes to succeed in this class and in this degree!\nThe pace can be overwhelming, but you’ll get what you need from this course when you:\n\nShow up and participate\nAsk for feedback from peers and instructors\nTake breaks to digest new knowledge"
+  },
+  {
+    "objectID": "course-materials/slides/day4am-slides.html#review-day-3",
+    "href": "course-materials/slides/day4am-slides.html#review-day-3",
+    "title": "",
+    "section": "",
+    "text": "Review day 3\n\n\n\nOn a sheet of paper, draw a table with 4 rows and 2 columns. Label the columns big_fish and mass.\nTrace the loop to right in your table. Each row represents one iteration of the loop and each column represents a variable.\nWrite down the value each variable will have at end of each loop iteration.\n\nfish_mass_kg &lt;- c(0.2, 1.9, \n                  0.03, 3.0)\nbig_fish &lt;- 0\nfor (mass in fish_mass_kg) {\n  if (mass &gt;= 1) {\n    big_fish &lt;- big_fish + 1\n  }\n}"
+  },
+  {
+    "objectID": "course-materials/slides/day4am-slides.html#function-definitions",
+    "href": "course-materials/slides/day4am-slides.html#function-definitions",
+    "title": "",
+    "section": "",
+    "text": "Function definitions\n\nFunction definitions have four main parts\n\n\nThe function keyword tells R this is a function definition.\nThe parameters inside the parentheses declare the function’s inputs.\nThe body of the function is enclosed in the curly brackets.\nThe return value comes at the end of the body and defines the function’s output.\n\nroll_die &lt;- function(n_sides = 6) {\n  roll &lt;- sample(1:n_sides, 1)\n  return(roll)\n}"
+  },
+  {
+    "objectID": "course-materials/slides/day4am-slides.html#function-calls",
+    "href": "course-materials/slides/day4am-slides.html#function-calls",
+    "title": "",
+    "section": "",
+    "text": "Function calls\n\nFunction calls invoke function definitions\n\n\nThe arguments inside the parentheses feed into the parameters.\nArguments match parameters by position or by name.\nWithout an argument, parameters may take on a default value.\n\nroll_die &lt;- function(n_sides = 6) {\n  roll &lt;- sample(1:n_sides, 1)\n  return(roll)\n}\n\nroll_die(6)\n\nroll_die(n_sides = 6)\n\nroll_die()"
   },
   {
     "objectID": "course-materials/slides/day2pm-slides.html#title-slide",
@@ -455,164 +637,227 @@
     "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1]  1.354899  1.454561 -1.436012\n\nrpois(4, lambda = 10)\n\n[1] 11 14  5  8"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#title-slide",
-    "href": "course-materials/slides/day1am-slides.html#title-slide",
+    "objectID": "course-materials/slides/day3pm-slides.html#title-slide",
+    "href": "course-materials/slides/day3pm-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 221 Day 1 AM\nCourse intro\n\nAugust 10th, 2025"
+    "text": "EDS 221 Day 3 PM\nLoops\n\nAugust 12th, 2025"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#corals",
-    "href": "course-materials/slides/day1am-slides.html#corals",
+    "objectID": "course-materials/slides/day3pm-slides.html#loops-repeat",
+    "href": "course-materials/slides/day3pm-slides.html#loops-repeat",
     "title": "",
     "section": "",
-    "text": "What happened to this system?\nWhat are the consequences for people and the environment?\nWhy are we talking about this in a programming class?"
+    "text": "Loops let you repeat yourself\n\nFor example, print each value in a vector\n\ncorals &lt;- c(\"Porites\", \"Pocillopora\", \"Acropora\")\nfor (c in corals) {\n  print(c)\n}\n\n[1] \"Porites\"\n[1] \"Pocillopora\"\n[1] \"Acropora\""
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-1",
-    "href": "course-materials/slides/day1am-slides.html#data-understanding-1",
+    "objectID": "course-materials/slides/day3pm-slides.html#loops-repeat2",
+    "href": "course-materials/slides/day3pm-slides.html#loops-repeat2",
     "title": "",
     "section": "",
-    "text": "From data to understanding\n\nWith code, we go from this…"
+    "text": "Loops let you repeat yourself\n\nIt’s common to loop over the indices of a vector.\n\ncorals &lt;- c(\"Porites\", \"Pocillopora\", \"Acropora\")\nfor (i in 1:length(corals)) {\n  print(corals[i])\n}\n\n[1] \"Porites\"\n[1] \"Pocillopora\"\n[1] \"Acropora\""
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#data-understanding-2",
-    "href": "course-materials/slides/day1am-slides.html#data-understanding-2",
+    "objectID": "course-materials/slides/day3pm-slides.html#fibonacci",
+    "href": "course-materials/slides/day3pm-slides.html#fibonacci",
     "title": "",
     "section": "",
-    "text": "From data to understanding\n\n…to this."
+    "text": "What does this loop make?\n\nLet’s break down this loop.\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#learning-objectives",
-    "href": "course-materials/slides/day1am-slides.html#learning-objectives",
+    "objectID": "course-materials/slides/day3pm-slides.html#loop-parts",
+    "href": "course-materials/slides/day3pm-slides.html#loop-parts",
     "title": "",
     "section": "",
-    "text": "Learning objectives\n\n\n🧠 Think like a computer scientist\n\n🌍 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\n\nIterator i\nSequence 3:length(fibonacci)\nBody { ... }\n\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#grading",
-    "href": "course-materials/slides/day1am-slides.html#grading",
+    "objectID": "course-materials/slides/day3pm-slides.html#iterator",
+    "href": "course-materials/slides/day3pm-slides.html#iterator",
     "title": "",
     "section": "",
-    "text": "Grading\n\n\n\n👍 Satisfactory / Unsatisfactory\n\nNo letter grades\n\n✅ Attendance\n\nExpected every day.\nBut life happens! Let your instructors know about absences in advance when possible.\n\n✋ Participation\n\nActive participation in all exercises expected."
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe iterator changes value each time through the loop.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#daily-schedule",
-    "href": "course-materials/slides/day1am-slides.html#daily-schedule",
+    "objectID": "course-materials/slides/day3pm-slides.html#sequence",
+    "href": "course-materials/slides/day3pm-slides.html#sequence",
     "title": "",
     "section": "",
-    "text": "Daily schedule\n\n\n\n\n\nMorning session\n\nReview previous day\nNew material\nSession review\n\nAfternoon session\n\nNew material\nSession review\n\nEnd-of-day session\n\nPractice day’s material\n\n\n\n\nSession activities\n\nPencil-and-paper exercises\nLive-coding demos\nConcept mapping\n\nExpect a lot of:\n\nWorking in groups\nProblem solving\nThink first, draw second, type last"
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe sequence is what the iterator takes on values from.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#typing-club",
-    "href": "course-materials/slides/day1am-slides.html#typing-club",
+    "objectID": "course-materials/slides/day3pm-slides.html#body",
+    "href": "course-materials/slides/day3pm-slides.html#body",
     "title": "",
     "section": "",
-    "text": "Have your coffee with typing club!\n\n\n💻 💻 💻 Touch typing is a valuable skill for keeping up in class, and one you can develop.\nBut why practice alone?\n☕ ☕ ☕ Join typing club 9:15-9:45, here in the NCEAS classroom. I’ll make the coffee (there will be tea, too), we’ll practice typing together.\n\n\nDistribution of typing speeds"
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe body is what the loop repeatedly does.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#course-schedule",
-    "href": "course-materials/slides/day1am-slides.html#course-schedule",
-    "title": "",
+    "objectID": "course-materials/activities/day4/day4am-encapsulation.html",
+    "href": "course-materials/activities/day4/day4am-encapsulation.html",
+    "title": "Encapsulation",
     "section": "",
-    "text": "Course schedule\n\n\n\n\n\nWeek 1\nWeek 2\n\n\n\n\nDay 1 - Code execution\nDay 6 - Data frames\n\n\nDay 2 - Data structures\nDay 7 - Manipulating data\n\n\nDay 3 - Control structures\nDay 8 - Advanced data types\n\n\nDay 4 - Functions\nDay 9 - Troubleshooting\n\n\nDay 5 - Creating programs\nDay 10 - Review"
+    "text": "One of the benefits of writing functions is giving repetitive code a comprehensible name. Consider this expression:\ncoral_outcome &lt;- sum(sample(1:6, size = 2, replace = FALSE))\nBy this point you’ve seen that line of code enough times you probably recognize its purpose on sight. But think back to the first time you saw it. Multiple function calls, a bunch of arguments - all kind of opaque, wasn’t it?\nBut let’s say you put that logic in a function call instead.\nroll2d6 &lt;- function() {\n  sum(sample(1:6, size = 2, replace = FALSE))\n}\nThen called that function to make coral_outcome.\ncoral_outcome &lt;- roll2d6()\nA little easier to read now, isn’t it? This process of hiding a complex piece of logic behind an easy-to-read name is called encapsulation."
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#degree-schedule",
-    "href": "course-materials/slides/day1am-slides.html#degree-schedule",
-    "title": "",
+    "objectID": "course-materials/activities/day4/day4am-encapsulation.html#whats-in-a-name",
+    "href": "course-materials/activities/day4/day4am-encapsulation.html#whats-in-a-name",
+    "title": "Encapsulation",
     "section": "",
-    "text": "Degree schedule\n\n\n\n\n\nFall\n\nStatistics\nEnvironmental data\nGeospatial analysis\nEthics and bias\n\nWinter\n\nMore statistics\nData visualization\nEnvironmental systems\nCapstone I\n\nSpring\n\nMachine learning\nDatabases\nCapstone II\n\n\n\n\n\nAll these classes use programming!\nBut since you haven’t taken them yet, in the meantime we’ll use programming to build…"
+    "text": "One of the benefits of writing functions is giving repetitive code a comprehensible name. Consider this expression:\ncoral_outcome &lt;- sum(sample(1:6, size = 2, replace = FALSE))\nBy this point you’ve seen that line of code enough times you probably recognize its purpose on sight. But think back to the first time you saw it. Multiple function calls, a bunch of arguments - all kind of opaque, wasn’t it?\nBut let’s say you put that logic in a function call instead.\nroll2d6 &lt;- function() {\n  sum(sample(1:6, size = 2, replace = FALSE))\n}\nThen called that function to make coral_outcome.\ncoral_outcome &lt;- roll2d6()\nA little easier to read now, isn’t it? This process of hiding a complex piece of logic behind an easy-to-read name is called encapsulation."
   },
   {
-    "objectID": "course-materials/slides/day1am-slides.html#coral-reef-model",
-    "href": "course-materials/slides/day1am-slides.html#coral-reef-model",
-    "title": "",
+    "objectID": "course-materials/activities/day4/day4am-encapsulation.html#how-to-encapsulate",
+    "href": "course-materials/activities/day4/day4am-encapsulation.html#how-to-encapsulate",
+    "title": "Encapsulation",
+    "section": "How to encapsulate",
+    "text": "How to encapsulate\nEncapsulating logic into a function has a few steps.\n\n1. Write out the expression(s) for the logic\ncoral_outcome &lt;- sum(sample(1:6, size = 2, replace = FALSE))\n\n\n2. Determine if the function needs any inputs\nIn this case, rolling 2d6 doesn’t take any inputs. We’ll see an example with inputs next.\n\n\n3. Write the function call\nWrite it out in a way that reads clearly to you. When there are inputs, put them in the call as arguments.\ncoral_outcome &lt;- roll2d6()\n\n\n4. Put the expression(s) in a function definition\nWrap the expression(s) in a function definition with the name you chose in step 3. When there are inputs, make them parameters.\nroll2d6 &lt;- function() {\n  total &lt;- sum(sample(1:6, size = 2, replace = FALSE))\n  return(total)\n}\nNow your function is an elegant replacement for harder-to-read expressions."
+  },
+  {
+    "objectID": "course-materials/activities/day4/day4am-encapsulation.html#an-example-with-inputs",
+    "href": "course-materials/activities/day4/day4am-encapsulation.html#an-example-with-inputs",
+    "title": "Encapsulation",
+    "section": "An example with inputs",
+    "text": "An example with inputs\nLet’s have a closer look at coral growth. Figuring out where the growth will happen is a multi-step process, and kind of hard to follow. Wouldn’t it be easier if we had an elegant function to handle it for us? Let’s walk through the steps of encapsulating it.\n\n1. Write out the expression(s) for the logic\nHere’s how we implemented coral growth.\nreef &lt;- matrix(0, nrow = 5, ncol = 5)\ncoral_row &lt;- 3\ncoral_col &lt;- 3\nreef[coral_row, coral_col] &lt;- 1\n\ngrowth_roll &lt;- 5\n\ngrowth_row_offset &lt;- c(-1, -1, -1, 0, 1, 1, 1, 0)\ngrowth_col_offset &lt;- c(-1, 0, 1, 1, 1, 0, -1, -1)\n\ngrowth_row &lt;- coral_row + growth_row_offset[growth_roll]\ngrowth_col &lt;- coral_col + growth_col_offset[growth_roll]\nreef[growth_row, growth_col] &lt;- 1\n\n\n2. Determine if the function needs any inputs\nWe have a few inputs here.\n\nThe direction of growth, growth_roll\nThe starting row for growth, coral_row\nThe starting column for growth, coral_col\nThe reef itself, reef\n\n\n\n3. Write the function call\nWritten this way, the function call makes it clear the reef is experiencing growth and passes all the necessary arguments.\nreef &lt;- growth(reef, growth_roll, coral_row, coral_col)\n\n\n4. Put the expression(s) in a function definition\nThis function takes the four inputs and gives them descriptive parameter names. It updates the reef, then returns the updated version.\ngrowth &lt;- function(reef, roll, row, col) {\n  growth_row_offset &lt;- c(-1, -1, -1, 0, 1, 1, 1, 0)\n  growth_col_offset &lt;- c(-1, 0, 1, 1, 1, 0, -1, -1)\n\n  growth_row &lt;- row + growth_row_offset[roll]\n  growth_col &lt;- col + growth_col_offset[roll]\n\n  reef[growth_row, growth_col] &lt;- 1\n\n  return(reef)\n}"
+  },
+  {
+    "objectID": "course-materials/activities/day4/day4am-encapsulation.html#your-turn",
+    "href": "course-materials/activities/day4/day4am-encapsulation.html#your-turn",
+    "title": "Encapsulation",
+    "section": "Your turn",
+    "text": "Your turn\nOpen your coral reef folder in Positron. Create a folder called “R” and inside of it create a script called “util.R”. “util” is short for “utility”, so “util.R” is a conventional name for scripts that contain utility functions. I.e., functions that make your code run smoother.\nIn that script, write a function to encapsulate the logic for putting 8 random corals on the initialized reef. Rather than hard-coding the number at 8, make the number of corals an input.\nFollow the four steps above. When you get to the end of each step, share your work with another student and discuss your reasoning."
+  },
+  {
+    "objectID": "course-materials/activities/day3/day3pm-death-survival.html",
+    "href": "course-materials/activities/day3/day3pm-death-survival.html",
+    "title": "Death and survival on the reef",
     "section": "",
-    "text": "Coral reef model"
+    "text": "In this exercise, you will apply what you’ve learned about conditional statements and loops to make a reef that can survive and die, tracking coral cover over time. You will implement other features of the model, like growth and crises, later in the week.\n\n\n\n\n\n\nImportant\n\n\n\nThis exercise synthesizes a lot of new material from the first three days of class. It’s a valuable opportunity to integrate everything you’ve learned so far, but it’s also very challenging. You are encouraged to:\n\nMake sketches to visualize your thinking\nWork in groups\nAsk your instructors for help!\n\n\n\n\n\nOpen the folder with your coral reef project in Positron.\nDownload death_survival.R and put it in your folder.\nThis script contains template code. You’ll fill it in with code you’ve written earlier in class, or by applying what you’ve learned about data structures and control structures.\n\n\n\nYour first step is to initialize your reef. Create the matrix and place 8 random corals in it.\nWhen done correctly, your reef will look like this:\n&gt; reef\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    0    1    1    1    0\n[2,]    0    1    0    1    0\n[3,]    1    0    0    1    0\n[4,]    0    0    0    0    0\n[5,]    0    0    0    1    0\n\n\n\nCreate vectors years and coral_cover_pct to keep track of time and percent cover.\nWhen done correctly, your vectors will look like this:\n&gt; years\n [1] 2004 2006 2008 2010 2012 2014 2016 2018 2020 2022 2024\n&gt; coral_cover_pct\n [1] 0 0 0 0 0 0 0 0 0 0 0\n\n\n\nCalculate coral cover in the first year.\nWhen done correctly, coral_cover_pct will look like this:\n&gt; coral_cover_pct\n [1] 0.32 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00\n\n\n\n\n\n\nTip\n\n\n\nreef is all 1’s and 0’s, so the mean of the reef equals the percent cover.\n\n\n\n\n\nYou’ve been given:\nfor (_________) {\nFill in the blank with the iterator and sequence to loop over the indices waiting to be updated. You’ve already calculated percent cover for the first year, so start your sequence at 2. Call your iterator t.\n\n\n\nWhile running the coral reef model manually, you alternated between two laminated grids. One represented the reef in the previous time step and you update the one in the current step. Now, you’ll do that in code.\nYou’ve been given:\n# Copy reef to a new variable, prev_reef\nprev_reef &lt;- _________\n# Wipe the new reef clean\nreef &lt;- _________\nFill in the blanks such that prev_reef becomes a copy of the reef, then reef starts over with all 0s.\n\n\n\nYou’ve been given two more nested loops:\nfor (_________) {\n  for (_________) {\nFill in the blanks to loop over the indices for the rows and columns of the reef. Call your iterators r and c.\n\n\n\nCheck if this cell had a coral in it in the previous reef.\nYou’ve been given:\nif (_________) {\nFill in the blank with the condition checking if this cell (indicated by r and c) had a coral in it in the previous time step.\n\n\n\nFor existing corals, roll 2d6 to determine the outcome.\nYou’ve been given:\n# Roll 2d6 for this coral\ncoral_outcome &lt;- _________\n# Fill in the conditions below for mortality and survival\n# Update the reef accordingly\nif (_________) {\n  # Mortality\n  print(\"Coral died\")\n  # Update the reef\n} else {\n  # Survival\n  print(\"Coral survived\")\n  # Update the reef\n}\nFill in the blank to create coral_outcome. Then, use that variable to check if you should apply mortality or survival. Where the comment says # Update the reef, use r and c to set the reef’s value at that location to the appropriate value (0 or 1).\n\n\n\nNotice where this code falls in the nested loops. It’s inside the time loop, but after the row and column loops. At this point, you’ve completed updating the reef for a time step. Now it’s time to calculate the coral percent cover and update your tracking variable, coral_cover_pct.\n\n\n\n\n\n\nTip\n\n\n\nThis step is similar to step 3. Make sure you choose the right index for coral_cover_pct!"
   },
   {
-    "objectID": "course-materials/activities/day2/day2pm-debugger.html",
-    "href": "course-materials/activities/day2/day2pm-debugger.html",
-    "title": "Debugger: indexing",
+    "objectID": "course-materials/activities/day3/day3pm-death-survival.html#instructions",
+    "href": "course-materials/activities/day3/day3pm-death-survival.html#instructions",
+    "title": "Death and survival on the reef",
     "section": "",
-    "text": "Bugs are an ever-present challenge in programming. With their red text and baffling messages, errors are among the most intimidating parts of learning to code. Perhaps even more frustrating are silent bugs - the code runs but the results just aren’t right.\nDebugger exercises will present you with buggy code - either an error or incorrect result. Your task will be to describe the intent of the code, diagnose the error, and use your problem solving skills to find a solution. With practice, these exercises will demystify errors and you’ll gain confidence in your coding abilities.\nBegin by creating a new script in your eds221/day2 folder called day2pm-debugger.R.\nFor each of the following code chunks\n\nExplain in plain language what the code chunk is supposed to do.\nCopy-paste the chunk into your script and run it to see the bug.\nDescribe the bug. Is it an error? An incorrect value? What did you expect, versus what did you find?\nFix the bug. Verify the code runs as expected."
+    "text": "In this exercise, you will apply what you’ve learned about conditional statements and loops to make a reef that can survive and die, tracking coral cover over time. You will implement other features of the model, like growth and crises, later in the week.\n\n\n\n\n\n\nImportant\n\n\n\nThis exercise synthesizes a lot of new material from the first three days of class. It’s a valuable opportunity to integrate everything you’ve learned so far, but it’s also very challenging. You are encouraged to:\n\nMake sketches to visualize your thinking\nWork in groups\nAsk your instructors for help!\n\n\n\n\n\nOpen the folder with your coral reef project in Positron.\nDownload death_survival.R and put it in your folder.\nThis script contains template code. You’ll fill it in with code you’ve written earlier in class, or by applying what you’ve learned about data structures and control structures.\n\n\n\nYour first step is to initialize your reef. Create the matrix and place 8 random corals in it.\nWhen done correctly, your reef will look like this:\n&gt; reef\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    0    1    1    1    0\n[2,]    0    1    0    1    0\n[3,]    1    0    0    1    0\n[4,]    0    0    0    0    0\n[5,]    0    0    0    1    0\n\n\n\nCreate vectors years and coral_cover_pct to keep track of time and percent cover.\nWhen done correctly, your vectors will look like this:\n&gt; years\n [1] 2004 2006 2008 2010 2012 2014 2016 2018 2020 2022 2024\n&gt; coral_cover_pct\n [1] 0 0 0 0 0 0 0 0 0 0 0\n\n\n\nCalculate coral cover in the first year.\nWhen done correctly, coral_cover_pct will look like this:\n&gt; coral_cover_pct\n [1] 0.32 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00\n\n\n\n\n\n\nTip\n\n\n\nreef is all 1’s and 0’s, so the mean of the reef equals the percent cover.\n\n\n\n\n\nYou’ve been given:\nfor (_________) {\nFill in the blank with the iterator and sequence to loop over the indices waiting to be updated. You’ve already calculated percent cover for the first year, so start your sequence at 2. Call your iterator t.\n\n\n\nWhile running the coral reef model manually, you alternated between two laminated grids. One represented the reef in the previous time step and you update the one in the current step. Now, you’ll do that in code.\nYou’ve been given:\n# Copy reef to a new variable, prev_reef\nprev_reef &lt;- _________\n# Wipe the new reef clean\nreef &lt;- _________\nFill in the blanks such that prev_reef becomes a copy of the reef, then reef starts over with all 0s.\n\n\n\nYou’ve been given two more nested loops:\nfor (_________) {\n  for (_________) {\nFill in the blanks to loop over the indices for the rows and columns of the reef. Call your iterators r and c.\n\n\n\nCheck if this cell had a coral in it in the previous reef.\nYou’ve been given:\nif (_________) {\nFill in the blank with the condition checking if this cell (indicated by r and c) had a coral in it in the previous time step.\n\n\n\nFor existing corals, roll 2d6 to determine the outcome.\nYou’ve been given:\n# Roll 2d6 for this coral\ncoral_outcome &lt;- _________\n# Fill in the conditions below for mortality and survival\n# Update the reef accordingly\nif (_________) {\n  # Mortality\n  print(\"Coral died\")\n  # Update the reef\n} else {\n  # Survival\n  print(\"Coral survived\")\n  # Update the reef\n}\nFill in the blank to create coral_outcome. Then, use that variable to check if you should apply mortality or survival. Where the comment says # Update the reef, use r and c to set the reef’s value at that location to the appropriate value (0 or 1).\n\n\n\nNotice where this code falls in the nested loops. It’s inside the time loop, but after the row and column loops. At this point, you’ve completed updating the reef for a time step. Now it’s time to calculate the coral percent cover and update your tracking variable, coral_cover_pct.\n\n\n\n\n\n\nTip\n\n\n\nThis step is similar to step 3. Make sure you choose the right index for coral_cover_pct!"
   },
   {
-    "objectID": "course-materials/activities/day2/day2pm-debugger.html#bug-1",
-    "href": "course-materials/activities/day2/day2pm-debugger.html#bug-1",
-    "title": "Debugger: indexing",
-    "section": "Bug 1",
-    "text": "Bug 1\n\n“Brianna said the coral cover pre-2020 never dropped below 10% - can you double check that?”\n\nsurvey_years &lt;- seq(2008, 2024, by = 2)\ncoral_cover_pct &lt;- c(34.53, 22.26, 11.66, 9.25, 14.05, 22.30, 30.35, 16.35, 5.74)\n\npre_2020_coral &lt;- survey_years[coral_cover_pct &lt; 2020]\nmin(pre_2020_coral)"
+    "objectID": "course-materials/activities/day3/day3pm-death-survival.html#verify",
+    "href": "course-materials/activities/day3/day3pm-death-survival.html#verify",
+    "title": "Death and survival on the reef",
+    "section": "Verify",
+    "text": "Verify\nWhen done correctly, your code will produce this result for the coral cover percent:\n [1] 0.32 0.24 0.24 0.24 0.24 0.20 0.20 0.20 0.16 0.08 0.08\nNotice the percent cover never increases, it just slowly drops over time. That’s because we haven’t implemented any growth yet.\nWhen you’re done, call an instructor over to review your code and get feedback."
   },
   {
-    "objectID": "course-materials/activities/day2/day2pm-debugger.html#bug-2",
-    "href": "course-materials/activities/day2/day2pm-debugger.html#bug-2",
-    "title": "Debugger: indexing",
-    "section": "Bug 2",
-    "text": "Bug 2\n\n“Did you get the sea level model predictions for the Coastal Commission meeting?”\n\nsea_level_2100_ft &lt;- c(1.7, 2.0, 2.6, 10)\nnames(sea_level_2100_ft) &lt;- c(\"RCP 2.6\", \"RCP 4.5\", \"RCP 8.5\", \"H++\")\nworst_case_rcp &lt;- \"RCP 8.5\"\nsea_level_2100_ft[\"worst_case_rcp\"]"
-  },
-  {
-    "objectID": "course-materials/activities/day2/day2pm-debugger.html#bug-3",
-    "href": "course-materials/activities/day2/day2pm-debugger.html#bug-3",
-    "title": "Debugger: indexing",
-    "section": "Bug 3",
-    "text": "Bug 3\n\n“Hey Randall, it looks like you recorded a finch as a towhee. Can you fix that?”\n\nsongbird_survey &lt;- data.frame(\n  species = c(\"California Towhee\", \"House Finch\", \"House Sparrow\"),\n  count = c(9L, 6L, 8L),\n  song_freq_khz = c(4.99, 2.66, 4.08),\n  is_native = c(TRUE, TRUE, FALSE)\n)\n\nwrong_count_towhee &lt;- songbird_survey$count[species == \"California Towhee\"]\nwrong_count_finch &lt;- songbird_survey$count[species == \"House Finch\"]\nright_count_towhee &lt;- wrong_count_towhee - 1\nright_count_finch &lt;- wrong_count_finch + 1\n\nsongbird_survey$count[species == \"California Towhee\"] &lt;- right_count_towhee\nsongbird_survey$count[species == \"House Finch\"] &lt;- right_count_finch\nsongbird_survey"
-  },
-  {
-    "objectID": "course-materials/activities/day1/day1pm-git-challenge.html",
-    "href": "course-materials/activities/day1/day1pm-git-challenge.html",
-    "title": "git challenge",
+    "objectID": "course-materials/activities/day1/day1am-coral-reef-model.html",
+    "href": "course-materials/activities/day1/day1am-coral-reef-model.html",
+    "title": "Hands-on coral reef model",
     "section": "",
-    "text": "This exercise will take you through a standard git workflow on your computer and on a whiteboard.\nDo this exercise in pairs. Choose one student to work at their computer while the other student manages their whiteboard. When you’ve completed the exercise once through, swap roles and start over.\nBegin by drawing four boxes on your whiteboard. Label them working directory, staging area, local repo and remote repo.\n\n\nThis exercise begins with a repo on GitHub. Visit https://github.com/eds-221-programming-m26/eds221-git-challenge in your browser to see what the repo looks like. You should see a README file containing the same instructions as the page on the course website.\nCloning copies a remote repository on GitHub to a local repository on your computer.\n\n\nFirst, make your own copy of this remote repo.\n\nOn the repo page, click the green “Use this template” button → “Create a new repository.”.\nKeep the owner your own GitHub account and use the same repo name eds221-git-challenge.\nClick “Create repository.\n\nThen, clone your copy of the remote repo to your computer.\n\nSwitch to the Terminal in Positron (not the R console).\ncd to your eds221/ directory (not your eds221-day1pm/ directory; one level up from there).\nClone the remote repo with this command:\ngit clone https://github.com/&lt;your GitHub username&gt;/eds221-git-challenge\n\nMake sure to replace &lt;your GitHub username&gt;. You should now see the directory eds221/eds221-git-challenge/.\n\n\n\n\nDraw a line from your remote repo box to your working directory box.\nLabel the line git clone.\n\n\n\n\n\nThe working directory is the directory on your computer that git recognizes as a repository. git will track your changes as you edit, create, and delete files in this directory.\n\n\n\nOpen the eds221/eds221-git-challenge/ folder in Positron.\nEdit the README. Add a sentence stating your name and the name of your favorite video game from childhood. If you didn’t play video games, pick another kind of game (board, card, sport, etc).\nSave the README.\nCreate directory called R/.\nCreate a script in R/ called fave-game.R. Add these expressions to your script, replacing the text as appropriate.\n\nmy_fave_game &lt;- \"your favorite childhood game here\"\npaste(\"my favorite childhood game was\", my_fave_game)\n\nAt the terminal, run git status. You should see that README.md and R/ have been modified. If they haven’t, make sure you saved your changes.\n\nNote: only R/, rather than R/fave-game.R, shows up now because the directory is new. After you stage individual files, you’ll see the full paths show up.\n\n\n\n\nWrite README.md and R/fave-game.R on sticky notes.\nPlace the sticky notes in the working directory box.\n\n\n\n\n\nIf using git is like working in a kitchen, then the staging area is the countertop. It’s where you put your ingredients (file changes in the working directory; the previous step) before you cook with them (committing changes; the next step).\n\n\n\nAt the terminal, run git add README.md.\nRun git status again. Verify that README.md is under “Changes to be committed”, but R/ is still in “Untracked files”.\n\n\n\n\n\nMove the README.md sticky note to the staging area box.\n\n\n\n\n\nAt the terminal, run git add R/fave-game.R.\nRun git status again. Verify that both README.md and R/fave-game.R are under “Changes to be committed”.\n\n\n\n\n\nMove the R/fave-game.R sticky note to the staging area box.\n\n\n\n\n\nYou’ve pulled out your ingredients, now it’s time to cook. Committing your changes creates a new checkpoint in your local repository. It’s the equivalent of an entry in a Wikipedia page revision history.\n\n\n\nAt the terminal, run git commit -m \"Add favorite game\".\n\nThe -m \"Add favorite game\" part defines your commit message. It’s a brief summary of the changes included in the commit.\n\nRun git status again. Verify that you see “Your branch is ahead of ‘origin/main’ by 1 commit”, which means your local repository has a commit that isn’t on the remote repository yet. Also verify that you see “nothing to commit, working tree clean”, which means that your working directory and local repository are synced up.\n\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the local repository box together. This represents all the staged changes getting packaged up in a single commit.\n\n\n\n\n\nYou’ve cooked the meal, but no one can eat because you haven’t served it yet. Pushing your commit will send your local changes to the remote repository on GitHub. At that point, collaborators and clients will be able to see your work.\n\n\n\nAt the terminal, run git push. You should see messages about enumerating, counting, compressing, and writing objects. These all mean the commit is making its way from your computer up to the remote repository.\nRun git status. You should see a local repository looking very content and pleased with itself. That looks like this:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the remote repository box."
+    "text": "Models are used everywhere in data science. Data models, statistical models, machine learning models - even the latitude/longitude coordinates on your GPS come from a model. But models don’t have to be complex. An important aphorism about models states “all models are wrong, but some are useful.” In this course you will build a model of a coral reef inspired by the recent history of disturbance and recovery on the Mo’orea reefs. It’s not the most sophisticated model in the world, but as you’ll see it generates somewhat realistic patterns and it gives you a tangible (and tactile!) goal for your code."
   },
   {
-    "objectID": "course-materials/activities/day1/day1pm-git-challenge.html#instructions",
-    "href": "course-materials/activities/day1/day1pm-git-challenge.html#instructions",
-    "title": "git challenge",
+    "objectID": "course-materials/activities/day1/day1am-coral-reef-model.html#motivation",
+    "href": "course-materials/activities/day1/day1am-coral-reef-model.html#motivation",
+    "title": "Hands-on coral reef model",
     "section": "",
-    "text": "This exercise will take you through a standard git workflow on your computer and on a whiteboard.\nDo this exercise in pairs. Choose one student to work at their computer while the other student manages their whiteboard. When you’ve completed the exercise once through, swap roles and start over.\nBegin by drawing four boxes on your whiteboard. Label them working directory, staging area, local repo and remote repo.\n\n\nThis exercise begins with a repo on GitHub. Visit https://github.com/eds-221-programming-m26/eds221-git-challenge in your browser to see what the repo looks like. You should see a README file containing the same instructions as the page on the course website.\nCloning copies a remote repository on GitHub to a local repository on your computer.\n\n\nFirst, make your own copy of this remote repo.\n\nOn the repo page, click the green “Use this template” button → “Create a new repository.”.\nKeep the owner your own GitHub account and use the same repo name eds221-git-challenge.\nClick “Create repository.\n\nThen, clone your copy of the remote repo to your computer.\n\nSwitch to the Terminal in Positron (not the R console).\ncd to your eds221/ directory (not your eds221-day1pm/ directory; one level up from there).\nClone the remote repo with this command:\ngit clone https://github.com/&lt;your GitHub username&gt;/eds221-git-challenge\n\nMake sure to replace &lt;your GitHub username&gt;. You should now see the directory eds221/eds221-git-challenge/.\n\n\n\n\nDraw a line from your remote repo box to your working directory box.\nLabel the line git clone.\n\n\n\n\n\nThe working directory is the directory on your computer that git recognizes as a repository. git will track your changes as you edit, create, and delete files in this directory.\n\n\n\nOpen the eds221/eds221-git-challenge/ folder in Positron.\nEdit the README. Add a sentence stating your name and the name of your favorite video game from childhood. If you didn’t play video games, pick another kind of game (board, card, sport, etc).\nSave the README.\nCreate directory called R/.\nCreate a script in R/ called fave-game.R. Add these expressions to your script, replacing the text as appropriate.\n\nmy_fave_game &lt;- \"your favorite childhood game here\"\npaste(\"my favorite childhood game was\", my_fave_game)\n\nAt the terminal, run git status. You should see that README.md and R/ have been modified. If they haven’t, make sure you saved your changes.\n\nNote: only R/, rather than R/fave-game.R, shows up now because the directory is new. After you stage individual files, you’ll see the full paths show up.\n\n\n\n\nWrite README.md and R/fave-game.R on sticky notes.\nPlace the sticky notes in the working directory box.\n\n\n\n\n\nIf using git is like working in a kitchen, then the staging area is the countertop. It’s where you put your ingredients (file changes in the working directory; the previous step) before you cook with them (committing changes; the next step).\n\n\n\nAt the terminal, run git add README.md.\nRun git status again. Verify that README.md is under “Changes to be committed”, but R/ is still in “Untracked files”.\n\n\n\n\n\nMove the README.md sticky note to the staging area box.\n\n\n\n\n\nAt the terminal, run git add R/fave-game.R.\nRun git status again. Verify that both README.md and R/fave-game.R are under “Changes to be committed”.\n\n\n\n\n\nMove the R/fave-game.R sticky note to the staging area box.\n\n\n\n\n\nYou’ve pulled out your ingredients, now it’s time to cook. Committing your changes creates a new checkpoint in your local repository. It’s the equivalent of an entry in a Wikipedia page revision history.\n\n\n\nAt the terminal, run git commit -m \"Add favorite game\".\n\nThe -m \"Add favorite game\" part defines your commit message. It’s a brief summary of the changes included in the commit.\n\nRun git status again. Verify that you see “Your branch is ahead of ‘origin/main’ by 1 commit”, which means your local repository has a commit that isn’t on the remote repository yet. Also verify that you see “nothing to commit, working tree clean”, which means that your working directory and local repository are synced up.\n\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the local repository box together. This represents all the staged changes getting packaged up in a single commit.\n\n\n\n\n\nYou’ve cooked the meal, but no one can eat because you haven’t served it yet. Pushing your commit will send your local changes to the remote repository on GitHub. At that point, collaborators and clients will be able to see your work.\n\n\n\nAt the terminal, run git push. You should see messages about enumerating, counting, compressing, and writing objects. These all mean the commit is making its way from your computer up to the remote repository.\nRun git status. You should see a local repository looking very content and pleased with itself. That looks like this:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean\n\n\n\n\nMove the README.md and R/fave-game.R sticky notes to the remote repository box."
+    "text": "Models are used everywhere in data science. Data models, statistical models, machine learning models - even the latitude/longitude coordinates on your GPS come from a model. But models don’t have to be complex. An important aphorism about models states “all models are wrong, but some are useful.” In this course you will build a model of a coral reef inspired by the recent history of disturbance and recovery on the Mo’orea reefs. It’s not the most sophisticated model in the world, but as you’ll see it generates somewhat realistic patterns and it gives you a tangible (and tactile!) goal for your code."
   },
   {
-    "objectID": "course-materials/day5.html",
-    "href": "course-materials/day5.html",
-    "title": "Creating programs",
+    "objectID": "course-materials/activities/day1/day1am-coral-reef-model.html#model-rules",
+    "href": "course-materials/activities/day1/day1am-coral-reef-model.html#model-rules",
+    "title": "Hands-on coral reef model",
+    "section": "Model rules",
+    "text": "Model rules\nBefore you begin modeling the reef, make sure you have all the materials.\n\nReef grid (2 laminated sheets)\nCoral tokens (50 in a plastic bag)\nDice (6d6, 2d8)\nModel instructions\nPaper and pencil\n\nEach “turn” represents two years on the reef. You will simulate growth and mortality of corals by rolling dice and placing tokens. When the model completes the simulation, you will have a time series of coral percent cover from 2004 to 2024.\n\nSetup\nOn one grid, randomly place 8 coral tokens live-side up. This represent the coral cover on the reef in 2004.\nOn the sheet of paper, make two columns: year and pct_coral_cover. In the first row, record 2004 for the year and 32 for the percent coral cover.\nPro-tip: the reef grid has 25 cells, so the percent cover is the number of live corals tokens times four.\n\n\nTake a turn\nTwo years have passed since the last set of observations. Let’s simulate what happened on the reef. Keep the grid you updated in the previous turn (or during setup) the same and wipe the tokens from the other grid. The other grid is now the reef in the current turn.\n\nFOR each cell with a live coral token on the previous turn’s grid.\n\nRoll 2d6 and add them up. Call this total outcome.\nIF outcome is less than or equal to 3:\n\nThe coral dies.\nPlace a dead coral token on this turn’s grid in the same location.\n\nELSE IF outcome is greater than or equal to 6:\n\nThe coral grows.\nPlace a live coral token on this turn’s grid in the same location.\nThe coral now expands into a neighboring cell. Choose which of the 8 neighboring cells to grow into by rolling your d8. Place a live coral token on the neighboring cell in this turn’s grid corresponding to the relative location shown here:\n\n\n\n\nA 3x3 grid numbered 1 through 8, starting at the top left and progressing clockwise. The center cell is blank.\n\n\nELSE:\n\nThe coral neither grows nor dies.\nPlace a live coral token on this turn’s grid in the same location.\n\n\nCalculate the percent coral cover\nAdd a row to the paper with the year and percent coral cover\n\n\n\nKeep going\nRepeat taking turns until your time series runs through 2024.\n\n\nCRISES!\nThree crises struck Mo’orea’s coral reefs during this time period. Crises activate in specific years and change the model rules.\n\nCrown of Thorns Crisis\nIn 2008 and 2010, a plague of Crown of Thorns seastars wrecks devastation on the corals. Change the following rules:\n\nThe threshold for coral death increases from 3 to 4\nNo growth occurs\n\n\n\nCyclone Crisis\nIn 2012, a cyclone strikes Mo’orea. Change the following rules:\n\nNo mortality or growth occurs\nRoll a d6 to determine the direction of the cyclone’s approach. As the reef is scoured by the storm, remove all tokens from the three columns/rows facing its approach.\n\nOn a 1-2, the cyclone approaches from the west. Remove tokens from the three left columns.\nOn a 3-4, the cyclone approaches from the north. Remove tokens from the three top rows.\nOn a 5-6, the cyclone approaches from the east. Remove tokens from the three right columns.\n\n\n\n\nMarine Heatwave Crisis\nIn 2022, a marine heatwave caused an intense bleaching event on the reef. Change the following rules:\n\nThe threshold for coral death increases from 3 to 7\nThe growth threshold increases from 7 to 10\n\n\n\n\nSubmit your time series\nAfter resolving the model, submit your time series in the spreadsheet here."
+  },
+  {
+    "objectID": "course-materials/activities/day1/day1am-coral-reef-model.html#student-roles",
+    "href": "course-materials/activities/day1/day1am-coral-reef-model.html#student-roles",
+    "title": "Hands-on coral reef model",
+    "section": "Student roles",
+    "text": "Student roles\nChoose students in your group to perform each of the following roles.\n🎂 Demography tracker Keeps track of which coral to resolve growth/mortality for next, and which have already resolved.\n🪙 Token manager Places, flips, and removes tokens from the grid.\n🎲 Dice roller Rolls the dice and reports the totals.\n📝 Data recorder Updates the table as new time series data emerges.\n⏳ Time keeper Tracks the time and make sures the group is on track to finish. Also writes down any rule ambiguities (and the group decision) encountered.\nWhen the group encounters an ambiguity in the rules, you must reach consensus as a group to decide how to proceed.\n🙅 No laptops while the model is running 🙅"
+  },
+  {
+    "objectID": "course-materials/day4.html",
+    "href": "course-materials/day4.html",
+    "title": "Functions",
     "section": "",
-    "text": "Website under construction sign"
+    "text": "Review day 3\n Code sleuth: function basics\n Live coding demo: definitions and parameters\n Function basics mini-lecture\n Encapsulation\n Concept mapping: function basics\n Exit ticket"
   },
   {
-    "objectID": "course-materials/day6.html",
-    "href": "course-materials/day6.html",
-    "title": "Data frames",
+    "objectID": "course-materials/day4.html#morning-session-function-basics",
+    "href": "course-materials/day4.html#morning-session-function-basics",
+    "title": "Functions",
     "section": "",
-    "text": "Website under construction sign"
+    "text": "Review day 3\n Code sleuth: function basics\n Live coding demo: definitions and parameters\n Function basics mini-lecture\n Encapsulation\n Concept mapping: function basics\n Exit ticket"
   },
   {
-    "objectID": "course-materials/day3.html",
-    "href": "course-materials/day3.html",
-    "title": "Control structures",
-    "section": "",
-    "text": "Review day 2\n Code sleuth: conditions and logic\n Live coding demo: if-else if-else\n Concept mapping: conditions and logic\n Exit ticket"
+    "objectID": "course-materials/day4.html#afternoon-session-vectorized-functions",
+    "href": "course-materials/day4.html#afternoon-session-vectorized-functions",
+    "title": "Functions",
+    "section": "Afternoon session: Vectorized functions",
+    "text": "Afternoon session: Vectorized functions\n\n Live coding demo: vectorization\n Vectorization mini-lecture\n Getting help\n Concept mapping: vectorization\n Exit ticket"
   },
   {
-    "objectID": "course-materials/day3.html#morning-session-conditions-and-logic",
-    "href": "course-materials/day3.html#morning-session-conditions-and-logic",
-    "title": "Control structures",
-    "section": "",
-    "text": "Review day 2\n Code sleuth: conditions and logic\n Live coding demo: if-else if-else\n Concept mapping: conditions and logic\n Exit ticket"
-  },
-  {
-    "objectID": "course-materials/day3.html#afternoon-session-loops",
-    "href": "course-materials/day3.html#afternoon-session-loops",
-    "title": "Control structures",
-    "section": "Afternoon session: Loops",
-    "text": "Afternoon session: Loops\n\n Loops mini-lecture\n Live coding demo: loops\n Death and survival on the reef\n Concept mapping: loops\n Exit ticket"
-  },
-  {
-    "objectID": "course-materials/day3.html#end-of-day-practice",
-    "href": "course-materials/day3.html#end-of-day-practice",
-    "title": "Control structures",
+    "objectID": "course-materials/day4.html#end-of-day-practice",
+    "href": "course-materials/day4.html#end-of-day-practice",
+    "title": "Functions",
     "section": "End-of-day practice",
-    "text": "End-of-day practice\nFinish your day by completing the Death and survival on the reef activity.\n\n Death and survival on the reef"
+    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 4 Practice: Encapsulate the reef"
+  },
+  {
+    "objectID": "course-materials/day7.html",
+    "href": "course-materials/day7.html",
+    "title": "Manipulating data",
+    "section": "",
+    "text": "Website under construction sign"
+  },
+  {
+    "objectID": "course-materials/day2.html#morning-session-data-types-and-1d-structures",
+    "href": "course-materials/day2.html#morning-session-data-types-and-1d-structures",
+    "title": "Data structures",
+    "section": "Morning session: Data types and 1d structures",
+    "text": "Morning session: Data types and 1d structures\n\n Review day 1\n Create a data sheet\n Code sleuth: type coercion Solutions\n Live coding demo: creating vectors\n Types and vectors mini-lecture\n Concept mapping: data types and 1d structures Solutions\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day2.html#afternoon-session-indexing-and-2d-data",
+    "href": "course-materials/day2.html#afternoon-session-indexing-and-2d-data",
+    "title": "Data structures",
+    "section": "Afternoon session: Indexing and 2d data",
+    "text": "Afternoon session: Indexing and 2d data\n\n Code sleuth: indexing Solutions\n Live coding demo: indexing and 2d data\n SLWE: indexing\n Concept mapping: Indexing and 2d data Solutions\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day2.html#end-of-day-practice",
+    "href": "course-materials/day2.html#end-of-day-practice",
+    "title": "Data structures",
+    "section": "End-of-day practice",
+    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 2 Practice: Initialize the reef"
+  },
+  {
+    "objectID": "course-materials/day2.html#additional-materials",
+    "href": "course-materials/day2.html#additional-materials",
+    "title": "Data structures",
+    "section": "Additional materials",
+    "text": "Additional materials\n\nWant some extra practice? Try these debugger problems.\nSee Hands on Programming with R for more information about data structures and indexing.\nFor a truly in-depth exploration, read Vectors and Subsetting in Advanced R by Hadley Wickham."
+  },
+  {
+    "objectID": "course-materials/day1.html#morning-session-code-execution",
+    "href": "course-materials/day1.html#morning-session-code-execution",
+    "title": "Intro to programming",
+    "section": "Morning session: Code execution",
+    "text": "Morning session: Code execution\n\n Course introduction\n Hands-on coral reef model\n Live coding demo: console, script, environment\n Code sleuth: operators and functions Solutions\n Concept mapping: code execution Solutions\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day1.html#afternoon-session-version-control",
+    "href": "course-materials/day1.html#afternoon-session-version-control",
+    "title": "Intro to programming",
+    "section": "Afternoon session: Version control",
+    "text": "Afternoon session: Version control\n\n Tracking changes\n Live coding demo: git and GitHub\n Trace git commands\n Concept mapping: version control Solutions\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day1.html#end-of-day-practice",
+    "href": "course-materials/day1.html#end-of-day-practice",
+    "title": "Intro to programming",
+    "section": "End-of-day practice",
+    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 1 Practice: Create a repo for your coral reef model"
   }
 ]

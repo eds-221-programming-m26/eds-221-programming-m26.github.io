@@ -1,0 +1,194 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    # code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme: 
+      - ../../meds-slides-styles.scss
+execute: 
+  echo: true
+---
+
+## {#title-slide data-menu-title="Title Slide" background="#053660"} 
+
+[EDS 221 Day 4 AM]{.custom-title}
+
+[*Function basics*]{.custom-subtitle}
+
+<hr class="hr-teal">
+
+[August 13^th^, 2026]{.custom-subtitle3}
+
+---
+
+## {#information-overload data-menu-title="Information overload?"} 
+
+[Information overload?]{.slide-title}
+
+<hr>
+
+After three consecutive days of new content, it's normal to feel overwhelmed.
+
+![](https://media.tenor.com/l0YjavYXXw4AAAAM/spongebob-patrick.gif)
+
+---
+
+## {#training-montage data-menu-title="Your hard work will pay off!"} 
+
+[Your hard work will pay off!]{.slide-title}
+
+<hr>
+
+This is your training montage!
+
+![](https://media1.tenor.com/m/PL5-bIVifqsAAAAC/sylvester-stallone-rocky.gif)
+
+---
+
+## {#r-and-r data-menu-title="Take care of yourself"} 
+
+[Take care of yourself]{.slide-title}
+
+<hr>
+
+_Learning needs down time_. This weekend, take the time for rest and relaxation.
+
+![](https://media1.tenor.com/m/t0wH2frflPoAAAAd/bed.gif)
+
+---
+
+## {#successful-students data-menu-title="Successful students"} 
+
+[Successful students]{.slide-title}
+
+<hr>
+
+[Everyone here has what it takes to succeed in this class and in this degree!]{.body-text-l}
+
+The pace can be overwhelming, but you'll get what you need from this course when you:
+
+- Show up and participate
+- Ask for feedback from peers and instructors
+- Take breaks to digest new knowledge
+
+---
+
+## {#review-day-3 data-menu-title="Review day 3"} 
+
+[Review day 3]{.slide-title}
+
+<hr>
+
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+On a sheet of paper, draw a table with 4 rows and 2 columns. Label the columns `big_fish` and `mass`.
+
+_Trace_ the loop to right in your table. Each row represents one iteration of the loop and each column represents a variable. 
+
+Write down the value each variable will have at end of each loop iteration.
+
+:::
+
+::: {.column width="60%"}
+
+```r
+fish_mass_kg <- c(0.2, 1.9, 
+                  0.03, 3.0)
+big_fish <- 0
+for (mass in fish_mass_kg) {
+  if (mass >= 1) {
+    big_fish <- big_fish + 1
+  }
+}
+```
+
+:::
+
+:::
+
+---
+
+## {#function-definitions data-menu-title="Function definitions"} 
+
+[Function definitions]{.slide-title}
+
+<hr>
+
+[Function definitions have four main parts]{.body-text-m}
+
+
+::: {.columns}
+
+::: {.column width="35%"}
+
+The **function keyword** tells R this is a function definition.
+
+The **parameters** inside the parentheses declare the function's inputs. 
+
+The **body** of the function is enclosed in the curly brackets.
+
+The **return** value comes at the end of the body and defines the function's output.
+
+:::
+
+::: {.column width="65%"}
+
+```r
+roll_die <- function(n_sides = 6) {
+  roll <- sample(1:n_sides, 1)
+  return(roll)
+}
+```
+
+:::
+
+:::
+
+---
+
+## {#function-calls data-menu-title="Function calls"} 
+
+[Function calls]{.slide-title}
+
+<hr>
+
+[Function calls invoke function definitions]{.body-text-m}
+
+
+::: {.columns}
+
+::: {.column width="35%"}
+
+The **arguments** inside the parentheses feed into the parameters.
+
+Arguments match parameters by **position** or by **name**.
+
+Without an argument, parameters may take on a **default value**.
+
+:::
+
+::: {.column width="65%"}
+
+```r
+roll_die <- function(n_sides = 6) {
+  roll <- sample(1:n_sides, 1)
+  return(roll)
+}
+
+roll_die(6)
+
+roll_die(n_sides = 6)
+
+roll_die()
+```
+
+:::
+
+:::
+
+---

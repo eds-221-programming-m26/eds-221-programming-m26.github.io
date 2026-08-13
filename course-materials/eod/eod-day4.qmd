@@ -1,0 +1,68 @@
+---
+title: "Day 4: End-of-day practice"
+subtitle: "Encapsulate the reef"
+---
+
+Today you're going to practice writing and using functions by continuing to encapsulate logic in your reef model. You'll also learn a new GitHub feature: Issues.
+
+## Issues
+
+::: {.callout-note}
+
+GitHub Issues are tools for tracking tasks, bugs, or questions related to a project. Like a shared to-do list or lab notebook for your code, each issue has a title, a description, and a conversation thread where you and your collaborators can discuss how to resolve it. Issues can be labeled, assigned to specific people, and closed once resolved, making them a simple way to organize and communicate about problems or planned improvements without cluttering the actual code.
+
+:::
+
+### How to make an Issue
+
+1. Navigate to your repository on GitHub.com and click the **Issues** tab.
+2. Click **New issue**, then add a descriptive title and a description of a task, bug, or question related to your reef model.
+3. Click **Submit new issue** to create it.
+
+### Make two issues
+
+1. **Integrate initialization.** The reef initialization step has been encapsulated in a function, but `death_survival.R` doesn't have access to it yet. Create an Issue with the title "Integrate initialization". The description should read "Source R/util.R at the top of death_survival.R and replace the existing reef initialization code with a call to the initialization function.".
+2. **Encapsulate growth.** The coral growth code in `death_survival.R` still needs to be turned into a function. The Issue should describe adding a `growth` function to `R/util.R` and replacing the coral growth code in the script with a call to that function.
+
+## Encapsulate your code
+
+### Integrate initialization 
+
+Earlier today, you encapsulated the reef initialization step in a function. But that function isn't accessible to your reef model script yet - it's in a separate file. Follow these steps to link the two together.
+
+1. At the top of death_survival.R, add a line with the following code:
+
+`source("R/util.R")`
+
+The `source()` function runs the script found at the path you give it. In this case, R/util.R is the path to a script defining your reef initialization function. So sourcing that script defines the function and gives you access to it.
+
+2. Replace the coral reef initialization code in your script with a call to your new function.
+
+#### Link your changes and the issue
+
+Including a closing keyword like `fixes` followed by an Issue number in a commit message will automatically close that Issue when the commit is pushed to GitHub.
+
+1. Stage your changes to `death_survival.R` and `util.R`.
+2. Commit your changes with a message that includes `fixes #1`.
+
+### Encapsulate growth
+
+The activity this morning showed you how to encapsulate the code for coral growth into a function.
+
+1. Add the `growth` function in util.R.
+2. Replace the coral growth code in your script with a call to your new function.
+
+#### Link your changes and the issue
+
+1. Stage your changes to `death_survival.R` and `util.R`.
+2. Commit your changes with a message that includes `fixes #2`.
+
+## Wrap up
+
+When you're done, push your changes to GitHub. Then check your Issues on GitHub - you should see that they're closed now and linked to the specific code changes.
+
+::: {.callout-tip}
+
+By default, the **Issues** tab only shows *open* issues, so your closed issues will disappear from the list. To see them, click the **Closed** tab (next to **Open**) above the issue list. 
+
+:::

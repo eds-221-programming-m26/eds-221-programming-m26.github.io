@@ -68,7 +68,7 @@ Today you learned:
 **How code executes**
 
 * Code is made up of expressions, where operators and functions act on variables and values to make things happen.
-* Code has a _flow_ from scripts to the console to the environent.
+* Code has a _flow_ from scripts to the console to the environment.
 * Expressions build on each other to perform complex tasks using simpler parts.
 
 **How to track changes**

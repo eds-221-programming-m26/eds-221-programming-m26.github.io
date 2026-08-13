@@ -1,0 +1,100 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    # code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme: 
+      - ../../meds-slides-styles.scss
+execute: 
+  echo: true
+---
+
+## {#title-slide data-menu-title="Title Slide" background="#053660"} 
+
+[EDS 221 Day 4 PM]{.custom-title}
+
+[*Vectorized functions*]{.custom-subtitle}
+
+<hr class="hr-teal">
+
+[August 13^th^, 2026]{.custom-subtitle3}
+
+---
+
+## {#vectorization data-menu-title="Vectorization"} 
+
+[Vectorization]{.slide-title}
+
+<hr>
+
+**Vectorized** functions and operators work on entire vectors at once, rather than element by element.
+
+Using vectorization often improves code performance and clarity.
+
+```r
+squares <- c(1, 4, 9, 16, 25)
+
+# Loop
+roots <- double(length(squares))
+for (i in 1:length(roots)) {
+  roots[i] <- sqrt(roots)
+}
+
+# Vectorized
+roots <- sqrt(squares)
+```
+
+---
+
+## {#functions-operators data-menu-title="Functions and operators"} 
+
+[Functions and operators]{.slide-title}
+
+<hr>
+
+Both functions and operators can be vectorized.
+
+```{r}
+a <- 1:4
+b <- 4:1
+
+a + b
+as.character(a)
+```
+
+---
+
+## {#review- data-menu-title="Review"} 
+
+[Review]{.slide-title}
+
+<hr>
+
+The `round()` function rounds numbers.
+
+```{r}
+round(pi, digits = 2)
+```
+
+Consider this expression:
+
+```r
+round(seq(0, 2, by = 1/2) * pi, digits = 2)
+```
+
+Using only pencil and paper, answer the following questions.
+
+
+::: {.callout-tip}
+
+Solve sub-expressions first to build up to the complete solution.
+
+:::
+
+
+1. What will the output be?
+2. Which parameter is `round()` _vectorized_ over?
+
+---

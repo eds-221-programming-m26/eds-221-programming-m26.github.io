@@ -1,7 +1,7 @@
 ---
 title: "Control structures"
 subtitle: "Day 3"
-description: "Wednesday August 12^th^, 2025"
+description: "Wednesday August 12^th^, 2026"
 ---
 
 
@@ -13,17 +13,17 @@ description: "Wednesday August 12^th^, 2025"
 ## Morning session: Conditions and logic
 
 * {{< fa ghost title="A ghost" >}} [Review day 2](slides/day3am-slides.qmd){target="_blank"}
-* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: conditions and logic](activities/day3/day3am-code-sleuth.pdf){target="_blank"}
-* {{< fa users-line title="Multiple people working together" >}} Live coding demo: if-else if-else
-* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: conditions and logic](activities/day3/day3am-concept-mapping.pdf){target="_blank"}
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: conditions and logic](activities/day3/day3am-code-sleuth.pdf){target="_blank"} [**Solutions**](solutions/day3/day3am-code-sleuth.pdf){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: if-else if-else](solutions/day3/eds221-day3am-livecoding.R)
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: conditions and logic](activities/day3/day3am-concept-mapping.pdf){target="_blank"} [**Solutions**](solutions/day3/day3am-concept-mapping.pdf){target="_blank"}
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/BZuu5Ha6PiP38Uo6A){target="_blank"}
 
 ## Afternoon session: Loops
 
 * {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Loops mini-lecture](slides/day3pm-slides.qmd){target="_blank"}
-* {{< fa users-line title="Multiple people working together" >}} Live coding demo: loops
-* {{< fa laptop title="A laptop" >}} [Death and survival on the reef](activities/day3/day3pm-death-survival.qmd)
-* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: loops](activities/day3/day3pm-concept-mapping.pdf){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} [Live coding demo: loops](solutions/day3/eds221-day3pm-livecoding.R)
+* {{< fa laptop title="A laptop" >}} [Death and survival on the reef](activities/day3/day3pm-death-survival.qmd) [**Solutions**](solutions/day3/death_survival_solution.R){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: loops](activities/day3/day3pm-concept-mapping.pdf){target="_blank"} [**Solutions**](solutions/day3/day3pm-concept-mapping.pdf){target="_blank"}
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/bjpWmE58VB5gnuMr5){target="_blank"}
 
 ## End-of-day practice

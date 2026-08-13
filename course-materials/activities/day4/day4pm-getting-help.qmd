@@ -1,0 +1,92 @@
+---
+title: "Getting help"
+---
+
+Each R function comes with its own documentation that explains what it does and how to use it. Documentation in R takes some getting used to, but once you learn the patterns it becomes a valuable resource to coders new and experienced. After you complete this exercise, you will know how to:
+
+* Find the documentation for a function
+* Scan the documentation to find information about inputs and outputs
+* Use examples to understand function usage
+
+## Where to find help
+
+There are two ways to find documentation: the help pane and the `?` operator. Run this command at the console:
+
+```r
+?ifelse
+```
+
+This will bring up the documentation for the `ifelse()` function in the help pane. You can also use this pane directly.
+
+## Anatomy of documentation
+
+Documentation has many parts, but focus on these key ones:
+
+- _Big picture_: **Description** comes first and provides a high-level description of the function.
+- _Input_: **Arguments** lists the function's parameters, telling you what inputs it expects to receive.
+- _Output_: **Value** describes what the function returns.
+- _In practice_: **Examples** shows how to use the function with sample code.
+
+**Examples** is particularly helpful. Seeing a function in action is often the best way to pick up how to use it. Think of them as code sleuth activities in the real world.
+
+
+::: {.callout}
+
+Read the documentation for `ifelse()` to answer these questions.
+
+- How many parameters does the function take?
+- Do any of the parameters have default values?
+
+:::
+
+## Practice reading documentation
+
+::: {.callout}
+
+This exercise asks you to stand up, walk around, and talk to your peers.
+
+:::
+
+You've been assigned to one of four groups based on your last name. Find one or two other students in the same group as you. As a team, follow the instructions below based on your group.
+
+### Last name begins A-F
+
+Read the documentation for `log()`.
+
+Use the documentation to answer the following questions:
+
+- What's the default base for the `log()` function? 
+- What's the difference between `log()`, `log2()`, and `log10()`? 
+- How would you use `log()` to do the same thing as `log10()`?
+
+### Last name begins G-L
+
+Read the documentation for `which.max()`.
+
+Use the documentation to answer the following questions:
+
+- What's the difference between `which.max()` and `max()`? 
+- You're given a vector of 100 2d6 dice rolls. How would you use `which.max()` to find the first roll that's 10 or greater?
+
+### Last name begins M-R
+
+Read the documentation for `startsWith()`.
+
+Use the documentation to answer the following questions:
+
+- What _type_ of vectors does `startsWith()` expect as input? 
+- What _type_ of vector does `startsWith()` return?
+- How would you use `startsWith()` to check if a bird name begins with "California"? Write a line of code to demonstrate its use.
+
+### Last name begins S-Z
+
+Read the documentation for `cumsum()`.
+
+Use the documentation to answer the following questions:
+
+- What's the difference between `cumsum()` and `sum()`?
+- `sum(1:5)` returns one value. How many values are in the vector returned by `cumsum(1:5)`?
+
+## Practice reading documentation
+
+Stick with the student(s) you practiced reading documentation with. Find students from the other three groups. Trade off explaining your assigned functions.

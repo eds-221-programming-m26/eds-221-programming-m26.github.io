@@ -1,0 +1,131 @@
+---
+title: "Encapsulation"
+---
+
+## What's in a name?
+
+One of the benefits of writing functions is giving repetitive code a comprehensible name. Consider this expression:
+
+```r
+coral_outcome <- sum(sample(1:6, size = 2, replace = FALSE))
+```
+
+By this point you've seen that line of code enough times you probably recognize its purpose on sight. But think back to the first time you saw it. Multiple function calls, a bunch of arguments - all kind of opaque, wasn't it?
+
+But let's say you put that logic in a function call instead.
+
+```r
+roll2d6 <- function() {
+  sum(sample(1:6, size = 2, replace = FALSE))
+}
+```
+
+Then called that function to make `coral_outcome`.
+
+```r
+coral_outcome <- roll2d6()
+```
+
+A little easier to read now, isn't it? This process of hiding a complex piece of logic behind an easy-to-read name is called _encapsulation_. 
+
+## How to encapsulate
+
+Encapsulating logic into a function has a few steps.
+
+### 1. Write out the expression(s) for the logic
+
+```r
+coral_outcome <- sum(sample(1:6, size = 2, replace = FALSE))
+```
+
+### 2. Determine if the function needs any inputs
+
+In this case, rolling 2d6 doesn't take any inputs. We'll see an example with inputs next.
+
+### 3. Write the function call
+
+Write it out in a way that reads clearly to you. When there are inputs, put them in the call as arguments.
+
+```r
+coral_outcome <- roll2d6()
+```
+
+### 4. Put the expression(s) in a function definition
+
+Wrap the expression(s) in a function definition with the name you chose in step 3. When there are inputs, make them parameters.
+
+```r
+roll2d6 <- function() {
+  total <- sum(sample(1:6, size = 2, replace = FALSE))
+  return(total)
+}
+```
+
+Now your function is an elegant replacement for harder-to-read expressions.
+
+## An example with inputs
+
+Let's have a closer look at coral growth. Figuring out where the growth will happen is a multi-step process, and kind of hard to follow. Wouldn't it be easier if we had an elegant function to handle it for us? Let's walk through the steps of encapsulating it.
+
+### 1. Write out the expression(s) for the logic
+
+Here's how we implemented coral growth.
+
+```r
+reef <- matrix(0, nrow = 5, ncol = 5)
+coral_row <- 3
+coral_col <- 3
+reef[coral_row, coral_col] <- 1
+
+growth_roll <- 5
+
+growth_row_offset <- c(-1, -1, -1, 0, 1, 1, 1, 0)
+growth_col_offset <- c(-1, 0, 1, 1, 1, 0, -1, -1)
+
+growth_row <- coral_row + growth_row_offset[growth_roll]
+growth_col <- coral_col + growth_col_offset[growth_roll]
+reef[growth_row, growth_col] <- 1
+```
+
+### 2. Determine if the function needs any inputs
+
+We have a few inputs here. 
+
+* The direction of growth, `growth_roll`
+* The starting row for growth, `coral_row`
+* The starting column for growth, `coral_col`
+* The reef itself, `reef`
+
+### 3. Write the function call
+
+Written this way, the function call makes it clear the reef is experiencing growth and passes all the necessary arguments. 
+
+```r
+reef <- growth(reef, growth_roll, coral_row, coral_col)
+```
+
+### 4. Put the expression(s) in a function definition
+
+This function takes the four inputs and gives them descriptive parameter names. It updates the reef, then returns the updated version.
+
+```r
+growth <- function(reef, roll, row, col) {
+  growth_row_offset <- c(-1, -1, -1, 0, 1, 1, 1, 0)
+  growth_col_offset <- c(-1, 0, 1, 1, 1, 0, -1, -1)
+
+  growth_row <- row + growth_row_offset[roll]
+  growth_col <- col + growth_col_offset[roll]
+
+  reef[growth_row, growth_col] <- 1
+
+  return(reef)
+}
+```
+
+## Your turn
+
+Open your coral reef folder in Positron. Create a folder called "R" and inside of it create a script called "util.R". "util" is short for "utility", so "util.R" is a conventional name for scripts that contain utility functions. I.e., functions that make your code run smoother.
+
+In that script, write a function to encapsulate the logic for putting 8 random corals on the initialized reef. Rather than hard-coding the number at 8, make the number of corals an input.
+
+Follow the four steps above. When you get to the end of each step, share your work with another student and discuss your reasoning.

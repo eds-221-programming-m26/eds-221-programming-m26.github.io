@@ -1,7 +1,7 @@
 ---
 title: "Advanced data types"
 subtitle: "Day 8"
-description: "Wednesday August 19^th^, 2025"
+description: "Wednesday August 19^th^, 2026"
 ---
 
 ![Website under construction sign](images/under-construction.png)

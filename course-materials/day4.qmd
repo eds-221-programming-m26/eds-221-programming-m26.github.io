@@ -1,7 +1,30 @@
 ---
 title: "Functions"
 subtitle: "Day 4"
-description: "Thursay August 13^th^, 2025"
+description: "Thursday August 13^th^, 2026"
 ---
 
-![Website under construction sign](images/under-construction.png)
+## Morning session: Function basics
+
+* {{< fa ghost title="A ghost" >}} [Review day 3](slides/day4am-slides.qmd){target="_blank"}
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: function basics](activities/day4/day4am-code-sleuth.pdf){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} Live coding demo: definitions and parameters
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Function basics mini-lecture](slides/day4am-slides.qmd){target="_blank"}
+* {{< fa laptop title="A laptop" >}} [Encapsulation](activities/day4/day4am-encapsulation.qmd)
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: function basics](activities/day4/day4am-concept-mapping.pdf){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/cwm65kec3nnWFVzBA){target="_blank"}
+
+## Afternoon session: Vectorized functions
+
+* {{< fa users-line title="Multiple people working together" >}} Live coding demo: vectorization
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Vectorization mini-lecture](slides/day4pm-slides.qmd){target="_blank"}
+* {{< fa laptop title="A laptop" >}} [Getting help](activities/day4/day4pm-getting-help.qmd)
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: vectorization](activities/day4/day4pm-concept-mapping.pdf){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/ruKT9c43h99BYych6){target="_blank"}
+
+## End-of-day practice
+
+Complete the following tasks / activities before heading home for the day!
+
+- {{< fa laptop title="A laptop" >}} [**Day 4 Practice:** Encapsulate the reef](eod/eod-day4.qmd)
+

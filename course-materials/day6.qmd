@@ -1,7 +1,7 @@
 ---
 title: "Data frames"
 subtitle: "Day 6"
-description: "Monday August 17^th^, 2025"
+description: "Monday August 17^th^, 2026"
 ---
 
 ![Website under construction sign](images/under-construction.png)
