@@ -1,6 +1,6 @@
 # This is a comment, it starts with a pound sign
 
-# An expression is a complete, self-contained 
+# An expression is a complete, self-contained
 # piece of code that R can evaluate
 
 # These are all expressions
@@ -12,7 +12,7 @@ sample(1:6, size = 1)
 # We run code at the **console** (panel below)
 # Code modifies the **environment** panel to the right
 
-# For code to modify the environment, we have to assign the output 
+# For code to modify the environment, we have to assign the output
 # to a variable using <-
 1:6
 d6 <- 1:6
@@ -28,7 +28,7 @@ d6 <- 1:6
 1 + (2 * 3)
 
 # Run this code and decide if * or : has higher precendence
-2 * 3 : 8
+2 * 3:8
 
 
 # Functions are triggered by parentheses

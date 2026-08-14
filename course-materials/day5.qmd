@@ -4,4 +4,20 @@ subtitle: "Day 5"
 description: "Friday August 14^th^, 2026"
 ---
 
-![Website under construction sign](images/under-construction.png)
+## Morning session: Planning
+
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Progress check](slides/day5am-slides.qmd){target="_blank"}
+* {{< fa ghost title="A ghost" >}} [Review week 1](activities/day5/day5am-review-code-execution.qmd){target="_blank"}
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Problem decomposition](slides/day5am-slides.qmd){target="_blank"}
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Find a component](activities/day5/day5am-find-components.qmd)
+
+## Afternoon session: Implementing
+
+* {{< fa users-line title="Multiple people working together" >}} Encapsulation solutions
+* {{< fa users-line title="Multiple people working together" >}} Implement components
+* {{< fa users-line title="Multiple people working together" >}} Brainstorm extensions
+
+
+## End-of-day practice
+
+No end-of-day session today. Have a _great_ weekend and get some rest!

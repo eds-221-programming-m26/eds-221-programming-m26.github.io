@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hands-on coral reef model</title>
+<title>Find components</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -161,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Hands-on coral reef model</h1>
+      <h1 class="title">Find components</h1>
                       </div>
   </div>
     
@@ -182,18 +182,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
-  <li><a href="#model-rules" id="toc-model-rules" class="nav-link" data-scroll-target="#model-rules">Model rules</a>
-  <ul class="collapse">
-  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
-  <li><a href="#take-a-turn" id="toc-take-a-turn" class="nav-link" data-scroll-target="#take-a-turn">Take a turn</a></li>
-  <li><a href="#keep-going" id="toc-keep-going" class="nav-link" data-scroll-target="#keep-going">Keep going</a></li>
-  <li><a href="#crises" id="toc-crises" class="nav-link" data-scroll-target="#crises">CRISES!</a></li>
-  <li><a href="#submit-your-time-series" id="toc-submit-your-time-series" class="nav-link" data-scroll-target="#submit-your-time-series">Submit your time series</a></li>
-  </ul></li>
-  <li><a href="#student-roles" id="toc-student-roles" class="nav-link" data-scroll-target="#student-roles">Student roles</a></li>
+  <li><a href="#problem-decomposition" id="toc-problem-decomposition" class="nav-link active" data-scroll-target="#problem-decomposition">Problem decomposition</a></li>
+  <li><a href="#find-your-group" id="toc-find-your-group" class="nav-link" data-scroll-target="#find-your-group">Find your group</a></li>
+  <li><a href="#run-the-model" id="toc-run-the-model" class="nav-link" data-scroll-target="#run-the-model">Run the model</a></li>
+  <li><a href="#create-your-slide" id="toc-create-your-slide" class="nav-link" data-scroll-target="#create-your-slide">Create your slide</a></li>
+  <li><a href="#share-out" id="toc-share-out" class="nav-link" data-scroll-target="#share-out">Share out</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="day1am-coral-reef-model.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
@@ -202,113 +197,55 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="motivation" class="level2">
-<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
-<p>Models are used everywhere in data science. Data models, statistical models, machine learning models - even the latitude/longitude coordinates on your GPS come from a model. But models don’t have to be complex. An important aphorism about models states “all models are wrong, but some are useful.” In this course you will build a model of a coral reef inspired by the recent history of disturbance and recovery on the Mo’orea reefs. It’s not the most sophisticated model in the world, but as you’ll see it generates somewhat realistic patterns and it gives you a tangible (and tactile!) goal for your code.</p>
+<section id="problem-decomposition" class="level2">
+<h2 class="anchored" data-anchor-id="problem-decomposition">Problem decomposition</h2>
+<p>This session’s topic is about <em>planning</em> your code for solving complex problems. A key tenet of problem solving is breaking up complex problems into simpler components. Then we can solve the simpler components individually, and stitch them together into a full solution. This process of <strong><em>problem decomposition</em></strong> is how we apply the building blocks of programming (data structures, control structures, and functions) to perform sophisticated data analyses.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Problem decomposition is an art. There are no hard and fast rules, no right and wrong answers. It’s a skill you have to learn with practice. You will keep developing it your whole career.</p>
+</div>
+</div>
+<p>Let’s begin!</p>
 </section>
-<section id="model-rules" class="level2">
-<h2 class="anchored" data-anchor-id="model-rules">Model rules</h2>
-<p>Before you begin modeling the reef, make sure you have all the materials.</p>
+<section id="find-your-group" class="level2">
+<h2 class="anchored" data-anchor-id="find-your-group">Find your group</h2>
+<p>Open <a href="https://docs.google.com/spreadsheets/d/1o8cUTBIpoHg4gmpm-90HV0muxcW4D6ju5GDS5k3EOU8/edit?usp=sharing" target="_blank">this spreadsheet</a>. You’ll find two pieces of information here:</p>
 <ul>
-<li>Reef grid (2 laminated sheets)</li>
-<li>Coral tokens (50 in a plastic bag)</li>
-<li>Dice (6d6, 2d8)</li>
-<li>Model instructions</li>
-<li>Paper and pencil</li>
-</ul>
-<p>Each “turn” represents two years on the reef. You will simulate growth and mortality of corals by rolling dice and placing tokens. When the model completes the simulation, you will have a time series of coral percent cover from 2004 to 2024.</p>
-<section id="setup" class="level3">
-<h3 class="anchored" data-anchor-id="setup">Setup</h3>
-<p>On one grid, randomly place 8 coral tokens live-side up. This represent the coral cover on the reef in 2004.</p>
-<p>On the sheet of paper, make two columns: year and pct_coral_cover. In the first row, record 2004 for the year and 32 for the percent coral cover.</p>
-<p>Pro-tip: the reef grid has 25 cells, so the percent cover is the number of live corals tokens times four.</p>
-</section>
-<section id="take-a-turn" class="level3">
-<h3 class="anchored" data-anchor-id="take-a-turn">Take a turn</h3>
-<p>Two years have passed since the last set of observations. Let’s simulate what happened on the reef. Keep the grid you updated in the previous turn (or during setup) the same and wipe the tokens from the other grid. The other grid is now the reef in the current turn.</p>
-<ul>
-<li>FOR each cell with a live coral token on the previous turn’s grid.
-<ul>
-<li>Roll 2d6 and add them up. Call this total <code>outcome</code>.</li>
-<li>IF <code>outcome</code> is less than or equal to 3:
-<ul>
-<li>The coral dies.</li>
-<li>Place a dead coral token on this turn’s grid in the same location.</li>
-</ul></li>
-<li>ELSE IF <code>outcome</code> is greater than or equal to 6:
-<ul>
-<li>The coral grows.</li>
-<li>Place a live coral token on this turn’s grid in the same location.</li>
-<li>The coral now expands into a neighboring cell. Choose which of the 8 neighboring cells to grow into by rolling your d8. Place a live coral token on the neighboring cell in this turn’s grid corresponding to the relative location shown here:</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="growth-direction.png" class="img-fluid figure-img"></p>
-<figcaption>A 3x3 grid numbered 1 through 8, starting at the top left and progressing clockwise. The center cell is blank.</figcaption>
-</figure>
-</div></li>
-<li>ELSE:
-<ul>
-<li>The coral neither grows nor dies.</li>
-<li>Place a live coral token on this turn’s grid in the same location.</li>
-</ul></li>
-</ul></li>
-<li>Calculate the percent coral cover</li>
-<li>Add a row to the paper with the year and percent coral cover</li>
+<li>Your fellow group members</li>
+<li>A link to your “find component” slide</li>
 </ul>
 </section>
-<section id="keep-going" class="level3">
-<h3 class="anchored" data-anchor-id="keep-going">Keep going</h3>
-<p>Repeat taking turns until your time series runs through 2024.</p>
-</section>
-<section id="crises" class="level3">
-<h3 class="anchored" data-anchor-id="crises">CRISES!</h3>
-<p>Three crises struck Mo’orea’s coral reefs during this time period. Crises activate in specific years and change the model rules.</p>
-<section id="crown-of-thorns-crisis" class="level4">
-<h4 class="anchored" data-anchor-id="crown-of-thorns-crisis">Crown of Thorns Crisis</h4>
-<p>In 2008 and 2010, a plague of Crown of Thorns seastars wrecks devastation on the corals. Change the following rules:</p>
+<section id="run-the-model" class="level2">
+<h2 class="anchored" data-anchor-id="run-the-model">Run the model</h2>
+<p>As a group, run the coral reef model again. This time, as you’re reading the rules, rolling the dice, placing tokens, and so on, discuss with each other what components you find. The guidelines for a good component are:</p>
 <ul>
-<li>The threshold for coral death increases from 3 to 4</li>
-<li>No growth occurs</li>
+<li>Not too big, not too small. Each component needs code to run. If you could replace that code with a function call, would it improve the clarity of your code? If so, then it’s probably a good size component.</li>
+<li>Only one ultimate goal. Remember, functions only return one output. A component that has to do more than one thing is better off being broken down into two components.</li>
+<li>(Relatively) self-contained. How many dependencies does this component have? If there are a lot of dependencies, then the component probably needs to be simpler.</li>
 </ul>
 </section>
-<section id="cyclone-crisis" class="level4">
-<h4 class="anchored" data-anchor-id="cyclone-crisis">Cyclone Crisis</h4>
-<p>In 2012, a cyclone strikes Mo’orea. Change the following rules:</p>
+<section id="create-your-slide" class="level2">
+<h2 class="anchored" data-anchor-id="create-your-slide">Create your slide</h2>
+<p>Open your group’s slide, linked from the spreadsheet above. You’ll see the following prompts:</p>
 <ul>
-<li>No mortality or growth occurs</li>
-<li>Roll a d6 to determine the direction of the cyclone’s approach. As the reef is scoured by the storm, remove all tokens from the three columns/rows facing its approach.
-<ul>
-<li>On a 1-2, the cyclone approaches from the <strong>west</strong>. Remove tokens from the three left columns.</li>
-<li>On a 3-4, the cyclone approaches from the <strong>north</strong>. Remove tokens from the three top rows.</li>
-<li>On a 5-6, the cyclone approaches from the <strong>east</strong>. Remove tokens from the three right columns.</li>
-</ul></li>
+<li>Give a high-level summary of the component.</li>
+<li>Describe why you think this component is not too big and not too small. Why would replacing it with a function name make your code easier to read?</li>
+<li>Describe the goal of the component. What is the one outcome of it?</li>
+<li>What does the component immediately depend on? If this was a function, what inputs would it need?</li>
 </ul>
+<p>Answer each of these <em>in one sentence</em>.</p>
 </section>
-<section id="marine-heatwave-crisis" class="level4">
-<h4 class="anchored" data-anchor-id="marine-heatwave-crisis">Marine Heatwave Crisis</h4>
-<p>In 2022, a marine heatwave caused an intense bleaching event on the reef. Change the following rules:</p>
-<ul>
-<li>The threshold for coral death increases from 3 to 7</li>
-<li>The growth threshold increases from 6 to 10</li>
-</ul>
-</section>
-</section>
-<section id="submit-your-time-series" class="level3">
-<h3 class="anchored" data-anchor-id="submit-your-time-series">Submit your time series</h3>
-<p>After resolving the model, submit your time series in the spreadsheet <a href="https://docs.google.com/spreadsheets/d/1EfCwNVMbd8cBh9pJKQJusnz4jSwW6oBYhr-sGJIa2ng/edit?usp=sharing">here</a>.</p>
-</section>
-</section>
-<section id="student-roles" class="level2">
-<h2 class="anchored" data-anchor-id="student-roles">Student roles</h2>
-<p>Choose students in your group to perform each of the following roles.</p>
-<p>🎂 <strong>Demography tracker</strong> Keeps track of which coral to resolve growth/mortality for next, and which have already resolved.</p>
-<p>🪙 <strong>Token manager</strong> Places, flips, and removes tokens from the grid.</p>
-<p>🎲 <strong>Dice roller</strong> Rolls the dice and reports the totals.</p>
-<p>📝 <strong>Data recorder</strong> Updates the table as new time series data emerges.</p>
-<p>⏳ <strong>Time keeper</strong> Tracks the time and make sures the group is on track to finish. Also writes down any rule ambiguities (and the group decision) encountered.</p>
-<p>When the group encounters an ambiguity in the rules, you must reach consensus <em>as a group</em> to decide how to proceed.</p>
-<p>🙅 <strong>No laptops while the model is running</strong> 🙅</p>
+<section id="share-out" class="level2">
+<h2 class="anchored" data-anchor-id="share-out">Share out</h2>
+<p>Each group will share their chosen component with the class.</p>
 
 
 </section>

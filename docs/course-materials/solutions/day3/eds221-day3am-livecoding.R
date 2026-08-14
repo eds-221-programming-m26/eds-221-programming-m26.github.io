@@ -34,7 +34,7 @@ growth_col <- coral_col + growth_col_offset[growth_roll]
 reef[growth_row, growth_col] <- 1
 
 # Let's check if we're in bounds
-in_bounds <- growth_row >= 1 && 
+in_bounds <- growth_row >= 1 &&
   growth_row <= 5 &&
   growth_col >= 1 &&
   growth_col <= 5
@@ -52,7 +52,7 @@ growth_row <- coral_row + growth_row_offset[growth_roll]
 growth_col <- coral_col + growth_col_offset[growth_roll]
 
 # Let's check if we're in bounds
-in_bounds <- growth_row >= 1 && 
+in_bounds <- growth_row >= 1 &&
   growth_row <= 5 &&
   growth_col >= 1 &&
   growth_col <= 5
@@ -61,4 +61,3 @@ in_bounds <- growth_row >= 1 &&
 if (in_bounds) {
   reef[growth_row, growth_col] <- 1
 }
-

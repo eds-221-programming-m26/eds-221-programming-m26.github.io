@@ -80,7 +80,7 @@ In 2012, a cyclone strikes Mo'orea. Change the following rules:
 In 2022, a marine heatwave caused an intense bleaching event on the reef. Change the following rules:
 
 - The threshold for coral death increases from 3 to 7
-- The growth threshold increases from 7 to 10
+- The growth threshold increases from 6 to 10
 
 ### Submit your time series
 

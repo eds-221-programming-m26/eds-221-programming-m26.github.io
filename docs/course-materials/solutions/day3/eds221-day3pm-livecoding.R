@@ -1,20 +1,20 @@
 # Looping _iterates_ through a sequence
 corals <- c("Porites", "Pocillopora", "Acropora")
 for (c in corals) {
-    # print() explicitly sends output to the console inside loops
-    print(c)
+  # print() explicitly sends output to the console inside loops
+  print(c)
 }
 
 # It's also common to iterate through the _indices_ of the sequence
 for (i in 1:length(corals)) {
-    print(corals[i])
+  print(corals[i])
 }
 
 # Let's do the fibonacci loop
 fibonacci <- integer(20)
 fibonacci[1:2] <- 1L
 for (i in 3:length(fibonacci)) {
-    fibonacci[i] <- fibonacci[i - 1] + fibonacci[i - 2]
+  fibonacci[i] <- fibonacci[i - 1] + fibonacci[i - 2]
 }
 fibonacci
 
@@ -57,4 +57,3 @@ for (r in 1:5) {
     }
   }
 }
-

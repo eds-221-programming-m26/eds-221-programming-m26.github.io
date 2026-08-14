@@ -1,0 +1,46 @@
+---
+title: "Find components"
+---
+
+## Problem decomposition
+
+This session's topic is about _planning_ your code for solving complex problems. A key tenet of problem solving is breaking up complex problems into simpler components. Then we can solve the simpler components individually, and stitch them together into a full solution. This process of **_problem decomposition_** is how we apply the building blocks of programming (data structures, control structures, and functions) to perform sophisticated data analyses.
+
+
+::: {.callout-important}
+
+Problem decomposition is an art. There are no hard and fast rules, no right and wrong answers. It's a skill you have to learn with practice. You will keep developing it your whole career. 
+
+:::
+
+Let's begin!
+
+## Find your group
+
+Open [this spreadsheet](https://docs.google.com/spreadsheets/d/1o8cUTBIpoHg4gmpm-90HV0muxcW4D6ju5GDS5k3EOU8/edit?usp=sharing){target="_blank"}. You'll find two pieces of information here:
+
+- Your fellow group members
+- A link to your "find component" slide
+
+## Run the model
+
+As a group, run the coral reef model again. This time, as you're reading the rules, rolling the dice, placing tokens, and so on, discuss with each other what components you find. The guidelines for a good component are:
+
+- Not too big, not too small. Each component needs code to run. If you could replace that code with a function call, would it improve the clarity of your code? If so, then it's probably a good size component.
+- Only one ultimate goal. Remember, functions only return one output. A component that has to do more than one thing is better off being broken down into two components.
+- (Relatively) self-contained. How many dependencies does this component have? If there are a lot of dependencies, then the component probably needs to be simpler.
+
+## Create your slide
+
+Open your group's slide, linked from the spreadsheet above. You'll see the following prompts:
+
+- Give a high-level summary of the component.
+- Describe why you think this component is not too big and not too small. Why would replacing it with a function name make your code easier to read?
+- Describe the goal of the component. What is the one outcome of it?
+- What does the component immediately depend on? If this was a function, what inputs would it need?
+
+Answer each of these _in one sentence_.
+
+## Share out
+
+Each group will share their chosen component with the class.
