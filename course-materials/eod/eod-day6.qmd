@@ -1,0 +1,42 @@
+---
+title: "Day 6: End-of-day practice"
+subtitle: "Wrangle and visualize coral data"
+---
+
+Today you're going to apply the data wrangling and visualization concepts you learned today to a real coral reef dataset from Mo'orea. You'll also learn how to load external data.
+
+## Read data
+
+download the data from [here](data/moorea_coral.csv).
+
+inside your day 6 folder, create a subfolder called data.
+
+Put moorea_coral.csv in your data folder.
+
+Create a Quarto document in your day 6 folder called wrangle-visualize-coral.qmd.
+
+Add a code chunk containing the following code:
+
+```r
+moorea_coral <- read_csv(
+  "data/moorea_coral.csv",
+  na = c("", "NA", "ND") # This vector tells read_csv() which values to interpret as missing data
+)
+```
+
+Use `glimpse()` to see what the dataset looks like.
+
+## Wrangle and visualize
+
+### Exercise 1
+
+1. filter the data to the lter1 site in 2017, keeping only the taxa Acropora and Pocillopora
+2. Use the `complete()` function to fill in 0s for percent cover when nothing was observed
+3. make a boxplot showing the distribution of the percent cover, by habitat (fringing vs forereef) and species.
+
+### Exercise 2
+
+1. Continue using the filtered and completed data from the previous exercise
+2. calculate the mean and standard deviation of percent coral cover by habitat, depth, and taxon.
+
+

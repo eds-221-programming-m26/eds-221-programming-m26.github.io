@@ -1,0 +1,28 @@
+---
+title: "Grammar of graphics: Concept mapping"
+---
+
+## Instructions
+
+Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you'll work in pairs or trios to create your own concept maps from scratch.
+
+### 1. Make a list of the key concepts from the session
+
+- Aim for 6-10 terms.
+- Function names are valid concepts, but you should also identify the concepts associated with the functions. For example, `mean()`, `max()`, and `sd()` would all fall under the broader concept of **summary statistics**.
+- Briefly (1 sentence only) define each concept.
+
+### 2. Arrange your concepts hierarchically
+
+- Use a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.
+- Place your concepts on the concept map. Group related concepts together. 
+- Arrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.
+
+### 3. Connect related concepts
+
+- Connect related concepts with lines.
+- Label connections with _linking words_. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, **[ summary statistics ]** _include_ **[ `mean()`, `max()`, and `sd()` ]**.
+
+### 4. Iterate until complete
+
+Concept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1.
