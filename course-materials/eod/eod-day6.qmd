@@ -5,11 +5,30 @@ subtitle: "Wrangle and visualize coral data"
 
 Today you're going to apply the data wrangling and visualization concepts you learned today to a real coral reef dataset from Mo'orea. You'll also learn how to load external data.
 
+## Background
+
+This dataset comes from the [Moorea Coral Reef Long Term Ecological Research](https://mcr.lternet.edu/) (MCR LTER) site in French Polynesia, one of the longest-running coral reef monitoring programs in the world. Since 2005, researchers have surveyed the benthic (bottom-dwelling) community at six fixed sites spaced around the island of Moorea. At each site, two habitats are monitored every year: the **fringing reef**, a shallow zone close to shore, and the **forereef**, a deeper zone on the outer slope of the reef, beyond the reef crest.
+
+At each site and habitat, divers lay out permanent transects on the reef and photograph a series of quadrats (small square sampling frames) along them every year. Back in the lab, every point in each quadrat photo is classified into a taxonomic or substrate category — a coral genus (e.g., *Acropora*, *Pocillopora*, *Porites*), an algae type, sand, or another functional group — and the percent of the quadrat covered by each category is calculated. Because the same transects and quadrats are resurveyed annually, this design lets researchers track how coral cover changes over time, including before and after disturbances like cyclones and bleaching events.
+
+::: {.callout-note}
+
+The columns you'll use most are:
+
+- `Site`: one of six fixed LTER sites around Moorea (`LTER_1`–`LTER_6`)
+- `Habitat`: `Fringing` (shallow, nearshore) or `Forereef` (deeper, offshore)
+- `Depth`: survey depth, in meters
+- `Date`: survey year and month
+- `Taxonomy_Substrate_or_Functional_Group`: the coral genus or substrate/algae category identified in a quadrat
+- `Percent_Cover`: the percent of a quadrat covered by that category
+
+:::
+
 ## Read data
 
-download the data from [here](data/moorea_coral.csv).
+Download the data from [here](data/moorea_coral.csv).
 
-inside your day 6 folder, create a subfolder called data.
+Inside your day 6 folder, create a subfolder called data.
 
 Put moorea_coral.csv in your data folder.
 
@@ -18,6 +37,8 @@ Create a Quarto document in your day 6 folder called wrangle-visualize-coral.qmd
 Add a code chunk containing the following code:
 
 ```r
+library(tidyverse)
+
 moorea_coral <- read_csv(
   "data/moorea_coral.csv",
   na = c("", "NA", "ND") # This vector tells read_csv() which values to interpret as missing data
@@ -30,13 +51,26 @@ Use `glimpse()` to see what the dataset looks like.
 
 ### Exercise 1
 
-1. filter the data to the lter1 site in 2017, keeping only the taxa Acropora and Pocillopora
-2. Use the `complete()` function to fill in 0s for percent cover when nothing was observed
-3. make a boxplot showing the distribution of the percent cover, by habitat (fringing vs forereef) and species.
+1. Filter the data to the LTER 1 site in 2017, keeping only the taxa Acropora and Pocillopora.
+2. Rename `Taxonomy_Substrate_or_Functional_Group` to something shorter and more descriptive.
+3. Make a boxplot showing the distribution of the percent cover, by habitat (fringing vs. forereef) and species.
+4. Clean up the scale titles.
 
 ### Exercise 2
 
-1. Continue using the filtered and completed data from the previous exercise
-2. calculate the mean and standard deviation of percent coral cover by habitat, depth, and taxon.
+1. Continue using the filtered data from the previous exercise.
+2. Divide the percent cover by 100 so it's expressed as a fraction.
+3. Calculate the mean and standard deviation of percent coral cover by habitat, depth, and taxon.
+4. Sort the output in order of depth and taxon.
 
+### Exercise 3
 
+Use markdown in your Quarto document to explain your findings from Exercises 1 and 2.
+
+## Bonus exercise
+
+Use the `distinct()` function to find all unique taxa, then sort by taxa. What do you notice about Porites?
+
+Use the `ifelse()` and `str_starts()` functions to combine all the Porites values into a single label. Then repeat your analysis from Exercise 2, but this time expand your analysis to include Porites and Montipora. Hint: use the `%in%` operator.
+
+What coral is most widespread in the fringing reef, nearest the island? What about further offshore in the forereef?

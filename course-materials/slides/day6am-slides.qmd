@@ -1,0 +1,296 @@
+---
+format:
+  revealjs:
+    slide-number: true
+    # code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme:
+      - ../../meds-slides-styles.scss
+execute:
+  echo: true
+---
+
+## {#title-slide data-menu-title="Title Slide" background="#053660"}
+
+[EDS 221 Day 6 AM]{.custom-title}
+
+[*Data wrangling*]{.custom-subtitle}
+
+<hr class="hr-teal">
+
+[August 17^th^, 2026]{.custom-subtitle3}
+
+---
+
+## {#meet-the-data .smaller data-menu-title="Meet the data: penguins"}
+
+[Meet the data: penguins]{.slide-title}
+
+<hr>
+
+[Today we'll wrangle a data frame of penguin measurements from the Palmer Archipelago, Antarctica.]{.body-text-m}
+
+```{r}
+#| message: false
+library(tidyverse)
+library(palmerpenguins)
+
+penguins
+```
+
+---
+
+## {#glimpse .smaller data-menu-title="glimpse()"}
+
+[Getting an overview: glimpse()]{.slide-title}
+
+<hr>
+
+[`glimpse()` shows every column, its type, and a preview of its values — a fast way to see what you're working with.]{.body-text-m}
+
+```{r}
+glimpse(penguins)
+```
+
+---
+
+## {#filter-rows .smaller data-menu-title="filter(): working with rows"}
+
+[Working with rows: filter()]{.slide-title}
+
+<hr>
+
+[`filter()` keeps only the rows that match a condition. The first argument is the data frame; the rest are conditions that must be `TRUE`.]{.body-text-m}
+
+```{r}
+filter(penguins, species == "Chinstrap")
+```
+
+---
+
+## {#filter-conditions .smaller data-menu-title="filter(): combining conditions"}
+
+[filter(): combining conditions]{.slide-title}
+
+<hr>
+
+::: {.columns}
+
+::: {.column}
+
+[`,` or `&` — **both** must be true]{.body-text-m}
+
+```{r}
+filter(
+  penguins,
+  sex == "female",
+  flipper_length_mm > 190
+)
+```
+
+:::
+
+::: {.column}
+
+[`|` — **either** can be true]{.body-text-m}
+
+```{r}
+filter(
+  penguins,
+  species == "Chinstrap" |
+    body_mass_g < 3000
+)
+```
+
+:::
+
+:::
+
+[This `|` is not the same as the `||` from last week's conditionals — `|` compares element-by-element across an entire column.]{.body-text-s}
+
+---
+
+## {#arrange-rows .smaller data-menu-title="arrange(): working with rows"}
+
+[Working with rows: arrange()]{.slide-title}
+
+<hr>
+
+[`arrange()` sorts rows by one or more columns, smallest to largest by default. Wrap a column in `desc()` to sort largest to smallest.]{.body-text-m}
+
+::: {.columns}
+
+::: {.column}
+
+```{r}
+arrange(penguins, bill_depth_mm)
+```
+
+:::
+
+::: {.column}
+
+```{r}
+arrange(penguins, desc(bill_depth_mm))
+```
+
+:::
+
+:::
+
+---
+
+## {#mutate-columns .smaller data-menu-title="mutate(): working with columns"}
+
+[Working with columns: mutate()]{.slide-title}
+
+<hr>
+
+[`mutate()` adds a new column, computed from existing ones. The argument name becomes the new column name.]{.body-text-m}
+
+```{r}
+mutate(penguins, body_mass_kg = body_mass_g / 1000)
+```
+
+---
+
+## {#mutate-multiple .smaller data-menu-title="mutate(): multiple columns"}
+
+[mutate(): multiple new columns]{.slide-title}
+
+<hr>
+
+[You can create several columns in one call — later columns can even use ones you just created.]{.body-text-m}
+
+```{r}
+mutate(
+  penguins,
+  body_mass_kg = body_mass_g / 1000,
+  bill_length_cm = bill_length_mm / 10
+)
+```
+
+---
+
+## {#select-columns .smaller data-menu-title="select(): working with columns"}
+
+[Working with columns: select()]{.slide-title}
+
+<hr>
+
+[`select()` keeps only the columns you name, in the order you name them — everything else is dropped.]{.body-text-m}
+
+```{r}
+select(penguins, species, island, body_mass_g)
+```
+
+---
+
+## {#select-helpers .smaller data-menu-title="select(): helpers"}
+
+[select(): helpers]{.slide-title}
+
+<hr>
+
+::: {.columns}
+
+::: {.column}
+
+[`:` — a range of columns]{.body-text-m}
+
+```{r}
+select(penguins, species:bill_length_mm)
+```
+
+[`!` — everything **except**]{.body-text-m}
+
+```{r}
+select(penguins, !island)
+```
+
+:::
+
+::: {.column}
+
+[`starts_with()` — match column names]{.body-text-m}
+
+```{r}
+select(penguins, starts_with("bill"))
+```
+
+:::
+
+:::
+
+---
+
+## {#nested-calls .smaller data-menu-title="The problem with nesting"}
+
+[The problem with nesting]{.slide-title}
+
+<hr>
+
+[Wrangling usually takes several steps. Nesting function calls works, but it reads inside-out and gets hard to follow.]{.body-text-m}
+
+```{r}
+filter(
+  mutate(
+    penguins,
+    body_mass_kg = body_mass_g / 1000
+  ),
+  body_mass_kg < 2.8
+)
+```
+
+---
+
+## {#the-pipe .smaller data-menu-title="The pipe |>"}
+
+[The pipe: |>]{.slide-title}
+
+<hr>
+
+[`|>` takes what's on its left and passes it in as the **first argument** of the function on its right. Steps now read top-to-bottom, in the order they happen.]{.body-text-m}
+
+```{r}
+penguins |>
+  mutate(body_mass_kg = body_mass_g / 1000) |>
+  filter(body_mass_kg < 2.8)
+```
+
+---
+
+## {#summarize data-menu-title="summarize(): summarizing groups"}
+
+[Summarizing groups: summarize()]{.slide-title}
+
+<hr>
+
+[`summarize()` collapses many rows into one summary value. Most summary functions need `na.rm = TRUE` to ignore missing values.]{.body-text-m}
+
+```{r}
+penguins |>
+  summarize(avg_size = mean(body_mass_g, na.rm = TRUE))
+```
+
+---
+
+## {#summarize-by data-menu-title="summarize(): grouped with .by"}
+
+[summarize(): grouped with .by]{.slide-title}
+
+<hr>
+
+[The `.by` argument runs the summary separately for each group, returning one row per group.]{.body-text-m}
+
+```{r}
+penguins |>
+  summarize(
+    avg_size = mean(body_mass_g, na.rm = TRUE),
+    biggest_bill = max(bill_length_mm, na.rm = TRUE),
+    .by = species
+  )
+```
+
+---
