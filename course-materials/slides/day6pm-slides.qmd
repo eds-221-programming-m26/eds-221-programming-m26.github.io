@@ -329,3 +329,47 @@ ggplot(
 ```
 
 ---
+
+## {#grammar-review data-menu-title="The grammar of graphics"}
+
+[The grammar of graphics]{.slide-title}
+
+<hr>
+
+[`ggplot2` builds a figure by layering independent pieces on top of each other, instead of picking one big "chart type."]{.body-text-m}
+
+::: {.columns}
+
+::: {.column}
+
+**_data_**
+
+The data frame you're plotting.
+
+:::
+
+::: {.column}
+
+**_mapping_**
+
+Which columns control which visual properties (`aes()`).
+
+:::
+
+::: {.column}
+
+**_geometry_**
+
+The shape used to represent the data (`geom_*()`).
+
+:::
+
+::: {.column}
+
+**_scale_**
+
+How the mapping shows up on the figure (`scale_*()`).
+
+:::
+
+:::

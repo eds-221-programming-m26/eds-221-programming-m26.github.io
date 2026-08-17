@@ -112,6 +112,20 @@
     "text": "Student roles\nChoose students in your group to perform each of the following roles.\n🎂 Demography tracker Keeps track of which coral to resolve growth/mortality for next, and which have already resolved.\n🪙 Token manager Places, flips, and removes tokens from the grid.\n🎲 Dice roller Rolls the dice and reports the totals.\n📝 Data recorder Updates the table as new time series data emerges.\n⏳ Time keeper Tracks the time and make sures the group is on track to finish. Also writes down any rule ambiguities (and the group decision) encountered.\nWhen the group encounters an ambiguity in the rules, you must reach consensus as a group to decide how to proceed.\n🙅 No laptops while the model is running 🙅"
   },
   {
+    "objectID": "course-materials/activities/day6/day6am-concept-mapping.html",
+    "href": "course-materials/activities/day6/day6am-concept-mapping.html",
+    "title": "Data wrangling: Concept mapping",
+    "section": "",
+    "text": "Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you’ll work in pairs or trios to create your own concept maps from scratch.\n\n\n\nAim for 6-10 terms.\nFunction names are valid concepts, but you should also identify the concepts associated with the functions. For example, mean(), max(), and sd() would all fall under the broader concept of summary statistics.\nBriefly (1 sentence only) define each concept.\n\n\n\n\n\nUse a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.\nPlace your concepts on the concept map. Group related concepts together.\nArrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.\n\n\n\n\n\nConnect related concepts with lines.\nLabel connections with linking words. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, [ summary statistics ] include [ mean(), max(), and sd() ].\n\n\n\n\nConcept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1."
+  },
+  {
+    "objectID": "course-materials/activities/day6/day6am-concept-mapping.html#instructions",
+    "href": "course-materials/activities/day6/day6am-concept-mapping.html#instructions",
+    "title": "Data wrangling: Concept mapping",
+    "section": "",
+    "text": "Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you’ll work in pairs or trios to create your own concept maps from scratch.\n\n\n\nAim for 6-10 terms.\nFunction names are valid concepts, but you should also identify the concepts associated with the functions. For example, mean(), max(), and sd() would all fall under the broader concept of summary statistics.\nBriefly (1 sentence only) define each concept.\n\n\n\n\n\nUse a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.\nPlace your concepts on the concept map. Group related concepts together.\nArrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.\n\n\n\n\n\nConnect related concepts with lines.\nLabel connections with linking words. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, [ summary statistics ] include [ mean(), max(), and sd() ].\n\n\n\n\nConcept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1."
+  },
+  {
     "objectID": "course-materials/activities/day5/day5am-find-components.html",
     "href": "course-materials/activities/day5/day5am-find-components.html",
     "title": "Find components",
@@ -210,389 +224,186 @@
     "text": "Your turn\nOpen your coral reef folder in Positron. Create a folder called “R” and inside of it create a script called “util.R”. “util” is short for “utility”, so “util.R” is a conventional name for scripts that contain utility functions. I.e., functions that make your code run smoother.\nIn that script, write a function to encapsulate the logic for putting 8 random corals on the initialized reef. Rather than hard-coding the number at 8, make the number of corals an input.\nFollow the four steps above. When you get to the end of each step, share your work with another student and discuss your reasoning."
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#title-slide",
-    "href": "course-materials/slides/day3pm-slides.html#title-slide",
+    "objectID": "course-materials/slides/day6am-slides.html#title-slide",
+    "href": "course-materials/slides/day6am-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 221 Day 3 PM\nLoops\n\nAugust 12th, 2025"
+    "text": "EDS 221 Day 6 AM\nData wrangling\n\nAugust 17th, 2026"
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#loops-repeat",
-    "href": "course-materials/slides/day3pm-slides.html#loops-repeat",
+    "objectID": "course-materials/slides/day6am-slides.html#meet-the-data",
+    "href": "course-materials/slides/day6am-slides.html#meet-the-data",
     "title": "",
     "section": "",
-    "text": "Loops let you repeat yourself\n\nFor example, print each value in a vector\n\ncorals &lt;- c(\"Porites\", \"Pocillopora\", \"Acropora\")\nfor (c in corals) {\n  print(c)\n}\n\n[1] \"Porites\"\n[1] \"Pocillopora\"\n[1] \"Acropora\""
+    "text": "Meet the data: penguins\n\nToday we’ll wrangle a data frame of penguin measurements from the Palmer Archipelago, Antarctica.\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\npenguins\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#loops-repeat2",
-    "href": "course-materials/slides/day3pm-slides.html#loops-repeat2",
+    "objectID": "course-materials/slides/day6am-slides.html#glimpse",
+    "href": "course-materials/slides/day6am-slides.html#glimpse",
     "title": "",
     "section": "",
-    "text": "Loops let you repeat yourself\n\nIt’s common to loop over the indices of a vector.\n\ncorals &lt;- c(\"Porites\", \"Pocillopora\", \"Acropora\")\nfor (i in 1:length(corals)) {\n  print(corals[i])\n}\n\n[1] \"Porites\"\n[1] \"Pocillopora\"\n[1] \"Acropora\""
+    "text": "Getting an overview: glimpse()\n\nglimpse() shows every column, its type, and a preview of its values — a fast way to see what you’re working with.\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#fibonacci",
-    "href": "course-materials/slides/day3pm-slides.html#fibonacci",
+    "objectID": "course-materials/slides/day6am-slides.html#filter-rows",
+    "href": "course-materials/slides/day6am-slides.html#filter-rows",
     "title": "",
     "section": "",
-    "text": "What does this loop make?\n\nLet’s break down this loop.\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+    "text": "Working with rows: filter()\n\nfilter() keeps only the rows that match a condition. The first argument is the data frame; the rest are conditions that must be TRUE.\n\nfilter(penguins, species == \"Chinstrap\")\n\n# A tibble: 68 × 8\n   species   island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;     &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Chinstrap Dream            46.5          17.9               192        3500\n 2 Chinstrap Dream            50            19.5               196        3900\n 3 Chinstrap Dream            51.3          19.2               193        3650\n 4 Chinstrap Dream            45.4          18.7               188        3525\n 5 Chinstrap Dream            52.7          19.8               197        3725\n 6 Chinstrap Dream            45.2          17.8               198        3950\n 7 Chinstrap Dream            46.1          18.2               178        3250\n 8 Chinstrap Dream            51.3          18.2               197        3750\n 9 Chinstrap Dream            46            18.9               195        4150\n10 Chinstrap Dream            51.3          19.9               198        3700\n# ℹ 58 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#loop-parts",
-    "href": "course-materials/slides/day3pm-slides.html#loop-parts",
+    "objectID": "course-materials/slides/day6am-slides.html#filter-conditions",
+    "href": "course-materials/slides/day6am-slides.html#filter-conditions",
     "title": "",
     "section": "",
-    "text": "Parts of a loop\n\nA loop has three main parts\n\n\n\nIterator i\nSequence 3:length(fibonacci)\nBody { ... }\n\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+    "text": "filter(): combining conditions\n\n\n\n, or & — both must be true\n\nfilter(\n  penguins,\n  sex == \"female\",\n  flipper_length_mm &gt; 190\n)\n\n# A tibble: 100 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           40.3          18                 195        3250\n 2 Adelie  Torgersen           36.7          19.3               193        3450\n 3 Adelie  Torgersen           38.7          19                 195        3450\n 4 Adelie  Dream               36.4          17                 195        3325\n 5 Adelie  Biscoe              35.5          16.2               195        3350\n 6 Adelie  Torgersen           39.6          17.2               196        3550\n 7 Adelie  Torgersen           40.9          16.8               191        3700\n 8 Adelie  Dream               37.3          17.8               191        3350\n 9 Adelie  Dream               35.7          18                 202        3550\n10 Adelie  Biscoe              35            17.9               192        3725\n# ℹ 90 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\n\n| — either can be true\n\nfilter(\n  penguins,\n  species == \"Chinstrap\" |\n    body_mass_g &lt; 3000\n)\n\n# A tibble: 75 × 8\n   species   island   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;     &lt;fct&gt;             &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie    Dream              37.5          18.9               179        2975\n 2 Adelie    Biscoe             34.5          18.1               187        2900\n 3 Adelie    Biscoe             36.5          16.6               181        2850\n 4 Adelie    Biscoe             36.4          17.1               184        2850\n 5 Adelie    Dream              33.1          16.1               178        2900\n 6 Adelie    Biscoe             37.9          18.6               193        2925\n 7 Adelie    Torgers…           38.6          17                 188        2900\n 8 Chinstrap Dream              46.5          17.9               192        3500\n 9 Chinstrap Dream              50            19.5               196        3900\n10 Chinstrap Dream              51.3          19.2               193        3650\n# ℹ 65 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\n\n\nThis | is not the same as the || from last week’s conditionals — | compares element-by-element across an entire column."
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#iterator",
-    "href": "course-materials/slides/day3pm-slides.html#iterator",
+    "objectID": "course-materials/slides/day6am-slides.html#arrange-rows",
+    "href": "course-materials/slides/day6am-slides.html#arrange-rows",
     "title": "",
     "section": "",
-    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe iterator changes value each time through the loop.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+    "text": "Working with rows: arrange()\n\narrange() sorts rows by one or more columns, smallest to largest by default. Wrap a column in desc() to sort largest to smallest.\n\n\n\narrange(penguins, bill_depth_mm)\n\n# A tibble: 344 × 8\n   species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Gentoo  Biscoe           42.9          13.1               215        5000\n 2 Gentoo  Biscoe           46.1          13.2               211        4500\n 3 Gentoo  Biscoe           44.9          13.3               213        5100\n 4 Gentoo  Biscoe           43.3          13.4               209        4400\n 5 Gentoo  Biscoe           46.5          13.5               210        4550\n 6 Gentoo  Biscoe           42            13.5               210        4150\n 7 Gentoo  Biscoe           44            13.6               208        4350\n 8 Gentoo  Biscoe           40.9          13.7               214        4650\n 9 Gentoo  Biscoe           45.5          13.7               214        4650\n10 Gentoo  Biscoe           42.6          13.7               213        4950\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\n\n\narrange(penguins, desc(bill_depth_mm))\n\n# A tibble: 344 × 8\n   species   island   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;     &lt;fct&gt;             &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie    Torgers…           46            21.5               194        4200\n 2 Adelie    Torgers…           38.6          21.2               191        3800\n 3 Adelie    Dream              42.3          21.2               191        4150\n 4 Adelie    Torgers…           34.6          21.1               198        4400\n 5 Adelie    Dream              39.2          21.1               196        4150\n 6 Adelie    Biscoe             41.3          21.1               195        4400\n 7 Chinstrap Dream              54.2          20.8               201        4300\n 8 Adelie    Torgers…           42.5          20.7               197        4500\n 9 Adelie    Biscoe             39.6          20.7               191        3900\n10 Chinstrap Dream              52            20.7               210        4800\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#sequence",
-    "href": "course-materials/slides/day3pm-slides.html#sequence",
+    "objectID": "course-materials/slides/day6am-slides.html#mutate-columns",
+    "href": "course-materials/slides/day6am-slides.html#mutate-columns",
     "title": "",
     "section": "",
-    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe sequence is what the iterator takes on values from.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+    "text": "Working with columns: mutate()\n\nmutate() adds a new column, computed from existing ones. The argument name becomes the new column name.\n\nmutate(penguins, body_mass_kg = body_mass_g / 1000)\n\n# A tibble: 344 × 9\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 3 more variables: sex &lt;fct&gt;, year &lt;int&gt;, body_mass_kg &lt;dbl&gt;"
   },
   {
-    "objectID": "course-materials/slides/day3pm-slides.html#body",
-    "href": "course-materials/slides/day3pm-slides.html#body",
+    "objectID": "course-materials/slides/day6am-slides.html#mutate-multiple",
+    "href": "course-materials/slides/day6am-slides.html#mutate-multiple",
     "title": "",
     "section": "",
-    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe body is what the loop repeatedly does.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+    "text": "mutate(): multiple new columns\n\nYou can create several columns in one call — later columns can even use ones you just created.\n\nmutate(\n  penguins,\n  body_mass_kg = body_mass_g / 1000,\n  bill_length_cm = bill_length_mm / 10\n)\n\n# A tibble: 344 × 10\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 4 more variables: sex &lt;fct&gt;, year &lt;int&gt;, body_mass_kg &lt;dbl&gt;,\n#   bill_length_cm &lt;dbl&gt;"
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#title-slide",
-    "href": "course-materials/slides/day2pm-slides.html#title-slide",
+    "objectID": "course-materials/slides/day6am-slides.html#select-columns",
+    "href": "course-materials/slides/day6am-slides.html#select-columns",
     "title": "",
     "section": "",
-    "text": "EDS 221 Day 2 PM\nIndexing and 2d data\n\nAugust 11th, 2025"
+    "text": "Working with columns: select()\n\nselect() keeps only the columns you name, in the order you name them — everything else is dropped.\n\nselect(penguins, species, island, body_mass_g)\n\n# A tibble: 344 × 3\n   species island    body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;           &lt;int&gt;\n 1 Adelie  Torgersen        3750\n 2 Adelie  Torgersen        3800\n 3 Adelie  Torgersen        3250\n 4 Adelie  Torgersen          NA\n 5 Adelie  Torgersen        3450\n 6 Adelie  Torgersen        3650\n 7 Adelie  Torgersen        3625\n 8 Adelie  Torgersen        4675\n 9 Adelie  Torgersen        3475\n10 Adelie  Torgersen        4250\n# ℹ 334 more rows"
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#review-day1-code-execution",
-    "href": "course-materials/slides/day2pm-slides.html#review-day1-code-execution",
+    "objectID": "course-materials/slides/day6am-slides.html#select-helpers",
+    "href": "course-materials/slides/day6am-slides.html#select-helpers",
+    "title": "",
+    "section": "",
+    "text": "select(): helpers\n\n\n\n: — a range of columns\n\nselect(penguins, species:bill_length_mm)\n\n# A tibble: 344 × 3\n   species island    bill_length_mm\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;\n 1 Adelie  Torgersen           39.1\n 2 Adelie  Torgersen           39.5\n 3 Adelie  Torgersen           40.3\n 4 Adelie  Torgersen           NA  \n 5 Adelie  Torgersen           36.7\n 6 Adelie  Torgersen           39.3\n 7 Adelie  Torgersen           38.9\n 8 Adelie  Torgersen           39.2\n 9 Adelie  Torgersen           34.1\n10 Adelie  Torgersen           42  \n# ℹ 334 more rows\n\n\n\nstarts_with() — match column names\nThere are lots of these helper functions!\n\nselect(penguins, starts_with(\"bill\"))\n\n# A tibble: 344 × 2\n   bill_length_mm bill_depth_mm\n            &lt;dbl&gt;         &lt;dbl&gt;\n 1           39.1          18.7\n 2           39.5          17.4\n 3           40.3          18  \n 4           NA            NA  \n 5           36.7          19.3\n 6           39.3          20.6\n 7           38.9          17.8\n 8           39.2          19.6\n 9           34.1          18.1\n10           42            20.2\n# ℹ 334 more rows"
+  },
+  {
+    "objectID": "course-materials/slides/day6am-slides.html#nested-calls",
+    "href": "course-materials/slides/day6am-slides.html#nested-calls",
+    "title": "",
+    "section": "",
+    "text": "The problem with nesting\n\nWrangling usually takes several steps. Nesting function calls works, but it reads inside-out and gets hard to follow.\n\nfilter(\n  mutate(\n    penguins,\n    body_mass_kg = body_mass_g / 1000\n  ),\n  body_mass_kg &lt; 2.8\n)\n\n# A tibble: 1 × 9\n  species   island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;     &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Chinstrap Dream            46.9          16.6               192        2700\n# ℹ 3 more variables: sex &lt;fct&gt;, year &lt;int&gt;, body_mass_kg &lt;dbl&gt;"
+  },
+  {
+    "objectID": "course-materials/slides/day6am-slides.html#the-pipe",
+    "href": "course-materials/slides/day6am-slides.html#the-pipe",
+    "title": "",
+    "section": "",
+    "text": "The pipe: |&gt;\n\n|&gt; takes what’s on its left and passes it in as the first argument of the function on its right. Steps now read top-to-bottom, in the order they happen.\n\npenguins |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000) |&gt;\n  filter(body_mass_kg &lt; 2.8)\n\n# A tibble: 1 × 9\n  species   island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;     &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Chinstrap Dream            46.9          16.6               192        2700\n# ℹ 3 more variables: sex &lt;fct&gt;, year &lt;int&gt;, body_mass_kg &lt;dbl&gt;"
+  },
+  {
+    "objectID": "course-materials/slides/day6am-slides.html#summarize",
+    "href": "course-materials/slides/day6am-slides.html#summarize",
+    "title": "",
+    "section": "",
+    "text": "Summarizing groups: summarize()\n\nsummarize() collapses many rows into one summary value. Most summary functions need na.rm = TRUE to ignore missing values.\n\npenguins |&gt;\n  summarize(avg_size = mean(body_mass_g, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  avg_size\n     &lt;dbl&gt;\n1    4202."
+  },
+  {
+    "objectID": "course-materials/slides/day6am-slides.html#summarize-by",
+    "href": "course-materials/slides/day6am-slides.html#summarize-by",
+    "title": "",
+    "section": "",
+    "text": "summarize(): grouped with .by\n\nThe .by argument runs the summary separately for each group, returning one row per group.\n\npenguins |&gt;\n  summarize(\n    avg_size = mean(body_mass_g, na.rm = TRUE),\n    biggest_bill = max(bill_length_mm, na.rm = TRUE),\n    .by = species\n  )\n\n# A tibble: 3 × 3\n  species   avg_size biggest_bill\n  &lt;fct&gt;        &lt;dbl&gt;        &lt;dbl&gt;\n1 Adelie       3701.         46  \n2 Gentoo       5076.         59.6\n3 Chinstrap    3733.         58"
+  },
+  {
+    "objectID": "course-materials/slides/day6am-slides.html#memorize",
+    "href": "course-materials/slides/day6am-slides.html#memorize",
+    "title": "",
+    "section": "",
+    "text": "What to memorize\n\nData wrangling with the tidyverse involves far more functions than you’ve seen so far. You should memorize a few fundamentals now, then pick up the rest as you gain experience.\n\n\nRows\n\nfilter()\narrange()\n\nColumns\n\nselect()\nmutate()\n\n\nGroups\n\nsummarize()\nn()\nThe .by parameter"
+  },
+  {
+    "objectID": "course-materials/slides/day4pm-slides.html#title-slide",
+    "href": "course-materials/slides/day4pm-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 4 PM\nVectorized functions\n\nAugust 13th, 2025"
+  },
+  {
+    "objectID": "course-materials/slides/day4pm-slides.html#vectorization",
+    "href": "course-materials/slides/day4pm-slides.html#vectorization",
+    "title": "",
+    "section": "",
+    "text": "Vectorization\n\nVectorized functions and operators work on entire vectors at once, rather than element by element.\nUsing vectorization often improves code performance and clarity.\nsquares &lt;- c(1, 4, 9, 16, 25)\n\n# Loop\nroots &lt;- double(length(squares))\nfor (i in 1:length(roots)) {\n  roots[i] &lt;- sqrt(roots)\n}\n\n# Vectorized\nroots &lt;- sqrt(squares)"
+  },
+  {
+    "objectID": "course-materials/slides/day4pm-slides.html#functions-operators",
+    "href": "course-materials/slides/day4pm-slides.html#functions-operators",
+    "title": "",
+    "section": "",
+    "text": "Functions and operators\n\nBoth functions and operators can be vectorized.\n\na &lt;- 1:4\nb &lt;- 4:1\n\na + b\n\n[1] 5 5 5 5\n\nas.character(a)\n\n[1] \"1\" \"2\" \"3\" \"4\""
+  },
+  {
+    "objectID": "course-materials/slides/day4pm-slides.html#review-",
+    "href": "course-materials/slides/day4pm-slides.html#review-",
+    "title": "",
+    "section": "",
+    "text": "Review\n\nThe round() function rounds numbers.\n\nround(pi, digits = 2)\n\n[1] 3.14\n\n\nConsider this expression:\nround(seq(0, 2, by = 1/2) * pi, digits = 2)\nUsing only pencil and paper, answer the following questions.\n\n\n\n\n\n\nTip\n\n\nSolve sub-expressions first to build up to the complete solution.\n\n\n\n\nWhat will the output be?\nWhich parameter is round() vectorized over?"
+  },
+  {
+    "objectID": "course-materials/slides/day2am-slides.html#title-slide",
+    "href": "course-materials/slides/day2am-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 2 AM\nData types and 1d structures\n\nAugust 11th, 2025"
+  },
+  {
+    "objectID": "course-materials/slides/day2am-slides.html#review-day1-code-execution",
+    "href": "course-materials/slides/day2am-slides.html#review-day1-code-execution",
     "title": "",
     "section": "",
     "text": "Review day 1: Code execution\n\nWhat’s the value of x after you execute these commands?\nWhat output would you see at the console?\nx &lt;- 10\nx + 1\ny &lt;- x\ny &lt;- y * 2\nx\ny"
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#review-day1-version-control",
-    "href": "course-materials/slides/day2pm-slides.html#review-day1-version-control",
+    "objectID": "course-materials/slides/day2am-slides.html#review-day1-version-control",
+    "href": "course-materials/slides/day2am-slides.html#review-day1-version-control",
     "title": "",
     "section": "",
     "text": "Review day 1: Version control\n\nLabel the arrows in the following diagram with the corresponding git command."
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#create-datasheet",
-    "href": "course-materials/slides/day2pm-slides.html#create-datasheet",
+    "objectID": "course-materials/slides/day2am-slides.html#create-datasheet",
+    "href": "course-materials/slides/day2am-slides.html#create-datasheet",
     "title": "",
     "section": "",
     "text": "Create a datasheet\n\n\nPhoto by Annabelle Lang/LSU College of Agriculture"
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#types",
-    "href": "course-materials/slides/day2pm-slides.html#types",
+    "objectID": "course-materials/slides/day2am-slides.html#types",
+    "href": "course-materials/slides/day2am-slides.html#types",
     "title": "",
     "section": "",
     "text": "Atomic types\n\n\n\nThere are four atomic types in R.\n\nCharacter (text)\nDouble (decimal numbers)\nInteger (round numbers)\nLogical (true and false)\n\n\nAtomic types are the basic building blocks of data structures in R.\nLike the name implies, everything else is made out of them."
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#coercion",
-    "href": "course-materials/slides/day2pm-slides.html#coercion",
+    "objectID": "course-materials/slides/day2am-slides.html#coercion",
+    "href": "course-materials/slides/day2am-slides.html#coercion",
     "title": "",
     "section": "",
     "text": "Coercion\n\nAtomic vectors have to be one type. When you combine vectors of different types, one gets coerced into the other’s type.\n\nFrom Hands on Programming with R"
   },
   {
-    "objectID": "course-materials/slides/day2pm-slides.html#making-vectors",
-    "href": "course-materials/slides/day2pm-slides.html#making-vectors",
+    "objectID": "course-materials/slides/day2am-slides.html#making-vectors",
+    "href": "course-materials/slides/day2am-slides.html#making-vectors",
     "title": "",
     "section": "",
-    "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1]  1.354899  1.454561 -1.436012\n\nrpois(4, lambda = 10)\n\n[1] 11 14  5  8"
-  },
-  {
-    "objectID": "course-materials/slides/day5am-slides.html#title-slide",
-    "href": "course-materials/slides/day5am-slides.html#title-slide",
-    "title": "",
-    "section": "",
-    "text": "EDS 221 Day 5 AM\nCreating programs: planning\n\nAugust 14th, 2026"
-  },
-  {
-    "objectID": "course-materials/slides/day5am-slides.html#optimal-stress",
-    "href": "course-materials/slides/day5am-slides.html#optimal-stress",
-    "title": "",
-    "section": "",
-    "text": "Optimal stress\n\n\nYerkes-Dodson Curve"
-  },
-  {
-    "objectID": "course-materials/slides/day5am-slides.html#exponential-complexity",
-    "href": "course-materials/slides/day5am-slides.html#exponential-complexity",
-    "title": "",
-    "section": "",
-    "text": "Exponential complexity"
-  },
-  {
-    "objectID": "course-materials/slides/day5am-slides.html#course-goals",
-    "href": "course-materials/slides/day5am-slides.html#course-goals",
-    "title": "",
-    "section": "",
-    "text": "Course goals\n\n\n\nMust\nGrasp sufficient building blocks to continue your learning in the future.\n\nYou learned the alphabet and some basic vocabulary\n\nIdeally\nDevelop intuition about how to use data structures, control structures, and functions.\n\nYou can write with correct grammar\n\nMaybe\nFluently read and write code in R.\n\nYou can hold a conversation"
-  },
-  {
-    "objectID": "course-materials/slides/day5am-slides.html#progress-check",
-    "href": "course-materials/slides/day5am-slides.html#progress-check",
-    "title": "",
-    "section": "",
-    "text": "Progress check\n\nWritten assessment\n\n4 sets of 3 questions\n\n1 set for each day this week\n\nQuestions increase in complexity\n\n1st question: building blocks\n2nd question: intuition\n3rd question: fluency"
-  },
-  {
-    "objectID": "course-materials/slides/day5am-slides.html#problem-decomposition",
-    "href": "course-materials/slides/day5am-slides.html#problem-decomposition",
-    "title": "",
-    "section": "",
-    "text": "Problem decomposition\n\n\n\n\n\nWe’re going to re-run the coral reef model.\nThe model is a complex problem.\nThis time, as you’re running it, focus on finding simpler problems.\n\nIn the afternoon session, we’ll solve the simpler problems and put the whole thing together\nProblem decomposition is how we apply our building blocks to solve complex problems."
-  },
-  {
-    "objectID": "course-materials/slides/day5am-slides.html#identifying-components",
-    "href": "course-materials/slides/day5am-slides.html#identifying-components",
-    "title": "",
-    "section": "",
-    "text": "Identifying components\n\n\n\nWhat makes for a good component?\n\nNot too big, not too small\nOnly one ultimate goal\n(Relatively) self-contained\n\n\nGood\n\n“Roll 2d6”\n“Initialize the reef”\n“Grow a coral”\n\nNeeds revision\n\n“Apply crisis rules” (too big)\n“Set cell to 1” (too small)\n“Loop through the years” (not self-contained)"
-  },
-  {
-    "objectID": "course-materials/slides/day5am-slides.html#component-example",
-    "href": "course-materials/slides/day5am-slides.html#component-example",
-    "title": "",
-    "section": "",
-    "text": "Example of a component\n\nRoll 2d6\n\nNot too big, not too small. Replacing sum(sample(1:6, size = 2, replace = TRUE)) with roll2d6() improves clarity.\nOnly one ultimate goal. It calculates 1 number.\n(Relatively) self-contained. No dependencies at all, simplest case."
-  },
-  {
-    "objectID": "course-materials/slides/day5am-slides.html#component-your-turn",
-    "href": "course-materials/slides/day5am-slides.html#component-your-turn",
-    "title": "",
-    "section": "",
-    "text": "Find a component\n\nYour turn\n\nFind your group (see activity on course website)\nRun the model again\nAs you run it, identify a component of the model\nDescribe the component on your group’s slide\nShare with the class"
-  },
-  {
-    "objectID": "course-materials/slides/day3am-slides.html#title-slide",
-    "href": "course-materials/slides/day3am-slides.html#title-slide",
-    "title": "",
-    "section": "",
-    "text": "EDS 221 Day 3 AM\nConditions and logic\n\nAugust 12th, 2026"
-  },
-  {
-    "objectID": "course-materials/slides/day3am-slides.html#review-day2-indexing",
-    "href": "course-materials/slides/day3am-slides.html#review-day2-indexing",
-    "title": "",
-    "section": "",
-    "text": "Review day 2: Indexing\n\n\nOn a sheet of paper, draw the reef matrix after this code runs:\n\nreef &lt;- matrix(0, nrow = 5, ncol = 5)\ncoral_row &lt;- 3\ncoral_col &lt;- 4\nreef[coral_row, coral_col] &lt;- 1"
-  },
-  {
-    "objectID": "course-materials/slides/day3am-slides.html#review-day2-indexing2",
-    "href": "course-materials/slides/day3am-slides.html#review-day2-indexing2",
-    "title": "",
-    "section": "",
-    "text": "Review day 2: Indexing\n\n\n\nRecall the subgoals for evaluating indexing expressions\n\nIdentify the object being indexed (vector, data frame, matrix, etc)\nIdentify the index (inside [ ] or following $)\nDetermine the type of the index (positive integers, negative integers, conditions, names, blanks) and evaluate it\nApply the index to the object and determine the result\n\n\nOn a sheet of paper, apply these subgoals to evaluate the following code.\ngrowth_row_offset &lt;- c(-1, -1, -1, 0, 1, 1, 1, 0)\ngrowth_col_offset &lt;- c(-1, 0, 1, 1, 1, 0, -1, -1)\n\ngrowth_roll &lt;- 4\n\ngrowth_row &lt;- coral_row + \n  growth_row_offset[growth_roll]\ngrowth_col &lt;- coral_col + \n  growth_col_offset[growth_roll]\nreef[growth_row, growth_col] &lt;- 1"
-  },
-  {
-    "objectID": "course-materials/eod/eod-day4.html",
-    "href": "course-materials/eod/eod-day4.html",
-    "title": "Day 4: End-of-day practice",
-    "section": "",
-    "text": "Today you’re going to practice writing and using functions by continuing to encapsulate logic in your reef model. You’ll also learn a new GitHub feature: Issues."
-  },
-  {
-    "objectID": "course-materials/eod/eod-day4.html#issues",
-    "href": "course-materials/eod/eod-day4.html#issues",
-    "title": "Day 4: End-of-day practice",
-    "section": "Issues",
-    "text": "Issues\n\n\n\n\n\n\nNote\n\n\n\nGitHub Issues are tools for tracking tasks, bugs, or questions related to a project. Like a shared to-do list or lab notebook for your code, each issue has a title, a description, and a conversation thread where you and your collaborators can discuss how to resolve it. Issues can be labeled, assigned to specific people, and closed once resolved, making them a simple way to organize and communicate about problems or planned improvements without cluttering the actual code.\n\n\n\nHow to make an Issue\n\nNavigate to your repository on GitHub.com and click the Issues tab.\nClick New issue, then add a descriptive title and a description of a task, bug, or question related to your reef model.\nClick Submit new issue to create it.\n\n\n\nMake two issues\n\nIntegrate initialization. The reef initialization step has been encapsulated in a function, but death_survival.R doesn’t have access to it yet. Create an Issue with the title “Integrate initialization”. The description should read “Source R/util.R at the top of death_survival.R and replace the existing reef initialization code with a call to the initialization function.”.\nEncapsulate growth. The coral growth code in death_survival.R still needs to be turned into a function. The Issue should describe adding a growth function to R/util.R and replacing the coral growth code in the script with a call to that function."
-  },
-  {
-    "objectID": "course-materials/eod/eod-day4.html#encapsulate-your-code",
-    "href": "course-materials/eod/eod-day4.html#encapsulate-your-code",
-    "title": "Day 4: End-of-day practice",
-    "section": "Encapsulate your code",
-    "text": "Encapsulate your code\n\nIntegrate initialization\nEarlier today, you encapsulated the reef initialization step in a function. But that function isn’t accessible to your reef model script yet - it’s in a separate file. Follow these steps to link the two together.\n\nAt the top of death_survival.R, add a line with the following code:\n\nsource(\"R/util.R\")\nThe source() function runs the script found at the path you give it. In this case, R/util.R is the path to a script defining your reef initialization function. So sourcing that script defines the function and gives you access to it.\n\nReplace the coral reef initialization code in your script with a call to your new function.\n\n\nLink your changes and the issue\nIncluding a closing keyword like fixes followed by an Issue number in a commit message will automatically close that Issue when the commit is pushed to GitHub.\n\nStage your changes to death_survival.R and util.R.\nCommit your changes with a message that includes fixes #1.\n\n\n\n\nEncapsulate growth\nThe activity this morning showed you how to encapsulate the code for coral growth into a function.\n\nAdd the growth function in util.R.\nReplace the coral growth code in your script with a call to your new function.\n\n\nLink your changes and the issue\n\nStage your changes to death_survival.R and util.R.\nCommit your changes with a message that includes fixes #2."
-  },
-  {
-    "objectID": "course-materials/eod/eod-day4.html#wrap-up",
-    "href": "course-materials/eod/eod-day4.html#wrap-up",
-    "title": "Day 4: End-of-day practice",
-    "section": "Wrap up",
-    "text": "Wrap up\nWhen you’re done, push your changes to GitHub. Then check your Issues on GitHub - you should see that they’re closed now and linked to the specific code changes.\n\n\n\n\n\n\nTip\n\n\n\nBy default, the Issues tab only shows open issues, so your closed issues will disappear from the list. To see them, click the Closed tab (next to Open) above the issue list."
-  },
-  {
-    "objectID": "course-materials/eod/eod-day1.html",
-    "href": "course-materials/eod/eod-day1.html",
-    "title": "Day 1: End-of-day practice",
-    "section": "",
-    "text": "Over the course of the first week of EDS 221, you’re going to implement the coral reef model in R. This project provides an opportunity to integrate foundational programming concepts: data structures, control structures, and functions. All of your work on this project will live in a single repository.\nToday’s end-of-day practice lays the groundwork for the rest of the work you’ll do this week. By the end of this activity, you will have:\nThe following sections describe your goals and how to validate them. The instructions are deliberately left vague - use your notes and the activities from earlier today (e.g., live coding scripts) to guide you!"
-  },
-  {
-    "objectID": "course-materials/eod/eod-day1.html#version-control-tasks",
-    "href": "course-materials/eod/eod-day1.html#version-control-tasks",
-    "title": "Day 1: End-of-day practice",
-    "section": "Version control tasks",
-    "text": "Version control tasks\n\nInitialize a local git repository for your project in your eds221/ folder.\nIn your repository, create README.md. Add 2-3 sentences describing the coral reef model at a high level. This should be a summary, not step-by-step instructions.\nCommit your changes.\nCreate a remote repository on GitHub.\nPush your local repo to the remote.\n\n\nValidation checks\nCheck that…\n\nYour repo is inside eds221/, and not inside another repo you made earlier today. You don’t want nested repos!\nYour README is visible on GitHub.\nYour local and remote repositories are synced. git status should say:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean"
-  },
-  {
-    "objectID": "course-materials/eod/eod-day1.html#code-execution-tasks",
-    "href": "course-materials/eod/eod-day1.html#code-execution-tasks",
-    "title": "Day 1: End-of-day practice",
-    "section": "Code execution tasks",
-    "text": "Code execution tasks\n\nCreate a script called roll_dice.R.\nPaste the following code in roll_dice.R.\n\nset.seed(123)\ndie &lt;- 1:6\nrolls &lt;- sample(die, size = 2, replace = TRUE)\nroll_total &lt;- sum(rolls)\n\nRun the code in roll_dice.R at the console.\nSave your script, then commit and push your changes.\n\n\nValidation checks\nCheck that…\n\nThe value of roll_total is 9.\nYour script is visible on GitHub.\nYour local and remote repositories are synced."
-  },
-  {
-    "objectID": "course-materials/eod/eod-day1.html#wrap-up",
-    "href": "course-materials/eod/eod-day1.html#wrap-up",
-    "title": "Day 1: End-of-day practice",
-    "section": "Wrap up",
-    "text": "Wrap up\nCongrats - you’ve completed your tasks for day 1!\nToday you learned:\nHow code executes\n\nCode is made up of expressions, where operators and functions act on variables and values to make things happen.\nCode has a flow from scripts to the console to the environment.\nExpressions build on each other to perform complex tasks using simpler parts.\n\nHow to track changes\n\ngit records the history of your coding projects in repositories.\ngit commands “move” files between the working directory, staging area, local repository, and remote repository.\nGitHub hosts your remote repositories, so you can share code and collaborate!"
-  },
-  {
-    "objectID": "course-materials/eod/eod-day1.html#more-information",
-    "href": "course-materials/eod/eod-day1.html#more-information",
-    "title": "Day 1: End-of-day practice",
-    "section": "More information",
-    "text": "More information\n\nWhat’s a .md file?\nYou may have noticed your README file ends in .md. That means it’s a Markdown file. Markdown is a lightweight language for formatting text. All the formatting is included directly in the text (as opposed to a Word document, for example), so it’s much more compatible with version control. You’ll learn more about Markdown next week. In the meantime, if you’d like to learn more, check out Markdown Tutorial and GitHub for Beginners: Getting started with Markdown.\n\n\nWhy is the value of roll_total 9?\nRolling dice is random, so how come everyone’s supposed to get the same value? What a great question! For now, I’m going to leave this to you to ponder. Have another look at the code I gave you and, if you’re so inclined, come up with a hypothesis for why every student should get the same random numbers. We’ll discuss this on Day 4."
-  },
-  {
-    "objectID": "course-materials/day8.html",
-    "href": "course-materials/day8.html",
-    "title": "Advanced data types",
-    "section": "",
-    "text": "Website under construction sign"
-  },
-  {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
-    "title": "Scientific Programming Essentials",
-    "section": "Course Description",
-    "text": "Course Description\nThis course teaches scientific programming skills and demonstrates the application of these techniques to environmental data analysis and problem solving. Topics include fundamental programming concepts, transforming and visualizing data, and exposure to modern data science tools. The course will be taught in R.\nBy the end of this course, students will be able to:\n\n🧠 Think like a computer scientist\n\n🌎 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
-  },
-  {
-    "objectID": "index.html#teaching-team",
-    "href": "index.html#teaching-team",
-    "title": "Scientific Programming Essentials",
-    "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nMax Czapanskiy (they/them)\nEmail: maxczap@ucsb.edu\n\n\n\n\nTA\n\n\n\n\n\n\n\n\n\n\n\nAlessandra Vidal Meza (she/her/ella)\nEmail: avidalmeza@bren.ucsb.edu"
-  },
-  {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
-    "title": "Scientific Programming Essentials",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nEDS 221 was originally developed and taught by Allison Horst. This course website contains material reused from, adapted from, and inspired by Allison’s original work."
-  },
-  {
-    "objectID": "course-materials/day10.html",
-    "href": "course-materials/day10.html",
-    "title": "Review",
-    "section": "",
-    "text": "Website under construction sign"
-  },
-  {
-    "objectID": "course-materials/day9.html",
-    "href": "course-materials/day9.html",
-    "title": "Problem solving",
-    "section": "",
-    "text": "Website under construction sign"
-  },
-  {
-    "objectID": "course-materials/eod/eod-day2.html",
-    "href": "course-materials/eod/eod-day2.html",
-    "title": "Day 2: End-of-day practice",
-    "section": "",
-    "text": "Yesterday you laid the groundwork for your coral reef model by creating the repository. Today, you’ll write code to perform the reef initialization step.\nIn the game, you initialized the reef by randomly picking 8 grid cells and placing live coral tokens on them. Here, you’ll write a script to do something similar."
-  },
-  {
-    "objectID": "course-materials/eod/eod-day2.html#pseudocode-for-reef-initialization",
-    "href": "course-materials/eod/eod-day2.html#pseudocode-for-reef-initialization",
-    "title": "Day 2: End-of-day practice",
-    "section": "Pseudocode for reef initialization",
-    "text": "Pseudocode for reef initialization\nIt’s not exactly code, but it’s not quite plain language either - let’s get to know pseudocode.\nHere’s pseudocode describing how to initialize the reef:\nCreate a 5x5 matrix of 0s representing the coral reef\nLabel the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc\nRandomly sample 8 cell labels (without replacement)\nFor each sample cell label:\n    Convert the cell label to a row index\n    Convert the cell label to a column index\n    Use the row and column indices to set the value of the matrix cell to 1\nPrint the matrix\nA few things you should notice.\n\nPseudocode has the feel of code, but the details are a little hand-wavy.\nSome lines represent a single code expression (e.g., the first line creates a variable with a call to matrix()), while others may require more than a single expression to implement.\nIt’s a higher-level description of the procedure than code itself, although more detailed than simply plain language.\n\nBecause of these properties, pseudocode is a valuable tool in several stages of the coding process. It’s quicker to write and faster to digest than real code, so it’s useful for planning and for explaining. But it also has just enough detail that it requires you to think carefully about how your code is going to work. You’ll be writing pseudocode yourself later this week.\nNow it’s your turn to translate the pseudocode into real code."
-  },
-  {
-    "objectID": "course-materials/eod/eod-day2.html#implement-the-pseudocode",
-    "href": "course-materials/eod/eod-day2.html#implement-the-pseudocode",
-    "title": "Day 2: End-of-day practice",
-    "section": "Implement the pseudocode",
-    "text": "Implement the pseudocode\n\n0. Get ready\nOpen your coral reef model folder in Positron and make a new script called initalize_reef.R. Put this expression on the first line:\nset.seed(32)\n\n\n1. Create the matrix\nCreate a 5x5 matrix of 0s representing the coral reef\nWrite an expression to implement this step in the procedure. You should be able to do it in one line.\n\n\n2. Randomly sample coral starting locations\nLabel the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc\nRandomly sample 8 cell labels (without replacement)\nThe first line of pseudocode here is a cue for the reader. It would help to draw it on a sheet of paper for you to visualize it (drawing while you code is always a good idea!), but no code is needed here.\nThe second line requires another expression. Again, you should be able to do this in one line of code.\n\n\n3. Place your coral tokens\nFor each sample cell label:\n    Convert the cell label to a row index\n    Convert the cell label to a column index\n    Use the row and column indices to set the value of the matrix cell to 1\nThis part of the pseudocode requires you to repeat the same step multiple times - a loop. We’ll cover loops on Day 3, so for today your task is to initialize just one cell. Use the first value from your random sample of coral starting locations.\nConverting the cell label to row and column indices requires some problem solving! Make sure you can do the conversion on paper before writing the code.\n\n\n\n\n\n\nTip\n\n\n\nHere’s how I suggest solving it on paper - but you’re encouraged to do whatever helps you visualize and reason about the problem! Draw a 5x5 grid on a piece of paper. Label the rows and columns with their indices, and put the numbers 1 to 25 in the cells. From there, try to figure out how to convert the labels to indices.\nHint: the %% and %/% operators will come in useful here!\n\n\n\n\n4. Print the matrix\nAt the console.\n\n\nValidation checks\nCheck that…\n\nYour first sampled label is 6\nThe leftmost cell of the second row of your matrix is 1\nThe other 24 cells in your matrix are 0"
-  },
-  {
-    "objectID": "course-materials/eod/eod-day2.html#track-your-progress",
-    "href": "course-materials/eod/eod-day2.html#track-your-progress",
-    "title": "Day 2: End-of-day practice",
-    "section": "Track your progress",
-    "text": "Track your progress\nSave the files in your working directory, then stage, commit, and push your changes.\n\nValidation checks\nCheck that…\n\nYour script is visible on GitHub\nYour local and remote repositories are synced. git status should say:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean"
-  },
-  {
-    "objectID": "course-materials/eod/eod-day2.html#wrap-up",
-    "href": "course-materials/eod/eod-day2.html#wrap-up",
-    "title": "Day 2: End-of-day practice",
-    "section": "Wrap up",
-    "text": "Wrap up\nThat’s it for day 2!\nToday you learned about:\nData types and 1d structures\n\nReal world data is represented with four computational types: character, double, integer, and logical.\nVectors are constrained to one type, so combining vectors of different types induces coercion.\nThere are lots of different ways to create vectors, such as logical(), :, and c().\n\nIndexing and 2d data\n\nReading and writing from data structures happens through indexing.\nIndexing into 1d data structures can be done with positive integers (selection by position), negative integers (exclusion by position), names, and logic. In addition, you can index 2d data with blanks to access along an entire dimension.\nData frames are a particularly important 2d data structure and the workhorse of data science. We’ll work extensively with data frames starting next week after you build your computational thinking foundation."
-  },
-  {
-    "objectID": "course-materials/slides/day1pm-slides.html#title-slide",
-    "href": "course-materials/slides/day1pm-slides.html#title-slide",
-    "title": "",
-    "section": "",
-    "text": "EDS 221 Day 1 PM\nVersion control\n\nAugust 10th, 2026"
-  },
-  {
-    "objectID": "course-materials/slides/day1pm-slides.html#corals",
-    "href": "course-materials/slides/day1pm-slides.html#corals",
-    "title": "",
-    "section": "",
-    "text": "Anyone can edit Wikipedia - how do you keep all those changes organized?"
-  },
-  {
-    "objectID": "course-materials/slides/day1pm-slides.html#version-history",
-    "href": "course-materials/slides/day1pm-slides.html#version-history",
-    "title": "",
-    "section": "",
-    "text": "Version history tracks changes over time\n\nEach contribution is individually recorded."
-  },
-  {
-    "objectID": "course-materials/slides/day1pm-slides.html#version-history2",
-    "href": "course-materials/slides/day1pm-slides.html#version-history2",
-    "title": "",
-    "section": "",
-    "text": "Version history tracks changes over time\n\nDetails about when, who, and what are linked to a set of changes."
-  },
-  {
-    "objectID": "course-materials/slides/day1pm-slides.html#diffs",
-    "href": "course-materials/slides/day1pm-slides.html#diffs",
-    "title": "",
-    "section": "",
-    "text": "Differences highlight exact changes\n\nWith version history, changes can be tracked to individual lines."
-  },
-  {
-    "objectID": "course-materials/slides/day1pm-slides.html#no-version-control",
-    "href": "course-materials/slides/day1pm-slides.html#no-version-control",
-    "title": "",
-    "section": "",
-    "text": "Version control lets us avoid this\n\nFrom “R for Excel Users” by Julie Lowndes & Allison Horst"
-  },
-  {
-    "objectID": "course-materials/slides/day1pm-slides.html#code-version-control",
-    "href": "course-materials/slides/day1pm-slides.html#code-version-control",
-    "title": "",
-    "section": "",
-    "text": "Pardon me, I want to write code, not encyclopedias\n\n\n\n\n\nBryan (2018) The American Statistician\n\n\ngit is the most widespread tool for version control of code.\nLike Wikipedia’s revision history, it tracks when, who, and what, with line-by-line differences.\n\n\nGitHub is the most widespread platform for hosting git repositories\nIt helps you collaborate, simplifying access and project management"
-  },
-  {
-    "objectID": "course-materials/slides/day1pm-slides.html#live-coding",
-    "href": "course-materials/slides/day1pm-slides.html#live-coding",
-    "title": "",
-    "section": "",
-    "text": "Live coding demo"
+    "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1] -1.1841031 -0.3077750 -0.3283373\n\nrpois(4, lambda = 10)\n\n[1]  5 11  6  8"
   },
   {
     "objectID": "course-materials/slides/day4am-slides.html#title-slide",
@@ -672,81 +483,578 @@
     "text": "Function calls\n\nFunction calls invoke function definitions\n\n\nThe arguments inside the parentheses feed into the parameters.\nArguments match parameters by position or by name.\nWithout an argument, parameters may take on a default value.\n\nroll_die &lt;- function(n_sides = 6) {\n  roll &lt;- sample(1:n_sides, 1)\n  return(roll)\n}\n\nroll_die(6)\n\nroll_die(n_sides = 6)\n\nroll_die()"
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#title-slide",
-    "href": "course-materials/slides/day2am-slides.html#title-slide",
+    "objectID": "course-materials/slides/day6pm-slides.html#title-slide",
+    "href": "course-materials/slides/day6pm-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 221 Day 2 AM\nData types and 1d structures\n\nAugust 11th, 2025"
+    "text": "EDS 221 Day 6 PM\nGrammar of graphics\n\nAugust 17th, 2026"
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#review-day1-code-execution",
-    "href": "course-materials/slides/day2am-slides.html#review-day1-code-execution",
+    "objectID": "course-materials/slides/day6pm-slides.html#grammar-overview",
+    "href": "course-materials/slides/day6pm-slides.html#grammar-overview",
+    "title": "",
+    "section": "",
+    "text": "The grammar of graphics\n\nggplot2 builds a figure by layering independent pieces on top of each other, instead of picking one big “chart type.”\n\n\ndata\nThe data frame you’re plotting.\n\nmapping\nWhich columns control which visual properties (aes()).\n\ngeometry\nThe shape used to represent the data (geom_*()).\n\nscale\nHow the mapping shows up on the figure (scale_*())."
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#ggplot-data",
+    "href": "course-materials/slides/day6pm-slides.html#ggplot-data",
+    "title": "",
+    "section": "",
+    "text": "Geometries: start with data\n\nggplot() sets up a plot for a data frame — with nothing mapped yet, there’s nothing to draw.\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\nggplot(data = penguins)"
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#ggplot-mapping",
+    "href": "course-materials/slides/day6pm-slides.html#ggplot-mapping",
+    "title": "",
+    "section": "",
+    "text": "Geometries: add a mapping\n\naes() maps columns to axes. This sets up the grid, but still no geometry has been added.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)\n)"
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#ggplot-geom-point",
+    "href": "course-materials/slides/day6pm-slides.html#ggplot-geom-point",
+    "title": "",
+    "section": "",
+    "text": "Geometries: add a geometry\n\nA geom_*() layer draws the mapped data. geom_point() draws one point per row.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)\n) +\n  geom_point()"
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#geom-choices",
+    "href": "course-materials/slides/day6pm-slides.html#geom-choices",
+    "title": "",
+    "section": "",
+    "text": "Geometries: choosing a geometry\n\nThe geometry you choose depends on the kind of relationship you want to show.\n\n\nOne numeric variable → geom_histogram()\n\nggplot(penguins, aes(x = body_mass_g)) +\n  geom_histogram()\n\n\n\n\n\n\n\n\n\nOne categorical variable → geom_bar()\n\nggplot(penguins, aes(x = island)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#geom-boxplot",
+    "href": "course-materials/slides/day6pm-slides.html#geom-boxplot",
+    "title": "",
+    "section": "",
+    "text": "Geometries: comparing groups\n\nA numeric variable by a categorical variable → geom_boxplot() shows the distribution within each group.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = species, y = body_mass_g)\n) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#aesthetics-overview",
+    "href": "course-materials/slides/day6pm-slides.html#aesthetics-overview",
+    "title": "",
+    "section": "",
+    "text": "Aesthetics\n\naes() isn’t just for x and y — it can map columns to other visual properties too.\n\nx, y — position\ncolor — outline / line color\nfill — interior color\nshape — point symbol"
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#aes-color-fill",
+    "href": "course-materials/slides/day6pm-slides.html#aes-color-fill",
+    "title": "",
+    "section": "",
+    "text": "Aesthetics: color vs. fill\n\n\n\ncolor — outlines\n\nggplot(\n  penguins,\n  aes(x = species, y = body_mass_g, color = sex)\n) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\nfill — interiors\n\nggplot(\n  penguins,\n  aes(x = species, y = body_mass_g, fill = sex)\n) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#aes-shape",
+    "href": "course-materials/slides/day6pm-slides.html#aes-shape",
+    "title": "",
+    "section": "",
+    "text": "Aesthetics: shape\n\nshape gives each category of a point geometry a different symbol — useful when color alone isn’t enough (e.g., grayscale printing).\n\nggplot(\n  data = penguins,\n  mapping = aes(x = body_mass_g, y = flipper_length_mm, shape = species)\n) +\n  geom_point()"
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#aes-color-vs-shape",
+    "href": "course-materials/slides/day6pm-slides.html#aes-color-vs-shape",
+    "title": "",
+    "section": "",
+    "text": "Aesthetics: combining color and shape\n\nMapping species to both shape and color encodes the same grouping two ways, making it easier to read.\n\nggplot(\n  data = penguins,\n  mapping = aes(\n    x = body_mass_g,\n    y = flipper_length_mm,\n    shape = species,\n    color = species\n  )\n) +\n  geom_point()"
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#scales-overview",
+    "href": "course-materials/slides/day6pm-slides.html#scales-overview",
+    "title": "",
+    "section": "",
+    "text": "Scales\n\nEvery mapped aesthetic has a scale controlling how data values become visuals — an axis, a legend, a color ramp. scale_*() functions let you customize them: titles, breaks, and the values themselves."
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#scales-axis",
+    "href": "course-materials/slides/day6pm-slides.html#scales-axis",
+    "title": "",
+    "section": "",
+    "text": "Scales: renaming and rebreaking axes\n\nscale_x_continuous() and scale_y_continuous() control the x- and y-axis scales — here, a cleaner title and fewer tick marks (n.breaks).\n\nggplot(\n  data = penguins,\n  mapping = aes(x = body_mass_g, y = flipper_length_mm, shape = species)\n) +\n  geom_point() +\n  scale_x_continuous(name = \"Body mass (g)\", n.breaks = 2) +\n  scale_y_continuous(name = \"Flipper length (mm)\", n.breaks = 4)"
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#scales-manual",
+    "href": "course-materials/slides/day6pm-slides.html#scales-manual",
+    "title": "",
+    "section": "",
+    "text": "Scales: choosing values manually\n\nscale_shape_manual() lets you assign the exact shape (or color, or fill) for each category, instead of accepting the default.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = body_mass_g, y = flipper_length_mm, shape = species)\n) +\n  geom_point() +\n  scale_shape_manual(\n    name = \"Species\",\n    values = c(Adelie = \"square\", Chinstrap = \"diamond\", Gentoo = \"circle\")\n  )"
+  },
+  {
+    "objectID": "course-materials/slides/day6pm-slides.html#grammar-review",
+    "href": "course-materials/slides/day6pm-slides.html#grammar-review",
+    "title": "",
+    "section": "",
+    "text": "The grammar of graphics\n\nggplot2 builds a figure by layering independent pieces on top of each other, instead of picking one big “chart type.”\n\n\ndata\nThe data frame you’re plotting.\n\nmapping\nWhich columns control which visual properties (aes()).\n\ngeometry\nThe shape used to represent the data (geom_*()).\n\nscale\nHow the mapping shows up on the figure (scale_*())."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day4.html",
+    "href": "course-materials/eod/eod-day4.html",
+    "title": "Day 4: End-of-day practice",
+    "section": "",
+    "text": "Today you’re going to practice writing and using functions by continuing to encapsulate logic in your reef model. You’ll also learn a new GitHub feature: Issues."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day4.html#issues",
+    "href": "course-materials/eod/eod-day4.html#issues",
+    "title": "Day 4: End-of-day practice",
+    "section": "Issues",
+    "text": "Issues\n\n\n\n\n\n\nNote\n\n\n\nGitHub Issues are tools for tracking tasks, bugs, or questions related to a project. Like a shared to-do list or lab notebook for your code, each issue has a title, a description, and a conversation thread where you and your collaborators can discuss how to resolve it. Issues can be labeled, assigned to specific people, and closed once resolved, making them a simple way to organize and communicate about problems or planned improvements without cluttering the actual code.\n\n\n\nHow to make an Issue\n\nNavigate to your repository on GitHub.com and click the Issues tab.\nClick New issue, then add a descriptive title and a description of a task, bug, or question related to your reef model.\nClick Submit new issue to create it.\n\n\n\nMake two issues\n\nIntegrate initialization. The reef initialization step has been encapsulated in a function, but death_survival.R doesn’t have access to it yet. Create an Issue with the title “Integrate initialization”. The description should read “Source R/util.R at the top of death_survival.R and replace the existing reef initialization code with a call to the initialization function.”.\nEncapsulate growth. The coral growth code in death_survival.R still needs to be turned into a function. The Issue should describe adding a growth function to R/util.R and replacing the coral growth code in the script with a call to that function."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day4.html#encapsulate-your-code",
+    "href": "course-materials/eod/eod-day4.html#encapsulate-your-code",
+    "title": "Day 4: End-of-day practice",
+    "section": "Encapsulate your code",
+    "text": "Encapsulate your code\n\nIntegrate initialization\nEarlier today, you encapsulated the reef initialization step in a function. But that function isn’t accessible to your reef model script yet - it’s in a separate file. Follow these steps to link the two together.\n\nAt the top of death_survival.R, add a line with the following code:\n\nsource(\"R/util.R\")\nThe source() function runs the script found at the path you give it. In this case, R/util.R is the path to a script defining your reef initialization function. So sourcing that script defines the function and gives you access to it.\n\nReplace the coral reef initialization code in your script with a call to your new function.\n\n\nLink your changes and the issue\nIncluding a closing keyword like fixes followed by an Issue number in a commit message will automatically close that Issue when the commit is pushed to GitHub.\n\nStage your changes to death_survival.R and util.R.\nCommit your changes with a message that includes fixes #1.\n\n\n\n\nEncapsulate growth\nThe activity this morning showed you how to encapsulate the code for coral growth into a function.\n\nAdd the growth function in util.R.\nReplace the coral growth code in your script with a call to your new function.\n\n\nLink your changes and the issue\n\nStage your changes to death_survival.R and util.R.\nCommit your changes with a message that includes fixes #2."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day4.html#wrap-up",
+    "href": "course-materials/eod/eod-day4.html#wrap-up",
+    "title": "Day 4: End-of-day practice",
+    "section": "Wrap up",
+    "text": "Wrap up\nWhen you’re done, push your changes to GitHub. Then check your Issues on GitHub - you should see that they’re closed now and linked to the specific code changes.\n\n\n\n\n\n\nTip\n\n\n\nBy default, the Issues tab only shows open issues, so your closed issues will disappear from the list. To see them, click the Closed tab (next to Open) above the issue list."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day2.html",
+    "href": "course-materials/eod/eod-day2.html",
+    "title": "Day 2: End-of-day practice",
+    "section": "",
+    "text": "Yesterday you laid the groundwork for your coral reef model by creating the repository. Today, you’ll write code to perform the reef initialization step.\nIn the game, you initialized the reef by randomly picking 8 grid cells and placing live coral tokens on them. Here, you’ll write a script to do something similar."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day2.html#pseudocode-for-reef-initialization",
+    "href": "course-materials/eod/eod-day2.html#pseudocode-for-reef-initialization",
+    "title": "Day 2: End-of-day practice",
+    "section": "Pseudocode for reef initialization",
+    "text": "Pseudocode for reef initialization\nIt’s not exactly code, but it’s not quite plain language either - let’s get to know pseudocode.\nHere’s pseudocode describing how to initialize the reef:\nCreate a 5x5 matrix of 0s representing the coral reef\nLabel the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc\nRandomly sample 8 cell labels (without replacement)\nFor each sample cell label:\n    Convert the cell label to a row index\n    Convert the cell label to a column index\n    Use the row and column indices to set the value of the matrix cell to 1\nPrint the matrix\nA few things you should notice.\n\nPseudocode has the feel of code, but the details are a little hand-wavy.\nSome lines represent a single code expression (e.g., the first line creates a variable with a call to matrix()), while others may require more than a single expression to implement.\nIt’s a higher-level description of the procedure than code itself, although more detailed than simply plain language.\n\nBecause of these properties, pseudocode is a valuable tool in several stages of the coding process. It’s quicker to write and faster to digest than real code, so it’s useful for planning and for explaining. But it also has just enough detail that it requires you to think carefully about how your code is going to work. You’ll be writing pseudocode yourself later this week.\nNow it’s your turn to translate the pseudocode into real code."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day2.html#implement-the-pseudocode",
+    "href": "course-materials/eod/eod-day2.html#implement-the-pseudocode",
+    "title": "Day 2: End-of-day practice",
+    "section": "Implement the pseudocode",
+    "text": "Implement the pseudocode\n\n0. Get ready\nOpen your coral reef model folder in Positron and make a new script called initalize_reef.R. Put this expression on the first line:\nset.seed(32)\n\n\n1. Create the matrix\nCreate a 5x5 matrix of 0s representing the coral reef\nWrite an expression to implement this step in the procedure. You should be able to do it in one line.\n\n\n2. Randomly sample coral starting locations\nLabel the cells 1-25 such that the first row is 1-5, the second row is 6-10, etc\nRandomly sample 8 cell labels (without replacement)\nThe first line of pseudocode here is a cue for the reader. It would help to draw it on a sheet of paper for you to visualize it (drawing while you code is always a good idea!), but no code is needed here.\nThe second line requires another expression. Again, you should be able to do this in one line of code.\n\n\n3. Place your coral tokens\nFor each sample cell label:\n    Convert the cell label to a row index\n    Convert the cell label to a column index\n    Use the row and column indices to set the value of the matrix cell to 1\nThis part of the pseudocode requires you to repeat the same step multiple times - a loop. We’ll cover loops on Day 3, so for today your task is to initialize just one cell. Use the first value from your random sample of coral starting locations.\nConverting the cell label to row and column indices requires some problem solving! Make sure you can do the conversion on paper before writing the code.\n\n\n\n\n\n\nTip\n\n\n\nHere’s how I suggest solving it on paper - but you’re encouraged to do whatever helps you visualize and reason about the problem! Draw a 5x5 grid on a piece of paper. Label the rows and columns with their indices, and put the numbers 1 to 25 in the cells. From there, try to figure out how to convert the labels to indices.\nHint: the %% and %/% operators will come in useful here!\n\n\n\n\n4. Print the matrix\nAt the console.\n\n\nValidation checks\nCheck that…\n\nYour first sampled label is 6\nThe leftmost cell of the second row of your matrix is 1\nThe other 24 cells in your matrix are 0"
+  },
+  {
+    "objectID": "course-materials/eod/eod-day2.html#track-your-progress",
+    "href": "course-materials/eod/eod-day2.html#track-your-progress",
+    "title": "Day 2: End-of-day practice",
+    "section": "Track your progress",
+    "text": "Track your progress\nSave the files in your working directory, then stage, commit, and push your changes.\n\nValidation checks\nCheck that…\n\nYour script is visible on GitHub\nYour local and remote repositories are synced. git status should say:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean"
+  },
+  {
+    "objectID": "course-materials/eod/eod-day2.html#wrap-up",
+    "href": "course-materials/eod/eod-day2.html#wrap-up",
+    "title": "Day 2: End-of-day practice",
+    "section": "Wrap up",
+    "text": "Wrap up\nThat’s it for day 2!\nToday you learned about:\nData types and 1d structures\n\nReal world data is represented with four computational types: character, double, integer, and logical.\nVectors are constrained to one type, so combining vectors of different types induces coercion.\nThere are lots of different ways to create vectors, such as logical(), :, and c().\n\nIndexing and 2d data\n\nReading and writing from data structures happens through indexing.\nIndexing into 1d data structures can be done with positive integers (selection by position), negative integers (exclusion by position), names, and logic. In addition, you can index 2d data with blanks to access along an entire dimension.\nData frames are a particularly important 2d data structure and the workhorse of data science. We’ll work extensively with data frames starting next week after you build your computational thinking foundation."
+  },
+  {
+    "objectID": "course-materials/solutions/day6/day6-eod.html",
+    "href": "course-materials/solutions/day6/day6-eod.html",
+    "title": "Day 6: End-of-day practice solutions",
+    "section": "",
+    "text": "This dataset comes from the Moorea Coral Reef Long Term Ecological Research (MCR LTER) site in French Polynesia, one of the longest-running coral reef monitoring programs in the world. Since 2005, researchers have surveyed the benthic (bottom-dwelling) community at six fixed sites spaced around the island of Moorea. At each site, two habitats are monitored every year: the fringing reef, a shallow zone close to shore, and the forereef, a deeper zone on the outer slope of the reef, beyond the reef crest.\nAt each site and habitat, divers lay out permanent transects on the reef and photograph a series of quadrats (small square sampling frames) along them every year. Back in the lab, every point in each quadrat photo is classified into a taxonomic or substrate category — a coral genus (e.g., Acropora, Pocillopora, Porites), an algae type, sand, or another functional group — and the percent of the quadrat covered by each category is calculated. Because the same transects and quadrats are resurveyed annually, this design lets researchers track how coral cover changes over time, including before and after disturbances like cyclones and bleaching events.\nThe columns we’ll use most are:\n\nSite: one of six fixed LTER sites around Moorea (LTER_1–LTER_6)\nHabitat: Fringing (shallow, nearshore) or Forereef (deeper, offshore)\nDepth: survey depth, in meters\nDate: survey year and month\nTaxonomy_Substrate_or_Functional_Group: the coral genus or substrate/algae category identified in a quadrat\nPercent_Cover: the percent of a quadrat covered by that category\n\nWe’ll use this dataset to practice filtering, renaming, summarizing, and visualizing — all skills from today’s session.\n\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "course-materials/solutions/day6/day6-eod.html#background",
+    "href": "course-materials/solutions/day6/day6-eod.html#background",
+    "title": "Day 6: End-of-day practice solutions",
+    "section": "",
+    "text": "This dataset comes from the Moorea Coral Reef Long Term Ecological Research (MCR LTER) site in French Polynesia, one of the longest-running coral reef monitoring programs in the world. Since 2005, researchers have surveyed the benthic (bottom-dwelling) community at six fixed sites spaced around the island of Moorea. At each site, two habitats are monitored every year: the fringing reef, a shallow zone close to shore, and the forereef, a deeper zone on the outer slope of the reef, beyond the reef crest.\nAt each site and habitat, divers lay out permanent transects on the reef and photograph a series of quadrats (small square sampling frames) along them every year. Back in the lab, every point in each quadrat photo is classified into a taxonomic or substrate category — a coral genus (e.g., Acropora, Pocillopora, Porites), an algae type, sand, or another functional group — and the percent of the quadrat covered by each category is calculated. Because the same transects and quadrats are resurveyed annually, this design lets researchers track how coral cover changes over time, including before and after disturbances like cyclones and bleaching events.\nThe columns we’ll use most are:\n\nSite: one of six fixed LTER sites around Moorea (LTER_1–LTER_6)\nHabitat: Fringing (shallow, nearshore) or Forereef (deeper, offshore)\nDepth: survey depth, in meters\nDate: survey year and month\nTaxonomy_Substrate_or_Functional_Group: the coral genus or substrate/algae category identified in a quadrat\nPercent_Cover: the percent of a quadrat covered by that category\n\nWe’ll use this dataset to practice filtering, renaming, summarizing, and visualizing — all skills from today’s session.\n\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "course-materials/solutions/day6/day6-eod.html#read-data",
+    "href": "course-materials/solutions/day6/day6-eod.html#read-data",
+    "title": "Day 6: End-of-day practice solutions",
+    "section": "Read data",
+    "text": "Read data\nWe’ll start by reading in the CSV file. The na argument tells read_csv() to treat empty strings, \"NA\", and \"ND\" (no data) as missing values, so they’re stored as proper NAs instead of text.\n\nmoorea_coral &lt;- read_csv(\n  # Note: yur path will look different\n  \"course-materials/eod/data/moorea_coral.csv\",\n  na = c(\"\", \"NA\", \"ND\") # This vector tells read_csv() which values to interpret as missing data\n)"
+  },
+  {
+    "objectID": "course-materials/solutions/day6/day6-eod.html#exercise-1",
+    "href": "course-materials/solutions/day6/day6-eod.html#exercise-1",
+    "title": "Day 6: End-of-day practice solutions",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nThe full dataset includes dozens of taxa across many sites, habitats, and years, which is too much to visualize at once. In this exercise, we narrow our focus to a single site and year, and to just two coral genera, so we can compare how their cover differs between habitats.\n\nFilter the data to the LTER 1 site in 2017, keeping only the taxa Acropora and Pocillopora.\nRename Taxonomy_Substrate_or_Functional_Group to something shorter and more descriptive.\nMake a boxplot showing the distribution of the percent cover, by habitat (fringing vs. forereef) and species.\nClean up the scale titles.\n\n\nlter1_2017 &lt;- moorea_coral |&gt;\n  filter(\n    Site == \"LTER_1\",\n    Date == \"2017-04\",\n    Taxonomy_Substrate_or_Functional_Group == \"Acropora\" |\n      Taxonomy_Substrate_or_Functional_Group == \"Pocillopora\"\n  ) |&gt;\n  rename(genus = Taxonomy_Substrate_or_Functional_Group)\n\nggplot(\n  lter1_2017,\n  aes(\n    x = genus,\n    y = Percent_Cover,\n    fill = Habitat\n  )\n) +\n  geom_boxplot() +\n  scale_x_discrete(\"Genus\") +\n  scale_y_continuous(\"Percent cover\")"
+  },
+  {
+    "objectID": "course-materials/solutions/day6/day6-eod.html#exercise-2",
+    "href": "course-materials/solutions/day6/day6-eod.html#exercise-2",
+    "title": "Day 6: End-of-day practice solutions",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nA boxplot is great for showing the shape of a distribution, but it’s hard to read exact values off of it. Here, we summarize the same filtered data numerically, calculating the average (and how much it varies) for each combination of habitat, depth, and genus.\n\nContinue using the filtered data from the previous exercise.\nDivide the percent cover by 100 so it’s expressed as a fraction.\nCalculate the mean and standard deviation of percent coral cover by habitat, depth, and taxon.\nSort the output in order of depth and taxon.\n\n\nlter1_2017 |&gt;\n  mutate(Percent_Cover = Percent_Cover / 100) |&gt;\n  summarize(\n    coral_cover_mean = mean(Percent_Cover),\n    coral_cover_sd = sd(Percent_Cover),\n    .by = c(Habitat, Depth, genus)\n  ) |&gt;\n  arrange(Depth, genus)\n\n# A tibble: 6 × 5\n  Habitat  Depth genus       coral_cover_mean coral_cover_sd\n  &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                  &lt;dbl&gt;          &lt;dbl&gt;\n1 Fringing     6 Acropora            0              0       \n2 Fringing     6 Pocillopora         0.000154       0.000961\n3 Forereef    10 Acropora            0.0319         0.0472  \n4 Forereef    10 Pocillopora         0.578          0.174   \n5 Forereef    17 Acropora            0.011          0.0169  \n6 Forereef    17 Pocillopora         0.183          0.150"
+  },
+  {
+    "objectID": "course-materials/solutions/day6/day6-eod.html#exercise-3",
+    "href": "course-materials/solutions/day6/day6-eod.html#exercise-3",
+    "title": "Day 6: End-of-day practice solutions",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nUse markdown to explain your findings from Exercises 1 and 2.\nBoth Acropora and Pocillopora are nearly absent from the fringing reef (6 m depth), with mean cover close to 0%. On the forereef, cover is much higher for both genera, and Pocillopora consistently outcovers Acropora — 57.8% vs. 3.19% at 10 m, and 18.3% vs. 1.1% at 17 m. Cover for both genera is also lower at 17 m than at 10 m, suggesting cover declines with depth on the forereef. Standard deviations are large relative to the means (especially for Pocillopora), which means percent cover is patchy across quadrats rather than uniform — some quadrats have much higher or lower cover than the site average.\nThis fringing-vs-forereef contrast makes ecological sense: fringing reefs are shallow and closer to shore, so they experience more wave stress, sedimentation, and human impact, all of which tend to favor sand and algae over branching corals like Acropora and Pocillopora. The bonus exercise below digs a little deeper by adding two more genera to the comparison."
+  },
+  {
+    "objectID": "course-materials/solutions/day6/day6-eod.html#bonus-exercise",
+    "href": "course-materials/solutions/day6/day6-eod.html#bonus-exercise",
+    "title": "Day 6: End-of-day practice solutions",
+    "section": "Bonus exercise",
+    "text": "Bonus exercise\nSo far we’ve only looked at Acropora and Pocillopora, but the dataset includes many more taxa. Before expanding the analysis, it’s worth checking how those taxa are labeled — this is a good habit any time you’re about to group or filter by a categorical column.\nUse the distinct() function to find all unique taxa, then sort by taxa. What do you notice about Porites?\n\ndistinct(moorea_coral, Taxonomy_Substrate_or_Functional_Group) |&gt;\n  arrange(Taxonomy_Substrate_or_Functional_Group) |&gt;\n  print(n = Inf)\n\n# A tibble: 37 × 1\n   Taxonomy_Substrate_or_Functional_Group\n   &lt;chr&gt;                                 \n 1 Acanthastrea                          \n 2 Acropora                              \n 3 Astrea                                \n 4 Astreopora                            \n 5 CTB                                   \n 6 Cyanophyceae                          \n 7 Cyphastrea                            \n 8 Danafungia                            \n 9 Fungiidae unidentified                \n10 Gardineroseris                        \n11 Goniastrea                            \n12 Herpolitha                            \n13 Leptastrea                            \n14 Leptoseris                            \n15 Lithophyllon                          \n16 Lobactis                              \n17 Lobophyllia                           \n18 Macroalgae                            \n19 Millepora                             \n20 Montipora                             \n21 Non-coralline Crustose Algae          \n22 Pachyseris                            \n23 Pavona                                \n24 Plesiastrea                           \n25 Pleuractis                            \n26 Pocillopora                           \n27 Porites                               \n28 Porites irregularis                   \n29 Porites rus                           \n30 Porites spp. Massive                  \n31 Psammocora                            \n32 Sand                                  \n33 Sandolitha                            \n34 Soft Coral                            \n35 Stylocoeniella                        \n36 Tubastrea                             \n37 Unknown or Other                      \n\n\nPorites shows up as four separate categories (Porites, Porites irregularis, Porites rus, and Porites spp. Massive) instead of one. Left as-is, these would be treated as four different genera in a summarize(), splitting up cover that really belongs to the same genus and understating how common Porites actually is.\nUse ifelse() and str_starts() to combine all the Porites values into a single \"Porites\" label — str_starts() checks whether a string begins with \"Porites\", and ifelse() uses that check to decide whether to relabel it — then repeat the analysis from Exercise 2, expanding it to include Porites and Montipora.\n\ninclude_coral &lt;- c(\"Acropora\", \"Pocillopora\", \"Porites\", \"Montipora\")\n\nmoorea_coral |&gt;\n  rename(genus = Taxonomy_Substrate_or_Functional_Group) |&gt;\n  mutate(genus = ifelse(str_starts(genus, \"Porites\"), \"Porites\", genus)) |&gt;\n  filter(\n    Site == \"LTER_1\",\n    Date == \"2017-04\",\n    genus %in% include_coral\n  ) |&gt;\n  summarize(\n    coral_cover_mean = mean(Percent_Cover),\n    coral_cover_sd = sd(Percent_Cover),\n    .by = c(Habitat, Depth, genus)\n  ) |&gt;\n  arrange(Depth, genus)\n\n# A tibble: 12 × 5\n   Habitat  Depth genus       coral_cover_mean coral_cover_sd\n   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                  &lt;dbl&gt;          &lt;dbl&gt;\n 1 Fringing     6 Acropora              0              0     \n 2 Fringing     6 Montipora             0              0     \n 3 Fringing     6 Pocillopora           0.0154         0.0961\n 4 Fringing     6 Porites               0.781          2.41  \n 5 Forereef    10 Acropora              3.19           4.72  \n 6 Forereef    10 Montipora             8.81           6.72  \n 7 Forereef    10 Pocillopora          57.8           17.4   \n 8 Forereef    10 Porites               0.957          1.90  \n 9 Forereef    17 Acropora              1.1            1.69  \n10 Forereef    17 Montipora             1.02           1.29  \n11 Forereef    17 Pocillopora          18.3           15.0   \n12 Forereef    17 Porites               0.807          2.10  \n\n\nWhat coral is most widespread in the fringing reef, nearest the island? What about further offshore in the forereef?\nNearest the island, in the fringing reef, Porites is the most widespread genus (0.78% mean cover), while Acropora, Montipora, and Pocillopora are all essentially absent. Further offshore in the forereef, Pocillopora is by far the most widespread genus at both depths (57.8% at 10 m and 18.3% at 17 m), well above Acropora, Montipora, and Porites.\nThis kind of habitat-driven zonation — hardy, low-profile genera like Porites persisting close to shore, while faster-growing branching genera like Pocillopora dominate the more stable forereef — is exactly the pattern the MCR LTER’s long-term monitoring is designed to detect, along with how it shifts after disturbances."
+  },
+  {
+    "objectID": "course-materials/day8.html",
+    "href": "course-materials/day8.html",
+    "title": "Advanced data types",
+    "section": "",
+    "text": "Website under construction sign"
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Scientific Programming Essentials",
+    "section": "Course Description",
+    "text": "Course Description\nThis course teaches scientific programming skills and demonstrates the application of these techniques to environmental data analysis and problem solving. Topics include fundamental programming concepts, transforming and visualizing data, and exposure to modern data science tools. The course will be taught in R.\nBy the end of this course, students will be able to:\n\n🧠 Think like a computer scientist\n\n🌎 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
+  },
+  {
+    "objectID": "index.html#teaching-team",
+    "href": "index.html#teaching-team",
+    "title": "Scientific Programming Essentials",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nMax Czapanskiy (they/them)\nEmail: maxczap@ucsb.edu\n\n\n\n\nTA\n\n\n\n\n\n\n\n\n\n\n\nAlessandra Vidal Meza (she/her/ella)\nEmail: avidalmeza@bren.ucsb.edu"
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Scientific Programming Essentials",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nEDS 221 was originally developed and taught by Allison Horst. This course website contains material reused from, adapted from, and inspired by Allison’s original work."
+  },
+  {
+    "objectID": "course-materials/day10.html",
+    "href": "course-materials/day10.html",
+    "title": "Review",
+    "section": "",
+    "text": "Website under construction sign"
+  },
+  {
+    "objectID": "course-materials/day9.html",
+    "href": "course-materials/day9.html",
+    "title": "Problem solving",
+    "section": "",
+    "text": "Website under construction sign"
+  },
+  {
+    "objectID": "course-materials/eod/eod-day1.html",
+    "href": "course-materials/eod/eod-day1.html",
+    "title": "Day 1: End-of-day practice",
+    "section": "",
+    "text": "Over the course of the first week of EDS 221, you’re going to implement the coral reef model in R. This project provides an opportunity to integrate foundational programming concepts: data structures, control structures, and functions. All of your work on this project will live in a single repository.\nToday’s end-of-day practice lays the groundwork for the rest of the work you’ll do this week. By the end of this activity, you will have:\nThe following sections describe your goals and how to validate them. The instructions are deliberately left vague - use your notes and the activities from earlier today (e.g., live coding scripts) to guide you!"
+  },
+  {
+    "objectID": "course-materials/eod/eod-day1.html#version-control-tasks",
+    "href": "course-materials/eod/eod-day1.html#version-control-tasks",
+    "title": "Day 1: End-of-day practice",
+    "section": "Version control tasks",
+    "text": "Version control tasks\n\nInitialize a local git repository for your project in your eds221/ folder.\nIn your repository, create README.md. Add 2-3 sentences describing the coral reef model at a high level. This should be a summary, not step-by-step instructions.\nCommit your changes.\nCreate a remote repository on GitHub.\nPush your local repo to the remote.\n\n\nValidation checks\nCheck that…\n\nYour repo is inside eds221/, and not inside another repo you made earlier today. You don’t want nested repos!\nYour README is visible on GitHub.\nYour local and remote repositories are synced. git status should say:\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean"
+  },
+  {
+    "objectID": "course-materials/eod/eod-day1.html#code-execution-tasks",
+    "href": "course-materials/eod/eod-day1.html#code-execution-tasks",
+    "title": "Day 1: End-of-day practice",
+    "section": "Code execution tasks",
+    "text": "Code execution tasks\n\nCreate a script called roll_dice.R.\nPaste the following code in roll_dice.R.\n\nset.seed(123)\ndie &lt;- 1:6\nrolls &lt;- sample(die, size = 2, replace = TRUE)\nroll_total &lt;- sum(rolls)\n\nRun the code in roll_dice.R at the console.\nSave your script, then commit and push your changes.\n\n\nValidation checks\nCheck that…\n\nThe value of roll_total is 9.\nYour script is visible on GitHub.\nYour local and remote repositories are synced."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day1.html#wrap-up",
+    "href": "course-materials/eod/eod-day1.html#wrap-up",
+    "title": "Day 1: End-of-day practice",
+    "section": "Wrap up",
+    "text": "Wrap up\nCongrats - you’ve completed your tasks for day 1!\nToday you learned:\nHow code executes\n\nCode is made up of expressions, where operators and functions act on variables and values to make things happen.\nCode has a flow from scripts to the console to the environment.\nExpressions build on each other to perform complex tasks using simpler parts.\n\nHow to track changes\n\ngit records the history of your coding projects in repositories.\ngit commands “move” files between the working directory, staging area, local repository, and remote repository.\nGitHub hosts your remote repositories, so you can share code and collaborate!"
+  },
+  {
+    "objectID": "course-materials/eod/eod-day1.html#more-information",
+    "href": "course-materials/eod/eod-day1.html#more-information",
+    "title": "Day 1: End-of-day practice",
+    "section": "More information",
+    "text": "More information\n\nWhat’s a .md file?\nYou may have noticed your README file ends in .md. That means it’s a Markdown file. Markdown is a lightweight language for formatting text. All the formatting is included directly in the text (as opposed to a Word document, for example), so it’s much more compatible with version control. You’ll learn more about Markdown next week. In the meantime, if you’d like to learn more, check out Markdown Tutorial and GitHub for Beginners: Getting started with Markdown.\n\n\nWhy is the value of roll_total 9?\nRolling dice is random, so how come everyone’s supposed to get the same value? What a great question! For now, I’m going to leave this to you to ponder. Have another look at the code I gave you and, if you’re so inclined, come up with a hypothesis for why every student should get the same random numbers. We’ll discuss this on Day 4."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day6.html",
+    "href": "course-materials/eod/eod-day6.html",
+    "title": "Day 6: End-of-day practice",
+    "section": "",
+    "text": "Today you’re going to apply the data wrangling and visualization concepts you learned today to a real coral reef dataset from Mo’orea. You’ll also learn how to load external data."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day6.html#background",
+    "href": "course-materials/eod/eod-day6.html#background",
+    "title": "Day 6: End-of-day practice",
+    "section": "Background",
+    "text": "Background\nThis dataset comes from the Moorea Coral Reef Long Term Ecological Research (MCR LTER) site in French Polynesia, one of the longest-running coral reef monitoring programs in the world. Since 2005, researchers have surveyed the benthic (bottom-dwelling) community at six fixed sites spaced around the island of Moorea. At each site, two habitats are monitored every year: the fringing reef, a shallow zone close to shore, and the forereef, a deeper zone on the outer slope of the reef, beyond the reef crest.\nAt each site and habitat, divers lay out permanent transects on the reef and photograph a series of quadrats (small square sampling frames) along them every year. Back in the lab, every point in each quadrat photo is classified into a taxonomic or substrate category — a coral genus (e.g., Acropora, Pocillopora, Porites), an algae type, sand, or another functional group — and the percent of the quadrat covered by each category is calculated. Because the same transects and quadrats are resurveyed annually, this design lets researchers track how coral cover changes over time, including before and after disturbances like cyclones and bleaching events.\n\n\n\n\n\n\nNote\n\n\n\nThe columns you’ll use most are:\n\nSite: one of six fixed LTER sites around Moorea (LTER_1–LTER_6)\nHabitat: Fringing (shallow, nearshore) or Forereef (deeper, offshore)\nDepth: survey depth, in meters\nDate: survey year and month\nTaxonomy_Substrate_or_Functional_Group: the coral genus or substrate/algae category identified in a quadrat\nPercent_Cover: the percent of a quadrat covered by that category"
+  },
+  {
+    "objectID": "course-materials/eod/eod-day6.html#read-data",
+    "href": "course-materials/eod/eod-day6.html#read-data",
+    "title": "Day 6: End-of-day practice",
+    "section": "Read data",
+    "text": "Read data\nDownload the data from here.\nInside your day 6 folder, create a subfolder called data.\nPut moorea_coral.csv in your data folder.\nCreate a Quarto document in your day 6 folder called wrangle-visualize-coral.qmd.\nAdd a code chunk containing the following code:\nlibrary(tidyverse)\n\nmoorea_coral &lt;- read_csv(\n  \"data/moorea_coral.csv\",\n  na = c(\"\", \"NA\", \"ND\") # This vector tells read_csv() which values to interpret as missing data\n)\nUse glimpse() to see what the dataset looks like."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day6.html#wrangle-and-visualize",
+    "href": "course-materials/eod/eod-day6.html#wrangle-and-visualize",
+    "title": "Day 6: End-of-day practice",
+    "section": "Wrangle and visualize",
+    "text": "Wrangle and visualize\n\nExercise 1\n\nFilter the data to the LTER 1 site in 2017, keeping only the taxa Acropora and Pocillopora.\nRename Taxonomy_Substrate_or_Functional_Group to something shorter and more descriptive.\nMake a boxplot showing the distribution of the percent cover, by habitat (fringing vs. forereef) and species.\nClean up the scale titles.\n\n\n\nExercise 2\n\nContinue using the filtered data from the previous exercise.\nDivide the percent cover by 100 so it’s expressed as a fraction.\nCalculate the mean and standard deviation of percent coral cover by habitat, depth, and taxon.\nSort the output in order of depth and taxon.\n\n\n\nExercise 3\nUse markdown in your Quarto document to explain your findings from Exercises 1 and 2."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day6.html#bonus-exercise",
+    "href": "course-materials/eod/eod-day6.html#bonus-exercise",
+    "title": "Day 6: End-of-day practice",
+    "section": "Bonus exercise",
+    "text": "Bonus exercise\nUse the distinct() function to find all unique taxa, then sort by taxa. What do you notice about Porites?\nUse the ifelse() and str_starts() functions to combine all the Porites values into a single label. Then repeat your analysis from Exercise 2, but this time expand your analysis to include Porites and Montipora. Hint: use the %in% operator.\nWhat coral is most widespread in the fringing reef, nearest the island? What about further offshore in the forereef?"
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#title-slide",
+    "href": "course-materials/slides/day1pm-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 1 PM\nVersion control\n\nAugust 10th, 2026"
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#corals",
+    "href": "course-materials/slides/day1pm-slides.html#corals",
+    "title": "",
+    "section": "",
+    "text": "Anyone can edit Wikipedia - how do you keep all those changes organized?"
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#version-history",
+    "href": "course-materials/slides/day1pm-slides.html#version-history",
+    "title": "",
+    "section": "",
+    "text": "Version history tracks changes over time\n\nEach contribution is individually recorded."
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#version-history2",
+    "href": "course-materials/slides/day1pm-slides.html#version-history2",
+    "title": "",
+    "section": "",
+    "text": "Version history tracks changes over time\n\nDetails about when, who, and what are linked to a set of changes."
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#diffs",
+    "href": "course-materials/slides/day1pm-slides.html#diffs",
+    "title": "",
+    "section": "",
+    "text": "Differences highlight exact changes\n\nWith version history, changes can be tracked to individual lines."
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#no-version-control",
+    "href": "course-materials/slides/day1pm-slides.html#no-version-control",
+    "title": "",
+    "section": "",
+    "text": "Version control lets us avoid this\n\nFrom “R for Excel Users” by Julie Lowndes & Allison Horst"
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#code-version-control",
+    "href": "course-materials/slides/day1pm-slides.html#code-version-control",
+    "title": "",
+    "section": "",
+    "text": "Pardon me, I want to write code, not encyclopedias\n\n\n\n\n\nBryan (2018) The American Statistician\n\n\ngit is the most widespread tool for version control of code.\nLike Wikipedia’s revision history, it tracks when, who, and what, with line-by-line differences.\n\n\nGitHub is the most widespread platform for hosting git repositories\nIt helps you collaborate, simplifying access and project management"
+  },
+  {
+    "objectID": "course-materials/slides/day1pm-slides.html#live-coding",
+    "href": "course-materials/slides/day1pm-slides.html#live-coding",
+    "title": "",
+    "section": "",
+    "text": "Live coding demo"
+  },
+  {
+    "objectID": "course-materials/slides/day3am-slides.html#title-slide",
+    "href": "course-materials/slides/day3am-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 3 AM\nConditions and logic\n\nAugust 12th, 2026"
+  },
+  {
+    "objectID": "course-materials/slides/day3am-slides.html#review-day2-indexing",
+    "href": "course-materials/slides/day3am-slides.html#review-day2-indexing",
+    "title": "",
+    "section": "",
+    "text": "Review day 2: Indexing\n\n\nOn a sheet of paper, draw the reef matrix after this code runs:\n\nreef &lt;- matrix(0, nrow = 5, ncol = 5)\ncoral_row &lt;- 3\ncoral_col &lt;- 4\nreef[coral_row, coral_col] &lt;- 1"
+  },
+  {
+    "objectID": "course-materials/slides/day3am-slides.html#review-day2-indexing2",
+    "href": "course-materials/slides/day3am-slides.html#review-day2-indexing2",
+    "title": "",
+    "section": "",
+    "text": "Review day 2: Indexing\n\n\n\nRecall the subgoals for evaluating indexing expressions\n\nIdentify the object being indexed (vector, data frame, matrix, etc)\nIdentify the index (inside [ ] or following $)\nDetermine the type of the index (positive integers, negative integers, conditions, names, blanks) and evaluate it\nApply the index to the object and determine the result\n\n\nOn a sheet of paper, apply these subgoals to evaluate the following code.\ngrowth_row_offset &lt;- c(-1, -1, -1, 0, 1, 1, 1, 0)\ngrowth_col_offset &lt;- c(-1, 0, 1, 1, 1, 0, -1, -1)\n\ngrowth_roll &lt;- 4\n\ngrowth_row &lt;- coral_row + \n  growth_row_offset[growth_roll]\ngrowth_col &lt;- coral_col + \n  growth_col_offset[growth_roll]\nreef[growth_row, growth_col] &lt;- 1"
+  },
+  {
+    "objectID": "course-materials/slides/day5am-slides.html#title-slide",
+    "href": "course-materials/slides/day5am-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 5 AM\nCreating programs: planning\n\nAugust 14th, 2026"
+  },
+  {
+    "objectID": "course-materials/slides/day5am-slides.html#optimal-stress",
+    "href": "course-materials/slides/day5am-slides.html#optimal-stress",
+    "title": "",
+    "section": "",
+    "text": "Optimal stress\n\n\nYerkes-Dodson Curve"
+  },
+  {
+    "objectID": "course-materials/slides/day5am-slides.html#exponential-complexity",
+    "href": "course-materials/slides/day5am-slides.html#exponential-complexity",
+    "title": "",
+    "section": "",
+    "text": "Exponential complexity"
+  },
+  {
+    "objectID": "course-materials/slides/day5am-slides.html#course-goals",
+    "href": "course-materials/slides/day5am-slides.html#course-goals",
+    "title": "",
+    "section": "",
+    "text": "Course goals\n\n\n\nMust\nGrasp sufficient building blocks to continue your learning in the future.\n\nYou learned the alphabet and some basic vocabulary\n\nIdeally\nDevelop intuition about how to use data structures, control structures, and functions.\n\nYou can write with correct grammar\n\nMaybe\nFluently read and write code in R.\n\nYou can hold a conversation"
+  },
+  {
+    "objectID": "course-materials/slides/day5am-slides.html#progress-check",
+    "href": "course-materials/slides/day5am-slides.html#progress-check",
+    "title": "",
+    "section": "",
+    "text": "Progress check\n\nWritten assessment\n\n4 sets of 3 questions\n\n1 set for each day this week\n\nQuestions increase in complexity\n\n1st question: building blocks\n2nd question: intuition\n3rd question: fluency"
+  },
+  {
+    "objectID": "course-materials/slides/day5am-slides.html#problem-decomposition",
+    "href": "course-materials/slides/day5am-slides.html#problem-decomposition",
+    "title": "",
+    "section": "",
+    "text": "Problem decomposition\n\n\n\n\n\nWe’re going to re-run the coral reef model.\nThe model is a complex problem.\nThis time, as you’re running it, focus on finding simpler problems.\n\nIn the afternoon session, we’ll solve the simpler problems and put the whole thing together\nProblem decomposition is how we apply our building blocks to solve complex problems."
+  },
+  {
+    "objectID": "course-materials/slides/day5am-slides.html#identifying-components",
+    "href": "course-materials/slides/day5am-slides.html#identifying-components",
+    "title": "",
+    "section": "",
+    "text": "Identifying components\n\n\n\nWhat makes for a good component?\n\nNot too big, not too small\nOnly one ultimate goal\n(Relatively) self-contained\n\n\nGood\n\n“Roll 2d6”\n“Initialize the reef”\n“Grow a coral”\n\nNeeds revision\n\n“Apply crisis rules” (too big)\n“Set cell to 1” (too small)\n“Loop through the years” (not self-contained)"
+  },
+  {
+    "objectID": "course-materials/slides/day5am-slides.html#component-example",
+    "href": "course-materials/slides/day5am-slides.html#component-example",
+    "title": "",
+    "section": "",
+    "text": "Example of a component\n\nRoll 2d6\n\nNot too big, not too small. Replacing sum(sample(1:6, size = 2, replace = TRUE)) with roll2d6() improves clarity.\nOnly one ultimate goal. It calculates 1 number.\n(Relatively) self-contained. No dependencies at all, simplest case."
+  },
+  {
+    "objectID": "course-materials/slides/day5am-slides.html#component-your-turn",
+    "href": "course-materials/slides/day5am-slides.html#component-your-turn",
+    "title": "",
+    "section": "",
+    "text": "Find a component\n\nYour turn\n\nFind your group (see activity on course website)\nRun the model again\nAs you run it, identify a component of the model\nDescribe the component on your group’s slide\nShare with the class"
+  },
+  {
+    "objectID": "course-materials/slides/day2pm-slides.html#title-slide",
+    "href": "course-materials/slides/day2pm-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 2 PM\nIndexing and 2d data\n\nAugust 11th, 2025"
+  },
+  {
+    "objectID": "course-materials/slides/day2pm-slides.html#review-day1-code-execution",
+    "href": "course-materials/slides/day2pm-slides.html#review-day1-code-execution",
     "title": "",
     "section": "",
     "text": "Review day 1: Code execution\n\nWhat’s the value of x after you execute these commands?\nWhat output would you see at the console?\nx &lt;- 10\nx + 1\ny &lt;- x\ny &lt;- y * 2\nx\ny"
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#review-day1-version-control",
-    "href": "course-materials/slides/day2am-slides.html#review-day1-version-control",
+    "objectID": "course-materials/slides/day2pm-slides.html#review-day1-version-control",
+    "href": "course-materials/slides/day2pm-slides.html#review-day1-version-control",
     "title": "",
     "section": "",
     "text": "Review day 1: Version control\n\nLabel the arrows in the following diagram with the corresponding git command."
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#create-datasheet",
-    "href": "course-materials/slides/day2am-slides.html#create-datasheet",
+    "objectID": "course-materials/slides/day2pm-slides.html#create-datasheet",
+    "href": "course-materials/slides/day2pm-slides.html#create-datasheet",
     "title": "",
     "section": "",
     "text": "Create a datasheet\n\n\nPhoto by Annabelle Lang/LSU College of Agriculture"
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#types",
-    "href": "course-materials/slides/day2am-slides.html#types",
+    "objectID": "course-materials/slides/day2pm-slides.html#types",
+    "href": "course-materials/slides/day2pm-slides.html#types",
     "title": "",
     "section": "",
     "text": "Atomic types\n\n\n\nThere are four atomic types in R.\n\nCharacter (text)\nDouble (decimal numbers)\nInteger (round numbers)\nLogical (true and false)\n\n\nAtomic types are the basic building blocks of data structures in R.\nLike the name implies, everything else is made out of them."
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#coercion",
-    "href": "course-materials/slides/day2am-slides.html#coercion",
+    "objectID": "course-materials/slides/day2pm-slides.html#coercion",
+    "href": "course-materials/slides/day2pm-slides.html#coercion",
     "title": "",
     "section": "",
     "text": "Coercion\n\nAtomic vectors have to be one type. When you combine vectors of different types, one gets coerced into the other’s type.\n\nFrom Hands on Programming with R"
   },
   {
-    "objectID": "course-materials/slides/day2am-slides.html#making-vectors",
-    "href": "course-materials/slides/day2am-slides.html#making-vectors",
+    "objectID": "course-materials/slides/day2pm-slides.html#making-vectors",
+    "href": "course-materials/slides/day2pm-slides.html#making-vectors",
     "title": "",
     "section": "",
-    "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1] -1.1841031 -0.3077750 -0.3283373\n\nrpois(4, lambda = 10)\n\n[1]  5 11  6  8"
+    "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1]  1.354899  1.454561 -1.436012\n\nrpois(4, lambda = 10)\n\n[1] 11 14  5  8"
   },
   {
-    "objectID": "course-materials/slides/day4pm-slides.html#title-slide",
-    "href": "course-materials/slides/day4pm-slides.html#title-slide",
+    "objectID": "course-materials/slides/day3pm-slides.html#title-slide",
+    "href": "course-materials/slides/day3pm-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 221 Day 4 PM\nVectorized functions\n\nAugust 13th, 2025"
+    "text": "EDS 221 Day 3 PM\nLoops\n\nAugust 12th, 2025"
   },
   {
-    "objectID": "course-materials/slides/day4pm-slides.html#vectorization",
-    "href": "course-materials/slides/day4pm-slides.html#vectorization",
+    "objectID": "course-materials/slides/day3pm-slides.html#loops-repeat",
+    "href": "course-materials/slides/day3pm-slides.html#loops-repeat",
     "title": "",
     "section": "",
-    "text": "Vectorization\n\nVectorized functions and operators work on entire vectors at once, rather than element by element.\nUsing vectorization often improves code performance and clarity.\nsquares &lt;- c(1, 4, 9, 16, 25)\n\n# Loop\nroots &lt;- double(length(squares))\nfor (i in 1:length(roots)) {\n  roots[i] &lt;- sqrt(roots)\n}\n\n# Vectorized\nroots &lt;- sqrt(squares)"
+    "text": "Loops let you repeat yourself\n\nFor example, print each value in a vector\n\ncorals &lt;- c(\"Porites\", \"Pocillopora\", \"Acropora\")\nfor (c in corals) {\n  print(c)\n}\n\n[1] \"Porites\"\n[1] \"Pocillopora\"\n[1] \"Acropora\""
   },
   {
-    "objectID": "course-materials/slides/day4pm-slides.html#functions-operators",
-    "href": "course-materials/slides/day4pm-slides.html#functions-operators",
+    "objectID": "course-materials/slides/day3pm-slides.html#loops-repeat2",
+    "href": "course-materials/slides/day3pm-slides.html#loops-repeat2",
     "title": "",
     "section": "",
-    "text": "Functions and operators\n\nBoth functions and operators can be vectorized.\n\na &lt;- 1:4\nb &lt;- 4:1\n\na + b\n\n[1] 5 5 5 5\n\nas.character(a)\n\n[1] \"1\" \"2\" \"3\" \"4\""
+    "text": "Loops let you repeat yourself\n\nIt’s common to loop over the indices of a vector.\n\ncorals &lt;- c(\"Porites\", \"Pocillopora\", \"Acropora\")\nfor (i in 1:length(corals)) {\n  print(corals[i])\n}\n\n[1] \"Porites\"\n[1] \"Pocillopora\"\n[1] \"Acropora\""
   },
   {
-    "objectID": "course-materials/slides/day4pm-slides.html#review-",
-    "href": "course-materials/slides/day4pm-slides.html#review-",
+    "objectID": "course-materials/slides/day3pm-slides.html#fibonacci",
+    "href": "course-materials/slides/day3pm-slides.html#fibonacci",
     "title": "",
     "section": "",
-    "text": "Review\n\nThe round() function rounds numbers.\n\nround(pi, digits = 2)\n\n[1] 3.14\n\n\nConsider this expression:\nround(seq(0, 2, by = 1/2) * pi, digits = 2)\nUsing only pencil and paper, answer the following questions.\n\n\n\n\n\n\nTip\n\n\nSolve sub-expressions first to build up to the complete solution.\n\n\n\n\nWhat will the output be?\nWhich parameter is round() vectorized over?"
+    "text": "What does this loop make?\n\nLet’s break down this loop.\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+  },
+  {
+    "objectID": "course-materials/slides/day3pm-slides.html#loop-parts",
+    "href": "course-materials/slides/day3pm-slides.html#loop-parts",
+    "title": "",
+    "section": "",
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\n\nIterator i\nSequence 3:length(fibonacci)\nBody { ... }\n\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+  },
+  {
+    "objectID": "course-materials/slides/day3pm-slides.html#iterator",
+    "href": "course-materials/slides/day3pm-slides.html#iterator",
+    "title": "",
+    "section": "",
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe iterator changes value each time through the loop.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+  },
+  {
+    "objectID": "course-materials/slides/day3pm-slides.html#sequence",
+    "href": "course-materials/slides/day3pm-slides.html#sequence",
+    "title": "",
+    "section": "",
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe sequence is what the iterator takes on values from.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
+  },
+  {
+    "objectID": "course-materials/slides/day3pm-slides.html#body",
+    "href": "course-materials/slides/day3pm-slides.html#body",
+    "title": "",
+    "section": "",
+    "text": "Parts of a loop\n\nA loop has three main parts\n\n\nThe body is what the loop repeatedly does.\n\n\nfibonacci &lt;- integer(6)\nfibonacci[1:2] &lt;- 1\nfor (i in 3:length(fibonacci)) {\n  fibonacci[i] &lt;- fibonacci[i - 1] + fibonacci[i - 2]\n}\nfibonacci\n\n[1] 1 1 2 3 5 8"
   },
   {
     "objectID": "course-materials/slides/day1am-slides.html#title-slide",
@@ -889,6 +1197,20 @@
     "text": "Bug 3\n\n“Hey Randall, it looks like you recorded a finch as a towhee. Can you fix that?”\n\nsongbird_survey &lt;- data.frame(\n  species = c(\"California Towhee\", \"House Finch\", \"House Sparrow\"),\n  count = c(9L, 6L, 8L),\n  song_freq_khz = c(4.99, 2.66, 4.08),\n  is_native = c(TRUE, TRUE, FALSE)\n)\n\nwrong_count_towhee &lt;- songbird_survey$count[species == \"California Towhee\"]\nwrong_count_finch &lt;- songbird_survey$count[species == \"House Finch\"]\nright_count_towhee &lt;- wrong_count_towhee - 1\nright_count_finch &lt;- wrong_count_finch + 1\n\nsongbird_survey$count[species == \"California Towhee\"] &lt;- right_count_towhee\nsongbird_survey$count[species == \"House Finch\"] &lt;- right_count_finch\nsongbird_survey"
   },
   {
+    "objectID": "course-materials/activities/day6/day6pm-concept-mapping.html",
+    "href": "course-materials/activities/day6/day6pm-concept-mapping.html",
+    "title": "Grammar of graphics: Concept mapping",
+    "section": "",
+    "text": "Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you’ll work in pairs or trios to create your own concept maps from scratch.\n\n\n\nAim for 6-10 terms.\nFunction names are valid concepts, but you should also identify the concepts associated with the functions. For example, mean(), max(), and sd() would all fall under the broader concept of summary statistics.\nBriefly (1 sentence only) define each concept.\n\n\n\n\n\nUse a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.\nPlace your concepts on the concept map. Group related concepts together.\nArrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.\n\n\n\n\n\nConnect related concepts with lines.\nLabel connections with linking words. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, [ summary statistics ] include [ mean(), max(), and sd() ].\n\n\n\n\nConcept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1."
+  },
+  {
+    "objectID": "course-materials/activities/day6/day6pm-concept-mapping.html#instructions",
+    "href": "course-materials/activities/day6/day6pm-concept-mapping.html#instructions",
+    "title": "Grammar of graphics: Concept mapping",
+    "section": "",
+    "text": "Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you’ll work in pairs or trios to create your own concept maps from scratch.\n\n\n\nAim for 6-10 terms.\nFunction names are valid concepts, but you should also identify the concepts associated with the functions. For example, mean(), max(), and sd() would all fall under the broader concept of summary statistics.\nBriefly (1 sentence only) define each concept.\n\n\n\n\n\nUse a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.\nPlace your concepts on the concept map. Group related concepts together.\nArrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.\n\n\n\n\n\nConnect related concepts with lines.\nLabel connections with linking words. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, [ summary statistics ] include [ mean(), max(), and sd() ].\n\n\n\n\nConcept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1."
+  },
+  {
     "objectID": "course-materials/activities/day1/day1pm-git-challenge.html",
     "href": "course-materials/activities/day1/day1pm-git-challenge.html",
     "title": "git challenge",
@@ -935,7 +1257,28 @@
     "href": "course-materials/day6.html",
     "title": "Data frames",
     "section": "",
-    "text": "Website under construction sign"
+    "text": "Code sleuth: data wrangling\n Live coding demo: data wrangling\n Data wrangling mini-lecture\n Concept mapping: function basics\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day6.html#morning-session-data-wrangling",
+    "href": "course-materials/day6.html#morning-session-data-wrangling",
+    "title": "Data frames",
+    "section": "",
+    "text": "Code sleuth: data wrangling\n Live coding demo: data wrangling\n Data wrangling mini-lecture\n Concept mapping: function basics\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day6.html#afternoon-session-grammar-of-graphics",
+    "href": "course-materials/day6.html#afternoon-session-grammar-of-graphics",
+    "title": "Data frames",
+    "section": "Afternoon session: Grammar of graphics",
+    "text": "Afternoon session: Grammar of graphics\n\n Code sleuth: grammar of graphics\n Live coding demo: grammar of graphics\n Grammar of graphics mini-lecture\n Concept mapping: vectorization\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day6.html#end-of-day-practice",
+    "href": "course-materials/day6.html#end-of-day-practice",
+    "title": "Data frames",
+    "section": "End-of-day practice",
+    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 6 Practice: Wrangle and visualize coral data"
   },
   {
     "objectID": "course-materials/day3.html",

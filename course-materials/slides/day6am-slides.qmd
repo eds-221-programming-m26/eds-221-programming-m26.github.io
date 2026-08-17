@@ -203,17 +203,13 @@ select(penguins, species, island, body_mass_g)
 select(penguins, species:bill_length_mm)
 ```
 
-[`!` — everything **except**]{.body-text-m}
-
-```{r}
-select(penguins, !island)
-```
-
 :::
 
 ::: {.column}
 
 [`starts_with()` — match column names]{.body-text-m}
+
+_There are lots of these helper functions!_
 
 ```{r}
 select(penguins, starts_with("bill"))
@@ -294,3 +290,40 @@ penguins |>
 ```
 
 ---
+
+## {#memorize data-menu-title="What to memorize"}
+
+[What to memorize]{.slide-title}
+
+<hr>
+
+[Data wrangling with the tidyverse involves far more functions than you've seen so far. You should memorize a few fundamentals now, then pick up the rest as you gain experience.]{.body-text-m}
+
+
+::: {.columns}
+
+::: {.column}
+
+### Rows
+
+- `filter()`
+- `arrange()`
+
+### Columns
+
+- `select()`
+- `mutate()`
+
+:::
+
+::: {.column}
+
+### Groups
+
+- `summarize()`
+- `n()`
+- The `.by` parameter
+
+:::
+
+:::
