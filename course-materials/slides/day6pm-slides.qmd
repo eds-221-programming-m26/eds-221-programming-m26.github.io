@@ -1,0 +1,331 @@
+---
+format:
+  revealjs:
+    slide-number: true
+    # code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme:
+      - ../../meds-slides-styles.scss
+execute:
+  echo: true
+  fig-width: 4
+  fig-height: 3
+---
+
+## {#title-slide data-menu-title="Title Slide" background="#053660"}
+
+[EDS 221 Day 6 PM]{.custom-title}
+
+[*Grammar of graphics*]{.custom-subtitle}
+
+<hr class="hr-teal">
+
+[August 17^th^, 2026]{.custom-subtitle3}
+
+---
+
+## {#grammar-overview data-menu-title="The grammar of graphics"}
+
+[The grammar of graphics]{.slide-title}
+
+<hr>
+
+[`ggplot2` builds a figure by layering independent pieces on top of each other, instead of picking one big "chart type."]{.body-text-m}
+
+::: {.columns}
+
+::: {.column}
+
+**_data_**
+
+The data frame you're plotting.
+
+:::
+
+::: {.column}
+
+**_mapping_**
+
+Which columns control which visual properties (`aes()`).
+
+:::
+
+::: {.column}
+
+**_geometry_**
+
+The shape used to represent the data (`geom_*()`).
+
+:::
+
+::: {.column}
+
+**_scale_**
+
+How the mapping shows up on the figure (`scale_*()`).
+
+:::
+
+:::
+
+---
+
+## {#ggplot-data data-menu-title="Start with data"}
+
+[Geometries: start with data]{.slide-title}
+
+<hr>
+
+[`ggplot()` sets up a plot for a data frame — with nothing mapped yet, there's nothing to draw.]{.body-text-m}
+
+```{r}
+#| message: false
+library(tidyverse)
+library(palmerpenguins)
+
+ggplot(data = penguins)
+```
+
+---
+
+## {#ggplot-mapping .smaller data-menu-title="Add a mapping"}
+
+[Geometries: add a mapping]{.slide-title}
+
+<hr>
+
+[`aes()` maps columns to axes. This sets up the grid, but still no geometry has been added.]{.body-text-m}
+
+```{r}
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_length_mm, y = body_mass_g)
+)
+```
+
+---
+
+## {#ggplot-geom-point .smaller data-menu-title="Add a geometry"}
+
+[Geometries: add a geometry]{.slide-title}
+
+<hr>
+
+[A `geom_*()` layer draws the mapped data. `geom_point()` draws one point per row.]{.body-text-m}
+
+```{r}
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_length_mm, y = body_mass_g)
+) +
+  geom_point()
+```
+
+---
+
+## {#geom-choices .smaller data-menu-title="Choosing a geometry"}
+
+[Geometries: choosing a geometry]{.slide-title}
+
+<hr>
+
+[The geometry you choose depends on the kind of relationship you want to show.]{.body-text-m}
+
+::: {.columns}
+
+::: {.column}
+
+[One numeric variable → `geom_histogram()`]{.body-text-s}
+
+```{r}
+#| fig-height: 3
+ggplot(penguins, aes(x = body_mass_g)) +
+  geom_histogram()
+```
+
+:::
+
+::: {.column}
+
+[One categorical variable → `geom_bar()`]{.body-text-s}
+
+```{r}
+#| fig-height: 3
+ggplot(penguins, aes(x = island)) +
+  geom_bar()
+```
+
+:::
+
+:::
+
+---
+
+## {#geom-boxplot .smaller data-menu-title="Comparing groups"}
+
+[Geometries: comparing groups]{.slide-title}
+
+<hr>
+
+[A numeric variable by a categorical variable → `geom_boxplot()` shows the distribution within each group.]{.body-text-m}
+
+```{r}
+ggplot(
+  data = penguins,
+  mapping = aes(x = species, y = body_mass_g)
+) +
+  geom_boxplot()
+```
+
+---
+
+## {#aesthetics-overview data-menu-title="Aesthetics"}
+
+[Aesthetics]{.slide-title}
+
+<hr>
+
+[`aes()` isn't just for `x` and `y` — it can map columns to other visual properties too.]{.body-text-m}
+
+- `x`, `y` — position
+- `color` — outline / line color
+- `fill` — interior color
+- `shape` — point symbol
+
+---
+
+## {#aes-color-fill .smaller data-menu-title="color vs. fill"}
+
+[Aesthetics: color vs. fill]{.slide-title}
+
+<hr>
+
+::: {.columns}
+
+::: {.column}
+
+[`color` — outlines]{.body-text-s}
+
+```{r}
+#| fig-height: 3.5
+ggplot(
+  penguins,
+  aes(x = species, y = body_mass_g, color = sex)
+) +
+  geom_boxplot()
+```
+
+:::
+
+::: {.column}
+
+[`fill` — interiors]{.body-text-s}
+
+```{r}
+#| fig-height: 3.5
+ggplot(
+  penguins,
+  aes(x = species, y = body_mass_g, fill = sex)
+) +
+  geom_boxplot()
+```
+
+:::
+
+:::
+
+---
+
+## {#aes-shape .smaller data-menu-title="shape"}
+
+[Aesthetics: shape]{.slide-title}
+
+<hr>
+
+[`shape` gives each category of a point geometry a different symbol — useful when color alone isn't enough (e.g., grayscale printing).]{.body-text-m}
+
+```{r}
+ggplot(
+  data = penguins,
+  mapping = aes(x = body_mass_g, y = flipper_length_mm, shape = species)
+) +
+  geom_point()
+```
+
+---
+
+## {#aes-color-vs-shape .smaller data-menu-title="Combining aesthetics"}
+
+[Aesthetics: combining color and shape]{.slide-title}
+
+<hr>
+
+[Mapping `species` to both `shape` and `color` encodes the same grouping two ways, making it easier to read.]{.body-text-m}
+
+```{r}
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = body_mass_g,
+    y = flipper_length_mm,
+    shape = species,
+    color = species
+  )
+) +
+  geom_point()
+```
+
+---
+
+## {#scales-overview data-menu-title="Scales"}
+
+[Scales]{.slide-title}
+
+<hr>
+
+[Every mapped aesthetic has a **scale** controlling how data values become visuals — an axis, a legend, a color ramp. `scale_*()` functions let you customize them: titles, breaks, and the values themselves.]{.body-text-m}
+
+---
+
+## {#scales-axis .smaller data-menu-title="Renaming axes"}
+
+[Scales: renaming and rebreaking axes]{.slide-title}
+
+<hr>
+
+[`scale_x_continuous()` and `scale_y_continuous()` control the x- and y-axis scales — here, a cleaner title and fewer tick marks (`n.breaks`).]{.body-text-m}
+
+```{r}
+ggplot(
+  data = penguins,
+  mapping = aes(x = body_mass_g, y = flipper_length_mm, shape = species)
+) +
+  geom_point() +
+  scale_x_continuous(name = "Body mass (g)", n.breaks = 2) +
+  scale_y_continuous(name = "Flipper length (mm)", n.breaks = 4)
+```
+
+---
+
+## {#scales-manual .smaller data-menu-title="Manual scales"}
+
+[Scales: choosing values manually]{.slide-title}
+
+<hr>
+
+[`scale_shape_manual()` lets you assign the exact shape (or color, or fill) for each category, instead of accepting the default.]{.body-text-m}
+
+```{r}
+ggplot(
+  data = penguins,
+  mapping = aes(x = body_mass_g, y = flipper_length_mm, shape = species)
+) +
+  geom_point() +
+  scale_shape_manual(
+    name = "Species",
+    values = c(Adelie = "square", Chinstrap = "diamond", Gentoo = "circle")
+  )
+```
+
+---
