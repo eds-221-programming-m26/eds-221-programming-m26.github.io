@@ -509,7 +509,8 @@
 <hr>
 <p><span class="body-text-m"><code>billboard</code> tracks each song’s chart rank in a separate column per week — <code>wk1</code> through <code>wk76</code>. That’s 76 columns encoding one variable: <em>week</em>.</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>billboard <span class="sc">|&gt;</span> <span class="fu">select</span>(artist, track, wk1, wk2, wk3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>billboard <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">select</span>(artist, track, wk1, wk2, wk3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 317 × 5
    artist         track                     wk1   wk2   wk3
@@ -532,30 +533,29 @@
 <h2></h2>
 <p><span class="slide-title">pivot_longer(): selecting with starts_with()</span></p>
 <hr>
-<p><span class="body-text-m"><code>cols</code> accepts the same tidyselect helpers as <code>select()</code>. <code>values_drop_na</code> removes weeks a song hadn’t charted yet or had already dropped off.</span></p>
+<p><span class="body-text-m"><code>cols</code> accepts the same tidyselect helpers as <code>select()</code>.</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>billboard <span class="sc">|&gt;</span></span>
 <span id="cb11-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
 <span id="cb11-3"><a></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"wk"</span>),</span>
 <span id="cb11-4"><a></a>    <span class="at">names_to =</span> <span class="st">"week"</span>,</span>
-<span id="cb11-5"><a></a>    <span class="at">values_to =</span> <span class="st">"rank"</span>,</span>
-<span id="cb11-6"><a></a>    <span class="at">values_drop_na =</span> <span class="cn">TRUE</span></span>
-<span id="cb11-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-5"><a></a>    <span class="at">values_to =</span> <span class="st">"rank"</span></span>
+<span id="cb11-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5,307 × 5
-   artist  track                   date.entered week   rank
-   &lt;chr&gt;   &lt;chr&gt;                   &lt;date&gt;       &lt;chr&gt; &lt;dbl&gt;
- 1 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk1      87
- 2 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk2      82
- 3 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk3      72
- 4 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk4      77
- 5 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk5      87
- 6 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk6      94
- 7 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk7      99
- 8 2Ge+her The Hardest Part Of ... 2000-09-02   wk1      91
- 9 2Ge+her The Hardest Part Of ... 2000-09-02   wk2      87
-10 2Ge+her The Hardest Part Of ... 2000-09-02   wk3      92
-# ℹ 5,297 more rows</code></pre>
+<pre><code># A tibble: 24,092 × 5
+   artist track                   date.entered week   rank
+   &lt;chr&gt;  &lt;chr&gt;                   &lt;date&gt;       &lt;chr&gt; &lt;dbl&gt;
+ 1 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk1      87
+ 2 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk2      82
+ 3 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk3      72
+ 4 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk4      77
+ 5 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk5      87
+ 6 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk6      94
+ 7 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk7      99
+ 8 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk8      NA
+ 9 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk9      NA
+10 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk10     NA
+# ℹ 24,082 more rows</code></pre>
 </div>
 </div>
 </section>

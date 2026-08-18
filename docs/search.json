@@ -81,7 +81,7 @@
     "href": "course-materials/day7.html#additional-materials",
     "title": "Manipulating data",
     "section": "Additional materials",
-    "text": "Additional materials\nJoins: R4DS ch 19 Pivoting: R4DS ch 5 Fundamentals of Data Visualization by Claus O. Wilke"
+    "text": "Additional materials\n\nJoins: R4DS ch 19\nPivoting: R4DS ch 5\nFundamentals of Data Visualization by Claus O. Wilke"
   },
   {
     "objectID": "course-materials/day4.html",
@@ -459,14 +459,14 @@
     "href": "course-materials/slides/day7pm-slides.html#pivot-longer-billboard",
     "title": "",
     "section": "",
-    "text": "pivot_longer(): a messier example\n\nbillboard tracks each song’s chart rank in a separate column per week — wk1 through wk76. That’s 76 columns encoding one variable: week.\n\nbillboard |&gt; select(artist, track, wk1, wk2, wk3)\n\n# A tibble: 317 × 5\n   artist         track                     wk1   wk2   wk3\n   &lt;chr&gt;          &lt;chr&gt;                   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 2 Pac          Baby Don't Cry (Keep...    87    82    72\n 2 2Ge+her        The Hardest Part Of ...    91    87    92\n 3 3 Doors Down   Kryptonite                 81    70    68\n 4 3 Doors Down   Loser                      76    76    72\n 5 504 Boyz       Wobble Wobble              57    34    25\n 6 98^0           Give Me Just One Nig...    51    39    34\n 7 A*Teens        Dancing Queen              97    97    96\n 8 Aaliyah        I Don't Wanna              84    62    51\n 9 Aaliyah        Try Again                  59    53    38\n10 Adams, Yolanda Open My Heart              76    76    74\n# ℹ 307 more rows"
+    "text": "pivot_longer(): a messier example\n\nbillboard tracks each song’s chart rank in a separate column per week — wk1 through wk76. That’s 76 columns encoding one variable: week.\n\nbillboard |&gt;\n  select(artist, track, wk1, wk2, wk3)\n\n# A tibble: 317 × 5\n   artist         track                     wk1   wk2   wk3\n   &lt;chr&gt;          &lt;chr&gt;                   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 2 Pac          Baby Don't Cry (Keep...    87    82    72\n 2 2Ge+her        The Hardest Part Of ...    91    87    92\n 3 3 Doors Down   Kryptonite                 81    70    68\n 4 3 Doors Down   Loser                      76    76    72\n 5 504 Boyz       Wobble Wobble              57    34    25\n 6 98^0           Give Me Just One Nig...    51    39    34\n 7 A*Teens        Dancing Queen              97    97    96\n 8 Aaliyah        I Don't Wanna              84    62    51\n 9 Aaliyah        Try Again                  59    53    38\n10 Adams, Yolanda Open My Heart              76    76    74\n# ℹ 307 more rows"
   },
   {
     "objectID": "course-materials/slides/day7pm-slides.html#pivot-longer-billboard2",
     "href": "course-materials/slides/day7pm-slides.html#pivot-longer-billboard2",
     "title": "",
     "section": "",
-    "text": "pivot_longer(): selecting with starts_with()\n\ncols accepts the same tidyselect helpers as select(). values_drop_na removes weeks a song hadn’t charted yet or had already dropped off.\n\nbillboard |&gt;\n  pivot_longer(\n    cols = starts_with(\"wk\"),\n    names_to = \"week\",\n    values_to = \"rank\",\n    values_drop_na = TRUE\n  )\n\n# A tibble: 5,307 × 5\n   artist  track                   date.entered week   rank\n   &lt;chr&gt;   &lt;chr&gt;                   &lt;date&gt;       &lt;chr&gt; &lt;dbl&gt;\n 1 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk1      87\n 2 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk2      82\n 3 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk3      72\n 4 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk4      77\n 5 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk5      87\n 6 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk6      94\n 7 2 Pac   Baby Don't Cry (Keep... 2000-02-26   wk7      99\n 8 2Ge+her The Hardest Part Of ... 2000-09-02   wk1      91\n 9 2Ge+her The Hardest Part Of ... 2000-09-02   wk2      87\n10 2Ge+her The Hardest Part Of ... 2000-09-02   wk3      92\n# ℹ 5,297 more rows"
+    "text": "pivot_longer(): selecting with starts_with()\n\ncols accepts the same tidyselect helpers as select().\n\nbillboard |&gt;\n  pivot_longer(\n    cols = starts_with(\"wk\"),\n    names_to = \"week\",\n    values_to = \"rank\"\n  )\n\n# A tibble: 24,092 × 5\n   artist track                   date.entered week   rank\n   &lt;chr&gt;  &lt;chr&gt;                   &lt;date&gt;       &lt;chr&gt; &lt;dbl&gt;\n 1 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk1      87\n 2 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk2      82\n 3 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk3      72\n 4 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk4      77\n 5 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk5      87\n 6 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk6      94\n 7 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk7      99\n 8 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk8      NA\n 9 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk9      NA\n10 2 Pac  Baby Don't Cry (Keep... 2000-02-26   wk10     NA\n# ℹ 24,082 more rows"
   },
   {
     "objectID": "course-materials/slides/day7pm-slides.html#selecting-cols",
@@ -1117,49 +1117,49 @@
     "href": "course-materials/slides/day7am-slides.html#meet-the-data",
     "title": "",
     "section": "",
-    "text": "Meet the data: nycflights13\n\nInstead of one giant table, nycflights13 spreads information about 2013 NYC flights across five related data frames.\n\nlibrary(tidyverse)\nlibrary(nycflights13)\n\nflights\n\n# A tibble: 336,776 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      517            515         2      830            819\n 2  2013     1     1      533            529         4      850            830\n 3  2013     1     1      542            540         2      923            850\n 4  2013     1     1      544            545        -1     1004           1022\n 5  2013     1     1      554            600        -6      812            837\n 6  2013     1     1      554            558        -4      740            728\n 7  2013     1     1      555            600        -5      913            854\n 8  2013     1     1      557            600        -3      709            723\n 9  2013     1     1      557            600        -3      838            846\n10  2013     1     1      558            600        -2      753            745\n# ℹ 336,766 more rows\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
+    "text": "Meet the data: surveys & species\n\nInstead of one giant table, this dataset spreads rodent, bird, and reptile trapping records across two related data frames.\n\nlibrary(tidyverse)\n\nsurveys &lt;- read_csv(\"data/surveys.csv\", na = c(\"\", \"NA\"))\nspecies &lt;- read_csv(\"data/species.csv\", na = c(\"\", \"NA\"))\n\nsurveys\n\n# A tibble: 18,676 × 7\n   record_id date     plot_id species_id sex   hindfoot_length weight\n       &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;           &lt;dbl&gt;  &lt;dbl&gt;\n 1     16879 1/6/1990       1 DM         F                  37     35\n 2     16880 1/6/1990       1 OL         M                  21     28\n 3     16881 1/6/1990       6 PF         M                  16      7\n 4     16882 1/6/1990      23 RM         F                  17      9\n 5     16883 1/6/1990      12 RM         M                  17     10\n 6     16884 1/6/1990      24 RM         M                  17      9\n 7     16885 1/6/1990      12 SF         M                  25     35\n 8     16886 1/6/1990      24 SH         F                  30     73\n 9     16887 1/6/1990      12 SF         M                  28     44\n10     16888 1/6/1990      17 DO         M                  36     55\n# ℹ 18,666 more rows"
   },
   {
     "objectID": "course-materials/slides/day7am-slides.html#relational-data",
     "href": "course-materials/slides/day7am-slides.html#relational-data",
     "title": "",
     "section": "",
-    "text": "Relational data\n\nA relational dataset stores information across multiple tables instead of one, connected by shared columns called keys.\n\nflights — one row per flight\nairlines — one row per carrier\nairports — one row per airport\nplanes — one row per physical aircraft\nweather — one row per airport, per hour\n\nSplitting data this way avoids repeating an airline’s full name on every one of its thousands of flights."
+    "text": "Relational data\n\nA relational dataset stores information across multiple tables instead of one, connected by shared columns called keys.\n\nsurveys — one row per animal captured on a trapping night\nspecies — one row per species\n\nSplitting data this way avoids repeating a species’ full scientific name and taxon on every one of its thousands of capture records."
   },
   {
     "objectID": "course-materials/slides/day7am-slides.html#primary-key",
     "href": "course-materials/slides/day7am-slides.html#primary-key",
     "title": "",
     "section": "",
-    "text": "Keys: primary key\n\nA primary key uniquely identifies each row in its own table. Every plane appears exactly once in planes, identified by tailnum.\n\nplanes |&gt;\n  count(tailnum) |&gt;\n  filter(n &gt; 1)\n\n# A tibble: 0 × 2\n# ℹ 2 variables: tailnum &lt;chr&gt;, n &lt;int&gt;\n\n\nZero rows out means every tailnum is unique — tailnum is a valid primary key for planes."
+    "text": "Keys: primary key\n\nA primary key uniquely identifies each row in its own table. Every species appears exactly once in species, identified by species_id.\n\nspecies |&gt;\n  count(species_id) |&gt;\n  filter(n &gt; 1)\n\n# A tibble: 0 × 2\n# ℹ 2 variables: species_id &lt;chr&gt;, n &lt;int&gt;\n\n\nZero rows out means every species_id is unique — species_id is a valid primary key for species."
   },
   {
     "objectID": "course-materials/slides/day7am-slides.html#foreign-key",
     "href": "course-materials/slides/day7am-slides.html#foreign-key",
     "title": "",
     "section": "",
-    "text": "Keys: foreign key\n\nA foreign key refers to a primary key in another table. tailnum also appears in flights — but a single plane makes many flights.\n\nflights |&gt;\n  count(tailnum) |&gt;\n  filter(n &gt; 1)\n\n# A tibble: 3,873 × 2\n   tailnum     n\n   &lt;chr&gt;   &lt;int&gt;\n 1 D942DN      4\n 2 N0EGMQ    371\n 3 N10156    153\n 4 N102UW     48\n 5 N103US     46\n 6 N104UW     47\n 7 N10575    289\n 8 N105UW     45\n 9 N107US     41\n10 N108UW     60\n# ℹ 3,863 more rows\n\n\nRows here mean tailnum repeats in flights — it’s a foreign key there, not a primary key."
+    "text": "Keys: foreign key\n\nA foreign key refers to a primary key in another table. species_id also appears in surveys — but the same species is captured many times.\n\nsurveys |&gt;\n  count(species_id) |&gt;\n  filter(n &gt; 1)\n\n# A tibble: 38 × 2\n   species_id     n\n   &lt;chr&gt;      &lt;int&gt;\n 1 AB            80\n 2 AH           301\n 3 AS             2\n 4 BA            43\n 5 CB            27\n 6 DM          4921\n 7 DO          1543\n 8 DS            95\n 9 DX            36\n10 NL           348\n# ℹ 28 more rows\n\n\nRows here mean species_id repeats in surveys — it’s a foreign key there, not a primary key."
   },
   {
     "objectID": "course-materials/slides/day7am-slides.html#inner-join",
     "href": "course-materials/slides/day7am-slides.html#inner-join",
     "title": "",
     "section": "",
-    "text": "inner_join(): matching columns\n\ninner_join() adds columns from a second table by matching rows on a shared key. join_by() says which column to match on.\n\nflights |&gt;\n  inner_join(airlines, join_by(carrier)) |&gt;\n  select(flight, carrier, name)\n\n# A tibble: 336,776 × 3\n   flight carrier name                    \n    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;                   \n 1   1545 UA      United Air Lines Inc.   \n 2   1714 UA      United Air Lines Inc.   \n 3   1141 AA      American Airlines Inc.  \n 4    725 B6      JetBlue Airways         \n 5    461 DL      Delta Air Lines Inc.    \n 6   1696 UA      United Air Lines Inc.   \n 7    507 B6      JetBlue Airways         \n 8   5708 EV      ExpressJet Airlines Inc.\n 9     79 B6      JetBlue Airways         \n10    301 AA      American Airlines Inc.  \n# ℹ 336,766 more rows"
+    "text": "inner_join(): matching columns\n\ninner_join() adds columns from a second table by matching rows on a shared key. join_by() says which column to match on.\n\nsurveys |&gt;\n  inner_join(species, join_by(species_id)) |&gt;\n  select(record_id, species_id, species_name)\n\n# A tibble: 18,269 × 3\n   record_id species_id species_name             \n       &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;                    \n 1     16879 DM         Dipodomys merriami       \n 2     16880 OL         Onychomys leucogaster    \n 3     16881 PF         Perognathus flavus       \n 4     16882 RM         Reithrodontomys megalotis\n 5     16883 RM         Reithrodontomys megalotis\n 6     16884 RM         Reithrodontomys megalotis\n 7     16885 SF         Sigmodon fulviventer     \n 8     16886 SH         Sigmodon hispidus        \n 9     16887 SF         Sigmodon fulviventer     \n10     16888 DO         Dipodomys ordii          \n# ℹ 18,259 more rows"
   },
   {
     "objectID": "course-materials/slides/day7am-slides.html#inner-join-rename",
     "href": "course-materials/slides/day7am-slides.html#inner-join-rename",
     "title": "",
     "section": "",
-    "text": "inner_join(): different column names\n\nWhen the key has different names in each table, connect them with == inside join_by(). Here dest in flights matches faa in airports.\n\nflights |&gt;\n  inner_join(airports, join_by(dest == faa)) |&gt;\n  select(flight, dest, name)\n\n# A tibble: 329,174 × 3\n   flight dest  name                           \n    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;                          \n 1   1545 IAH   George Bush Intercontinental   \n 2   1714 IAH   George Bush Intercontinental   \n 3   1141 MIA   Miami Intl                     \n 4    461 ATL   Hartsfield Jackson Atlanta Intl\n 5   1696 ORD   Chicago Ohare Intl             \n 6    507 FLL   Fort Lauderdale Hollywood Intl \n 7   5708 IAD   Washington Dulles Intl         \n 8     79 MCO   Orlando Intl                   \n 9    301 ORD   Chicago Ohare Intl             \n10     49 PBI   Palm Beach Intl                \n# ℹ 329,164 more rows"
+    "text": "inner_join(): different column names\n\nWhen the key has different names in each table, connect them with == inside join_by(). Here species_id in surveys matches code in this renamed copy of species.\n\nspecies_renamed &lt;- species |&gt; rename(code = species_id)\n\nsurveys |&gt;\n  inner_join(species_renamed, join_by(species_id == code)) |&gt;\n  select(record_id, species_id, species_name)\n\n# A tibble: 18,269 × 3\n   record_id species_id species_name             \n       &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;                    \n 1     16879 DM         Dipodomys merriami       \n 2     16880 OL         Onychomys leucogaster    \n 3     16881 PF         Perognathus flavus       \n 4     16882 RM         Reithrodontomys megalotis\n 5     16883 RM         Reithrodontomys megalotis\n 6     16884 RM         Reithrodontomys megalotis\n 7     16885 SF         Sigmodon fulviventer     \n 8     16886 SH         Sigmodon hispidus        \n 9     16887 SF         Sigmodon fulviventer     \n10     16888 DO         Dipodomys ordii          \n# ℹ 18,259 more rows"
   },
   {
     "objectID": "course-materials/slides/day7am-slides.html#join-row-counts",
     "href": "course-materials/slides/day7am-slides.html#join-row-counts",
     "title": "",
     "section": "",
-    "text": "What happens to row count\n\ninner_join() keeps only rows with a match in both tables. Some flights use planes missing from planes, so they drop out.\n\nnrow(flights)\n\n[1] 336776\n\nflights |&gt;\n  inner_join(planes, join_by(tailnum)) |&gt;\n  nrow()\n\n[1] 284170\n\n\nAlways check row counts before and after a join — an unexpected change usually means a key wasn’t as unique as you thought."
+    "text": "What happens to row count\n\ninner_join() keeps only rows with a match in both tables. Some captures are missing a species_id, so they drop out.\n\nnrow(surveys)\n\n[1] 18676\n\nsurveys |&gt;\n  inner_join(species, join_by(species_id)) |&gt;\n  nrow()\n\n[1] 18269\n\n\nAlways check row counts before and after a join — an unexpected change usually means a key wasn’t as unique as you thought."
   },
   {
     "objectID": "course-materials/slides/day7am-slides.html#join-family",
@@ -1173,14 +1173,14 @@
     "href": "course-materials/slides/day7am-slides.html#filtering-joins",
     "title": "",
     "section": "",
-    "text": "Filtering joins\n\nFiltering joins use a second table to keep or drop rows from the first — without adding any new columns.\n\n\nsemi_join() — keep rows with a match\n\ncarriers_with_data &lt;- head(airlines, 5)\n\nflights |&gt;\n  semi_join(carriers_with_data, join_by(carrier)) |&gt;\n  distinct(carrier)\n\n# A tibble: 5 × 1\n  carrier\n  &lt;chr&gt;  \n1 AA     \n2 B6     \n3 DL     \n4 AS     \n5 9E     \n\n\n\nanti_join() — keep rows without a match\n\nflights |&gt;\n  anti_join(carriers_with_data, join_by(carrier)) |&gt;\n  distinct(carrier)\n\n# A tibble: 11 × 1\n   carrier\n   &lt;chr&gt;  \n 1 UA     \n 2 EV     \n 3 MQ     \n 4 US     \n 5 WN     \n 6 VX     \n 7 FL     \n 8 F9     \n 9 HA     \n10 YV     \n11 OO"
+    "text": "Filtering joins\n\nFiltering joins use a second table to keep or drop rows from the first — without adding any new columns.\n\n\nsemi_join() — keep rows with a match\n\nbirds &lt;- species |&gt; filter(taxa == \"Bird\")\n\nsurveys |&gt;\n  semi_join(birds, join_by(species_id)) |&gt;\n  distinct(species_id)\n\n# A tibble: 8 × 1\n  species_id\n  &lt;chr&gt;     \n1 AB        \n2 PG        \n3 PC        \n4 UP        \n5 AS        \n6 CB        \n7 PU        \n8 US        \n\n\n\nanti_join() — keep rows without a match\n\nsurveys |&gt;\n  anti_join(birds, join_by(species_id)) |&gt;\n  distinct(species_id)\n\n# A tibble: 35 × 1\n   species_id\n   &lt;chr&gt;     \n 1 DM        \n 2 OL        \n 3 PF        \n 4 RM        \n 5 SF        \n 6 SH        \n 7 DO        \n 8 OT        \n 9 AH        \n10 PE        \n# ℹ 25 more rows"
   },
   {
     "objectID": "course-materials/slides/day7am-slides.html#am-memorize",
     "href": "course-materials/slides/day7am-slides.html#am-memorize",
     "title": "",
     "section": "",
-    "text": "What to memorize\n\nJoining lets you work with data split across multiple tables instead of duplicating information in one giant sheet.\n\n\nKeys\n\nPrimary key: unique in its own table\nForeign key: refers to another table’s primary key\n\n\nJoins\n\ninner_join(), left_join(), full_join()\njoin_by() — and join_by(x == y) when names differ\nsemi_join() / anti_join() to filter, not add columns"
+    "text": "What to memorize\n\nJoining lets you work with data split across multiple tables instead of duplicating information in one giant sheet.\n\n\nKeys\n\nPrimary key: unique in its own table\nForeign key: refers to another table’s primary key\n\n\nJoins\n\ninner_join(), left_join()\njoin_by()"
   },
   {
     "objectID": "course-materials/slides/day4pm-slides.html#title-slide",

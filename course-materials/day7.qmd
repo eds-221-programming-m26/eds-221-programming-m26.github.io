@@ -28,6 +28,6 @@ Complete the following tasks / activities before heading home for the day!
 
 ## Additional materials
 
-[Joins: R4DS ch 19](https://r4ds.hadley.nz/joins.html)
-[Pivoting: R4DS ch 5](https://r4ds.hadley.nz/data-tidy.html)
-[Fundamentals of Data Visualization by Claus O. Wilke](https://clauswilke.com/dataviz/)
+- [Joins: R4DS ch 19](https://r4ds.hadley.nz/joins.html)
+- [Pivoting: R4DS ch 5](https://r4ds.hadley.nz/data-tidy.html)
+- [Fundamentals of Data Visualization by Claus O. Wilke](https://clauswilke.com/dataviz/)

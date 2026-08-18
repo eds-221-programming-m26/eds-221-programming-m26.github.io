@@ -123,7 +123,8 @@ mass_wide |>
 [`billboard` tracks each song's chart rank in a separate column per week — `wk1` through `wk76`. That's 76 columns encoding one variable: *week*.]{.body-text-m}
 
 ```{r}
-billboard |> select(artist, track, wk1, wk2, wk3)
+billboard |>
+  select(artist, track, wk1, wk2, wk3)
 ```
 
 ---
@@ -134,15 +135,14 @@ billboard |> select(artist, track, wk1, wk2, wk3)
 
 <hr>
 
-[`cols` accepts the same tidyselect helpers as `select()`. `values_drop_na` removes weeks a song hadn't charted yet or had already dropped off.]{.body-text-m}
+[`cols` accepts the same tidyselect helpers as `select()`.]{.body-text-m}
 
 ```{r}
 billboard |>
   pivot_longer(
     cols = starts_with("wk"),
     names_to = "week",
-    values_to = "rank",
-    values_drop_na = TRUE
+    values_to = "rank"
   )
 ```
 

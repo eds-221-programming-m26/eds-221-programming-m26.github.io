@@ -23,20 +23,23 @@ execute:
 
 ---
 
-## {#meet-the-data .smaller data-menu-title="Meet the data: nycflights13"}
+## {#meet-the-data .smaller data-menu-title="Meet the data: surveys & species"}
 
-[Meet the data: nycflights13]{.slide-title}
+[Meet the data: surveys & species]{.slide-title}
 
 <hr>
 
-[Instead of one giant table, `nycflights13` spreads information about 2013 NYC flights across **five** related data frames.]{.body-text-m}
+[Instead of one giant table, this dataset spreads rodent, bird, and reptile trapping records across **two** related data frames.]{.body-text-m}
 
 ```{r}
 #| message: false
+#| warning: false
 library(tidyverse)
-library(nycflights13)
 
-flights
+surveys <- read_csv("data/surveys.csv", na = c("", "NA"))
+species <- read_csv("data/species.csv", na = c("", "NA"))
+
+surveys
 ```
 
 ---
@@ -49,13 +52,10 @@ flights
 
 [A *relational dataset* stores information across multiple tables instead of one, connected by shared columns called **keys**.]{.body-text-m}
 
-- `flights` — one row per flight
-- `airlines` — one row per carrier
-- `airports` — one row per airport
-- `planes` — one row per physical aircraft
-- `weather` — one row per airport, per hour
+- `surveys` — one row per animal captured on a trapping night
+- `species` — one row per species
 
-[Splitting data this way avoids repeating an airline's full name on every one of its thousands of flights.]{.body-text-s}
+[Splitting data this way avoids repeating a species' full scientific name and taxon on every one of its thousands of capture records.]{.body-text-s}
 
 ---
 
@@ -65,15 +65,15 @@ flights
 
 <hr>
 
-[A **primary key** uniquely identifies each row *in its own table*. Every plane appears exactly once in `planes`, identified by `tailnum`.]{.body-text-m}
+[A **primary key** uniquely identifies each row *in its own table*. Every species appears exactly once in `species`, identified by `species_id`.]{.body-text-m}
 
 ```{r}
-planes |>
-  count(tailnum) |>
+species |>
+  count(species_id) |>
   filter(n > 1)
 ```
 
-[Zero rows out means every `tailnum` is unique — `tailnum` is a valid primary key for `planes`.]{.body-text-s}
+[Zero rows out means every `species_id` is unique — `species_id` is a valid primary key for `species`.]{.body-text-s}
 
 ---
 
@@ -83,15 +83,15 @@ planes |>
 
 <hr>
 
-[A **foreign key** refers to a primary key in *another* table. `tailnum` also appears in `flights` — but a single plane makes many flights.]{.body-text-m}
+[A **foreign key** refers to a primary key in *another* table. `species_id` also appears in `surveys` — but the same species is captured many times.]{.body-text-m}
 
 ```{r}
-flights |>
-  count(tailnum) |>
+surveys |>
+  count(species_id) |>
   filter(n > 1)
 ```
 
-[Rows here mean `tailnum` repeats in `flights` — it's a foreign key there, not a primary key.]{.body-text-s}
+[Rows here mean `species_id` repeats in `surveys` — it's a foreign key there, not a primary key.]{.body-text-s}
 
 ---
 
@@ -104,9 +104,9 @@ flights |>
 [`inner_join()` adds columns from a second table by matching rows on a shared key. `join_by()` says which column to match on.]{.body-text-m}
 
 ```{r}
-flights |>
-  inner_join(airlines, join_by(carrier)) |>
-  select(flight, carrier, name)
+surveys |>
+  inner_join(species, join_by(species_id)) |>
+  select(record_id, species_id, species_name)
 ```
 
 ---
@@ -117,12 +117,14 @@ flights |>
 
 <hr>
 
-[When the key has different names in each table, connect them with `==` inside `join_by()`. Here `dest` in `flights` matches `faa` in `airports`.]{.body-text-m}
+[When the key has different names in each table, connect them with `==` inside `join_by()`. Here `species_id` in `surveys` matches `code` in this renamed copy of `species`.]{.body-text-m}
 
 ```{r}
-flights |>
-  inner_join(airports, join_by(dest == faa)) |>
-  select(flight, dest, name)
+species_renamed <- species |> rename(code = species_id)
+
+surveys |>
+  inner_join(species_renamed, join_by(species_id == code)) |>
+  select(record_id, species_id, species_name)
 ```
 
 ---
@@ -133,13 +135,13 @@ flights |>
 
 <hr>
 
-[`inner_join()` keeps only rows with a match in **both** tables. Some flights use planes missing from `planes`, so they drop out.]{.body-text-m}
+[`inner_join()` keeps only rows with a match in **both** tables. Some captures are missing a `species_id`, so they drop out.]{.body-text-m}
 
 ```{r}
-nrow(flights)
+nrow(surveys)
 
-flights |>
-  inner_join(planes, join_by(tailnum)) |>
+surveys |>
+  inner_join(species, join_by(species_id)) |>
   nrow()
 ```
 
@@ -179,11 +181,11 @@ flights |>
 [`semi_join()` — keep rows *with* a match]{.body-text-s}
 
 ```{r}
-carriers_with_data <- head(airlines, 5)
+birds <- species |> filter(taxa == "Bird")
 
-flights |>
-  semi_join(carriers_with_data, join_by(carrier)) |>
-  distinct(carrier)
+surveys |>
+  semi_join(birds, join_by(species_id)) |>
+  distinct(species_id)
 ```
 
 :::
@@ -193,9 +195,9 @@ flights |>
 [`anti_join()` — keep rows *without* a match]{.body-text-s}
 
 ```{r}
-flights |>
-  anti_join(carriers_with_data, join_by(carrier)) |>
-  distinct(carrier)
+surveys |>
+  anti_join(birds, join_by(species_id)) |>
+  distinct(species_id)
 ```
 
 :::
@@ -227,9 +229,8 @@ flights |>
 
 ### Joins
 
-- `inner_join()`, `left_join()`, `full_join()`
-- `join_by()` — and `join_by(x == y)` when names differ
-- `semi_join()` / `anti_join()` to filter, not add columns
+- `inner_join()`, `left_join()`
+- `join_by()`
 
 :::
 

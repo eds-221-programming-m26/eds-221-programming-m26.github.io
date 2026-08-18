@@ -400,34 +400,33 @@
 <hr class="hr-teal">
 <p><span class="custom-subtitle3">August 18<sup>th</sup>, 2026</span></p>
 </section>
-<section id="meet-the-data" class="slide level2 smaller" data-menu-title="Meet the data: nycflights13">
+<section id="meet-the-data" class="slide level2 smaller" data-menu-title="Meet the data: surveys &amp; species">
 <h2></h2>
-<p><span class="slide-title">Meet the data: nycflights13</span></p>
+<p><span class="slide-title">Meet the data: surveys &amp; species</span></p>
 <hr>
-<p><span class="body-text-m">Instead of one giant table, <code>nycflights13</code> spreads information about 2013 NYC flights across <strong>five</strong> related data frames.</span></p>
+<p><span class="body-text-m">Instead of one giant table, this dataset spreads rodent, bird, and reptile trapping records across <strong>two</strong> related data frames.</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(nycflights13)</span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a>flights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a>surveys <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/surveys.csv"</span>, <span class="at">na =</span> <span class="fu">c</span>(<span class="st">""</span>, <span class="st">"NA"</span>))</span>
+<span id="cb1-4"><a></a>species <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/species.csv"</span>, <span class="at">na =</span> <span class="fu">c</span>(<span class="st">""</span>, <span class="st">"NA"</span>))</span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a>surveys</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 336,776 × 19
-    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
- 1  2013     1     1      517            515         2      830            819
- 2  2013     1     1      533            529         4      850            830
- 3  2013     1     1      542            540         2      923            850
- 4  2013     1     1      544            545        -1     1004           1022
- 5  2013     1     1      554            600        -6      812            837
- 6  2013     1     1      554            558        -4      740            728
- 7  2013     1     1      555            600        -5      913            854
- 8  2013     1     1      557            600        -3      709            723
- 9  2013     1     1      557            600        -3      838            846
-10  2013     1     1      558            600        -2      753            745
-# ℹ 336,766 more rows
-# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
-#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
-#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre><code># A tibble: 18,676 × 7
+   record_id date     plot_id species_id sex   hindfoot_length weight
+       &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;           &lt;dbl&gt;  &lt;dbl&gt;
+ 1     16879 1/6/1990       1 DM         F                  37     35
+ 2     16880 1/6/1990       1 OL         M                  21     28
+ 3     16881 1/6/1990       6 PF         M                  16      7
+ 4     16882 1/6/1990      23 RM         F                  17      9
+ 5     16883 1/6/1990      12 RM         M                  17     10
+ 6     16884 1/6/1990      24 RM         M                  17      9
+ 7     16885 1/6/1990      12 SF         M                  25     35
+ 8     16886 1/6/1990      24 SH         F                  30     73
+ 9     16887 1/6/1990      12 SF         M                  28     44
+10     16888 1/6/1990      17 DO         M                  36     55
+# ℹ 18,666 more rows</code></pre>
 </div>
 </div>
 </section>
@@ -437,57 +436,54 @@
 <hr>
 <p><span class="body-text-m">A <em>relational dataset</em> stores information across multiple tables instead of one, connected by shared columns called <strong>keys</strong>.</span></p>
 <ul>
-<li><code>flights</code> — one row per flight</li>
-<li><code>airlines</code> — one row per carrier</li>
-<li><code>airports</code> — one row per airport</li>
-<li><code>planes</code> — one row per physical aircraft</li>
-<li><code>weather</code> — one row per airport, per hour</li>
+<li><code>surveys</code> — one row per animal captured on a trapping night</li>
+<li><code>species</code> — one row per species</li>
 </ul>
-<p><span class="body-text-s">Splitting data this way avoids repeating an airline’s full name on every one of its thousands of flights.</span></p>
+<p><span class="body-text-s">Splitting data this way avoids repeating a species’ full scientific name and taxon on every one of its thousands of capture records.</span></p>
 </section>
 <section id="primary-key" class="slide level2 smaller" data-menu-title="Primary keys">
 <h2></h2>
 <p><span class="slide-title">Keys: primary key</span></p>
 <hr>
-<p><span class="body-text-m">A <strong>primary key</strong> uniquely identifies each row <em>in its own table</em>. Every plane appears exactly once in <code>planes</code>, identified by <code>tailnum</code>.</span></p>
+<p><span class="body-text-m">A <strong>primary key</strong> uniquely identifies each row <em>in its own table</em>. Every species appears exactly once in <code>species</code>, identified by <code>species_id</code>.</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>planes <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a></a>  <span class="fu">count</span>(tailnum) <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>species <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">count</span>(species_id) <span class="sc">|&gt;</span></span>
 <span id="cb3-3"><a></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 0 × 2
-# ℹ 2 variables: tailnum &lt;chr&gt;, n &lt;int&gt;</code></pre>
+# ℹ 2 variables: species_id &lt;chr&gt;, n &lt;int&gt;</code></pre>
 </div>
 </div>
-<p><span class="body-text-s">Zero rows out means every <code>tailnum</code> is unique — <code>tailnum</code> is a valid primary key for <code>planes</code>.</span></p>
+<p><span class="body-text-s">Zero rows out means every <code>species_id</code> is unique — <code>species_id</code> is a valid primary key for <code>species</code>.</span></p>
 </section>
 <section id="foreign-key" class="slide level2 smaller" data-menu-title="Foreign keys">
 <h2></h2>
 <p><span class="slide-title">Keys: foreign key</span></p>
 <hr>
-<p><span class="body-text-m">A <strong>foreign key</strong> refers to a primary key in <em>another</em> table. <code>tailnum</code> also appears in <code>flights</code> — but a single plane makes many flights.</span></p>
+<p><span class="body-text-m">A <strong>foreign key</strong> refers to a primary key in <em>another</em> table. <code>species_id</code> also appears in <code>surveys</code> — but the same species is captured many times.</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>flights <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a></a>  <span class="fu">count</span>(tailnum) <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>surveys <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">count</span>(species_id) <span class="sc">|&gt;</span></span>
 <span id="cb5-3"><a></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3,873 × 2
-   tailnum     n
-   &lt;chr&gt;   &lt;int&gt;
- 1 D942DN      4
- 2 N0EGMQ    371
- 3 N10156    153
- 4 N102UW     48
- 5 N103US     46
- 6 N104UW     47
- 7 N10575    289
- 8 N105UW     45
- 9 N107US     41
-10 N108UW     60
-# ℹ 3,863 more rows</code></pre>
+<pre><code># A tibble: 38 × 2
+   species_id     n
+   &lt;chr&gt;      &lt;int&gt;
+ 1 AB            80
+ 2 AH           301
+ 3 AS             2
+ 4 BA            43
+ 5 CB            27
+ 6 DM          4921
+ 7 DO          1543
+ 8 DS            95
+ 9 DX            36
+10 NL           348
+# ℹ 28 more rows</code></pre>
 </div>
 </div>
-<p><span class="body-text-s">Rows here mean <code>tailnum</code> repeats in <code>flights</code> — it’s a foreign key there, not a primary key.</span></p>
+<p><span class="body-text-s">Rows here mean <code>species_id</code> repeats in <code>surveys</code> — it’s a foreign key there, not a primary key.</span></p>
 </section>
 <section id="inner-join" class="slide level2 smaller" data-menu-title="inner_join(): matching columns">
 <h2></h2>
@@ -495,24 +491,24 @@
 <hr>
 <p><span class="body-text-m"><code>inner_join()</code> adds columns from a second table by matching rows on a shared key. <code>join_by()</code> says which column to match on.</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>flights <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">inner_join</span>(airlines, <span class="fu">join_by</span>(carrier)) <span class="sc">|&gt;</span></span>
-<span id="cb7-3"><a></a>  <span class="fu">select</span>(flight, carrier, name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>surveys <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">inner_join</span>(species, <span class="fu">join_by</span>(species_id)) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a></a>  <span class="fu">select</span>(record_id, species_id, species_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 336,776 × 3
-   flight carrier name                    
-    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;                   
- 1   1545 UA      United Air Lines Inc.   
- 2   1714 UA      United Air Lines Inc.   
- 3   1141 AA      American Airlines Inc.  
- 4    725 B6      JetBlue Airways         
- 5    461 DL      Delta Air Lines Inc.    
- 6   1696 UA      United Air Lines Inc.   
- 7    507 B6      JetBlue Airways         
- 8   5708 EV      ExpressJet Airlines Inc.
- 9     79 B6      JetBlue Airways         
-10    301 AA      American Airlines Inc.  
-# ℹ 336,766 more rows</code></pre>
+<pre><code># A tibble: 18,269 × 3
+   record_id species_id species_name             
+       &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;                    
+ 1     16879 DM         Dipodomys merriami       
+ 2     16880 OL         Onychomys leucogaster    
+ 3     16881 PF         Perognathus flavus       
+ 4     16882 RM         Reithrodontomys megalotis
+ 5     16883 RM         Reithrodontomys megalotis
+ 6     16884 RM         Reithrodontomys megalotis
+ 7     16885 SF         Sigmodon fulviventer     
+ 8     16886 SH         Sigmodon hispidus        
+ 9     16887 SF         Sigmodon fulviventer     
+10     16888 DO         Dipodomys ordii          
+# ℹ 18,259 more rows</code></pre>
 </div>
 </div>
 </section>
@@ -520,26 +516,28 @@
 <h2></h2>
 <p><span class="slide-title">inner_join(): different column names</span></p>
 <hr>
-<p><span class="body-text-m">When the key has different names in each table, connect them with <code>==</code> inside <code>join_by()</code>. Here <code>dest</code> in <code>flights</code> matches <code>faa</code> in <code>airports</code>.</span></p>
+<p><span class="body-text-m">When the key has different names in each table, connect them with <code>==</code> inside <code>join_by()</code>. Here <code>species_id</code> in <code>surveys</code> matches <code>code</code> in this renamed copy of <code>species</code>.</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>flights <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">inner_join</span>(airports, <span class="fu">join_by</span>(dest <span class="sc">==</span> faa)) <span class="sc">|&gt;</span></span>
-<span id="cb9-3"><a></a>  <span class="fu">select</span>(flight, dest, name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>species_renamed <span class="ot">&lt;-</span> species <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">code =</span> species_id)</span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a>surveys <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a></a>  <span class="fu">inner_join</span>(species_renamed, <span class="fu">join_by</span>(species_id <span class="sc">==</span> code)) <span class="sc">|&gt;</span></span>
+<span id="cb9-5"><a></a>  <span class="fu">select</span>(record_id, species_id, species_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 329,174 × 3
-   flight dest  name                           
-    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;                          
- 1   1545 IAH   George Bush Intercontinental   
- 2   1714 IAH   George Bush Intercontinental   
- 3   1141 MIA   Miami Intl                     
- 4    461 ATL   Hartsfield Jackson Atlanta Intl
- 5   1696 ORD   Chicago Ohare Intl             
- 6    507 FLL   Fort Lauderdale Hollywood Intl 
- 7   5708 IAD   Washington Dulles Intl         
- 8     79 MCO   Orlando Intl                   
- 9    301 ORD   Chicago Ohare Intl             
-10     49 PBI   Palm Beach Intl                
-# ℹ 329,164 more rows</code></pre>
+<pre><code># A tibble: 18,269 × 3
+   record_id species_id species_name             
+       &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;                    
+ 1     16879 DM         Dipodomys merriami       
+ 2     16880 OL         Onychomys leucogaster    
+ 3     16881 PF         Perognathus flavus       
+ 4     16882 RM         Reithrodontomys megalotis
+ 5     16883 RM         Reithrodontomys megalotis
+ 6     16884 RM         Reithrodontomys megalotis
+ 7     16885 SF         Sigmodon fulviventer     
+ 8     16886 SH         Sigmodon hispidus        
+ 9     16887 SF         Sigmodon fulviventer     
+10     16888 DO         Dipodomys ordii          
+# ℹ 18,259 more rows</code></pre>
 </div>
 </div>
 </section>
@@ -547,17 +545,17 @@
 <h2></h2>
 <p><span class="slide-title">What happens to row count</span></p>
 <hr>
-<p><span class="body-text-m"><code>inner_join()</code> keeps only rows with a match in <strong>both</strong> tables. Some flights use planes missing from <code>planes</code>, so they drop out.</span></p>
+<p><span class="body-text-m"><code>inner_join()</code> keeps only rows with a match in <strong>both</strong> tables. Some captures are missing a <code>species_id</code>, so they drop out.</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">nrow</span>(flights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">nrow</span>(surveys)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 336776</code></pre>
+<pre><code>[1] 18676</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>flights <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">inner_join</span>(planes, <span class="fu">join_by</span>(tailnum)) <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>surveys <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">inner_join</span>(species, <span class="fu">join_by</span>(species_id)) <span class="sc">|&gt;</span></span>
 <span id="cb13-3"><a></a>  <span class="fu">nrow</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 284170</code></pre>
+<pre><code>[1] 18269</code></pre>
 </div>
 </div>
 <p><span class="body-text-s">Always check row counts before and after a join — an unexpected change usually means a key wasn’t as unique as you thought.</span></p>
@@ -584,43 +582,46 @@
 <div class="column">
 <p><span class="body-text-s"><code>semi_join()</code> — keep rows <em>with</em> a match</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>carriers_with_data <span class="ot">&lt;-</span> <span class="fu">head</span>(airlines, <span class="dv">5</span>)</span>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>birds <span class="ot">&lt;-</span> species <span class="sc">|&gt;</span> <span class="fu">filter</span>(taxa <span class="sc">==</span> <span class="st">"Bird"</span>)</span>
 <span id="cb15-2"><a></a></span>
-<span id="cb15-3"><a></a>flights <span class="sc">|&gt;</span></span>
-<span id="cb15-4"><a></a>  <span class="fu">semi_join</span>(carriers_with_data, <span class="fu">join_by</span>(carrier)) <span class="sc">|&gt;</span></span>
-<span id="cb15-5"><a></a>  <span class="fu">distinct</span>(carrier)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-3"><a></a>surveys <span class="sc">|&gt;</span></span>
+<span id="cb15-4"><a></a>  <span class="fu">semi_join</span>(birds, <span class="fu">join_by</span>(species_id)) <span class="sc">|&gt;</span></span>
+<span id="cb15-5"><a></a>  <span class="fu">distinct</span>(species_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 1
-  carrier
-  &lt;chr&gt;  
-1 AA     
-2 B6     
-3 DL     
-4 AS     
-5 9E     </code></pre>
+<pre><code># A tibble: 8 × 1
+  species_id
+  &lt;chr&gt;     
+1 AB        
+2 PG        
+3 PC        
+4 UP        
+5 AS        
+6 CB        
+7 PU        
+8 US        </code></pre>
 </div>
 </div>
 </div><div class="column">
 <p><span class="body-text-s"><code>anti_join()</code> — keep rows <em>without</em> a match</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>flights <span class="sc">|&gt;</span></span>
-<span id="cb17-2"><a></a>  <span class="fu">anti_join</span>(carriers_with_data, <span class="fu">join_by</span>(carrier)) <span class="sc">|&gt;</span></span>
-<span id="cb17-3"><a></a>  <span class="fu">distinct</span>(carrier)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>surveys <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">anti_join</span>(birds, <span class="fu">join_by</span>(species_id)) <span class="sc">|&gt;</span></span>
+<span id="cb17-3"><a></a>  <span class="fu">distinct</span>(species_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 11 × 1
-   carrier
-   &lt;chr&gt;  
- 1 UA     
- 2 EV     
- 3 MQ     
- 4 US     
- 5 WN     
- 6 VX     
- 7 FL     
- 8 F9     
- 9 HA     
-10 YV     
-11 OO     </code></pre>
+<pre><code># A tibble: 35 × 1
+   species_id
+   &lt;chr&gt;     
+ 1 DM        
+ 2 OL        
+ 3 PF        
+ 4 RM        
+ 5 SF        
+ 6 SH        
+ 7 DO        
+ 8 OT        
+ 9 AH        
+10 PE        
+# ℹ 25 more rows</code></pre>
 </div>
 </div>
 </div>
@@ -641,9 +642,8 @@
 </div><div class="column">
 <h3 id="joins">Joins</h3>
 <ul>
-<li><code>inner_join()</code>, <code>left_join()</code>, <code>full_join()</code></li>
-<li><code>join_by()</code> — and <code>join_by(x == y)</code> when names differ</li>
-<li><code>semi_join()</code> / <code>anti_join()</code> to filter, not add columns</li>
+<li><code>inner_join()</code>, <code>left_join()</code></li>
+<li><code>join_by()</code></li>
 </ul>
 </div>
 </div>
