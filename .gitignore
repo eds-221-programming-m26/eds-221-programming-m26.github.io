@@ -6,3 +6,7 @@
 **/.DS_Store
 /.quarto/
 _freeze/*
+# Google Forms API credentials/tokens (scripts/create_exit_ticket.R)
+client_secret.json
+.secrets/
+.secrets

@@ -1,0 +1,196 @@
+---
+format:
+  revealjs:
+    slide-number: true
+    # code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme:
+      - ../../meds-slides-styles.scss
+execute:
+  echo: true
+---
+
+## {#title-slide data-menu-title="Title Slide" background="#053660"}
+
+[EDS 221 Day 7 PM]{.custom-title}
+
+[*Reshaping data*]{.custom-subtitle}
+
+<hr class="hr-teal">
+
+[August 18^th^, 2026]{.custom-subtitle3}
+
+---
+
+## {#tidy-data data-menu-title="Tidy data"}
+
+[Tidy data]{.slide-title}
+
+<hr>
+
+[A data frame is **tidy** when:]{.body-text-m}
+
+- Every **variable** is a column
+- Every **observation** is a row
+- Every **value** is a cell
+
+[The same values can be arranged into many different table shapes — only one of them is tidy. *Reshaping* moves values between rows and columns without changing what they mean.]{.body-text-s}
+
+---
+
+## {#meet-the-data-pm .smaller data-menu-title="Meet the data: penguins, summarized"}
+
+[Meet the data: penguins, summarized]{.slide-title}
+
+<hr>
+
+[Average body mass by species and sex — one row per group. This is **long** data: each combination of `species` and `sex` gets its own row.]{.body-text-m}
+
+```{r}
+#| message: false
+library(tidyverse)
+library(palmerpenguins)
+
+mass_by_sex <- penguins |>
+  filter(!is.na(sex)) |>
+  summarize(mean_mass = mean(body_mass_g, na.rm = TRUE), .by = c(species, sex))
+
+mass_by_sex
+```
+
+---
+
+## {#pivot-wider .smaller data-menu-title="pivot_wider(): making data wider"}
+
+[pivot_wider(): making data wider]{.slide-title}
+
+<hr>
+
+[`pivot_wider()` spreads one column's values into new columns. `names_from` supplies the new column names; `values_from` supplies the cells.]{.body-text-m}
+
+```{r}
+mass_wide <- mass_by_sex |>
+  pivot_wider(names_from = sex, values_from = mean_mass)
+
+mass_wide
+```
+
+---
+
+## {#pivot-wider-why .smaller data-menu-title="pivot_wider(): why reshape?"}
+
+[pivot_wider(): why reshape?]{.slide-title}
+
+<hr>
+
+[Wide data makes it easy to compare values that were in *different rows* — now they're in different columns of the *same* row.]{.body-text-m}
+
+```{r}
+mass_wide |>
+  mutate(diff = male - female)
+```
+
+[This comparison would need a join if `male` and `female` were still in separate rows.]{.body-text-s}
+
+---
+
+## {#pivot-longer .smaller data-menu-title="pivot_longer(): making data longer"}
+
+[pivot_longer(): making data longer]{.slide-title}
+
+<hr>
+
+[`pivot_longer()` is the reverse: it gathers columns into rows. `cols` says which columns to gather; `names_to`/`values_to` name where they land.]{.body-text-m}
+
+```{r}
+mass_wide |>
+  pivot_longer(
+    cols = c(female, male),
+    names_to = "sex",
+    values_to = "mean_mass"
+  )
+```
+
+---
+
+## {#pivot-longer-billboard .smaller data-menu-title="pivot_longer(): a messier example"}
+
+[pivot_longer(): a messier example]{.slide-title}
+
+<hr>
+
+[`billboard` tracks each song's chart rank in a separate column per week — `wk1` through `wk76`. That's 76 columns encoding one variable: *week*.]{.body-text-m}
+
+```{r}
+billboard |> select(artist, track, wk1, wk2, wk3)
+```
+
+---
+
+## {#pivot-longer-billboard2 .smaller data-menu-title="pivot_longer(): starts_with()"}
+
+[pivot_longer(): selecting with starts_with()]{.slide-title}
+
+<hr>
+
+[`cols` accepts the same tidyselect helpers as `select()`. `values_drop_na` removes weeks a song hadn't charted yet or had already dropped off.]{.body-text-m}
+
+```{r}
+billboard |>
+  pivot_longer(
+    cols = starts_with("wk"),
+    names_to = "week",
+    values_to = "rank",
+    values_drop_na = TRUE
+  )
+```
+
+---
+
+## {#selecting-cols data-menu-title="Selecting columns to pivot"}
+
+[Selecting columns to pivot]{.slide-title}
+
+<hr>
+
+[`cols` can be written several ways — pick whichever most clearly states your intent.]{.body-text-m}
+
+- `c(female, male)` — name them explicitly
+- `female:male` — a range of adjacent columns
+- `starts_with("wk")` — match a naming pattern
+- `!year` — everything **except** a column
+
+---
+
+## {#pm-memorize data-menu-title="What to memorize"}
+
+[What to memorize]{.slide-title}
+
+<hr>
+
+[The same values can live in a wide or a long table — reshaping picks whichever shape fits the next step of your analysis.]{.body-text-m}
+
+::: {.columns}
+
+::: {.column}
+
+### Wider
+
+- `pivot_wider()`
+- `names_from`, `values_from`
+- Good for comparing values across a row
+
+:::
+
+::: {.column}
+
+### Longer
+
+- `pivot_longer()`
+- `cols`, `names_to`, `values_to`
+- Good for plotting and grouped summaries
+
+:::
+
+:::

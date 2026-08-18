@@ -1,0 +1,236 @@
+---
+format:
+  revealjs:
+    slide-number: true
+    # code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme:
+      - ../../meds-slides-styles.scss
+execute:
+  echo: true
+---
+
+## {#title-slide data-menu-title="Title Slide" background="#053660"}
+
+[EDS 221 Day 7 AM]{.custom-title}
+
+[*Joining data*]{.custom-subtitle}
+
+<hr class="hr-teal">
+
+[August 18^th^, 2026]{.custom-subtitle3}
+
+---
+
+## {#meet-the-data .smaller data-menu-title="Meet the data: nycflights13"}
+
+[Meet the data: nycflights13]{.slide-title}
+
+<hr>
+
+[Instead of one giant table, `nycflights13` spreads information about 2013 NYC flights across **five** related data frames.]{.body-text-m}
+
+```{r}
+#| message: false
+library(tidyverse)
+library(nycflights13)
+
+flights
+```
+
+---
+
+## {#relational-data data-menu-title="Relational data"}
+
+[Relational data]{.slide-title}
+
+<hr>
+
+[A *relational dataset* stores information across multiple tables instead of one, connected by shared columns called **keys**.]{.body-text-m}
+
+- `flights` — one row per flight
+- `airlines` — one row per carrier
+- `airports` — one row per airport
+- `planes` — one row per physical aircraft
+- `weather` — one row per airport, per hour
+
+[Splitting data this way avoids repeating an airline's full name on every one of its thousands of flights.]{.body-text-s}
+
+---
+
+## {#primary-key .smaller data-menu-title="Primary keys"}
+
+[Keys: primary key]{.slide-title}
+
+<hr>
+
+[A **primary key** uniquely identifies each row *in its own table*. Every plane appears exactly once in `planes`, identified by `tailnum`.]{.body-text-m}
+
+```{r}
+planes |>
+  count(tailnum) |>
+  filter(n > 1)
+```
+
+[Zero rows out means every `tailnum` is unique — `tailnum` is a valid primary key for `planes`.]{.body-text-s}
+
+---
+
+## {#foreign-key .smaller data-menu-title="Foreign keys"}
+
+[Keys: foreign key]{.slide-title}
+
+<hr>
+
+[A **foreign key** refers to a primary key in *another* table. `tailnum` also appears in `flights` — but a single plane makes many flights.]{.body-text-m}
+
+```{r}
+flights |>
+  count(tailnum) |>
+  filter(n > 1)
+```
+
+[Rows here mean `tailnum` repeats in `flights` — it's a foreign key there, not a primary key.]{.body-text-s}
+
+---
+
+## {#inner-join .smaller data-menu-title="inner_join(): matching columns"}
+
+[inner_join(): matching columns]{.slide-title}
+
+<hr>
+
+[`inner_join()` adds columns from a second table by matching rows on a shared key. `join_by()` says which column to match on.]{.body-text-m}
+
+```{r}
+flights |>
+  inner_join(airlines, join_by(carrier)) |>
+  select(flight, carrier, name)
+```
+
+---
+
+## {#inner-join-rename .smaller data-menu-title="inner_join(): different column names"}
+
+[inner_join(): different column names]{.slide-title}
+
+<hr>
+
+[When the key has different names in each table, connect them with `==` inside `join_by()`. Here `dest` in `flights` matches `faa` in `airports`.]{.body-text-m}
+
+```{r}
+flights |>
+  inner_join(airports, join_by(dest == faa)) |>
+  select(flight, dest, name)
+```
+
+---
+
+## {#join-row-counts .smaller data-menu-title="What happens to row count"}
+
+[What happens to row count]{.slide-title}
+
+<hr>
+
+[`inner_join()` keeps only rows with a match in **both** tables. Some flights use planes missing from `planes`, so they drop out.]{.body-text-m}
+
+```{r}
+nrow(flights)
+
+flights |>
+  inner_join(planes, join_by(tailnum)) |>
+  nrow()
+```
+
+[Always check row counts before and after a join — an unexpected change usually means a key wasn't as unique as you thought.]{.body-text-s}
+
+---
+
+## {#join-family data-menu-title="The join family"}
+
+[The join family]{.slide-title}
+
+<hr>
+
+[`inner_join()` is one of several **mutating joins** that add columns from a second table. They differ in which unmatched rows they keep.]{.body-text-m}
+
+- `inner_join()` — keep rows that match in **both** tables
+- `left_join()` — keep **all** rows from the left table
+- `right_join()` — keep **all** rows from the right table
+- `full_join()` — keep **all** rows from **either** table
+
+[`left_join()` is the most common — it never drops rows from the table you started with.]{.body-text-s}
+
+---
+
+## {#filtering-joins .smaller data-menu-title="Filtering joins"}
+
+[Filtering joins]{.slide-title}
+
+<hr>
+
+[**Filtering joins** use a second table to keep or drop rows from the first — without adding any new columns.]{.body-text-m}
+
+::: {.columns}
+
+::: {.column}
+
+[`semi_join()` — keep rows *with* a match]{.body-text-s}
+
+```{r}
+carriers_with_data <- head(airlines, 5)
+
+flights |>
+  semi_join(carriers_with_data, join_by(carrier)) |>
+  distinct(carrier)
+```
+
+:::
+
+::: {.column}
+
+[`anti_join()` — keep rows *without* a match]{.body-text-s}
+
+```{r}
+flights |>
+  anti_join(carriers_with_data, join_by(carrier)) |>
+  distinct(carrier)
+```
+
+:::
+
+:::
+
+---
+
+## {#am-memorize data-menu-title="What to memorize"}
+
+[What to memorize]{.slide-title}
+
+<hr>
+
+[Joining lets you work with data split across multiple tables instead of duplicating information in one giant sheet.]{.body-text-m}
+
+::: {.columns}
+
+::: {.column}
+
+### Keys
+
+- Primary key: unique in its own table
+- Foreign key: refers to another table's primary key
+
+:::
+
+::: {.column}
+
+### Joins
+
+- `inner_join()`, `left_join()`, `full_join()`
+- `join_by()` — and `join_by(x == y)` when names differ
+- `semi_join()` / `anti_join()` to filter, not add columns
+
+:::
+
+:::

@@ -3,5 +3,31 @@ title: "Manipulating data"
 subtitle: "Day 7"
 description: "Tuesday August 18^th^, 2026"
 ---
+## Morning session: Joining data
 
-![Website under construction sign](images/under-construction.png)
+* {{< fa laptop title="A laptop" >}} [Ugly figure competition](activities/day7/day7am-ugly-figure.qmd)
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: joining data](activities/day7/day7am-code-sleuth.pdf){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} Live coding demo: joining data
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Joining data mini-lecture](slides/day7am-slides.qmd){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: joining data](activities/day7/day7am-concept-mapping.qmd){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://docs.google.com/forms/d/e/1FAIpQLSc2DtXOdNCj2WmJ80p6190ZgA3Nc4COv_qV9aLWqfbuNaO9fA/viewform){target="_blank"}
+
+## Afternoon session: Reshaping data
+
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: reshaping data](activities/day7/day7pm-code-sleuth.pdf){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} Live coding demo: reshaping data
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Reshaping data mini-lecture](slides/day7pm-slides.qmd){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: reshaping data](activities/day7/day7pm-concept-mapping.qmd){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://docs.google.com/forms/d/e/1FAIpQLSdj3WDCEXs_HfC3DhM86Mlc_RyS2p2x1z3H4AcBaZ3rZKi0rQ/viewform){target="_blank"}
+
+## End-of-day practice
+
+Complete the following tasks / activities before heading home for the day!
+
+- {{< fa laptop title="A laptop" >}} [**Day 7 Practice:** Join, wrangle, and visualize reef data](eod/eod-day7.qmd)
+
+## Additional materials
+
+[Joins: R4DS ch 19](https://r4ds.hadley.nz/joins.html)
+[Pivoting: R4DS ch 5](https://r4ds.hadley.nz/data-tidy.html)
+[Fundamentals of Data Visualization by Claus O. Wilke](https://clauswilke.com/dataviz/)

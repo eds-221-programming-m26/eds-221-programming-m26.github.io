@@ -1,0 +1,67 @@
+---
+title: "Ugly figure competition"
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+```
+
+## Background: `theme()`
+
+Every element of a ggplot's *non-data* appearance — text, gridlines, backgrounds, legends, axis ticks — is controlled by the theme. You can add complete themes like `theme_minimal()` or `theme_bw()` to change the overall look of a plot in one line. The `theme()` function lets you go further and control individual elements of that look yourself.
+
+`theme()` defines a collection of parameter, one for each element you want to customize. Many parameters are set using an `element_*()` function that matches the type of thing you're changing:
+
+- `element_text()` for text (axis labels, titles, legend text...)
+- `element_line()` for lines (axis lines, gridlines...)
+- `element_rect()` for rectangles (plot background, panel background, legend background...)
+- `element_blank()` to remove an element entirely
+
+For example:
+
+```{r}
+ggplot(data = mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  theme(
+    panel.background = element_rect(fill = "cornsilk"),
+    axis.title = element_text(color = "darkgreen", face = "bold"),
+    axis.text = element_text(size = 14, angle = 45),
+    panel.grid.major = element_line(color = "orange"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+A few things worth noticing:
+
+- `theme()` is additive — it changes only the elements you name, leaving everything else at its default (or at whatever a complete theme like `theme_minimal()` set previously).
+- Order matters. If you call a complete theme (e.g. `theme_bw()`) *after* a `theme()` call, it will reset everything `theme()` changed. Complete themes should generally come first, with `theme()` tweaks layered on afterward.
+- There are dozens of themeable elements, covering nearly everything on the plot that isn't data. The [ggplot2 theme vignette](https://ggplot2.tidyverse.org/reference/theme.html) lists them all.
+
+## Challenge: make it hideous
+
+Create a script for this challenge called day7am-ugly-figure.R. Copy-paste the code from the day 6 end-of-day practice you wrote to make the boxplot in Exercise 1 — percent cover by habitat and species.
+
+Your task: using only `theme()`, turn this figure into the gnarliest, most visually upsetting version of itself that you can. The underlying `geom_boxplot()` call and data should stay the same. 
+
+::: {.callout-note}
+
+Some `theme()` elements worth abusing:
+
+- `panel.background`, `plot.background`, `legend.background` — fill colors
+- `panel.grid.major`, `panel.grid.minor` — gridline color, thickness, or removal
+- `axis.text`, `axis.title`, `plot.title`, `legend.text` — font color, size, angle, face
+- `legend.position` — try somewhere it doesn't belong
+- `axis.ticks` — color and length
+
+:::
+
+### Rules
+
+1. The plot must still run without errors and must still technically display the correct data.
+2. All changes must be made through `theme()` — no changing `geom_boxplot()` to something else, no fabricating data.
+3. Anything goes otherwise. Clashing colors, unreadable text, chaotic gridlines — go big.
+
+## Submission
+
+Find your slide in [this Slides presentation](https://docs.google.com/presentation/d/1_H6Pjtcx0_bIMKPsxCbm8GQ_4Ajy_gnE-bx139C1mFU/edit?usp=sharing){target="_blank"}. Put your code and your ugly figure on it.

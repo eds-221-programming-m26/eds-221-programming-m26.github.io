@@ -1,0 +1,119 @@
+---
+title: "Day 7: End-of-day practice"
+subtitle: "Joining, wrangling, and visualizing reef data"
+---
+
+Today you're going to combine everything from today's sessions (joining and reshaping) with the wrangling and visualization skills from Day 6. You'll bring together two real datasets from Mo'orea to ask an ecological question: is coral cover correlated with the abundance of herbivorous fish?
+
+## Background
+
+Both datasets come from the [Moorea Coral Reef Long Term Ecological Research](https://mcr.lternet.edu/) (MCR LTER) site in French Polynesia. Since 2005, researchers have surveyed the same six fixed sites around the island of Moorea every year — the **fringing reef** (shallow, close to shore), the **forereef** (deeper, on the outer slope), and, at some sites, the **backreef** (the shallow, semi-enclosed zone between the fringing reef and the barrier reef).
+
+**Coral cover.** At each site and habitat, divers photograph a series of quadrats along permanent transects. Every point in each photo is classified into a coral genus, an algae type, sand, or another substrate category, and the percent of the quadrat covered by each category is calculated.
+
+**Fish surveys.** Along those same transects, divers conduct visual surveys, counting and identifying every fish within a fixed swath, and estimating each fish's length (used to calculate biomass). Each fish is also assigned a coarse trophic role — for example, herbivorous "primary consumers" that graze on algae, versus "secondary consumers" and "piscivores" that eat other animals.
+
+::: {.callout-note}
+
+The coral columns you'll use most are:
+
+- `Site`: one of six fixed LTER sites around Moorea (`LTER_1`–`LTER_6`)
+- `Habitat`: `Fringing`, `Forereef`, or `Backreef`
+- `Depth`: survey depth, in meters (some habitats were surveyed at more than one depth)
+- `Date`: survey year and month, formatted `"YYYY-MM"`
+- `Quad40`: an ID for each individual quadrat surveyed along a transect — rows sharing the same `Site`, `Habitat`, `Depth`, `Date`, and `Quad40` describe the same quadrat
+- `Taxonomy_Substrate_or_Functional_Group`: the coral genus, or a non-coral category (`Sand`, `CTB`, `Macroalgae`, `Non-coralline Crustose Algae`, `Unknown or Other`) identified in a quadrat
+- `Percent_Cover`: the percent of a quadrat covered by that category
+
+The fish columns you'll use most are:
+
+- `Site`, `Habitat`: same meaning as above
+- `Year`: survey year, as a number
+- `Taxonomy`: fish species
+- `Biomass`: estimated biomass of that observation, calculated from count and length
+- `Coarse_Trophic`: trophic role — `"Primary Consumer"` (herbivore), `"Secondary Consumer"`, `"Piscivore_primarily"`, or `"Planktivore"`
+
+:::
+
+## Read data
+
+Download the data [moorea_coral.csv](data/moorea_coral.csv), [moorea_fish.csv](data/moorea_fish.csv).
+
+Inside your day 7 folder, create a subfolder called `data`, and put both CSVs in it.
+
+Create an R script in your day 7 folder called `reef-joins.R`.
+
+Add a code chunk containing the following code:
+
+```r
+library(tidyverse)
+
+moorea_coral <- read_csv(
+  "data/moorea_coral.csv",
+  na = c("", "NA", "ND") # This vector tells read_csv() which values to interpret as missing data
+)
+
+moorea_fish <- read_csv(
+  "data/moorea_fish.csv",
+  na = c("", "NA", "ND")
+)
+```
+
+Use `glimpse()` on each to see what you're working with.
+
+## Wrangle, join, and visualize
+
+### Exercise 1: Wrangle the coral data
+
+1. Create a vector called `non_coral` containing the five non-coral category labels: `"Sand"`, `"CTB"`, `"Macroalgae"`, `"Non-coralline Crustose Algae"`, and `"Unknown or Other"`. Filter `moorea_coral` to exclude any row whose `Taxonomy_Substrate_or_Functional_Group` is in `non_coral`, and to keep only rows where `Depth` is less than 17.
+
+
+::: {.callout-tip}
+
+When comparing a column to _multiple_ possible values, use the `%in%` operator instead of a series of `|` clauses.
+
+Here are two examples of how to use %in%. Run these at the console and compare the outputs.
+
+```r
+c("apple", "banana", "creamsicle", "danish", "eclair") %in% c("apple", "creamsicle", "eclair")
+
+!c("apple", "banana", "creamsicle", "danish", "eclair") %in% c("apple", "creamsicle", "eclair")
+```
+
+:::
+
+
+2. Use `mutate()`, `str_sub()`, and `as.numeric()` to pull the four-digit year out of `Date` (which is formatted `"YYYY-MM"`) into a new column called `Year`.
+3. Each quadrat (identified by `Quad40`) can contain several coral genera, so summarizing in one step would average across genera within a quadrat instead of adding them up. Summarize in two steps instead:
+   - First, sum `Percent_Cover` by year, site, habitat, depth, and `Quad40` to get the **total** coral cover in each quadrat. Call the new column `quadrat_cover`.
+   - Then, summarize the **mean** of `quadrat_cover` by year, site, habitat, and depth. Call the new column `mean_coral_cover`.
+4. Arrange the result by year, site, and depth. Store it as `coral_summary`.
+
+### Exercise 2: Wrangle the fish data
+
+1. Filter `moorea_fish` to rows where `Coarse_Trophic` is `"Primary Consumer"` — the herbivorous, algae-grazing fish.
+2. Summarize the **total** biomass (sum of `Biomass`) by site, habitat, and year. Call the new column `total_biomass`.
+3. Arrange the result by year, site, and habitat. Store it as `fish_summary`.
+
+### Exercise 3: Join the summaries
+
+1. Use `inner_join()` to combine `coral_summary` and `fish_summary`, matching on site, habitat, *and* year. Store the result as `reef_joined`.
+2. Compare the number of rows in `reef_joined` to the number of rows in `coral_summary` and `fish_summary`. Are they the same? Why or why not? (Hint: think about which habitats show up in each dataset.)
+
+### Exercise 4: Reshape
+
+1. From `reef_joined`, `select()` just `Site`, `Habitat`, `Year`, and `mean_coral_cover`.
+2. Use `pivot_wider()` to spread `Habitat` into its own columns, so each row is one site/year combination with a column for every habitat's mean coral cover.
+3. Add a column that calculates the *difference* in coral cover between two habitats of your choice.
+4. Create a histogram to visualize the distribution of the difference in coral cover between the habitats.
+
+### Exercise 5: Visualize
+
+Using `reef_joined`, create a scatterplot with mean coral cover on the x-axis and herbivorous fish biomass on the y-axis. Choose descriptive axis titles.
+
+
+::: {.callout-tip}
+
+That's a lot of points! One way to clean up your figure is to break it out into [small multiples](https://www.pewresearch.org/decoded/2018/12/20/how-pew-research-center-uses-small-multiple-charts/). Try adding a [`facet_wrap()`](https://ggplot2.tidyverse.org/reference/facet_wrap.html) to your figure.
+
+:::

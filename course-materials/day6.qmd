@@ -9,7 +9,7 @@ description: "Monday August 17^th^, 2026"
 * {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: data wrangling](activities/day6/day6am-code-sleuth.pdf){target="_blank"}
 * {{< fa users-line title="Multiple people working together" >}} Live coding demo: data wrangling
 * {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Data wrangling mini-lecture](slides/day6am-slides.qmd){target="_blank"}
-* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: function basics](activities/day6/day6am-concept-mapping.qmd){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: data wrangling](activities/day6/day6am-concept-mapping.qmd){target="_blank"}
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/isMgvq3d7strgBSr5){target="_blank"}
 
 ## Afternoon session: Grammar of graphics
@@ -17,7 +17,7 @@ description: "Monday August 17^th^, 2026"
 * {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: grammar of graphics](activities/day6/day6pm-code-sleuth.pdf){target="_blank"}
 * {{< fa users-line title="Multiple people working together" >}} Live coding demo: grammar of graphics
 * {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Grammar of graphics mini-lecture](slides/day6pm-slides.qmd){target="_blank"}
-* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: vectorization](activities/day6/day6pm-concept-mapping.qmd){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: grammar of graphics](activities/day6/day6pm-concept-mapping.qmd){target="_blank"}
 * {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://forms.gle/M2Hzqjr5egfvFg9t5){target="_blank"}
 
 ## End-of-day practice
