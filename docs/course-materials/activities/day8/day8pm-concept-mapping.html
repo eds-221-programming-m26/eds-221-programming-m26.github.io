@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Wednesday August 19th, 2026">
 
-<title>Advanced data types</title>
+<title>Dates and times: Concept mapping</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,25 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">EDS 221</span>
     </a>
   </div>
@@ -92,11 +91,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../eds221-syllabus-m26.pdf" target="_blank"> 
+    <a class="nav-link" href="../../../eds221-syllabus-m26.pdf" target="_blank"> 
 <span class="menu-text">syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -105,43 +104,43 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
         <li>
-    <a class="dropdown-item" href="../course-materials/day1.html">
+    <a class="dropdown-item" href="../../../course-materials/day1.html">
  <span class="dropdown-text">day 1 (8/10)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day2.html">
+    <a class="dropdown-item" href="../../../course-materials/day2.html">
  <span class="dropdown-text">day 2 (8/11)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day3.html">
+    <a class="dropdown-item" href="../../../course-materials/day3.html">
  <span class="dropdown-text">day 3 (8/12)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day4.html">
+    <a class="dropdown-item" href="../../../course-materials/day4.html">
  <span class="dropdown-text">day 4 (8/13)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day5.html">
+    <a class="dropdown-item" href="../../../course-materials/day5.html">
  <span class="dropdown-text">day 5 (8/14)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day6.html">
+    <a class="dropdown-item" href="../../../course-materials/day6.html">
  <span class="dropdown-text">day 6 (8/17)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day7.html">
+    <a class="dropdown-item" href="../../../course-materials/day7.html">
  <span class="dropdown-text">day 7 (8/18)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day8.html">
+    <a class="dropdown-item" href="../../../course-materials/day8.html">
  <span class="dropdown-text">day 8 (8/19)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day9.html">
+    <a class="dropdown-item" href="../../../course-materials/day9.html">
  <span class="dropdown-text">day 9 (8/20)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day10.html">
+    <a class="dropdown-item" href="../../../course-materials/day10.html">
  <span class="dropdown-text">day 10 (8/21)</span></a>
   </li>  
     </ul>
@@ -162,14 +161,8 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Advanced data types</h1>
-            <p class="subtitle lead">Day 8</p>
-                  <div>
-        <div class="description">
-          Wednesday August 19<sup>th</sup>, 2026
-        </div>
-      </div>
-                </div>
+      <h1 class="title">Dates and times: Concept mapping</h1>
+                      </div>
   </div>
     
   
@@ -189,10 +182,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#morning-session-factors" id="toc-morning-session-factors" class="nav-link active" data-scroll-target="#morning-session-factors">Morning session: Factors</a></li>
-  <li><a href="#afternoon-session-dates-and-times" id="toc-afternoon-session-dates-and-times" class="nav-link" data-scroll-target="#afternoon-session-dates-and-times">Afternoon session: Dates and times</a></li>
-  <li><a href="#end-of-day-practice" id="toc-end-of-day-practice" class="nav-link" data-scroll-target="#end-of-day-practice">End-of-day practice</a></li>
-  <li><a href="#additional-materials" id="toc-additional-materials" class="nav-link" data-scroll-target="#additional-materials">Additional materials</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a>
+  <ul class="collapse">
+  <li><a href="#make-a-list-of-the-key-concepts-from-the-session" id="toc-make-a-list-of-the-key-concepts-from-the-session" class="nav-link" data-scroll-target="#make-a-list-of-the-key-concepts-from-the-session">1. Make a list of the key concepts from the session</a></li>
+  <li><a href="#arrange-your-concepts-hierarchically" id="toc-arrange-your-concepts-hierarchically" class="nav-link" data-scroll-target="#arrange-your-concepts-hierarchically">2. Arrange your concepts hierarchically</a></li>
+  <li><a href="#connect-related-concepts" id="toc-connect-related-concepts" class="nav-link" data-scroll-target="#connect-related-concepts">3. Connect related concepts</a></li>
+  <li><a href="#iterate-until-complete" id="toc-iterate-until-complete" class="nav-link" data-scroll-target="#iterate-until-complete">4. Iterate until complete</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -203,44 +199,38 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="morning-session-factors" class="level2">
-<h2 class="anchored" data-anchor-id="morning-session-factors">Morning session: Factors</h2>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you’ll work in pairs or trios to create your own concept maps from scratch.</p>
+<section id="make-a-list-of-the-key-concepts-from-the-session" class="level3">
+<h3 class="anchored" data-anchor-id="make-a-list-of-the-key-concepts-from-the-session">1. Make a list of the key concepts from the session</h3>
 <ul>
-<li><i class="fa-solid fa-pen-to-square" title="A pencil writing on paper" aria-label="pen-to-square"></i> <a href="activities/day8/day8am-code-sleuth.pdf" target="_blank">Code sleuth: factors</a></li>
-<li><i class="fa-solid fa-users-line" title="Multiple people working together" aria-label="users-line"></i> Live coding demo: factors</li>
-<li><i class="fa-solid fa-person-chalkboard" title="A person motioning at a chalkboard" aria-label="person-chalkboard"></i> <a href="../course-materials/slides/day8am-slides.html" target="_blank">Factors mini-lecture</a></li>
-<li><i class="fa-solid fa-diagram-project" title="Nodes connected by edges" aria-label="diagram-project"></i> <a href="../course-materials/activities/day8/day8am-concept-mapping.html" target="_blank">Concept mapping: factors</a></li>
-<li><i class="fa-solid fa-square-check" title="A checked checkbox" aria-label="square-check"></i> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpnEDBySaL7IQdFaXQmka2ZsAVI_ZgfpgGk-__tMyu7SbQPA/viewform" target="_blank">Exit ticket</a></li>
+<li>Aim for 6-10 terms.</li>
+<li>Function names are valid concepts, but you should also identify the concepts associated with the functions. For example, <code>mean()</code>, <code>max()</code>, and <code>sd()</code> would all fall under the broader concept of <strong>summary statistics</strong>.</li>
+<li>Briefly (1 sentence only) define each concept.</li>
 </ul>
 </section>
-<section id="afternoon-session-dates-and-times" class="level2">
-<h2 class="anchored" data-anchor-id="afternoon-session-dates-and-times">Afternoon session: Dates and times</h2>
+<section id="arrange-your-concepts-hierarchically" class="level3">
+<h3 class="anchored" data-anchor-id="arrange-your-concepts-hierarchically">2. Arrange your concepts hierarchically</h3>
 <ul>
-<li><i class="fa-solid fa-pen-to-square" title="A pencil writing on paper" aria-label="pen-to-square"></i> <a href="activities/day8/day8pm-code-sleuth.pdf" target="_blank">Code sleuth: dates and times</a></li>
-<li><i class="fa-solid fa-users-line" title="Multiple people working together" aria-label="users-line"></i> Live coding demo: dates and times</li>
-<li><i class="fa-solid fa-person-chalkboard" title="A person motioning at a chalkboard" aria-label="person-chalkboard"></i> <a href="../course-materials/slides/day8pm-slides.html" target="_blank">Dates and times mini-lecture</a></li>
-<li><i class="fa-solid fa-diagram-project" title="Nodes connected by edges" aria-label="diagram-project"></i> <a href="../course-materials/activities/day8/day8pm-concept-mapping.html" target="_blank">Concept mapping: dates and times</a></li>
-<li><i class="fa-solid fa-square-check" title="A checked checkbox" aria-label="square-check"></i> <a href="https://docs.google.com/forms/d/e/1FAIpQLScGxNiqjzSFdkTx4NyTpR8yvdGfB2WNXe34kBeh1eyfFjPnnQ/viewform" target="_blank">Exit ticket</a></li>
+<li>Use a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.</li>
+<li>Place your concepts on the concept map. Group related concepts together.</li>
+<li>Arrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.</li>
 </ul>
 </section>
-<section id="end-of-day-practice" class="level2">
-<h2 class="anchored" data-anchor-id="end-of-day-practice">End-of-day practice</h2>
-<p>Complete the following tasks / activities before heading home for the day!</p>
+<section id="connect-related-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="connect-related-concepts">3. Connect related concepts</h3>
 <ul>
-<li><i class="fa-solid fa-laptop" title="A laptop" aria-label="laptop"></i> <a href="../course-materials/eod/eod-day8.html"><strong>Day 8 Practice:</strong> Refine reef data with factors and dates</a></li>
+<li>Connect related concepts with lines.</li>
+<li>Label connections with <em>linking words</em>. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, <strong>[ summary statistics ]</strong> <em>include</em> <strong>[ <code>mean()</code>, <code>max()</code>, and <code>sd()</code> ]</strong>.</li>
 </ul>
 </section>
-<section id="additional-materials" class="level2">
-<h2 class="anchored" data-anchor-id="additional-materials">Additional materials</h2>
-<ul>
-<li><a href="https://r4ds.hadley.nz/factors.html">Factors: R4DS ch 16</a></li>
-<li><a href="https://doi.org/10.1080/00031305.2017.1356375">Wrangling Categorical Data in R</a></li>
-<li><a href="https://r4ds.hadley.nz/datetimes.html">Dates and times: R4DS ch 17</a></li>
-<li><a href="https://zachholman.com/talk/utc-is-enough-for-everyone-right">UTC is enough for everyone… right?</a></li>
-<li><a href="https://gist.github.com/timvisee/fcda9bbdff88d45cc9061606b4b923ca">Falsehoods programmers believe about time</a></li>
-</ul>
+<section id="iterate-until-complete" class="level3">
+<h3 class="anchored" data-anchor-id="iterate-until-complete">4. Iterate until complete</h3>
+<p>Concept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -668,7 +658,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><img src="../images/bren-logo.png" alt="The Bren School of Environmental Science &amp; Management logo" width="250"></p>
+<p><img src="../../../images/bren-logo.png" alt="The Bren School of Environmental Science &amp; Management logo" width="250"></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

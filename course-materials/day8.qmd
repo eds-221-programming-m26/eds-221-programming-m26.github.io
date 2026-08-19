@@ -3,5 +3,32 @@ title: "Advanced data types"
 subtitle: "Day 8"
 description: "Wednesday August 19^th^, 2026"
 ---
+## Morning session: Factors
 
-![Website under construction sign](images/under-construction.png)
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: factors](activities/day8/day8am-code-sleuth.pdf){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} Live coding demo: factors
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Factors mini-lecture](slides/day8am-slides.qmd){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: factors](activities/day8/day8am-concept-mapping.qmd){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://docs.google.com/forms/d/e/1FAIpQLSdpnEDBySaL7IQdFaXQmka2ZsAVI_ZgfpgGk-__tMyu7SbQPA/viewform){target="_blank"}
+
+## Afternoon session: Dates and times
+
+* {{< fa pen-to-square title="A pencil writing on paper" >}} [Code sleuth: dates and times](activities/day8/day8pm-code-sleuth.pdf){target="_blank"}
+* {{< fa users-line title="Multiple people working together" >}} Live coding demo: dates and times
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Dates and times mini-lecture](slides/day8pm-slides.qmd){target="_blank"}
+* {{< fa diagram-project title="Nodes connected by edges" >}} [Concept mapping: dates and times](activities/day8/day8pm-concept-mapping.qmd){target="_blank"}
+* {{< fa square-check title="A checked checkbox" >}} [Exit ticket](https://docs.google.com/forms/d/e/1FAIpQLScGxNiqjzSFdkTx4NyTpR8yvdGfB2WNXe34kBeh1eyfFjPnnQ/viewform){target="_blank"}
+
+## End-of-day practice
+
+Complete the following tasks / activities before heading home for the day!
+
+- {{< fa laptop title="A laptop" >}} [**Day 8 Practice:** Refine reef data with factors and dates](eod/eod-day8.qmd)
+
+## Additional materials
+
+- [Factors: R4DS ch 16](https://r4ds.hadley.nz/factors.html)
+- [Wrangling Categorical Data in R](https://doi.org/10.1080/00031305.2017.1356375)
+- [Dates and times: R4DS ch 17](https://r4ds.hadley.nz/datetimes.html)
+- [UTC is enough for everyone... right?](https://zachholman.com/talk/utc-is-enough-for-everyone-right)
+- [Falsehoods programmers believe about time](https://gist.github.com/timvisee/fcda9bbdff88d45cc9061606b4b923ca)

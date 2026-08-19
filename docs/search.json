@@ -154,6 +154,20 @@
     "text": "Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you’ll work in pairs or trios to create your own concept maps from scratch.\n\n\n\nAim for 6-10 terms.\nFunction names are valid concepts, but you should also identify the concepts associated with the functions. For example, mean(), max(), and sd() would all fall under the broader concept of summary statistics.\nBriefly (1 sentence only) define each concept.\n\n\n\n\n\nUse a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.\nPlace your concepts on the concept map. Group related concepts together.\nArrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.\n\n\n\n\n\nConnect related concepts with lines.\nLabel connections with linking words. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, [ summary statistics ] include [ mean(), max(), and sd() ].\n\n\n\n\nConcept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1."
   },
   {
+    "objectID": "course-materials/activities/day8/day8pm-concept-mapping.html",
+    "href": "course-materials/activities/day8/day8pm-concept-mapping.html",
+    "title": "Dates and times: Concept mapping",
+    "section": "",
+    "text": "Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you’ll work in pairs or trios to create your own concept maps from scratch.\n\n\n\nAim for 6-10 terms.\nFunction names are valid concepts, but you should also identify the concepts associated with the functions. For example, mean(), max(), and sd() would all fall under the broader concept of summary statistics.\nBriefly (1 sentence only) define each concept.\n\n\n\n\n\nUse a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.\nPlace your concepts on the concept map. Group related concepts together.\nArrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.\n\n\n\n\n\nConnect related concepts with lines.\nLabel connections with linking words. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, [ summary statistics ] include [ mean(), max(), and sd() ].\n\n\n\n\nConcept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1."
+  },
+  {
+    "objectID": "course-materials/activities/day8/day8pm-concept-mapping.html#instructions",
+    "href": "course-materials/activities/day8/day8pm-concept-mapping.html#instructions",
+    "title": "Dates and times: Concept mapping",
+    "section": "",
+    "text": "Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you’ll work in pairs or trios to create your own concept maps from scratch.\n\n\n\nAim for 6-10 terms.\nFunction names are valid concepts, but you should also identify the concepts associated with the functions. For example, mean(), max(), and sd() would all fall under the broader concept of summary statistics.\nBriefly (1 sentence only) define each concept.\n\n\n\n\n\nUse a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.\nPlace your concepts on the concept map. Group related concepts together.\nArrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.\n\n\n\n\n\nConnect related concepts with lines.\nLabel connections with linking words. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, [ summary statistics ] include [ mean(), max(), and sd() ].\n\n\n\n\nConcept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1."
+  },
+  {
     "objectID": "course-materials/activities/day7/day7am-concept-mapping.html",
     "href": "course-materials/activities/day7/day7am-concept-mapping.html",
     "title": "Joining data: Concept mapping",
@@ -411,6 +425,55 @@
     "title": "",
     "section": "",
     "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1]  1.354899  1.454561 -1.436012\n\nrpois(4, lambda = 10)\n\n[1] 11 14  5  8"
+  },
+  {
+    "objectID": "course-materials/slides/day8pm-slides.html#title-slide",
+    "href": "course-materials/slides/day8pm-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 8 PM\nDates and times\n\nAugust 19th, 2026"
+  },
+  {
+    "objectID": "course-materials/slides/day8pm-slides.html#why-dates-tricky",
+    "href": "course-materials/slides/day8pm-slides.html#why-dates-tricky",
+    "title": "",
+    "section": "",
+    "text": "Why dates are tricky\n\nDates look like plain text, but they aren’t — \"01/02/2017\" could mean January 2nd or February 1st depending on where you’re reading from.\n\nlibrary(tidyverse)\nlibrary(lubridate)\n\nclass(\"2017-01-31\")\n\n[1] \"character\"\n\n\nA character string has no concept of “one day later.” A proper date type does."
+  },
+  {
+    "objectID": "course-materials/slides/day8pm-slides.html#parsing-dates",
+    "href": "course-materials/slides/day8pm-slides.html#parsing-dates",
+    "title": "",
+    "section": "",
+    "text": "Parsing dates: ymd(), mdy(), dmy()\n\nlubridate’s parsing functions are named for the order the year, month, and day appear in your text — they all return the same kind of date.\n\nymd(\"2017-01-31\")\n\n[1] \"2017-01-31\"\n\nmdy(\"January 31st, 2017\")\n\n[1] \"2017-01-31\"\n\ndmy(\"31-Jan-2017\")\n\n[1] \"2017-01-31\""
+  },
+  {
+    "objectID": "course-materials/slides/day8pm-slides.html#parsing-datetimes",
+    "href": "course-materials/slides/day8pm-slides.html#parsing-datetimes",
+    "title": "",
+    "section": "",
+    "text": "Parsing datetimes: ymd_hms()\n\nAdd _hms, _hm, or _h to also capture a time of day. Unspecified time components default to zero.\n\nymd_hms(\"2017-01-31 20:11:59\")\n\n[1] \"2017-01-31 20:11:59 UTC\"\n\nmdy_hm(\"01/31/2017 08:01\")\n\n[1] \"2017-01-31 08:01:00 UTC\""
+  },
+  {
+    "objectID": "course-materials/slides/day8pm-slides.html#extracting-components",
+    "href": "course-materials/slides/day8pm-slides.html#extracting-components",
+    "title": "",
+    "section": "",
+    "text": "Extracting components\n\nOnce something is a date, you can pull out any piece of it — useful for grouping and filtering.\n\nrelease_date &lt;- ymd(\"2026-08-19\")\n\nyear(release_date)\n\n[1] 2026\n\nmonth(release_date, label = TRUE)\n\n[1] Aug\n12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec\n\nwday(release_date, label = TRUE)\n\n[1] Wed\nLevels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat"
+  },
+  {
+    "objectID": "course-materials/slides/day8pm-slides.html#date-arithmetic",
+    "href": "course-materials/slides/day8pm-slides.html#date-arithmetic",
+    "title": "",
+    "section": "",
+    "text": "Date arithmetic\n\nDates support arithmetic directly. days(), weeks(), and friends add a fixed span of calendar time.\n\nstart &lt;- ymd(\"2026-08-19\")\n\nstart + days(1)\n\n[1] \"2026-08-20\"\n\nstart + weeks(2)\n\n[1] \"2026-09-02\"\n\nymd(\"2026-12-25\") - start\n\nTime difference of 128 days\n\n\nThe last line returns a difftime — the number of days between two dates."
+  },
+  {
+    "objectID": "course-materials/slides/day8pm-slides.html#pm-memorize",
+    "href": "course-materials/slides/day8pm-slides.html#pm-memorize",
+    "title": "",
+    "section": "",
+    "text": "What to memorize\n\nDates and datetimes are a distinct type from text — parse early, and let lubridate handle the arithmetic.\n\n\nCreating\n\nymd() (and permutations)\nymd_hms() (and permutations)\n\n\nComponents\n\nyear(), month(), day(), wday()\nhour(), minute(), second()"
   },
   {
     "objectID": "course-materials/slides/day7pm-slides.html#title-slide",
@@ -686,6 +749,104 @@
     "text": "Wrap up\nThat’s it for day 2!\nToday you learned about:\nData types and 1d structures\n\nReal world data is represented with four computational types: character, double, integer, and logical.\nVectors are constrained to one type, so combining vectors of different types induces coercion.\nThere are lots of different ways to create vectors, such as logical(), :, and c().\n\nIndexing and 2d data\n\nReading and writing from data structures happens through indexing.\nIndexing into 1d data structures can be done with positive integers (selection by position), negative integers (exclusion by position), names, and logic. In addition, you can index 2d data with blanks to access along an entire dimension.\nData frames are a particularly important 2d data structure and the workhorse of data science. We’ll work extensively with data frames starting next week after you build your computational thinking foundation."
   },
   {
+    "objectID": "course-materials/eod/eod-day8.html",
+    "href": "course-materials/eod/eod-day8.html",
+    "title": "Day 8: End-of-day practice",
+    "section": "",
+    "text": "Today you’ll revisit the coral/fish reef question from Day 7, this time refining two things from the first time around: parsing Date as a real date instead of pulling the year out with str_sub(), and taking control of how Site and Habitat are ordered in your plots instead of leaving R to sort them alphabetically."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day8.html#read-data",
+    "href": "course-materials/eod/eod-day8.html#read-data",
+    "title": "Day 8: End-of-day practice",
+    "section": "Read data",
+    "text": "Read data\nDownload the data moorea_coral.csv, moorea_fish.csv.\nInside your day 8 folder, create a subfolder called data, and put both CSVs in it.\nCreate an R script in your day 8 folder called reef-factors-dates.R.\nAdd a code chunk containing the following code:\nlibrary(tidyverse)\nlibrary(lubridate)\n\nmoorea_coral &lt;- read_csv(\n  \"data/moorea_coral.csv\",\n  na = c(\"\", \"NA\", \"ND\") # This vector tells read_csv() which values to interpret as missing data\n)\n\nmoorea_fish &lt;- read_csv(\n  \"data/moorea_fish.csv\",\n  na = c(\"\", \"NA\", \"ND\")\n)\nUse glimpse() on each to see what you’re working with."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day8.html#part-1-dates",
+    "href": "course-materials/eod/eod-day8.html#part-1-dates",
+    "title": "Day 8: End-of-day practice",
+    "section": "Part 1: Dates",
+    "text": "Part 1: Dates\n\nExercise 1: Parse real dates\n\nCreate a vector called non_coral containing the five non-coral category labels: \"Sand\", \"CTB\", \"Macroalgae\", \"Non-coralline Crustose Algae\", and \"Unknown or Other\". Filter moorea_coral to exclude any row whose Taxonomy_Substrate_or_Functional_Group is in non_coral, and to keep only rows where Depth is less than 17.\nDate is stored as text formatted \"YYYY-MM\". Use mutate() to turn it into an actual date column. Then use year() on that date column to create a Year column.\n\n\n\n\n\n\n\nTip\n\n\n\nCompare the two approaches at the console:\nstr_sub(\"2017-04\", 1, 4) |&gt; as.numeric()\n\nym(\"2017-04\") |&gt; year()\nBoth get you a year — but only the second one gives you back something that’s still a date, so you can keep asking it date questions.\n\n\n\nEvery quadrat should be resurveyed roughly once a year. Check that assumption: use count() on Site, Depth, Quad40, and Year.\n\n\n\nExercise 2: Summarize coral cover\nEach quadrat (identified by Quad40) can contain several coral genera, so summarizing in one step would average across genera within a quadrat instead of adding them up. Summarize in two steps instead:\n\nFirst, sum Percent_Cover by year, site, habitat, depth, and Quad40 to get the total coral cover in each quadrat. Call the new column quadrat_cover.\nThen, summarize the mean of quadrat_cover by year, site, and habitat. Call the new column mean_coral_cover.\nArrange the result by year, site, and habitat. Store it as coral_summary.\n\n\n\nExercise 3: Wrangle and join the fish data\n\nFilter moorea_fish to rows where Coarse_Trophic is \"Primary Consumer\" — the herbivorous, algae-grazing fish.\nSummarize the total biomass (sum of Biomass) by site, habitat, and year. Call the new column total_biomass. Store it as fish_summary.\nUse inner_join() to combine coral_summary and fish_summary, matching on site, habitat, and year. Store the result as reef_joined."
+  },
+  {
+    "objectID": "course-materials/eod/eod-day8.html#part-2-factors",
+    "href": "course-materials/eod/eod-day8.html#part-2-factors",
+    "title": "Day 8: End-of-day practice",
+    "section": "Part 2: Factors",
+    "text": "Part 2: Factors\n\nExercise 4: Order habitats ecologically\nThe coral surveys only cover two habitats, Forereef and Fringing. Backreef shows up in the fish data, but never in moorea_coral, so it always drops out of reef_joined during the inner_join() (the same reason your row counts didn’t match in Exercise 3). By default, those two remaining habitats sort alphabetically: Forereef, Fringing — putting the deeper habitat first. Use fct_relevel() to put them in shallow-to-deep order instead: \"Fringing\", \"Forereef\".\n\nmutate() reef_joined$Habitat into a factor with that level order.\nRemake last week’s habitat comparison: select() Site, Habitat, Year, and mean_coral_cover, then pivot_wider() to spread Habitat into its own columns.\nAdd a column calculating the difference in coral cover between the two habitats, and plot its distribution as a histogram — same as Day 7, but now the column order in your wide data (and any faceting you do downstream) follows reef structure instead of the alphabet.\n\n\n\nExercise 5: Order sites by coral cover\nRight now Site sorts as LTER_1, LTER_2, …, LTER_6 — an arbitrary label order that says nothing about the reef. Use fct_reorder() to reorder Site’s levels by mean_coral_cover instead.\n\nUsing reef_joined, create a scatterplot with mean coral cover on the x-axis and herbivorous fish biomass on the y-axis, facet_wrap()-ed by Site.\nReorder Site with fct_reorder(Site, mean_coral_cover) before faceting, and compare the two versions. With sites ordered by coral cover, does a pattern with fish biomass become easier to see?\n\n\n\n\n\n\n\nTip\n\n\n\nfct_reorder() needs a summary value per level, so it works best right before a plot — reorder inside the mutate() that feeds your ggplot() call, rather than saving the reordered factor back into reef_joined for later use."
+  },
+  {
+    "objectID": "course-materials/day9.html",
+    "href": "course-materials/day9.html",
+    "title": "Problem solving",
+    "section": "",
+    "text": "Website under construction sign"
+  },
+  {
+    "objectID": "course-materials/day10.html",
+    "href": "course-materials/day10.html",
+    "title": "Review",
+    "section": "",
+    "text": "Website under construction sign"
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Scientific Programming Essentials",
+    "section": "Course Description",
+    "text": "Course Description\nThis course teaches scientific programming skills and demonstrates the application of these techniques to environmental data analysis and problem solving. Topics include fundamental programming concepts, transforming and visualizing data, and exposure to modern data science tools. The course will be taught in R.\nBy the end of this course, students will be able to:\n\n🧠 Think like a computer scientist\n\n🌎 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
+  },
+  {
+    "objectID": "index.html#teaching-team",
+    "href": "index.html#teaching-team",
+    "title": "Scientific Programming Essentials",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nMax Czapanskiy (they/them)\nEmail: maxczap@ucsb.edu\n\n\n\n\nTA\n\n\n\n\n\n\n\n\n\n\n\nAlessandra Vidal Meza (she/her/ella)\nEmail: avidalmeza@bren.ucsb.edu"
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Scientific Programming Essentials",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nEDS 221 was originally developed and taught by Allison Horst. This course website contains material reused from, adapted from, and inspired by Allison’s original work."
+  },
+  {
+    "objectID": "course-materials/day8.html",
+    "href": "course-materials/day8.html",
+    "title": "Advanced data types",
+    "section": "",
+    "text": "Code sleuth: factors\n Live coding demo: factors\n Factors mini-lecture\n Concept mapping: factors\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day8.html#morning-session-factors",
+    "href": "course-materials/day8.html#morning-session-factors",
+    "title": "Advanced data types",
+    "section": "",
+    "text": "Code sleuth: factors\n Live coding demo: factors\n Factors mini-lecture\n Concept mapping: factors\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day8.html#afternoon-session-dates-and-times",
+    "href": "course-materials/day8.html#afternoon-session-dates-and-times",
+    "title": "Advanced data types",
+    "section": "Afternoon session: Dates and times",
+    "text": "Afternoon session: Dates and times\n\n Code sleuth: dates and times\n Live coding demo: dates and times\n Dates and times mini-lecture\n Concept mapping: dates and times\n Exit ticket"
+  },
+  {
+    "objectID": "course-materials/day8.html#end-of-day-practice",
+    "href": "course-materials/day8.html#end-of-day-practice",
+    "title": "Advanced data types",
+    "section": "End-of-day practice",
+    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 8 Practice: Refine reef data with factors and dates"
+  },
+  {
+    "objectID": "course-materials/day8.html#additional-materials",
+    "href": "course-materials/day8.html#additional-materials",
+    "title": "Advanced data types",
+    "section": "Additional materials",
+    "text": "Additional materials\n\nFactors: R4DS ch 16\nWrangling Categorical Data in R\nDates and times: R4DS ch 17\nUTC is enough for everyone… right?\nFalsehoods programmers believe about time"
+  },
+  {
     "objectID": "course-materials/solutions/day6/day6-eod.html",
     "href": "course-materials/solutions/day6/day6-eod.html",
     "title": "Day 6: End-of-day practice solutions",
@@ -733,48 +894,6 @@
     "title": "Day 6: End-of-day practice solutions",
     "section": "Bonus exercise",
     "text": "Bonus exercise\nSo far we’ve only looked at Acropora and Pocillopora, but the dataset includes many more taxa. Before expanding the analysis, it’s worth checking how those taxa are labeled — this is a good habit any time you’re about to group or filter by a categorical column.\nUse the distinct() function to find all unique taxa, then sort by taxa. What do you notice about Porites?\n\ndistinct(moorea_coral, Taxonomy_Substrate_or_Functional_Group) |&gt;\n  arrange(Taxonomy_Substrate_or_Functional_Group) |&gt;\n  print(n = Inf)\n\n# A tibble: 37 × 1\n   Taxonomy_Substrate_or_Functional_Group\n   &lt;chr&gt;                                 \n 1 Acanthastrea                          \n 2 Acropora                              \n 3 Astrea                                \n 4 Astreopora                            \n 5 CTB                                   \n 6 Cyanophyceae                          \n 7 Cyphastrea                            \n 8 Danafungia                            \n 9 Fungiidae unidentified                \n10 Gardineroseris                        \n11 Goniastrea                            \n12 Herpolitha                            \n13 Leptastrea                            \n14 Leptoseris                            \n15 Lithophyllon                          \n16 Lobactis                              \n17 Lobophyllia                           \n18 Macroalgae                            \n19 Millepora                             \n20 Montipora                             \n21 Non-coralline Crustose Algae          \n22 Pachyseris                            \n23 Pavona                                \n24 Plesiastrea                           \n25 Pleuractis                            \n26 Pocillopora                           \n27 Porites                               \n28 Porites irregularis                   \n29 Porites rus                           \n30 Porites spp. Massive                  \n31 Psammocora                            \n32 Sand                                  \n33 Sandolitha                            \n34 Soft Coral                            \n35 Stylocoeniella                        \n36 Tubastrea                             \n37 Unknown or Other                      \n\n\nPorites shows up as four separate categories (Porites, Porites irregularis, Porites rus, and Porites spp. Massive) instead of one. Left as-is, these would be treated as four different genera in a summarize(), splitting up cover that really belongs to the same genus and understating how common Porites actually is.\nUse ifelse() and str_starts() to combine all the Porites values into a single \"Porites\" label — str_starts() checks whether a string begins with \"Porites\", and ifelse() uses that check to decide whether to relabel it — then repeat the analysis from Exercise 2, expanding it to include Porites and Montipora.\n\ninclude_coral &lt;- c(\"Acropora\", \"Pocillopora\", \"Porites\", \"Montipora\")\n\nmoorea_coral |&gt;\n  rename(genus = Taxonomy_Substrate_or_Functional_Group) |&gt;\n  mutate(genus = ifelse(str_starts(genus, \"Porites\"), \"Porites\", genus)) |&gt;\n  filter(\n    Site == \"LTER_1\",\n    Date == \"2017-04\",\n    genus %in% include_coral\n  ) |&gt;\n  summarize(\n    coral_cover_mean = mean(Percent_Cover),\n    coral_cover_sd = sd(Percent_Cover),\n    .by = c(Habitat, Depth, genus)\n  ) |&gt;\n  arrange(Depth, genus)\n\n# A tibble: 12 × 5\n   Habitat  Depth genus       coral_cover_mean coral_cover_sd\n   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                  &lt;dbl&gt;          &lt;dbl&gt;\n 1 Fringing     6 Acropora              0              0     \n 2 Fringing     6 Montipora             0              0     \n 3 Fringing     6 Pocillopora           0.0154         0.0961\n 4 Fringing     6 Porites               0.781          2.41  \n 5 Forereef    10 Acropora              3.19           4.72  \n 6 Forereef    10 Montipora             8.81           6.72  \n 7 Forereef    10 Pocillopora          57.8           17.4   \n 8 Forereef    10 Porites               0.957          1.90  \n 9 Forereef    17 Acropora              1.1            1.69  \n10 Forereef    17 Montipora             1.02           1.29  \n11 Forereef    17 Pocillopora          18.3           15.0   \n12 Forereef    17 Porites               0.807          2.10  \n\n\nWhat coral is most widespread in the fringing reef, nearest the island? What about further offshore in the forereef?\nNearest the island, in the fringing reef, Porites is the most widespread genus (0.78% mean cover), while Acropora, Montipora, and Pocillopora are all essentially absent. Further offshore in the forereef, Pocillopora is by far the most widespread genus at both depths (57.8% at 10 m and 18.3% at 17 m), well above Acropora, Montipora, and Porites.\nThis kind of habitat-driven zonation — hardy, low-profile genera like Porites persisting close to shore, while faster-growing branching genera like Pocillopora dominate the more stable forereef — is exactly the pattern the MCR LTER’s long-term monitoring is designed to detect, along with how it shifts after disturbances."
-  },
-  {
-    "objectID": "course-materials/day8.html",
-    "href": "course-materials/day8.html",
-    "title": "Advanced data types",
-    "section": "",
-    "text": "Website under construction sign"
-  },
-  {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
-    "title": "Scientific Programming Essentials",
-    "section": "Course Description",
-    "text": "Course Description\nThis course teaches scientific programming skills and demonstrates the application of these techniques to environmental data analysis and problem solving. Topics include fundamental programming concepts, transforming and visualizing data, and exposure to modern data science tools. The course will be taught in R.\nBy the end of this course, students will be able to:\n\n🧠 Think like a computer scientist\n\n🌎 Represent real world data using computational data structures\n🤖 Interpret and design algorithms to solve problems\n🍄 Decompose complex problems into modular components\n\n🎨 Create like a computer scientist\n\n🔠 Read and write code using proper syntax\n🛠 Implement algorithms with control structures and functions\n👷 Manage coding projects using version control"
-  },
-  {
-    "objectID": "index.html#teaching-team",
-    "href": "index.html#teaching-team",
-    "title": "Scientific Programming Essentials",
-    "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nMax Czapanskiy (they/them)\nEmail: maxczap@ucsb.edu\n\n\n\n\nTA\n\n\n\n\n\n\n\n\n\n\n\nAlessandra Vidal Meza (she/her/ella)\nEmail: avidalmeza@bren.ucsb.edu"
-  },
-  {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
-    "title": "Scientific Programming Essentials",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nEDS 221 was originally developed and taught by Allison Horst. This course website contains material reused from, adapted from, and inspired by Allison’s original work."
-  },
-  {
-    "objectID": "course-materials/day10.html",
-    "href": "course-materials/day10.html",
-    "title": "Review",
-    "section": "",
-    "text": "Website under construction sign"
-  },
-  {
-    "objectID": "course-materials/day9.html",
-    "href": "course-materials/day9.html",
-    "title": "Problem solving",
-    "section": "",
-    "text": "Website under construction sign"
   },
   {
     "objectID": "course-materials/eod/eod-day1.html",
@@ -1104,6 +1223,76 @@
     "title": "",
     "section": "",
     "text": "Making vectors\n\nThere are many ways to make vectors. Some of the most common are:\n\n\n\n# Sequence operator\n2:4\n\n[1] 2 3 4\n\n# c() function\nc(\"Violet\", \"Cyan\")\n\n[1] \"Violet\" \"Cyan\"  \n\n\n\n\n# Vector constructors\ncharacter(5)\n\n[1] \"\" \"\" \"\" \"\" \"\"\n\ndouble(5)\n\n[1] 0 0 0 0 0\n\n# Random number generators\nrnorm(3, mean = 0, sd = 1)\n\n[1] -1.1841031 -0.3077750 -0.3283373\n\nrpois(4, lambda = 10)\n\n[1]  5 11  6  8"
+  },
+  {
+    "objectID": "course-materials/slides/day8am-slides.html#title-slide",
+    "href": "course-materials/slides/day8am-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 221 Day 8 AM\nFactors\n\nAugust 19th, 2026"
+  },
+  {
+    "objectID": "course-materials/slides/day8am-slides.html#meet-the-data",
+    "href": "course-materials/slides/day8am-slides.html#meet-the-data",
+    "title": "",
+    "section": "",
+    "text": "Meet the data: gss_cat\n\ngss_cat (from forcats) is a sample of the General Social Survey. Several columns store categorical responses.\n\nlibrary(tidyverse)\n\ngss_cat\n\n# A tibble: 21,483 × 9\n    year marital         age race  rincome        partyid    relig denom tvhours\n   &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt; &lt;fct&gt;          &lt;fct&gt;      &lt;fct&gt; &lt;fct&gt;   &lt;int&gt;\n 1  2000 Never married    26 White $8000 to 9999  Ind,near … Prot… Sout…      12\n 2  2000 Divorced         48 White $8000 to 9999  Not str r… Prot… Bapt…      NA\n 3  2000 Widowed          67 White Not applicable Independe… Prot… No d…       2\n 4  2000 Never married    39 White Not applicable Ind,near … Orth… Not …       4\n 5  2000 Divorced         25 White Not applicable Not str d… None  Not …       1\n 6  2000 Married          25 White $20000 - 24999 Strong de… Prot… Sout…      NA\n 7  2000 Never married    36 White $25000 or more Not str r… Chri… Not …       3\n 8  2000 Divorced         44 White $7000 to 7999  Ind,near … Prot… Luth…      NA\n 9  2000 Married          44 White $25000 or more Not str d… Prot… Other       0\n10  2000 Married          47 White $25000 or more Strong re… Prot… Sout…       3\n# ℹ 21,473 more rows"
+  },
+  {
+    "objectID": "course-materials/slides/day8am-slides.html#what-is-a-factor",
+    "href": "course-materials/slides/day8am-slides.html#what-is-a-factor",
+    "title": "",
+    "section": "",
+    "text": "What is a factor?\n\nA factor stores categorical data as a set of predefined levels — the possible values a variable can take.\n\nlevels(gss_cat$rincome)\n\n [1] \"No answer\"      \"Don't know\"     \"Refused\"        \"$25000 or more\"\n [5] \"$20000 - 24999\" \"$15000 - 19999\" \"$10000 - 14999\" \"$8000 to 9999\" \n [9] \"$7000 to 7999\"  \"$6000 to 6999\"  \"$5000 to 5999\"  \"$4000 to 4999\" \n[13] \"$3000 to 3999\"  \"$1000 to 2999\"  \"Lt $1000\"       \"Not applicable\"\n\n\nUnder the hood, R stores the values as integers and keeps a lookup table of level labels. This is what makes factors compact and orderable."
+  },
+  {
+    "objectID": "course-materials/slides/day8am-slides.html#why-factors",
+    "href": "course-materials/slides/day8am-slides.html#why-factors",
+    "title": "",
+    "section": "",
+    "text": "Why not just use character strings?\n\nCharacter vectors sort alphabetically. Factors let you control the order directly, which matters for plots and tables.\n\ngss_cat |&gt;\n  mutate(rincome = as.character(rincome)) |&gt;\n  ggplot(aes(x = rincome)) +\n  geom_bar() +\n  theme(axis.text.x = element_text(angle = 90))\n\n\nNotice the income bins are in no meaningful order — alphabetical, not low-to-high."
+  },
+  {
+    "objectID": "course-materials/slides/day8am-slides.html#fct-relevel",
+    "href": "course-materials/slides/day8am-slides.html#fct-relevel",
+    "title": "",
+    "section": "",
+    "text": "fct_relevel(): manual order\n\nfct_relevel() moves specific levels to the front, in the order you list them.\n\ngss_cat |&gt;\n  mutate(marital = fct_relevel(marital, \"Never married\", \"Married\")) |&gt;\n  pull(marital) |&gt;\n  levels()\n\n[1] \"Never married\" \"Married\"       \"No answer\"     \"Separated\"    \n[5] \"Divorced\"      \"Widowed\""
+  },
+  {
+    "objectID": "course-materials/slides/day8am-slides.html#fct-infreq",
+    "href": "course-materials/slides/day8am-slides.html#fct-infreq",
+    "title": "",
+    "section": "",
+    "text": "fct_infreq(): order by frequency\n\nfct_infreq() reorders levels from most to least common — useful whenever “biggest first” is the natural reading order.\n\ngss_cat |&gt;\n  mutate(marital = fct_infreq(marital)) |&gt;\n  ggplot(aes(x = marital)) +\n  geom_bar() +\n  theme(axis.text.x = element_text(angle = 90))"
+  },
+  {
+    "objectID": "course-materials/slides/day8am-slides.html#fct-reorder",
+    "href": "course-materials/slides/day8am-slides.html#fct-reorder",
+    "title": "",
+    "section": "",
+    "text": "fct_reorder(): order by another variable\n\nfct_reorder() sorts levels by a summary statistic of another variable — e.g., average TV hours by religion.\n\nrelig_summary &lt;- gss_cat |&gt;\n  filter(!is.na(tvhours)) |&gt;\n  summarize(tv_hours = mean(tvhours), .by = relig)\n\nrelig_summary |&gt;\n  mutate(relig = fct_reorder(relig, tv_hours)) |&gt;\n  ggplot(aes(x = tv_hours, y = relig)) +\n  geom_point()"
+  },
+  {
+    "objectID": "course-materials/slides/day8am-slides.html#fct-recode",
+    "href": "course-materials/slides/day8am-slides.html#fct-recode",
+    "title": "",
+    "section": "",
+    "text": "fct_recode(): renaming levels\n\nfct_recode() changes level labels without touching the underlying data or order. New name on the left, old name on the right.\n\ngss_cat |&gt;\n  mutate(\n    partyid = fct_recode(\n      partyid,\n      \"Republican, strong\" = \"Strong republican\",\n      \"Republican, weak\" = \"Not str republican\"\n    )\n  ) |&gt;\n  count(partyid)\n\n# A tibble: 10 × 2\n   partyid                n\n   &lt;fct&gt;              &lt;int&gt;\n 1 No answer            154\n 2 Don't know             1\n 3 Other party          393\n 4 Republican, strong  2314\n 5 Republican, weak    3032\n 6 Ind,near rep        1791\n 7 Independent         4119\n 8 Ind,near dem        2499\n 9 Not str democrat    3690\n10 Strong democrat     3490"
+  },
+  {
+    "objectID": "course-materials/slides/day8am-slides.html#fct-lump",
+    "href": "course-materials/slides/day8am-slides.html#fct-lump",
+    "title": "",
+    "section": "",
+    "text": "fct_lump(): collapsing rare levels\n\nfct_lump_n() keeps the n most common levels and lumps the rest into \"Other\" — handy when a factor has too many rare categories to plot cleanly.\n\ngss_cat |&gt;\n  mutate(relig = fct_lump_n(relig, n = 5)) |&gt;\n  count(relig, sort = TRUE)\n\n# A tibble: 6 × 2\n  relig          n\n  &lt;fct&gt;      &lt;int&gt;\n1 Protestant 10846\n2 Catholic    5124\n3 None        3523\n4 Other        913\n5 Christian    689\n6 Jewish       388"
+  },
+  {
+    "objectID": "course-materials/slides/day8am-slides.html#am-memorize",
+    "href": "course-materials/slides/day8am-slides.html#am-memorize",
+    "title": "",
+    "section": "",
+    "text": "What to memorize\n\nFactors store categorical data with explicit, controllable levels instead of relying on alphabetical order.\n\n\nInspecting\n\nlevels()\n\n\nReordering / recoding\n\nfct_reorder(), fct_recode()"
   },
   {
     "objectID": "course-materials/slides/day7am-slides.html#title-slide",
@@ -1452,6 +1641,20 @@
     "objectID": "course-materials/activities/day7/day7pm-concept-mapping.html#instructions",
     "href": "course-materials/activities/day7/day7pm-concept-mapping.html#instructions",
     "title": "Reshaping data: Concept mapping",
+    "section": "",
+    "text": "Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you’ll work in pairs or trios to create your own concept maps from scratch.\n\n\n\nAim for 6-10 terms.\nFunction names are valid concepts, but you should also identify the concepts associated with the functions. For example, mean(), max(), and sd() would all fall under the broader concept of summary statistics.\nBriefly (1 sentence only) define each concept.\n\n\n\n\n\nUse a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.\nPlace your concepts on the concept map. Group related concepts together.\nArrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.\n\n\n\n\n\nConnect related concepts with lines.\nLabel connections with linking words. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, [ summary statistics ] include [ mean(), max(), and sd() ].\n\n\n\n\nConcept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1."
+  },
+  {
+    "objectID": "course-materials/activities/day8/day8am-concept-mapping.html",
+    "href": "course-materials/activities/day8/day8am-concept-mapping.html",
+    "title": "Factors: Concept mapping",
+    "section": "",
+    "text": "Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you’ll work in pairs or trios to create your own concept maps from scratch.\n\n\n\nAim for 6-10 terms.\nFunction names are valid concepts, but you should also identify the concepts associated with the functions. For example, mean(), max(), and sd() would all fall under the broader concept of summary statistics.\nBriefly (1 sentence only) define each concept.\n\n\n\n\n\nUse a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.\nPlace your concepts on the concept map. Group related concepts together.\nArrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.\n\n\n\n\n\nConnect related concepts with lines.\nLabel connections with linking words. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, [ summary statistics ] include [ mean(), max(), and sd() ].\n\n\n\n\nConcept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1."
+  },
+  {
+    "objectID": "course-materials/activities/day8/day8am-concept-mapping.html#instructions",
+    "href": "course-materials/activities/day8/day8am-concept-mapping.html#instructions",
+    "title": "Factors: Concept mapping",
     "section": "",
     "text": "Last week you did concept mapping by filling in the blanks in diagrams provided to you. This week, you’ll work in pairs or trios to create your own concept maps from scratch.\n\n\n\nAim for 6-10 terms.\nFunction names are valid concepts, but you should also identify the concepts associated with the functions. For example, mean(), max(), and sd() would all fall under the broader concept of summary statistics.\nBriefly (1 sentence only) define each concept.\n\n\n\n\n\nUse a whiteboard, a piece of paper, or a digital tool like Lucidchart or Google Slides.\nPlace your concepts on the concept map. Group related concepts together.\nArrange the concepts hierarchically. The broadest concept should be at the top with nested subconcepts below it.\n\n\n\n\n\nConnect related concepts with lines.\nLabel connections with linking words. Reading a source concept, the linking words, and the destination concept together should form a complete(ish) sentence. For example, [ summary statistics ] include [ mean(), max(), and sd() ].\n\n\n\n\nConcept mapping is an iterative process. You are encouraged to bounce between steps as is helpful. For example, as you work on arranging concepts in step 2, you may find you need to revise your choice of concepts from step 1."
   },

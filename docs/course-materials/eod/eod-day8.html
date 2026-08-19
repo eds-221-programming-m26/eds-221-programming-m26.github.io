@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Wednesday August 19th, 2026">
 
-<title>Advanced data types</title>
+<title>Day 8: End-of-day practice</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,28 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EDS 221</span>
     </a>
   </div>
@@ -92,11 +125,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../eds221-syllabus-m26.pdf" target="_blank"> 
+    <a class="nav-link" href="../../eds221-syllabus-m26.pdf" target="_blank"> 
 <span class="menu-text">syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -105,43 +138,43 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
         <li>
-    <a class="dropdown-item" href="../course-materials/day1.html">
+    <a class="dropdown-item" href="../../course-materials/day1.html">
  <span class="dropdown-text">day 1 (8/10)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day2.html">
+    <a class="dropdown-item" href="../../course-materials/day2.html">
  <span class="dropdown-text">day 2 (8/11)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day3.html">
+    <a class="dropdown-item" href="../../course-materials/day3.html">
  <span class="dropdown-text">day 3 (8/12)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day4.html">
+    <a class="dropdown-item" href="../../course-materials/day4.html">
  <span class="dropdown-text">day 4 (8/13)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day5.html">
+    <a class="dropdown-item" href="../../course-materials/day5.html">
  <span class="dropdown-text">day 5 (8/14)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day6.html">
+    <a class="dropdown-item" href="../../course-materials/day6.html">
  <span class="dropdown-text">day 6 (8/17)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day7.html">
+    <a class="dropdown-item" href="../../course-materials/day7.html">
  <span class="dropdown-text">day 7 (8/18)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day8.html">
+    <a class="dropdown-item" href="../../course-materials/day8.html">
  <span class="dropdown-text">day 8 (8/19)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day9.html">
+    <a class="dropdown-item" href="../../course-materials/day9.html">
  <span class="dropdown-text">day 9 (8/20)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day10.html">
+    <a class="dropdown-item" href="../../course-materials/day10.html">
  <span class="dropdown-text">day 10 (8/21)</span></a>
   </li>  
     </ul>
@@ -162,14 +195,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Advanced data types</h1>
-            <p class="subtitle lead">Day 8</p>
-                  <div>
-        <div class="description">
-          Wednesday August 19<sup>th</sup>, 2026
-        </div>
-      </div>
-                </div>
+      <h1 class="title">Day 8: End-of-day practice</h1>
+            <p class="subtitle lead">Refining reef data with factors and dates</p>
+                      </div>
   </div>
     
   
@@ -189,10 +217,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#morning-session-factors" id="toc-morning-session-factors" class="nav-link active" data-scroll-target="#morning-session-factors">Morning session: Factors</a></li>
-  <li><a href="#afternoon-session-dates-and-times" id="toc-afternoon-session-dates-and-times" class="nav-link" data-scroll-target="#afternoon-session-dates-and-times">Afternoon session: Dates and times</a></li>
-  <li><a href="#end-of-day-practice" id="toc-end-of-day-practice" class="nav-link" data-scroll-target="#end-of-day-practice">End-of-day practice</a></li>
-  <li><a href="#additional-materials" id="toc-additional-materials" class="nav-link" data-scroll-target="#additional-materials">Additional materials</a></li>
+  <li><a href="#read-data" id="toc-read-data" class="nav-link active" data-scroll-target="#read-data">Read data</a></li>
+  <li><a href="#part-1-dates" id="toc-part-1-dates" class="nav-link" data-scroll-target="#part-1-dates">Part 1: Dates</a>
+  <ul class="collapse">
+  <li><a href="#exercise-1-parse-real-dates" id="toc-exercise-1-parse-real-dates" class="nav-link" data-scroll-target="#exercise-1-parse-real-dates">Exercise 1: Parse real dates</a></li>
+  <li><a href="#exercise-2-summarize-coral-cover" id="toc-exercise-2-summarize-coral-cover" class="nav-link" data-scroll-target="#exercise-2-summarize-coral-cover">Exercise 2: Summarize coral cover</a></li>
+  <li><a href="#exercise-3-wrangle-and-join-the-fish-data" id="toc-exercise-3-wrangle-and-join-the-fish-data" class="nav-link" data-scroll-target="#exercise-3-wrangle-and-join-the-fish-data">Exercise 3: Wrangle and join the fish data</a></li>
+  </ul></li>
+  <li><a href="#part-2-factors" id="toc-part-2-factors" class="nav-link" data-scroll-target="#part-2-factors">Part 2: Factors</a>
+  <ul class="collapse">
+  <li><a href="#exercise-4-order-habitats-ecologically" id="toc-exercise-4-order-habitats-ecologically" class="nav-link" data-scroll-target="#exercise-4-order-habitats-ecologically">Exercise 4: Order habitats ecologically</a></li>
+  <li><a href="#exercise-5-order-sites-by-coral-cover" id="toc-exercise-5-order-sites-by-coral-cover" class="nav-link" data-scroll-target="#exercise-5-order-sites-by-coral-cover">Exercise 5: Order sites by coral cover</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -203,44 +239,108 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="morning-session-factors" class="level2">
-<h2 class="anchored" data-anchor-id="morning-session-factors">Morning session: Factors</h2>
-<ul>
-<li><i class="fa-solid fa-pen-to-square" title="A pencil writing on paper" aria-label="pen-to-square"></i> <a href="activities/day8/day8am-code-sleuth.pdf" target="_blank">Code sleuth: factors</a></li>
-<li><i class="fa-solid fa-users-line" title="Multiple people working together" aria-label="users-line"></i> Live coding demo: factors</li>
-<li><i class="fa-solid fa-person-chalkboard" title="A person motioning at a chalkboard" aria-label="person-chalkboard"></i> <a href="../course-materials/slides/day8am-slides.html" target="_blank">Factors mini-lecture</a></li>
-<li><i class="fa-solid fa-diagram-project" title="Nodes connected by edges" aria-label="diagram-project"></i> <a href="../course-materials/activities/day8/day8am-concept-mapping.html" target="_blank">Concept mapping: factors</a></li>
-<li><i class="fa-solid fa-square-check" title="A checked checkbox" aria-label="square-check"></i> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpnEDBySaL7IQdFaXQmka2ZsAVI_ZgfpgGk-__tMyu7SbQPA/viewform" target="_blank">Exit ticket</a></li>
-</ul>
+<p>Today you’ll revisit the coral/fish reef question from Day 7, this time refining two things from the first time around: parsing <code>Date</code> as a real date instead of pulling the year out with <code>str_sub()</code>, and taking control of how <code>Site</code> and <code>Habitat</code> are <em>ordered</em> in your plots instead of leaving R to sort them alphabetically.</p>
+<section id="read-data" class="level2">
+<h2 class="anchored" data-anchor-id="read-data">Read data</h2>
+<p>Download the data <a href="data/moorea_coral.csv">moorea_coral.csv</a>, <a href="data/moorea_fish.csv">moorea_fish.csv</a>.</p>
+<p>Inside your day 8 folder, create a subfolder called <code>data</code>, and put both CSVs in it.</p>
+<p>Create an R script in your day 8 folder called <code>reef-factors-dates.R</code>.</p>
+<p>Add a code chunk containing the following code:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>moorea_coral <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/moorea_coral.csv"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">na =</span> <span class="fu">c</span>(<span class="st">""</span>, <span class="st">"NA"</span>, <span class="st">"ND"</span>) <span class="co"># This vector tells read_csv() which values to interpret as missing data</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>moorea_fish <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/moorea_fish.csv"</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">na =</span> <span class="fu">c</span>(<span class="st">""</span>, <span class="st">"NA"</span>, <span class="st">"ND"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use <code>glimpse()</code> on each to see what you’re working with.</p>
 </section>
-<section id="afternoon-session-dates-and-times" class="level2">
-<h2 class="anchored" data-anchor-id="afternoon-session-dates-and-times">Afternoon session: Dates and times</h2>
-<ul>
-<li><i class="fa-solid fa-pen-to-square" title="A pencil writing on paper" aria-label="pen-to-square"></i> <a href="activities/day8/day8pm-code-sleuth.pdf" target="_blank">Code sleuth: dates and times</a></li>
-<li><i class="fa-solid fa-users-line" title="Multiple people working together" aria-label="users-line"></i> Live coding demo: dates and times</li>
-<li><i class="fa-solid fa-person-chalkboard" title="A person motioning at a chalkboard" aria-label="person-chalkboard"></i> <a href="../course-materials/slides/day8pm-slides.html" target="_blank">Dates and times mini-lecture</a></li>
-<li><i class="fa-solid fa-diagram-project" title="Nodes connected by edges" aria-label="diagram-project"></i> <a href="../course-materials/activities/day8/day8pm-concept-mapping.html" target="_blank">Concept mapping: dates and times</a></li>
-<li><i class="fa-solid fa-square-check" title="A checked checkbox" aria-label="square-check"></i> <a href="https://docs.google.com/forms/d/e/1FAIpQLScGxNiqjzSFdkTx4NyTpR8yvdGfB2WNXe34kBeh1eyfFjPnnQ/viewform" target="_blank">Exit ticket</a></li>
-</ul>
+<section id="part-1-dates" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-dates">Part 1: Dates</h2>
+<section id="exercise-1-parse-real-dates" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1-parse-real-dates">Exercise 1: Parse real dates</h3>
+<ol type="1">
+<li>Create a vector called <code>non_coral</code> containing the five non-coral category labels: <code>"Sand"</code>, <code>"CTB"</code>, <code>"Macroalgae"</code>, <code>"Non-coralline Crustose Algae"</code>, and <code>"Unknown or Other"</code>. Filter <code>moorea_coral</code> to exclude any row whose <code>Taxonomy_Substrate_or_Functional_Group</code> is in <code>non_coral</code>, and to keep only rows where <code>Depth</code> is less than 17.</li>
+<li><code>Date</code> is stored as text formatted <code>"YYYY-MM"</code>. Use <code>mutate()</code> to turn it into an actual date column. Then use <code>year()</code> on that date column to create a <code>Year</code> column.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Compare the two approaches at the console:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_sub</span>(<span class="st">"2017-04"</span>, <span class="dv">1</span>, <span class="dv">4</span>) <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ym</span>(<span class="st">"2017-04"</span>) <span class="sc">|&gt;</span> <span class="fu">year</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Both get you a year — but only the second one gives you back something that’s still a <em>date</em>, so you can keep asking it date questions.</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Every quadrat should be resurveyed roughly once a year. Check that assumption: use <code>count()</code> on Site, Depth, Quad40, and Year.</li>
+</ol>
 </section>
-<section id="end-of-day-practice" class="level2">
-<h2 class="anchored" data-anchor-id="end-of-day-practice">End-of-day practice</h2>
-<p>Complete the following tasks / activities before heading home for the day!</p>
-<ul>
-<li><i class="fa-solid fa-laptop" title="A laptop" aria-label="laptop"></i> <a href="../course-materials/eod/eod-day8.html"><strong>Day 8 Practice:</strong> Refine reef data with factors and dates</a></li>
-</ul>
+<section id="exercise-2-summarize-coral-cover" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-2-summarize-coral-cover">Exercise 2: Summarize coral cover</h3>
+<p>Each quadrat (identified by <code>Quad40</code>) can contain several coral genera, so summarizing in one step would average across genera within a quadrat instead of adding them up. Summarize in two steps instead:</p>
+<ol type="1">
+<li>First, sum <code>Percent_Cover</code> by year, site, habitat, depth, and <code>Quad40</code> to get the <strong>total</strong> coral cover in each quadrat. Call the new column <code>quadrat_cover</code>.</li>
+<li>Then, summarize the <strong>mean</strong> of <code>quadrat_cover</code> by year, site, and habitat. Call the new column <code>mean_coral_cover</code>.</li>
+<li>Arrange the result by year, site, and habitat. Store it as <code>coral_summary</code>.</li>
+</ol>
 </section>
-<section id="additional-materials" class="level2">
-<h2 class="anchored" data-anchor-id="additional-materials">Additional materials</h2>
-<ul>
-<li><a href="https://r4ds.hadley.nz/factors.html">Factors: R4DS ch 16</a></li>
-<li><a href="https://doi.org/10.1080/00031305.2017.1356375">Wrangling Categorical Data in R</a></li>
-<li><a href="https://r4ds.hadley.nz/datetimes.html">Dates and times: R4DS ch 17</a></li>
-<li><a href="https://zachholman.com/talk/utc-is-enough-for-everyone-right">UTC is enough for everyone… right?</a></li>
-<li><a href="https://gist.github.com/timvisee/fcda9bbdff88d45cc9061606b4b923ca">Falsehoods programmers believe about time</a></li>
-</ul>
+<section id="exercise-3-wrangle-and-join-the-fish-data" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3-wrangle-and-join-the-fish-data">Exercise 3: Wrangle and join the fish data</h3>
+<ol type="1">
+<li>Filter <code>moorea_fish</code> to rows where <code>Coarse_Trophic</code> is <code>"Primary Consumer"</code> — the herbivorous, algae-grazing fish.</li>
+<li>Summarize the <strong>total</strong> biomass (sum of <code>Biomass</code>) by site, habitat, and year. Call the new column <code>total_biomass</code>. Store it as <code>fish_summary</code>.</li>
+<li>Use <code>inner_join()</code> to combine <code>coral_summary</code> and <code>fish_summary</code>, matching on site, habitat, <em>and</em> year. Store the result as <code>reef_joined</code>.</li>
+</ol>
+</section>
+</section>
+<section id="part-2-factors" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-factors">Part 2: Factors</h2>
+<section id="exercise-4-order-habitats-ecologically" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-4-order-habitats-ecologically">Exercise 4: Order habitats ecologically</h3>
+<p>The coral surveys only cover two habitats, <code>Forereef</code> and <code>Fringing</code>. <code>Backreef</code> shows up in the fish data, but never in <code>moorea_coral</code>, so it always drops out of <code>reef_joined</code> during the <code>inner_join()</code> (the same reason your row counts didn’t match in Exercise 3). By default, those two remaining habitats sort alphabetically: <code>Forereef</code>, <code>Fringing</code> — putting the <em>deeper</em> habitat first. Use <code>fct_relevel()</code> to put them in shallow-to-deep order instead: <code>"Fringing"</code>, <code>"Forereef"</code>.</p>
+<ol type="1">
+<li><code>mutate()</code> <code>reef_joined$Habitat</code> into a factor with that level order.</li>
+<li>Remake last week’s habitat comparison: <code>select()</code> <code>Site</code>, <code>Habitat</code>, <code>Year</code>, and <code>mean_coral_cover</code>, then <code>pivot_wider()</code> to spread <code>Habitat</code> into its own columns.</li>
+<li>Add a column calculating the difference in coral cover between the two habitats, and plot its distribution as a histogram — same as Day 7, but now the column order in your wide data (and any faceting you do downstream) follows reef structure instead of the alphabet.</li>
+</ol>
+</section>
+<section id="exercise-5-order-sites-by-coral-cover" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-5-order-sites-by-coral-cover">Exercise 5: Order sites by coral cover</h3>
+<p>Right now <code>Site</code> sorts as <code>LTER_1</code>, <code>LTER_2</code>, …, <code>LTER_6</code> — an arbitrary label order that says nothing about the reef. Use <code>fct_reorder()</code> to reorder <code>Site</code>’s levels by <code>mean_coral_cover</code> instead.</p>
+<ol type="1">
+<li>Using <code>reef_joined</code>, create a scatterplot with mean coral cover on the x-axis and herbivorous fish biomass on the y-axis, <code>facet_wrap()</code>-ed by <code>Site</code>.</li>
+<li>Reorder <code>Site</code> with <code>fct_reorder(Site, mean_coral_cover)</code> before faceting, and compare the two versions. With sites ordered by coral cover, does a pattern with fish biomass become easier to see?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>fct_reorder()</code> needs a summary value per level, so it works best right before a plot — reorder inside the <code>mutate()</code> that feeds your <code>ggplot()</code> call, rather than saving the reordered factor back into <code>reef_joined</code> for later use.</p>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -668,7 +768,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><img src="../images/bren-logo.png" alt="The Bren School of Environmental Science &amp; Management logo" width="250"></p>
+<p><img src="../../images/bren-logo.png" alt="The Bren School of Environmental Science &amp; Management logo" width="250"></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

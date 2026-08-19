@@ -1,0 +1,144 @@
+---
+format:
+  revealjs:
+    slide-number: true
+    # code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme:
+      - ../../meds-slides-styles.scss
+execute:
+  echo: true
+---
+
+## {#title-slide data-menu-title="Title Slide" background="#053660"}
+
+[EDS 221 Day 8 PM]{.custom-title}
+
+[*Dates and times*]{.custom-subtitle}
+
+<hr class="hr-teal">
+
+[August 19^th^, 2026]{.custom-subtitle3}
+
+---
+
+## {#why-dates-tricky data-menu-title="Why dates are tricky"}
+
+[Why dates are tricky]{.slide-title}
+
+<hr>
+
+[Dates look like plain text, but they aren't — `"01/02/2017"` could mean January 2^nd^ or February 1^st^ depending on where you're reading from.]{.body-text-m}
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(lubridate)
+
+class("2017-01-31")
+```
+
+[A character string has no concept of "one day later." A proper **date** type does.]{.body-text-s}
+
+---
+
+## {#parsing-dates .smaller data-menu-title="Parsing dates: ymd(), mdy(), dmy()"}
+
+[Parsing dates: ymd(), mdy(), dmy()]{.slide-title}
+
+<hr>
+
+[**lubridate**'s parsing functions are named for the *order* the year, month, and day appear in your text — they all return the same kind of date.]{.body-text-m}
+
+```{r}
+ymd("2017-01-31")
+mdy("January 31st, 2017")
+dmy("31-Jan-2017")
+```
+
+---
+
+## {#parsing-datetimes .smaller data-menu-title="Parsing datetimes: ymd_hms()"}
+
+[Parsing datetimes: ymd_hms()]{.slide-title}
+
+<hr>
+
+[Add `_hms`, `_hm`, or `_h` to also capture a time of day. Unspecified time components default to zero.]{.body-text-m}
+
+```{r}
+ymd_hms("2017-01-31 20:11:59")
+mdy_hm("01/31/2017 08:01")
+```
+
+---
+
+## {#extracting-components .smaller data-menu-title="Extracting components"}
+
+[Extracting components]{.slide-title}
+
+<hr>
+
+[Once something is a date, you can pull out any piece of it — useful for grouping and filtering.]{.body-text-m}
+
+```{r}
+release_date <- ymd("2026-08-19")
+
+year(release_date)
+month(release_date, label = TRUE)
+wday(release_date, label = TRUE)
+```
+
+---
+
+## {#date-arithmetic .smaller data-menu-title="Date arithmetic"}
+
+[Date arithmetic]{.slide-title}
+
+<hr>
+
+[Dates support arithmetic directly. `days()`, `weeks()`, and friends add a fixed span of calendar time.]{.body-text-m}
+
+```{r}
+start <- ymd("2026-08-19")
+
+start + days(1)
+start + weeks(2)
+ymd("2026-12-25") - start
+```
+
+[The last line returns a `difftime` — the number of days between two dates.]{.body-text-s}
+
+---
+
+## {#pm-memorize data-menu-title="What to memorize"}
+
+[What to memorize]{.slide-title}
+
+<hr>
+
+[Dates and datetimes are a distinct type from text — parse early, and let lubridate handle the arithmetic.]{.body-text-m}
+
+::: {.columns}
+
+::: {.column}
+
+### Creating
+
+- `ymd()` (and permutations)
+- `ymd_hms()` (and permutations)
+
+:::
+
+::: {.column}
+
+### Components
+
+- `year()`, `month()`, `day()`, `wday()`
+- `hour()`, `minute()`, `second()`
+
+:::
+
+:::

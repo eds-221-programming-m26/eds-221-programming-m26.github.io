@@ -1,0 +1,200 @@
+---
+format:
+  revealjs:
+    slide-number: true
+    # code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme:
+      - ../../meds-slides-styles.scss
+execute:
+  echo: true
+---
+
+## {#title-slide data-menu-title="Title Slide" background="#053660"}
+
+[EDS 221 Day 8 AM]{.custom-title}
+
+[*Factors*]{.custom-subtitle}
+
+<hr class="hr-teal">
+
+[August 19^th^, 2026]{.custom-subtitle3}
+
+---
+
+## {#meet-the-data .smaller data-menu-title="Meet the data: gss_cat"}
+
+[Meet the data: gss_cat]{.slide-title}
+
+<hr>
+
+[`gss_cat` (from **forcats**) is a sample of the General Social Survey. Several columns store categorical responses.]{.body-text-m}
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+
+gss_cat
+```
+
+---
+
+## {#what-is-a-factor data-menu-title="What is a factor?"}
+
+[What is a factor?]{.slide-title}
+
+<hr>
+
+[A **factor** stores categorical data as a set of predefined **levels** — the possible values a variable can take.]{.body-text-m}
+
+```{r}
+levels(gss_cat$rincome)
+```
+
+[Under the hood, R stores the values as integers and keeps a lookup table of level labels. This is what makes factors compact *and* orderable.]{.body-text-s}
+
+---
+
+## {#why-factors .smaller data-menu-title="Why not just use character strings?"}
+
+[Why not just use character strings?]{.slide-title}
+
+<hr>
+
+[Character vectors sort **alphabetically**. Factors let you control the order directly, which matters for plots and tables.]{.body-text-m}
+
+```{r}
+gss_cat |>
+  mutate(rincome = as.character(rincome)) |>
+  ggplot(aes(x = rincome)) +
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+[Notice the income bins are in no meaningful order — alphabetical, not low-to-high.]{.body-text-s}
+
+---
+
+## {#fct-relevel .smaller data-menu-title="fct_relevel(): manual order"}
+
+[fct_relevel(): manual order]{.slide-title}
+
+<hr>
+
+[`fct_relevel()` moves specific levels to the front, in the order you list them.]{.body-text-m}
+
+```{r}
+gss_cat |>
+  mutate(marital = fct_relevel(marital, "Never married", "Married")) |>
+  pull(marital) |>
+  levels()
+```
+
+---
+
+## {#fct-infreq .smaller data-menu-title="fct_infreq(): order by frequency"}
+
+[fct_infreq(): order by frequency]{.slide-title}
+
+<hr>
+
+[`fct_infreq()` reorders levels from most to least common — useful whenever "biggest first" is the natural reading order.]{.body-text-m}
+
+```{r}
+gss_cat |>
+  mutate(marital = fct_infreq(marital)) |>
+  ggplot(aes(x = marital)) +
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+---
+
+## {#fct-reorder .smaller data-menu-title="fct_reorder(): order by another variable"}
+
+[fct_reorder(): order by another variable]{.slide-title}
+
+<hr>
+
+[`fct_reorder()` sorts levels by a *summary statistic* of another variable — e.g., average TV hours by religion.]{.body-text-m}
+
+```{r}
+relig_summary <- gss_cat |>
+  filter(!is.na(tvhours)) |>
+  summarize(tv_hours = mean(tvhours), .by = relig)
+
+relig_summary |>
+  mutate(relig = fct_reorder(relig, tv_hours)) |>
+  ggplot(aes(x = tv_hours, y = relig)) +
+  geom_point()
+```
+
+---
+
+## {#fct-recode data-menu-title="fct_recode(): renaming levels"}
+
+[fct_recode(): renaming levels]{.slide-title}
+
+<hr>
+
+[`fct_recode()` changes level *labels* without touching the underlying data or order. New name on the left, old name on the right.]{.body-text-m}
+
+```{r}
+gss_cat |>
+  mutate(
+    partyid = fct_recode(
+      partyid,
+      "Republican, strong" = "Strong republican",
+      "Republican, weak" = "Not str republican"
+    )
+  ) |>
+  count(partyid)
+```
+
+---
+
+## {#fct-lump .smaller data-menu-title="fct_lump(): collapsing rare levels"}
+
+[fct_lump(): collapsing rare levels]{.slide-title}
+
+<hr>
+
+[`fct_lump_n()` keeps the *n* most common levels and lumps the rest into `"Other"` — handy when a factor has too many rare categories to plot cleanly.]{.body-text-m}
+
+```{r}
+gss_cat |>
+  mutate(relig = fct_lump_n(relig, n = 5)) |>
+  count(relig, sort = TRUE)
+```
+
+---
+
+## {#am-memorize data-menu-title="What to memorize"}
+
+[What to memorize]{.slide-title}
+
+<hr>
+
+[Factors store categorical data with explicit, controllable **levels** instead of relying on alphabetical order.]{.body-text-m}
+
+::: {.columns}
+
+::: {.column}
+
+### Inspecting
+
+- `levels()`
+
+:::
+
+::: {.column}
+
+### Reordering / recoding
+
+- `fct_reorder()`, `fct_recode()`
+
+:::
+
+:::
