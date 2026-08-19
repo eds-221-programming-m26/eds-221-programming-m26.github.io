@@ -53,8 +53,6 @@ Both get you a year — but only the second one gives you back something that's 
 
 :::
 
-3. Every quadrat should be resurveyed roughly once a year. Check that assumption: use `count()` on Site, Depth, Quad40, and Year.
-
 ### Exercise 2: Summarize coral cover
 
 Each quadrat (identified by `Quad40`) can contain several coral genera, so summarizing in one step would average across genera within a quadrat instead of adding them up. Summarize in two steps instead:
