@@ -1,0 +1,74 @@
+---
+title: "Reprex practice"
+---
+
+## Instructions
+
+Below are two chunks of code that each throw an error. Your job isn't to fix the code — it's to turn each one into a **reprex**: reproducible, minimal, and self-contained.
+
+For each example:
+
+1. Run the code and read the error.
+2. Strip it down to the smallest version that still produces the same error. Cut anything — columns, steps, arguments — that isn't needed to trigger it.
+3. Make sure it's self-contained: no object should be used before it's created *within the reprex itself*.
+4. Use the `reprex` package to generate a clean, shareable version.
+5. Trade with a partner. Can they spot the bug just from reading your reprex — without ever seeing your original code?
+
+Create a script in your day 9 folder called `day9am-reprex-practice.R` and work through both examples there.
+
+```r
+library(tidyverse)
+library(reprex)
+```
+
+## Get the data
+
+Download [AS00601.csv](data/AS00601.csv) and put it in a `data/` subfolder inside your day 9 folder.
+
+**Data source:** Gregory, S.V. and I. Arismendi. 2020. Aquatic Vertebrate Population Study in Mack Creek, Andrews Experimental Forest, 1987 to present ver 14. Environmental Data Initiative. https://doi.org/10.6073/pasta/7c78d662e847cdbe33584add8f809165
+
+Read it in — this part works fine:
+
+```r
+mack_creek_vertebrates <- read_csv("data/AS00601.csv")
+```
+
+## Example 1
+
+```r
+mack_creek_lengths <- mack_creek_vertebrates |>
+  select(YEAR:SAMPLEDATE) |>
+  filter(SECTION == "CC",
+         !is.na(SPECIES)) |>
+  summarize(mean_length_cm = mean(LENGTH1, na.rm = TRUE),
+            sd_length_cm = sd(LENGTH1, na.rm = TRUE),
+            .by = species)
+```
+
+## Example 2
+
+```r
+mack_creek_vertebrates |>
+  filter(SPECIES == "ONCL") +
+  ggplot(mapping = aes(x = LENGTH1, y = WEIGHT)) +
+  geom_point() +
+  scale_x_continuous("Cutthroat trout length (cm)") +
+  scale_y_continuous("Weight (g)") +
+  theme_minimal()
+```
+
+## Making the reprex
+
+Once your code is minimal and self-contained, copy it to your clipboard and run:
+
+```r
+reprex()
+```
+
+`reprex()` runs your code in a fresh R session and copies a nicely formatted, ready-to-paste version — including the output and error — back to your clipboard. Paste it somewhere your partner can read it.
+
+::: {.callout-tip}
+
+If `reprex()` runs cleanly with no error, that's a clue: you may have accidentally fixed the bug (or cut something that mattered) while minimizing. Add back what you removed one piece at a time until the error returns.
+
+:::

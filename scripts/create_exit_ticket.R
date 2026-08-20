@@ -49,7 +49,8 @@ drive_token <- function() {
 
 api_request <- function(url, method = "GET", body = NULL, query = NULL, token) {
   resp <- httr::VERB(
-    method, url,
+    method,
+    url,
     httr::config(token = token),
     query = query,
     body = body,
@@ -88,7 +89,11 @@ find_forms <- function(name_query, token = drive_token()) {
 #' until this is called.
 publish_form <- function(form_id, token = drive_token()) {
   api_request(
-    paste0("https://forms.googleapis.com/v1/forms/", form_id, ":setPublishSettings"),
+    paste0(
+      "https://forms.googleapis.com/v1/forms/",
+      form_id,
+      ":setPublishSettings"
+    ),
     method = "POST",
     body = list(
       publishSettings = list(
@@ -108,7 +113,11 @@ publish_form <- function(form_id, token = drive_token()) {
 #'   docs.google.com/forms/d/{id}/edit). Use find_forms() to look it up.
 #' @param new_title Title for the duplicated form.
 #' @return list(form_id, edit_url, responder_url)
-duplicate_exit_ticket <- function(source_form_id, new_title, token = drive_token()) {
+duplicate_exit_ticket <- function(
+  source_form_id,
+  new_title,
+  token = drive_token()
+) {
   source_meta <- api_request(
     paste0("https://www.googleapis.com/drive/v3/files/", source_form_id),
     query = list(fields = "parents"),
@@ -116,7 +125,11 @@ duplicate_exit_ticket <- function(source_form_id, new_title, token = drive_token
   )
 
   copied <- api_request(
-    paste0("https://www.googleapis.com/drive/v3/files/", source_form_id, "/copy"),
+    paste0(
+      "https://www.googleapis.com/drive/v3/files/",
+      source_form_id,
+      "/copy"
+    ),
     method = "POST",
     body = list(name = new_title, parents = source_meta$parents),
     token = token

@@ -4,4 +4,16 @@ subtitle: "Day 9"
 description: "Thursday August 20^th^, 2026"
 ---
 
-![Website under construction sign](images/under-construction.png)
+## Morning session: Troubleshooting
+
+* {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Troubleshooting](slides/day9am-slides.qmd){target="_blank"}
+* {{< fa bug title="A bug" >}} [Reprex practice](activities/day9/day9am-reprex-practice.qmd){target="_blank"}
+
+## Afternoon session: Exploratory Data Analysis
+
+* {{< fa magnifying-glass-chart title="A magnifying glass over a chart" >}} [Exploratory Data Analysis](activities/day9/day9pm-eda.qmd){target="_blank"}
+
+## Additional materials
+
+- [Object of type closure is not subsettable](https://posit.co/resources/videos/object-of-type-closure-is-not-subsettable) A great talk by Jenny Bryan about debugging tools and mindset.
+- [Getting help: R4DS ch 8](https://r4ds.hadley.nz/workflow-help.html)

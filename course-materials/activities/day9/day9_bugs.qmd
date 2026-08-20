@@ -1,0 +1,161 @@
+---
+draft: true
+format: pdf
+---
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+library(nycflights13)
+library(palmerpenguins)
+moorea_coral <- read_csv("../../eod/data/moorea_coral.csv")
+moorea_fish <- read_csv("../../eod/data/moorea_fish.csv")
+```
+
+<!-- Problem 1 -->
+
+> I added a column called `Year` to the `moorea_coral` data frame but it's not there in the output.
+
+```{r}
+#| results: hold
+
+moorea_coral |> mutate(Year = ym(Date))
+glimpse(moorea_coral)
+```
+
+{{< pagebreak >}}
+
+<!-- Problem 2 -->
+
+> Why can't I select the departure day-of-week column?
+
+```{r}
+#| error: true
+#| results: hold
+
+flights |>
+  mutate(
+    departure = make_datetime(year, month, day, hour, minute),
+    dep_wday = wday(departure, label = TRUE)
+  ) |>
+  select(departure, dep-wday)
+```
+
+{{< pagebreak >}}
+
+<!-- Problem 3 -->
+
+> Why can't I select the departure day-of-week column?
+
+```{r}
+#| error: true
+#| results: hold
+
+flights |>
+  mutate(
+    departure = make_date(year, month, day,hour, minute)
+    dep_wday = wday(departure, label = TRUE)
+  ) |>
+  select(departure, dep_wday)
+```
+
+{{< pagebreak >}}
+
+<!-- Problem 4 -->
+
+> Collapsing the factors didn't work.
+
+```{r}
+#| results: hold
+
+gss_cat |>
+  mutate(
+    pardyid = fct_collapse(
+      partyid,
+      "R" = c("Strong republican", "Not str republican"),
+      "I" = c("Ind,near rep", "Independent", "Ind,near dem"),
+      "D" = c("Not str democrat", "Strong democrat"),
+      "O" = c("No answer", "Don't know", "Other party")
+    )
+  ) |>
+  count(partyid)
+```
+
+{{< pagebreak >}}
+
+<!-- Problem 5 -->
+
+> What do you mean body mass not found, it's literally in the data frame.
+
+```{r}
+#| error: true
+#| results: hold
+
+penguins |>
+  filter(!is.na(sex)) |>
+  mutate(body_mass_kg = body_mass_g / 1000)
+  summarize(
+    mean_mass_g = mean(body_mass_g, na.rm = TRUE),
+    .by = c(species, sex)
+  )
+```
+
+{{< pagebreak >}}
+
+<!-- Problem 6 -->
+
+> I summarized max_bill_length, why can't I plot it?
+
+```{r}
+#| error: true
+#| results: hold
+
+penguins |>
+  summarize(
+    max_bill_length = max(bill_length_mm, na.rm = TRUE),
+    max_bill_depth = max(bill_depth_mm, na.rm = TRUE),
+    .by = species
+  ) |>
+  ggplot(
+    data = penguins,
+    mapping = aes(x = max_bill_length, y = max_bill_depth)
+  ) +
+  geom_point()
+```
+
+{{< pagebreak >}}
+
+<!-- Problem 7 -->
+
+> Biomass is in grams, and I **know** there were piscivorous fish bigger than 100 g at every site. So why is my result an empty data frame?
+
+```{r}
+#| results: hold
+
+moorea_fish |>
+  filter(
+    Coarse_Trophic == "Piscivore primarily",
+    Biomass > 100
+  ) |>
+  count(Site)
+```
+
+{{< pagebreak >}}
+
+<!-- Problem 8 -->
+
+> Are you kidding me I just want to summarize these dang fish WHAT IS GOING ON
+
+```{r}
+#| error: true
+#| results: hold
+
+moorea_fish |>
+  filter(Site == "LTER_1") |>
+  summarize(
+    mean_biomass = mean(Biomass, na.rm = TRUE),
+    .by = Year, Habitat, Family
+  )
+```
+
