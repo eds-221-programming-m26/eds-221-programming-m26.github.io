@@ -199,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="goal" class="level2">
 <h2 class="anchored" data-anchor-id="goal">Goal</h2>
 <p>So far, the bugs you’ve debugged have been planted on purpose. That’s about to change.</p>
-<p>In this activity, you’ll perform an <em>exploratory data analysis</em> (EDA) on a real dataset. As poke and prod your way through the data, you will organically create bugs. At that point you will switch from exploration to debugging. There are five EDA prompts below to get you started. You’re not limited to these - they exist to get you diving into the data. The real activity begins when you hit a bug. The goal isn’t to finish all five questions below; it’s to practice the troubleshooting loop from this morning (and a reprex, if the loop stalls) when something goes wrong.</p>
+<p>In this activity, you’ll perform an <em>exploratory data analysis</em> (EDA) on a real dataset. As you poke and prod your way through the data, you will organically create bugs. At that point you will switch from exploration to debugging. There are five EDA prompts below to get you started. You’re not limited to these - they exist to get you diving into the data. The real activity begins when you hit a bug. The goal isn’t to finish all five questions below; it’s to practice the troubleshooting loop from this morning (and a reprex, if the loop stalls) when something goes wrong.</p>
 </section>
 <section id="background-sbc-lter" class="level2">
 <h2 class="anchored" data-anchor-id="background-sbc-lter">Background: SBC LTER</h2>
@@ -210,8 +210,15 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="eda-questions">EDA questions</h2>
 <p>Here are some options to begin your exploration. You don’t need to answer all five, and you are encouraged to choose a different question if something catches your interest.</p>
 <ol type="1">
-<li><strong>Kelp canopy over time.</strong> Using <a href="https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.74">Kelp canopy area and biomass from Landsat</a>: has canopy biomass at these reefs trended up, down, or crashed-and-recovered over the last four decades? Do any sharp drops line up with a known marine heatwave or a big storm?</li>
 <li><strong>Kelp forest community dynamics.</strong> Search the catalog for “Kelp Forest Community Dynamics” (diver counts of reef fish, invertebrates, and algae at permanent transects since 2000): how has the abundance of one species, or a group of them, changed across the record — and does it differ between reef sites?</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/kfcd.png" class="img-fluid figure-img"></p>
+<figcaption>Choose any of these to explore</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
 <li><strong>Spiny lobster and fishing pressure.</strong> Using the <a href="https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.77">Spiny lobster abundance, size, and fishing effort</a> dataset: are lobsters bigger or more abundant at the sites inside Marine Protected Areas (Naples, Isla Vista) than at the sites open to fishing? Does the companion fishing-pressure table track that pattern?</li>
 <li><strong>Temperature and kelp.</strong> Combine the <a href="https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.6006">reef mooring bottom temperature</a> time series with the <a href="https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.74">kelp canopy</a> data above: does a spike in bottom temperature at a site (the 2014–2016 marine heatwave, a.k.a. “the Blob,” is a good place to look) line up with a drop in that site’s kelp canopy biomass?</li>
 <li><strong>Stream chemistry.</strong> Using <a href="https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.6">Stream chemistry in the Santa Barbara Coastal drainage area</a>: do nutrient concentrations (nitrate, ammonium, or soluble reactive phosphorus) spike during winter storms compared to summer?</li>

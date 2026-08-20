@@ -18,11 +18,13 @@ SBC LTER publishes dozens of datasets covering everything from satellite-derived
 
 Here are some options to begin your exploration. You don't need to answer all five, and you are encouraged to choose a different question if something catches your interest. 
 
-1. **Kelp canopy over time.** Using [Kelp canopy area and biomass from Landsat](https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.74): has canopy biomass at these reefs trended up, down, or crashed-and-recovered over the last four decades? Do any sharp drops line up with a known marine heatwave or a big storm?
-2. **Kelp forest community dynamics.** Search the catalog for "Kelp Forest Community Dynamics" (diver counts of reef fish, invertebrates, and algae at permanent transects since 2000): how has the abundance of one species, or a group of them, changed across the record — and does it differ between reef sites?
-3. **Spiny lobster and fishing pressure.** Using the [Spiny lobster abundance, size, and fishing effort](https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.77) dataset: are lobsters bigger or more abundant at the sites inside Marine Protected Areas (Naples, Isla Vista) than at the sites open to fishing? Does the companion fishing-pressure table track that pattern?
-4. **Temperature and kelp.** Combine the [reef mooring bottom temperature](https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.6006) time series with the [kelp canopy](https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.74) data above: does a spike in bottom temperature at a site (the 2014–2016 marine heatwave, a.k.a. "the Blob," is a good place to look) line up with a drop in that site's kelp canopy biomass?
-5. **Stream chemistry.** Using [Stream chemistry in the Santa Barbara Coastal drainage area](https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.6): do nutrient concentrations (nitrate, ammonium, or soluble reactive phosphorus) spike during winter storms compared to summer?
+1. **Kelp forest community dynamics.** Search the catalog for "Kelp Forest Community Dynamics" (diver counts of reef fish, invertebrates, and algae at permanent transects since 2000): how has the abundance of one species, or a group of them, changed across the record — and does it differ between reef sites?
+
+  ![Choose any of these to explore](../../images/kfcd.png)
+
+2. **Spiny lobster and fishing pressure.** Using the [Spiny lobster abundance, size, and fishing effort](https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.77) dataset: are lobsters bigger or more abundant at the sites inside Marine Protected Areas (Naples, Isla Vista) than at the sites open to fishing? Does the companion fishing-pressure table track that pattern?
+3. **Temperature and kelp.** Combine the [reef mooring bottom temperature](https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.6006) time series with the [kelp canopy](https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.74) data above: does a spike in bottom temperature at a site (the 2014–2016 marine heatwave, a.k.a. "the Blob," is a good place to look) line up with a drop in that site's kelp canopy biomass?
+4. **Stream chemistry.** Using [Stream chemistry in the Santa Barbara Coastal drainage area](https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.6): do nutrient concentrations (nitrate, ammonium, or soluble reactive phosphorus) spike during winter storms compared to summer?
 
 ## What to do when you hit a bug
 
