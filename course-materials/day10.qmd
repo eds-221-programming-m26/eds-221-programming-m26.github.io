@@ -4,4 +4,7 @@ subtitle: "Day 10"
 description: "Friday August 21^st^, 2026"
 ---
 
-![Website under construction sign](images/under-construction.png)
+## Morning session: Review
+
+- {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} [Review](slides/day10am-slides.qmd){target="_blank"}
+- {{< fa laptop title="A laptop" >}} [Calculating a moving average](activities/day10/day10-moving-average.qmd)

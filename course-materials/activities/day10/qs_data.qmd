@@ -1,0 +1,51 @@
+---
+format: 
+  pdf:
+    geometry:
+      - margin=1in
+execute:
+  message: false
+  echo: false
+  warning: false
+---
+
+```{r}
+#| label: tbl-qs-data
+#| tbl-cap: "Stream chemistry in the Quebrada Sonadora stream, fall 1984"
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+read_csv("data/QuebradaSonadora_Fall1984.csv") |>
+  kable()
+```
+
+{{< pagebreak >}}
+
+\renewcommand{\arraystretch}{2.1}
+```{r}
+#| label: tbl-smoothed-data
+#| tbl-cap: "Stream chemistry data smoothed using a moving average. Fill out this table to create non-overlapping 9-day windows and calculate the mean potassium (K) and magnesium (Mg) concentrations in the stream during that window."
+
+matrix("", nrow = 12, ncol = 6) |>
+  as_tibble() |>
+  set_names(c(
+    "Window",
+    "Start",
+    "End (exclusive)",
+    "Dates in window",
+    "Mean K (mg/L)",
+    "Mean Mg (mg/L)"
+  )) |>
+  mutate(Window = row_number()) |>
+  kable() |>
+  kable_styling(latex_options = "striped") |>
+  column_spec(1, width = "0.5in", border_right = TRUE) |>
+  column_spec(2, width = "1.1in", border_right = TRUE) |>
+  column_spec(3, width = "1.1in", border_right = TRUE) |>
+  column_spec(4, width = "2.2in", border_right = TRUE) |>
+  column_spec(5, width = "1.1in", border_right = TRUE) |>
+  column_spec(6, width = "1.1in") |>
+  landscape()
+```

@@ -1,0 +1,108 @@
+---
+title: "Moving averages"
+---
+
+## Goal
+
+Next week in EDS 214, you'll build an analytical workflow to reproduce figures from a study that examined how stream chemistry changed before and after a hurricane. A key piece of that workflow is a **moving average**. Noisy measurements and irregular sampling can make it more difficult to see patterns in the data. Smoothing, as with a moving average, fixes this. Instead of plotting every sample, you average together all the samples that fall within a fixed-width window, then slide that window forward across the whole record.
+
+Today you'll apply what you've learned in EDS 221 to perform a moving average on a subset of similar data, so the technique is already familiar when you meet it again next week. You'll build a 9-day moving average of potassium (K) and magnesium (Mg) concentrations, first by hand, then with a `for` loop, and finish by plotting the smoothed record.
+
+## Step 1: By hand
+
+You should have a printed copy of the data below. Before you open Positron, calculate the result by hand first. Hand calculations serve two purposes: you'll learn the algorithm deeply and have ground-truthed numbers to check your code results against.
+
+| sample_date | k_mgl | mg_mgl |
+|---|---|---|
+| 1984-09-04 | 0.26 | 1.46 |
+| 1984-09-10 | 0.21 | 1.53 |
+| 1984-09-13 | 0.23 | NA |
+| 1984-09-18 | NA | NA |
+| 1984-09-24 | NA | 1.42 |
+| 1984-10-01 | 0.22 | 1.30 |
+| 1984-10-08 | 0.27 | 1.43 |
+| 1984-10-15 | 0.17 | 1.22 |
+| 1984-10-22 | 0.16 | 1.07 |
+| 1984-10-29 | 0.19 | 1.10 |
+| 1984-11-08 | 0.21 | 1.05 |
+| 1984-11-14 | 0.26 | 0.78 |
+| 1984-11-21 | 0.29 | 1.34 |
+| 1984-11-28 | NA | 1.38 |
+
+**The windowing rule:** window 1 starts on the very first sample date. Each window is 9 days wide and *half-open* — it includes its start date but not its end date (`start <= sample_date < start + 9`). Window 2 starts exactly 9 days after window 1, window 3 starts 9 days after that, and so on, until you run past the last sample date.
+
+Fill in the worksheet with your by-hand calculations. For each window: list which sample dates fall inside it, then average their `k_mgl` and `mg_mgl` values.
+
+::: {.callout-tip}
+
+Window 2 has two Mg readings, and they're both `NA`. What should the mean Mg be for that window? Keep your answer in mind — you'll check it against R in Step 5.
+
+:::
+
+## Step 2: Read in the data
+
+Create a script called `moving-average.R` in your day 10 folder. Download [QuebradaSonadora_Fall1984.csv](data/QuebradaSonadora_Fall1984.csv) into a `data/` subfolder alongside it.
+
+Read the CSV file into an object called `qs_data`.
+
+## Step 3: Initialize the result
+
+Before you can fill in a moving average, you need somewhere to put it. Build a tibble called `qs_smoothed` with one row per window: a `window_start` column stepping 9 days at a time from the first sample date to the last, and blank (`NA`) `k_mgl` and `mg_mgl` columns to fill in later.
+
+
+::: {.callout-tip}
+
+You've seen `seq()` for numbers, e.g., `seq(1, 10, by = 3)`. `seq()` also works on dates. Try running `seq(ymd("2025-01-01"), ymd("2025-06-01"), by = "2 months")` for an example.
+
+:::
+
+::: {.callout-tip}
+
+`qs_data$sample_date[1]` is the first sample date. What's a way to pull out the *last* one without typing a row number?
+
+:::
+
+Check `qs_smoothed`: does `window_start` match the window boundaries you wrote down in Step 1?
+
+## Step 4: Moving average for loop
+
+Now automate what you did by hand using a for loop. Before you start coding, determine the following:
+
+- What **sequence** are you iterating over?
+- What **iterator** will you use?
+- What does the **body** need to do with the iterator?
+
+
+::: {.callout-tip}
+
+This step requires indexing with logic.
+
+:::
+
+
+::: {.callout-tip}
+
+It's easy to lose track of what's happening inside a for loop's body. Use `print()` frequently to see how variables update in response to the iterator.
+
+:::
+
+## Step 5: Validate
+
+Don't trust the loop just because it ran without an error. Check your results!
+
+- Compare `qs_smoothed` to the worksheet you filled in by hand in Step 1. Do the numbers match?
+- If a row looks wrong, add `print()` statements inside the loop (e.g., print the window start and end in each iteration, or the ion values inside the window) to watch exactly what each iteration is doing.
+
+## Step 6: Plot it
+
+Finish by plotting both smoothed time series on one set of axes, color-coded by ion. 
+
+
+::: {.callout-tip}
+
+You'll need to reshape the data before plotting it
+
+:::
+
+## Step 7: Have a great weekend!
+
